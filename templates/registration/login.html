@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+
+        
+{% block content %}
+
+<div>
+    <form method="post" action="" role="form" class="col s12">
+    {% csrf_token %}
+    <h3>Login</h3>
+      <div >
+        <div>
+          {{ form.email }}
+          <label for="email">email</label>
+        </div>
+      </div>
+       <div >
+        <div>
+          {{ form.password }}
+          <label for="password">Password</label>
+        </div>
+      </div>
+      {% if form.errors %}
+      <div >
+        <div>
+          <span >Your username or password did not match.</span>
+        </div>
+      </div>
+      {% endif %}
+      <button type="submit" value="login" >Login</button>
+      <input type="hidden" name="next" value="{{ next }}">
+      <p> Forgot Password?<a href="{% url 'password_reset' %}">Reset password</a></p>
+      <button > <a href="{% url 'django_registration_register' %}">Create an account</a>  </button>
+    </form>
+
+
+    <p>
+      <a href="{% url "google_login" %}">Log in with Google</a>
+      </p>
+  </div>
+
+{% endblock %}

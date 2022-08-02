@@ -1,0 +1,6 @@
+Hi,
+You registered for MetaApp, but you need to activate your account within {{ expiration_days }} days.
+To do that, please visit this page:
+{{ scheme }}://{{ request.get_host }}{% url "django_registration_activate" activation_key %}
+Thanks,
+The MetaApp Team

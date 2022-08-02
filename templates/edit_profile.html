@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+
+        
+{% block content %}
+
+<div>
+    <form method="post" enctype="multipart/form-data" action="" role="form" >
+    {% csrf_token %}
+    <h3>Edit Profile</h3>
+      <div >
+      <div >
+      <div>
+        <span>File</span>
+        {{ form.picture }}
+      </div>
+      <div class="file-path-wrapper">
+        <input class="file-path validate" type="text">
+      </div>
+    </div>
+      </div>
+      <div >
+        <div >
+          {{ form.first_name }}
+          <label for="icon_prefix">First Name</label>
+        </div>
+        <div >
+          {{ form.last_name }}
+          <label for="icon_prefix">Last Name</label>
+        </div>
+      </div>
+       <div >
+        <div>
+          {{ form.location }}
+          <label for="location">location</label>
+        </div>
+      </div>
+      <div >
+        <div>
+          {{ form.url }}
+          <label for="url">URL</label>
+        </div>
+      </div>
+      <div >
+        <div >
+          {{ form.profile_info }}
+          <label for="profile_info">About</label>
+        </div>
+      </div>
+      <div >
+        <div >
+          <span>{{ form.errors }}</span>
+        </div>
+      </div>
+      <button type="submit" name="action">Update</button>
+    </form>
+  </div>
+
+{% endblock %}
