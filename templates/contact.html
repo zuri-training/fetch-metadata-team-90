@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h4>Want to send us a message ?</h4>
+<div></div>
+<br>
+
+ <div >
+    <form method="POST" action="" class="col s12">
+    {% csrf_token %}
+      <div >
+        <div >
+          {{ form.name }}
+          <label for="first_name">Name</label>
+        </div>
+        <div >
+          {{ form.email }}
+          <label for="email">Email</label>
+        </div>
+      </div>
+      <div >
+        <div >
+          {{ form.message }}
+          <label for="textarea">Message</label>
+        </div>
+      </div>
+
+       <button type="submit" name="action">Submit
+  </button>
+
+    </form>
+  </div>
+
+{% endblock %}          

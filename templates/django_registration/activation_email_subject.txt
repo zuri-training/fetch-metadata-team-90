@@ -1,0 +1,1 @@
+Activate your metadata account! You have {{ expiration_days }} days!
