@@ -1,0 +1,87 @@
+body{
+    background-color: white;
+    font-size: 15px;
+    text-align: center;
+ 
+    margin-top: 20vh;
+
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70vw;
+    margin: auto;
+}
+
+img{
+    width: 10vw;
+}
+.one{
+   text-align: center;
+}
+
+.two{
+    color: lightblue;
+}
+.two >h2{
+   font-size: 2rem;
+}
+
+.three{
+    color: lightgray;
+    max-width: 450px;
+}
+
+.four{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-content:flex-start;
+    /* width: 100vw; */
+}
+
+.four >label{
+    font-size: 0.9rem;
+    width: 220px;
+}
+
+ button{
+    width: 350px;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    padding: 10px 0;
+    border: none;
+    /* change color */
+    background-color: lightblue; 
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.email__container{
+    border: 1px solid #000;
+    height: 40px;
+    width: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 4rem;
+    margin-bottom: 30px;
+    border-radius: 4px;
+}
+
+.email__container>input{
+    width: 100%;
+    height: 80%;
+    border: none;
+    outline: none;
+    padding: 0 0.3rem;
+}
+
+.email__container>img{
+    cursor: pointer;
+    height: 20px;
+}
