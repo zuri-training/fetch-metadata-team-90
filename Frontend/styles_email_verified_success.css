@@ -1,19 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
 body{
-    background-color: white;
-    font-size: 15px;
-    text-align: center;
+        background-color: white;
+        font-size: 15px;
+        text-align: center;
+        line-height: 20px;
+        font-family: 'Work Sans', sans-serif;
+     
+        margin-top: 20vh;
 }
 
-.check{
-    
+img{
+    width: 10vw;
 }
 
 .main-section{
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70vw;
+    margin: auto;
 }
 
 .top-section{
-    color: lightskyblue;
+    color: #408CC6;
     font-size: 20px;
 }
 
@@ -22,8 +33,14 @@ color: lightgray;
 }
 
 button{
-    color: white;
-    background-color: blue;
+    width: 350px;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    padding: 10px 0;
     border: none;
-    border-radius: 2px;
+    /* change color */
+    background-color: #56CCF2; 
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
 }
