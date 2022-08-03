@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
 body{
     background-color: white;
     font-size: 15px;
     text-align: center;
+    line-height: 20px;
+    font-family: 'Work Sans', sans-serif;
  
     margin-top: 20vh;
 
@@ -24,14 +28,14 @@ img{
 }
 
 .two{
-    color: lightblue;
+    color: #408CC6;
 }
 .two >h2{
    font-size: 2rem;
 }
 
 .three{
-    color: lightgray;
+    color: #8A8A8A;
     max-width: 450px;
 }
 
@@ -55,7 +59,7 @@ img{
     padding: 10px 0;
     border: none;
     /* change color */
-    background-color: lightblue; 
+    background-color: #56CCF2; 
     color: #fff;
     border-radius: 4px;
     cursor: pointer;
