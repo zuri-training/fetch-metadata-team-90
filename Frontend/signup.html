@@ -7,6 +7,10 @@
     <title>sign up</title>
     <link rel="stylesheet" href="signup.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <main>
@@ -14,9 +18,7 @@
             <div class="inner-box">
                 <div class="picture-side">
                     <div class="logo">
-                        <h1>
-                            MetLab
-                        </h1>
+                        <img src="signup-img/logo.svg" alt="">
                     </div>
                     <div class="heading-right">
                         <p>A data extraction tool that can be used to extract data quickly and effectively while providing accurate information about the data being extracted.</p>
@@ -31,9 +33,9 @@
                 <div class="forms-wrapper">
                     <form action="#">
                         <div class="heading">
-                            <p>Start for free</p>
+                            <p class="big">Start for free</p>
                             <h3>Create new account</h3>
-                            <h6>Already a member?</h6>
+                            <p>Already a member?</p>
                             <a href="#">Log in</a>
                         </div>
                         <div class="card-box">
@@ -54,7 +56,7 @@
                                  autocomplete="off"
                                  required
                                  placeholder="name@gmail">
-                                <i style="position: absolute; margin-right: 15px;" class="fa-solid fa-envelope"></i>
+                                <i style="position: absolute; margin-right: 15px;" class="fa-regular fa-envelope"></i>
                             </div>
                             
                         </div>
@@ -68,8 +70,8 @@
                                  required
                                  id="myInput">
                                 <span class="eye" onclick="myFunction()">
-                                    <i id="hide1" class="fa-solid fa-eye"></i>
-                                    <i id="hide2" class="fa-solid fa-eye-slash"></i>
+                                    <i id="hide1" class="fa-regular fa-eye"></i>
+                                    <i id="hide2" class="fa-regular fa-eye-slash"></i>
                             </span>
                             </div>
                         </div>
@@ -83,8 +85,8 @@
                                  required
                                  id="myInput">
                                 <span class="eye" onclick="myFunction()">
-                                    <i id="hide1" class="fa-solid fa-eye"></i>
-                                    <i id="hide2" class="fa-solid fa-eye-slash"></i>
+                                    <i id="hide1" class="fa-regular fa-eye"></i>
+                                    <i id="hide2" class="fa-regular fa-eye-slash"></i>
                                 </span>
                             </div>
                         
@@ -92,11 +94,14 @@
                         <div class="button">
                             <input type="submit" value="Create Account">
                         </div>
-                        <p class="text">
-                            By continueing with Google Apple or Email, I agree to MetLab's
-                            <a href="#">Prvacy Policy</a> and
-                            <a href="#">Terms of service</a>
-                        </p>
+                        <div class="buttom-text">
+                            <p class="text">
+                                By continueing with Google Apple or Email, I agree to MetLab's
+                                <a href="#">Prvacy Policy</a> and
+                                <a href="#">Terms of service</a>
+                            </p>
+                        </div>
+                       
                     </form>
                     
 
