@@ -1,4 +1,5 @@
 from django.db import models
+from django.apps import apps
 from django.contrib.auth.models import User
 from django.contrib.auth.models import AbstractUser, UserManager
 from django.conf import settings
@@ -21,7 +22,7 @@ class MetlabUserManager(UserManager):
 			)
 		username = GlobalUserModel.normalize_username(username)
 		user = self.model(username=username, email=email, **extra_fields)
-		user.password = make_password(password)
+		user.set_password(password)
 		user.save(using=self._db)
 		return user
 	def create_user(self, username, email, password=None, **extra_fields):
@@ -35,7 +36,7 @@ class MetlabUserManager(UserManager):
 			raise ValueError("Superuser must have is_staff=True.")
 		if extra_fields.get("is_superuser") is not True:
 			raise ValueError("Superuser must have is_superuser=True.")
-			return self._create_user(username, email, password, **extra_fields)
+		return self._create_user(username, email, password, **extra_fields)
 
 class User(AbstractUser):
 
