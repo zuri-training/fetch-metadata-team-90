@@ -153,23 +153,22 @@
   /* the drop a message section styling begins here */
 .main-container{
    gap: 125px;
+   margin-bottom: 32px;
 }
 
 .drop-msg{
-/* display: flex; */
-/* flex-direction: column;
-align-items: flex-end; */
 padding: 0px;
-/* gap: 32px; */
 width: 505px;
-height: 726px;
+
 
 }
 .sub-title{
+    text-align: center;
+    margin-bottom: 32px;
 
 }
 form{
-    margin-top: 32px;
+
 }
 .sub-title h3{
 /* Drop us a message */
@@ -365,6 +364,50 @@ border-radius: 4px;
 flex: none;
 order: 5;
 flex-grow: 0;
+cursor: pointer;
+
+font-family: 'Droid Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 16px;
+/* identical to box height, or 80% */
+display: flex;
+align-items: center;
+border: 0px;
+
+/* white */
+color: #FFFFFF;
+
+}
+
+input::placeholder{
+    /* Button text */
+
+
+width: 419px;
+height: 76px;
+
+/* Web/Body small */
+
+font-family: 'Work Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 28px;
+/* or 140% */
+
+
+/* Grey/Grey06 */
+
+color: #A6A6A6;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
 }
 
 .contact-us{
@@ -389,6 +432,8 @@ flex-grow: 0;
     
     /* Blue/Blue05 */
       color: #408CC6;
+      margin-left: 210px;
+      margin-bottom: 28.9px;
 }
 .contact-us img{
     /* Man chatting remotely with woman colleague */
