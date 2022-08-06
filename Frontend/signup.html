@@ -83,10 +83,10 @@
                                  minlength="4"
                                  autocomplete="off"
                                  required
-                                 id="myInput">
-                                <span class="eye" onclick="myFunction()">
-                                    <i id="hide1" class="fa-regular fa-eye"></i>
-                                    <i id="hide2" class="fa-regular fa-eye-slash"></i>
+                                 id="myInput2">
+                                <span class="eye" onclick="myFunction2()">
+                                    <i id="hide3" class="fa-regular fa-eye"></i>
+                                    <i id="hide4" class="fa-regular fa-eye-slash"></i>
                                 </span>
                             </div>
                         
@@ -96,7 +96,7 @@
                         </div>
                         <div class="buttom-text">
                             <p class="text">
-                                By continueing with Google Apple or Email, I agree to MetLab's
+                                By continuing with Google Apple or Email, I agree to MetLab's
                                 <a href="#">Prvacy Policy</a> and
                                 <a href="#">Terms of service</a>
                             </p>
@@ -124,6 +124,22 @@
                 x.type ="password";
                 y.style.display = "none";
                 z.style.display = "block";
+            }
+        }
+        function myFunction2(){
+            var c = document.getElementById("myInput2");
+            var a = document.getElementById("hide3");
+            var b = document.getElementById("hide4");
+
+            if(c.type === 'password'){
+                c.type ="text";
+                a.style.display = "block";
+                b.style.display = "none";
+            }
+            else{
+                c.type ="password";
+                a.style.display = "none";
+                b.style.display = "block";
             }
         }
     </script>
