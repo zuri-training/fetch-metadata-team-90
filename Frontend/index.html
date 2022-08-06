@@ -15,18 +15,35 @@
     <main>
       <header class="hero-section">
         <nav>
-          <div class="logo">
+          <div class="logo generalflexselector">
             <img src="./Home-Images/Horizontal Logo.svg" alt="" />
           </div>
-          <ul>
+          <!--This is for Mobile-->
+          <div id="toogle-nav-list" class="nav__mobile-list">
+            <ul class="">
+              <li><a href="">Home</a></li>
+              <li><a href="">Privacy</a></li>
+              <li><a href="">Contact</a></li>
+              <li><a href="">Upload</a></li>
+            </ul>
+            <button class="login-btn"><a href="">Login</a></button>
+            <button class="signup-btn"><a href="">Sign Up</a></button>
+          </div>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+          <!--This is the end of Mobile -->
+          <ul class="nav__list">
             <li><a href="">Home</a></li>
             <li><a href="">Privacy</a></li>
             <li><a href="">Contact</a></li>
             <li><a href="">Upload</a></li>
           </ul>
           <div class="nav-btn">
-            <button class="login"><a href="">Login</a></button>
-            <button class="sign-up"><a href="">Sign Up</a></button>
+            <button class="login-btn"><a href="">Login</a></button>
+            <button class="signup-btn"><a href="">Sign Up</a></button>
           </div>
         </nav>
         <div class="hero-content">
@@ -36,16 +53,16 @@
             the file was captured. Without risking your privacy, extract the
             contents from the file.
           </p>
-          <div class="upload-file-body">
+          <div class="upload-file-body generalflexselector">
             <form class="wrapper" action="">
-              <div class="file-upload">
+              <div class="file-upload generalflexselector">
                 <input type="file" class="file-input" hidden />
                 <i class="fa fa-cloud-upload" aria-hidden="true"></i>
                 <p>Drag and drop a file here or click to upload</p>
               </div>
             </form>
           </div>
-          <button class="get-started">Get Started</button>
+          <button class="get-started generalflexselector">Get Started</button>
         </div>
         <div class="animation">
           <img src="./Home-Images/Animation.gif" />
@@ -55,9 +72,9 @@
         <div class="services">
           <h3>How Metlab Works in 5 Simple Steps</h3>
         </div>
-        <div class="row">
-          <div class="col-md-3 text-center">
-            <div class="icon">
+        <div class="row generalflexselector">
+          <div class="col-md-3 generalflexselector">
+            <div class="icon generalflexselector">
               <img src="Home-Images/ghost.svg" />
             </div>
             <h6>Sign up</h6>
@@ -127,7 +144,7 @@
             </p>
           </div>
         </div>
-        <div class="container">
+        <div class="container generalflexselector">
           <div class="boxes">
             <div class="icon">
               <img src="/Frontend/Home-Images/Box1.svg" />
@@ -189,14 +206,14 @@
             </div>
           </div>
         </div>
-        <div class="start-btn">
+        <div class="start-btn generalflexselector">
           <button>Start Extracting Data</button>
         </div>
       </section>
     </main>
     <footer>
       <div class="footer-container">
-        <div class="resourses">
+        <div class="resourses generalflexselector">
           <h6>RESOURCES</h6>
           <p>Customer Stories</p>
           <p>Webinars</p>
@@ -225,7 +242,7 @@
         <p>Privacy | Website Terms of Use | Cookie Consent | COVID-19</p>
         <p>© 2022 MetLab. All Rights Reserved</p>
       </div>
-      <div class="social">
+      <div class="social generalflexselector">
         <div class="icons">
           <i class="fa-brands fa-facebook-f"></i>
         </div>
