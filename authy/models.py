@@ -12,16 +12,9 @@ class MetlabUserManager(UserManager):
 			raise ValueError("The given username must be set")
 		if not email:
 			raise ValueError("Email must be set")
-		email = self.normalize_email(email)
-			# Lookup the real model class from the global app registry so this
-			# manager method can be used in migrations. This is fine because
-			# managers are by definition working on the real model.
-		GlobalUserModel = apps.get_model(
-				self.model._meta.app_label, self.model._meta.object_name
-			)
-		username = GlobalUserModel.normalize_username(username)
-		user = self.model(username=username, email=email, **extra_fields)
-		user.password = make_password(password)
+
+		user = self.model(email=self.normalize_email(email))
+		user.set_password(password)
 		user.save(using=self._db)
 		return user
 	def create_user(self, username, email, password=None, **extra_fields):
@@ -35,7 +28,7 @@ class MetlabUserManager(UserManager):
 			raise ValueError("Superuser must have is_staff=True.")
 		if extra_fields.get("is_superuser") is not True:
 			raise ValueError("Superuser must have is_superuser=True.")
-			return self._create_user(username, email, password, **extra_fields)
+		return self._create_user(username, email, password, **extra_fields)
 
 class User(AbstractUser):
 
