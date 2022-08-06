@@ -444,6 +444,166 @@ right: 100px;
   /* the drop a message section styling ends here */
 
 
+/* the get in touch section styling begins here */
+
+
+/* the get in touch section styling ends here */
+.sub-container{
+
+}
+.get-in h3{
+/* Get in Touch */
+margin: 160px 0px 0px 100px;
+
+
+width: 209px;
+height: 56px;
+
+/* Web/Header 3 */
+
+font-family: 'Work Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 35px;
+line-height: 56px;
+/* identical to box height, or 160% */
+
+align-items: center;
+text-align: center;
+letter-spacing: -0.02em;
+
+/* Blue/Blue05 */
+
+color: #408CC6;
+
+}
+.getting-in{
+    padding: 40px;
+    gap: 32px;
+    
+    width: 1240px;
+    height: 598px;
+    
+    /* white */
+    
+    background: #FFFFFF;
+    /* S1 */
+    
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15), 0px 0px 15px 4px rgba(0, 0, 0, 0.02);
+    border-radius: 4px;
+    margin: 56px 50px 160px;
+}
+.getting-in span{
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 38px;
+    /* identical to box height, or 150% */
+    
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    
+    /* Grey/Grey07 */
+    
+    color: #8A8A8A;
+    
+}
+
+.getting-in p{
+/* Web/Body small */
+
+font-family: 'Work Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 28px;
+
+/* or 140% */
+
+
+/* Grey/Grey07 */
+
+color: #8A8A8A;
+}
+.text-uno{
+    width: 1159px;
+    height: 68px;
+    
+    /* Web/Body small */
+    
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    /* or 140% */
+    
+    /* Grey/Grey07 */
+    color: #8A8A8A;
+    
+}
+.text-duo{
+
+/* Auto layout */
+
+
+padding: 0px;
+gap: 8px;
+
+width: 750px;
+height: 114px;
+margin-top: 32px;
+}
+.text-trio{
+/* Auto layout */
+
+padding: 0px;
+gap: 8px;
+
+width: 750px;
+height: 74px;
+margin-top: 32px;
+
+}
+.text-quatro{
+/* Auto layout */
+
+padding: 0px;
+gap: 8px;
+
+width: 750px;
+height: 74px;
+margin-top: 32px;
+
+
+}
+.get-in-socials{
+/* Auto layout */
+
+display: flex;
+justify-content: center;
+align-items: flex-start;
+padding: 0px;
+gap: 16px;
+width: 189px;
+height: 60px;
+margin-top: 32px;
+
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 4;
+flex-grow: 0;
+}
+.get-in-socials img{
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    
+}
 
   /*Styling of the Footer starts here*/
 footer {
