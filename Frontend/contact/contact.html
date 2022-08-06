@@ -4,31 +4,91 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="../style.css"> -->
+    <link rel="stylesheet" href="contact.css">
     <title>Contact Us</title>
 </head>
 <body>
     <main>
         <header class="hero-section">
-            <nav>
-            <div class="logo">
-              <img src="./Home-Images/Horizontal Logo.svg" alt="" />
+          <nav>
+            <div class="logo generalflexselector">
+              <img src="./Horizontal Logo.png" alt="" />
             </div>
-            <ul>
+            <!--This is for Mobile-->
+            <div id="toogle-nav-list" class="nav__mobile-list">
+              <ul class="">
+                <li><a href="">Home</a></li>
+                <li><a href="">Privacy</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">Upload</a></li>
+              </ul>
+              <button class="login-btn"><a href="">Login</a></button>
+              <button class="signup-btn"><a href="">Sign Up</a></button>
+            </div>
+            <div class="hamburger">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
+            <!--This is the end of Mobile -->
+            <ul class="nav__list">
               <li><a href="">Home</a></li>
               <li><a href="">Privacy</a></li>
               <li><a href="">Contact</a></li>
+              <li><a href="">Upload</a></li>
             </ul>
             <div class="nav-btn">
-              <button class="login"><a href="">Login</a></button>
-            
+              <button class="login-btn"><a href="">Login</a></button>
+              <button class="signup-btn"><a href="">Sign Up</a></button>
             </div>
           </nav>
           
-            <button class="get-started">Get Started</button>
-          </div>
-          
         </header>
-       
+        
+        <footer>
+          <div class="footer-container">
+            <div class="resourses generalflexselector">
+              <h6>RESOURCES</h6>
+              <p>Customer Stories</p>
+              <p>Webinars</p>
+              <p>Featured Articles</p>
+              <p>Downloads</p>
+              <p>Documentation</p>
+            </div>
+            <div class="resourses">
+              <h6>RESOURCES</h6>
+              <p>Community & Support</p>
+              <p>Training</p>
+              <p>Startup Program</p>
+              <p>Academic Program</p>
+              <p><br /></p>
+            </div>
+            <div class="resourses">
+              <h6>COMPANY</h6>
+              <p>About</p>
+              <p>Blog</p>
+              <p>Contact</p>
+              <p>Jobs</p>
+              <p>Press</p>
+            </div>
+          </div>
+          <div class="footer-txt">
+            <p>Privacy | Website Terms of Use | Cookie Consent | COVID-19</p>
+            <p>© 2022 MetLab. All Rights Reserved</p>
+          </div>
+          <div class="social generalflexselector">
+            <div class="icon">
+              <img src="./Facebook.svg" alt="">            
+            </div>
+            <div class="icon">
+              <img src="./Telegram App.svg" alt="">
+            </div>
+            <div class="icon">
+              <img src="./Twitter.svg" alt="">
+            </div>
+          </div>
+        </footer>
       </main>
       
 </body>
