@@ -7,17 +7,12 @@
 body {
   font-family: "Work Sans";
   font-style: normal;
+  overflow-x: hidden;
 }
 .generalflexselector {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.overlay {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  opacity: 0.7;
 }
 .hero-section {
   background-image: url(/Frontend/Home-Images/Hero.png);
@@ -28,19 +23,7 @@ body {
   top: 0px;
   padding-top: 40px;
 }
-.bar {
-  display: block;
-  width: 25px;
-  height: 3px;
-  margin: 5px auto;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  background-color: #ffffff;
-}
-.hamburger {
-  display: none;
-  cursor: pointer;
-}
+
 /* This is the starting point for styling of the nav links */
 nav {
   padding: 0 20px;
@@ -48,6 +31,9 @@ nav {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+}
+.logo {
+  padding: 15px 30px 15px 50px;
 }
 nav ul {
   float: right;
@@ -92,6 +78,19 @@ nav ul li {
 }
 .nav__mobile-list {
   display: none;
+}
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #ffffff;
+}
+.hamburger {
+  display: none;
+  cursor: pointer;
 }
 @media (max-width: 720px) {
   .nav__mobile-list {
@@ -362,7 +361,7 @@ nav ul li {
   font-size: 20px;
   font-weight: 700;
   line-height: 30px;
-  text-align: center;
+  text-align: left;
   color: #408cc6;
 }
 .need-to-know .container .boxes ul {
@@ -395,7 +394,6 @@ nav ul li {
   color: #6f6f6f;
 }
 .need-to-know .start-btn {
-  flex-direction: row;
   padding-bottom: 80px;
 }
 .need-to-know .start-btn button {
@@ -407,11 +405,13 @@ nav ul li {
   border: 2px solid #56ccf2;
   margin: auto;
   font-size: 20px;
-  color: #408cc6;
   font-weight: 700;
   text-align: center;
   line-height: 16px;
-  cursor: pointer;
+}
+.need-to-know .start-btn button a {
+  color: #408cc6;
+  text-decoration: none;
 }
 /*This is the styling of the mobile view/responsiveness of the need-to-know section*/
 @media (max-width: 768px) {
@@ -453,16 +453,47 @@ nav ul li {
     border-radius: 15px;
     background-color: #ffffff;
     margin: 30px;
-    padding: 30px;
+    padding: 20px;
     transition: 0.3s;
+  }
+  .need-to-know .container .boxes .icon {
+    margin: auto;
+    width: 45px;
+    height: 45px;
+  }
+  .need-to-know .container .boxes h6 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: center;
+    color: #408cc6;
+  }
+  .need-to-know .container .boxes li {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: center;
+    padding: 7px 0;
+    list-style: none;
+    color: #6f6f6f;
+  }
+  .need-to-know .container .boxes p {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: center;
+    color: #6f6f6f;
+  }
+  .need-to-know .container .boxes ul li::before {
+    display: none;
   }
 }
 
 /*Styling of the Footer starts here*/
 footer {
   width: 100%;
-  height: 500px;
-  background: url(/Frontend/Home-Images/footer\ bg.png);
+  height: 100%;
+  background: url(Home-Images/footer\ bg.png);
 }
 .footer-container {
   width: 100%;
@@ -492,7 +523,7 @@ footer {
   color: #ffffff;
 }
 .footer-txt {
-  width: 1190px;
+  width: 100%;
   margin: auto;
 }
 .footer-txt p {
@@ -522,4 +553,11 @@ footer .social .icons i {
   padding: 5px;
   cursor: pointer;
   border-radius: 2px;
+}
+/*This is the styling of the mobile view/responsiveness of the footer*/
+@media (max-width: 768px) {
+  .footer-txt {
+    width: 100%;
+    margin: auto;
+  }
 }
