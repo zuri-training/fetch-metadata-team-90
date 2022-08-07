@@ -1,12 +1,128 @@
-{% extends "base.html" %}
-{% block title %}Register for Blango{% endblock %}
-{% block content %}
 
-<h2>Register</h2>
-<form method="post">
-  {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Sign up</button>
-  </form>
+{% extends 'base.html' %} 
+{% load static %}
+<title>{% block title %}sign up {% endblock %}</title>
+{% block css %}<link rel="stylesheet"  href="{% static 'css/signup.css' %}" /> {% endblock %}
 
-{% endblock %}
+
+{%block navbar%} {% endblock %}
+{% block content %} 
+   
+  <main>
+    <div class="box">
+      <div class="inner-box">
+        <div class="picture-side">
+          <div class="logo">
+            <img src="{% static 'signup-img/logo.svg' %}" alt="" />
+          </div>
+          <div class="heading-right">
+            <p>
+              A data extraction tool that can be used to extract data quickly and
+              effectively while providing accurate information about the data
+              being extracted.
+            </p>
+          </div>
+          <div class="image">
+            <img class="dots" src="{% static 'signup-img/25332_[Converted]_1.png' %}"  alt="" />
+            <img class="woman" src="{% static 'signup-img/woman _signup.png' %}" alt="" />
+            <img class="pattern" src="{% static 'signup-img/Patter_Bg.png' %}" alt="" />
+          </div>
+        </div>
+  
+        <div class="forms-wrapper">
+          <form method="post" action="">
+            {% csrf_token %}
+            <div class="heading">
+              <p class="big">Start for free</p>
+              <h3>Create new account</h3>
+              <p>Already a member?</p>
+              <a href="{% url 'login' %}">Log in</a>
+            </div>
+          
+        <div class="form__fields">
+            <div class="card-box">
+              <span class="details">E-mail Address</span>
+              {{ form.email.errors }}
+              <div class="test">
+                {{ form.email }}
+                <i
+                  style="position: absolute; margin-right: 15px"
+                  class="fa-regular fa-envelope"
+                ></i>
+              </div>
+            </div>
+            <div class="card-box">
+              <span class="details">Password</span>
+              {{ form.password1.errors }}
+              <div class="test">
+                {{ form.password1 }}
+                <span class="eye" onclick="myFunction()">
+                  <i id="hide1" class="fa-regular fa-eye"></i>
+                  <i id="hide2" class="fa-regular fa-eye-slash"></i>
+                </span>
+              </div>
+            </div>
+            <div class="card-box last">
+              <span class="details">Confirm password</span>
+              {{ form.password2.errors }}
+              <div class="test">
+                {{ form.password2 }}
+                <span class="eye" onclick="myFunction2()">
+                  <i id="hide3" class="fa-regular fa-eye"></i>
+                  <i id="hide4" class="fa-regular fa-eye-slash"></i>
+                </span>
+              </div>
+            </div>
+            
+            <div class="button">
+              <input type="submit" value="Create Account" />
+            </div>
+            <div class="buttom-text">
+              <p class="text">
+                By continuing with Google Apple or Email, I agree to MetLab's
+                <a href="#">Prvacy Policy</a> and
+                <a href="#">Terms of service</a>
+              </p>
+            </div>
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script>
+    function myFunction(){
+        var x = document.getElementById("myInput");
+        var y = document.getElementById("hide1");
+        var z = document.getElementById("hide2");
+  
+        if(x.type === 'password'){
+            x.type ="text";
+            y.style.display = "block";
+            z.style.display = "none";
+        }
+        else{
+            x.type ="password";
+            y.style.display = "none";
+            z.style.display = "block";
+        }
+    }
+    function myFunction2(){
+        var c = document.getElementById("myInput2");
+        var a = document.getElementById("hide3");
+        var b = document.getElementById("hide4");
+  
+        if(c.type === 'password'){
+            c.type ="text";
+            a.style.display = "block";
+            b.style.display = "none";
+        }
+        else{
+            c.type ="password";
+            a.style.display = "none";
+            b.style.display = "block";
+        }
+    }
+  </script>
+  {% endblock %}
+  

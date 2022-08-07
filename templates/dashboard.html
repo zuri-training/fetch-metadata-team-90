@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+    <title> THETA Shell and API Tests</title>
+</head>
+<body>
+        <h1>THETA Shell and API Tests</h1>
+        Must have exiftool and ImageMagick installed on system as well as images.
+        For the THETA API test, you must have the THETA connected to your 
+        workstation or laptop with Wi-Fi.
+        <ul>
+           {% if  request.user.is_authenticated %}
+                {{ request.user.username }}
+                {% for file in file_list %}
+                   <p>{{ file.title }}</p>
+                   <a class="btn btn-info" href="{{ file.get_absolute_url}}?q=view" target="_blank">View</a>
+                   <a href={{ file.get_absolute_url}}>Download</a>
+                {% endfor %}
+                
+           {% endif %}
+        </ul>
+    
+</body>
+</html>
