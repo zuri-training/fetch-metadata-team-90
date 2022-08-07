@@ -1,3 +1,4 @@
+from asyncore import write
 from django.db import models
 from django.db.models.signals import pre_save, post_save
 from PIL import Image
@@ -13,11 +14,30 @@ from PyPDF2 import PdfFileReader
 from .datetime import transform_date
 from pymediainfo import MediaInfo
 # Create your models here.
+class FileQuerySet(models.QuerySet):
+    def search(self, query):
+        if query is None or query == "":
+            return self.none()
+        return self.filter(file_name__icontains = query)
+
+class FileManagers(models.Manager):
+    def get_queryset(self):
+        return FileQuerySet(self.model, using=self._db)
+    
+    def search(self, query):
+        return self.get_queryset().search(query=query)
+
+
+
+
 class FileContent(models.Model):
     file = models.FileField(upload_to='uploaded_files/')
     file_name = models.CharField(max_length=280, null=True, blank=True)
     extracted_metaData = models.TextField(null=True, blank=True)
     extracted_text = models.TextField(null = True, blank=True)
+
+    objects = FileManagers()
+
 
 BASE_DIR = pathlib.Path(__file__).parent
 
@@ -65,7 +85,8 @@ def extracted_metadata(instance, save=False):
                 result.update(extra_data)
     if kind.extension == 'mp3' or kind.extension == 'mp4':
         media_info = MediaInfo.parse(file_path)
-        result = media_info.to_data()    
+        result = media_info.to_data()
+
     return result
     
 

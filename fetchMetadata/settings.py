@@ -172,5 +172,6 @@ class Dev(Configuration):
 class Prod(Dev):
     DEBUG=False
     SECRET_KEY = values.SecretValue()
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
     ALLOWED_HOSTS = values.ListValue(["localhost", "0.0.0.0"])
     # DATABASES = values.DatabaseURLValue(f"sqlite:///{BASE_DIR}/db.sqlite3")

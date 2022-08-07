@@ -1,4 +1,5 @@
 from django.db import models
+from django.apps import apps
 from django.contrib.auth.models import User
 from django.contrib.auth.models import AbstractUser, UserManager
 from django.conf import settings
@@ -12,8 +13,15 @@ class MetlabUserManager(UserManager):
 			raise ValueError("The given username must be set")
 		if not email:
 			raise ValueError("Email must be set")
-
-		user = self.model(email=self.normalize_email(email))
+		email = self.normalize_email(email)
+			# Lookup the real model class from the global app registry so this
+			# manager method can be used in migrations. This is fine because
+			# managers are by definition working on the real model.
+		GlobalUserModel = apps.get_model(
+				self.model._meta.app_label, self.model._meta.object_name
+			)
+		username = GlobalUserModel.normalize_username(username)
+		user = self.model(username=username, email=email, **extra_fields)
 		user.set_password(password)
 		user.save(using=self._db)
 		return user

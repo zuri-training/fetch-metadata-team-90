@@ -2,7 +2,7 @@
 
 ## **Description**
 
-This is a platform that fetches and extracts metadata from files uploaded by users.
+This is a platform that fetches and extracts metadata from files uploaded by users. Unauthenticated users can visit the platform and get the full information of what the website entails, only verified and authenticated users who are logged in can get full access to upload their files and extract metadata.
 
 ## **Contribution Guidelines**
 ### Follow these steps to begin your contribution
