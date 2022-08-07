@@ -12,7 +12,7 @@ urlpatterns = [
    	
     path('profile/edit', EditProfile, name='edit-profile'),
 	path('accounts/profile/', UserProfile, name='profile'),
-	path("accounts/signup/", RegistrationView.as_view(form_class=AuthyRegistrationForm), name="signup"),
+	path("accounts/signup/", RegistrationView.as_view(template_name="signup.html", form_class=AuthyRegistrationForm), name="signup"),
 	path("accounts/", include("allauth.urls")),
 	path('accounts/', include('django.contrib.auth.urls')),
 	
