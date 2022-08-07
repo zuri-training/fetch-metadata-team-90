@@ -12,9 +12,16 @@ This is a platform that fetches and extracts metadata from files uploaded by use
 * Open cloned repository in your code editor
 ### **For Backend:**
 * Create a virtual environment
+  * cd into your virtual environment
+* activate your virtual enviroment:
+  * ./scripts/activate for windows users
+  * ./bin/activate for mac-os users
+* cd fetch-metadata-team-90
 * On your terminal run:
   * pip install -r requirements.txt
   * python3 manage.py runserver
+* Create a superuser:
+  * python manage.py createsuperuser
 * Add your contributions/make changes
 * Commit with a descriptive message and push
 * Create a pull request
