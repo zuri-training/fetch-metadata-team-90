@@ -309,7 +309,6 @@ nav {
   flex-wrap: wrap;
 }
 .how-it-works .row .col-md-3 {
-  position: relative;
   flex-direction: column;
   width: 256px;
   height: 302px;
@@ -410,7 +409,6 @@ nav {
   flex-wrap: wrap;
 }
 .need-to-know .container .boxes {
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -549,6 +547,71 @@ nav {
     font-size: 16px;
   }
 }
+/*Styling of the faq starts here*/
+.faq {
+  background-color: #fafafa;
+}
+.faq h3 {
+  height: 56px;
+  width: 1240px;
+  font-size: 35px;
+  font-weight: 700;
+  text-align: center;
+  color: #66a3d2;
+}
+.accordion {
+  width: 70%;
+  max-width: 1000px;
+  margin: 30px auto;
+}
+.accordion-item {
+  background-color: #ffffff;
+  color: #6f6f6f;
+  margin: 20px 0;
+  border-radius: 4px;
+  box-shadow: 0px 13px 30px rgba(0, 0, 0, 0.25);
+}
+.accordion-item-header {
+  padding: 15px 25px 15px 20px;
+  display: flex;
+  min-height: 3.5rem;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 38px;
+  color: #6f6f6f;
+  position: relative;
+  align-items: center;
+  cursor: pointer;
+}
+.accordion-item-header::after {
+  /* content: "\002b"; */
+  content: "\25BE";
+  font-size: 50px;
+  position: absolute;
+  right: 25px;
+}
+.accordion-item-header.active::after {
+  /*content: "\2212";*/
+  transform: rotate(180deg);
+}
+.accordion-item-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.accordion-item-body-content {
+  padding: 16px;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: left;
+  width: 770px;
+  color: #6f6f6f;
+  font-size: 20px;
+  font-weight: 400;
+}
+/* .accordion-item-header.active + .accordion-item-body {
+  max-height: 500px;
+} */
 
 /*Styling of the Footer starts here*/
 footer {
@@ -567,7 +630,6 @@ footer {
 .footer-container .resourses {
   align-items: center;
   margin: 50px 50px;
-  position: relative;
   flex-direction: column;
 }
 .footer-container .resourses img {
@@ -620,7 +682,6 @@ footer .social {
 }
 footer .social .icons {
   margin: 20px 10px;
-  position: relative;
   display: flex;
   flex-direction: row;
 }
@@ -641,7 +702,6 @@ footer .social .icons i {
   .footer-container .resourses {
     display: flex;
     margin: 10px auto;
-    position: relative;
   }
   .footer-container {
     padding-top: 50px;
