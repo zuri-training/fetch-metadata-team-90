@@ -356,6 +356,52 @@ hr {
 
 
 }
+.drag-area{
+    border: 2px dashed #fff;
+    /* height: 400px; */
+    /* width: 700px; */
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 32px;
+  }
+  .drag-area.active{
+    border: 2px solid #fff;
+  }
+  .drag-area .icon{
+    font-size: 201px;
+    color: rgb(96, 168, 180);
+  }
+  .drag-area header{
+    font-size: 30px;
+    font-weight: 500;
+    color: rgb(18, 141, 150);
+  }
+  .drag-area span{
+    font-size: 25px;
+    font-weight: 500;
+    color: rgb(27, 100, 129);
+    margin: 10px 0 15px 0;
+  }
+  .drag-area button{
+    padding: 10px 25px;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    background: rgb(56, 156, 180);
+    color: #fdfdff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .drag-area img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+  }
 .upload-container {
     width: 645px;
     height: 412px;
@@ -442,7 +488,7 @@ input.extract-button:hover{
     background: #FFFFFF;
     box-shadow: 0px 2px 10px rgba(36, 24, 24, 0.1);
     border-radius: 4px;
-    margin: 24px;
+    margin: 60px 24px;
 
 
 }

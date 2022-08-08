@@ -11,6 +11,8 @@
   <link rel="icon" href="../favicon-16x16-blue.png">
   <title>Profile Page-Test</title>
     <link rel="stylesheet" href="profile.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
   </head>
   <body>
     <header class="nav-aside">
@@ -106,10 +108,21 @@
         </section>
         <section class="main-flow">
             <div class="upload-container">
-              <div class="upload-area">
+              <!-- <div class="upload-area">
                 <img src="./cloud-plus.svg" alt="">
                 <p>Drag and drop a file here or click to upload</p>
+              </div> -->
+
+              <div class="drag-area">
+                <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                <header>Drag & Drop to Upload File</header>
+                <span>OR</span>
+                <button>Browse File</button>
+                <input type="file" hidden>
               </div>
+              <script src="profile.js"></script>
+
+
               <div class="extraction-button">
                <input class="extract-button" type="submit" value="Extract Metadata">           
               </div>
