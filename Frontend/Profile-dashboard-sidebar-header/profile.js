@@ -2,7 +2,7 @@ const checkbox = document.querySelector("input[type='checkbox']");const body = d
 
 
 //selecting all required elements
-const dropArea = document.querySelector(".drag-area"),
+const dropArea = document.querySelector(".upload-area"),
 dragText = dropArea.querySelector("header"),
 button = dropArea.querySelector("button"),
 input = dropArea.querySelector("input");
