@@ -32,24 +32,21 @@ nav {
 .logo {
   padding: 15px 30px 15px 50px;
 }
-nav ul {
+.nav-menu {
   float: right;
-  margin-right: 100px;
+  margin-right: 50px;
 }
-nav ul li {
+.nav-menu li {
   display: inline;
   list-style: none;
 }
-header nav ul li a {
+.nav-menu li a {
   line-height: 28px;
   text-decoration: none;
   font-size: 20px;
   color: #ffffff;
-  margin-left: 60px;
+  padding-left: 60px;
   font-weight: 400;
-}
-.nav-btn {
-  margin: 0 30px;
 }
 .login-btn a,
 .signup-btn a {
@@ -64,6 +61,7 @@ header nav ul li a {
   background: transparent;
   border: 2px solid #ffffff;
   border-radius: 4px;
+  margin-left: 150px;
   margin-right: 15px;
 }
 .signup-btn {
@@ -91,25 +89,25 @@ header nav ul li a {
 }
 /*This is the styling of the mobile view/responsiveness header/nav section*/
 @media (max-width: 720px) {
-  .nav__mobile-list {
-    display: block;
+  .nav-menu {
     position: fixed;
     left: -100%;
+    top: 90px;
     flex-direction: column;
-    min-width: 72px;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin: 40px 0;
+    width: 100%;
+    height: 100%;
+    background-color: #408cc6;
+    transition: 0.3s;
+    text-align: center;
   }
-  .nav__mobile-list a {
+  .nav-menu li a {
     font-size: 18px;
+    padding: 10px 0;
+    margin: 10px 0;
+    display: block;
   }
-  .nav__mobile-list.active {
+  .nav-menu.active {
     left: 0;
-  }
-  .nav__list,
-  .nav-btn {
-    display: none;
   }
   .hamburger {
     display: block;
@@ -125,17 +123,14 @@ header nav ul li a {
   }
   .signup-btn,
   .login-btn {
-    width: 50%;
-    padding: 8px 16px;
-    margin-left: 100px;
+    padding: 8px 5px;
+    margin-left: 10px;
   }
-  header nav ul li a {
-    line-height: 20px;
+  .login-btn a,
+  .signup-btn a {
     font-size: 16px;
-    padding: 10px 0;
-    margin: 10px 0;
-    display: block;
   }
+
   .logo {
     margin: -25px;
   }
