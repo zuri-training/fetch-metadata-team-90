@@ -4,31 +4,152 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="../style.css"> -->
+    <link rel="stylesheet" href="contact.css">
+    <link rel="icon" href="../favicon-16x16-blue.png">
+
     <title>Contact Us</title>
 </head>
 <body>
     <main>
         <header class="hero-section">
-            <nav>
-            <div class="logo">
-              <img src="./Home-Images/Horizontal Logo.svg" alt="" />
+          <nav>
+            <div class="logo generalflexselector">
+              <img src="./Horizontal Logo.png" alt="" />
             </div>
-            <ul>
+            <!--This is for Mobile-->
+            <div id="toogle-nav-list" class="nav__mobile-list">
+              <ul class="">
+                <li><a href="">Home</a></li>
+                <li><a href="">Privacy</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">Upload</a></li>
+              </ul>
+              <button class="login-btn"><a href="">Login</a></button>
+              <button class="signup-btn"><a href="">Sign Up</a></button>
+            </div>
+            <div class="hamburger">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
+            <!--This is the end of Mobile -->
+            <ul class="nav__list">
               <li><a href="">Home</a></li>
               <li><a href="">Privacy</a></li>
               <li><a href="">Contact</a></li>
+              <li><a href="">Upload</a></li>
             </ul>
             <div class="nav-btn">
-              <button class="login"><a href="">Login</a></button>
-            
+              <button class="login-btn"><a href="">Login</a></button>
+              <button class="signup-btn"><a href="">Sign Up</a></button>
             </div>
           </nav>
           
-            <button class="get-started">Get Started</button>
-          </div>
-          
         </header>
-       
+
+        <!-- the drop a message section begins here -->
+
+        <div class="main-container generalflexselector">
+            <div class="drop-msg">
+              <div class="sub-title">
+                <h3>Drop us a message</h3>
+                <p>We will get back to you as soon as possible</p>
+              </div>
+              <form action="" autocomplete="on">
+                <label for="fname" class="fname">Full name:</label><br>
+                <input type="text" id="fname" name="fname" value="" placeholder="enter full name here" autofocus required><br><br>
+                <label for="email" class="fname">E-mail Address:</label><br>
+                <input type="text" id="email" name="email" value="" placeholder="name@gmail.com" autofocus required><br><br>
+                <label for="subject"class="fname">Subject:</label><br>
+                <input type="text" id="Subject" name="Subject" value="" placeholder="Select a topic to get started" autofocus required autocomplete="off"><br><br>
+                <label for="message" class="fname">Message:</label><br>
+                <input type="text" id="message" name="message" value="" placeholder="Drop us a message here" autofocus required autocomplete="off"><br><br>
+                <input type="submit" value="Submit" id="submit">
+              </form> 
+
+            </div>
+            <div class="contact-us">
+              <h1>Contact Us</h1>
+              <img src="./Man chatting remotely with woman colleague.svg" alt="">
+            </div>
+        </div>
+      
+              <!-- the drop a message section ends here -->
+              
+              <!-- the get in touch section begins here -->
+
+              <div class="sub-container">
+                <div class="get-in">
+                  <h3>Get in Touch</h3>
+                </div>
+                <div class="getting-in">
+                  <div class="text-uno">
+                    <p>Metlab is here to help you: <br> Our experts are available to answer any questions you might have. We've got the answers.</p>
+                  </div>
+                  <div class="text-duo">
+                    <p><span>BASED IN</span> <br> Lagos <br>Nigeria</p>
+                  </div>
+                  <div class="text-trio">
+                    <p><span>EMAIL US</span><br>info@metlab.com</p>
+                  </div>
+                  <div class="text-quatro">
+                    <p><span>CALL US</span><br>+44 04 24 54 94 MA4</p>
+                  </div>
+                  <div class="get-in-socials generalflexselector">
+                    <img src="./Facebook-blue.svg" alt="">
+                    <img src="./Instagram.svg" alt="">
+                    <img src="./Twitter Squared.svg" alt="">
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- the get in touch section ends here -->
+
+        <footer>
+          <div class="footer-container">
+            <div class="resourses generalflexselector">
+              <h6>RESOURCES</h6>
+              <p>Customer Stories</p>
+              <p>Webinars</p>
+              <p>Featured Articles</p>
+              <p>Downloads</p>
+              <p>Documentation</p>
+            </div>
+            <div class="resourses">
+              <h6>RESOURCES</h6>
+              <p>Community & Support</p>
+              <p>Training</p>
+              <p>Startup Program</p>
+              <p>Academic Program</p>
+              <p><br /></p>
+            </div>
+            <div class="resourses">
+              <h6>COMPANY</h6>
+              <p>About</p>
+              <p>Blog</p>
+              <p>Contact</p>
+              <p>Jobs</p>
+              <p>Press</p>
+            </div>
+          </div>
+          <div class="footer-txt">
+            <p>Privacy | Website Terms of Use | Cookie Consent | COVID-19</p>
+            <p>© 2022 MetLab. All Rights Reserved</p>
+          </div>
+          <div class="social generalflexselector">
+            <div class="icon">
+              <img src="./Facebook.svg" alt="">            
+            </div>
+            <div class="icon">
+              <img src="./Telegram App.svg" alt="">
+            </div>
+            <div class="icon">
+              <img src="./Twitter.svg" alt="">
+            </div>
+          </div>
+        </footer>
       </main>
       
 </body>
