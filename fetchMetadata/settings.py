@@ -159,7 +159,7 @@ class Dev(Configuration):
      
     
     
-
+    LOGIN_REDIRECT_URL = 'dashboard'
     LOGOUT_REDIRECT_URL = '/'
     
     # Default primary key field type

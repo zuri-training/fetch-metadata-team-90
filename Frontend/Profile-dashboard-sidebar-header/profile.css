@@ -385,21 +385,28 @@ hr {
     color: rgb(27, 100, 129);
     margin: 10px 0 15px 0;
   }
-  .drag-area button{
-    padding: 10px 25px;
-    font-size: 20px;
-    font-weight: 500;
+  .upload-area button{
     border: none;
     outline: none;
-    background: rgb(56, 156, 180);
-    color: #fdfdff;
-    border-radius: 5px;
+    color: #3eaaad;
     cursor: pointer;
-  }
-  .drag-area img{
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    align-items: center;
+    text-align: center;
+    color: #8A8A8A;
+      }
+    
+    .upload-area button:hover{
+    color:#0b324e
+    }
+  .upload-area img{
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    object-fit:contain;
     border-radius: 5px;
   }
 .upload-container {
@@ -419,18 +426,20 @@ hr {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 75px 120px;
     gap: 10px;
     margin-bottom: 40px;
     background: #EDF7FF;
     cursor: pointer;
     border: 3px dashed #1A75BB;
     border-radius: 4px;
+    height: 236px;
 }
-.upload-area img{
-    width: 50px;
-    height: 50px;
+.upload-area .cloud-icon{
+    width: 50px !important;
+    height: 50px !important;
 }
+
+
 .upload-area p{
     width: 440px;
     height: 28px;
