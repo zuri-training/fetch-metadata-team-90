@@ -651,3 +651,27 @@ footer .social .icons i {
     margin: 15px 20px;
   }
 }
+
+/*This is the styling for the scroll to top button
+.scroll-to-top{
+  position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 50px;
+    border: none;
+    display: none;
+  
+  
+    
+    z-index: 99; 
+  
+    outline: none; 
+    cursor: pointer; 
+     
+    
+}
+    
+#scrolltopbtn {
+    height: 100px;
+    width: 150px;
+}
