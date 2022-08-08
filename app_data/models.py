@@ -30,7 +30,6 @@ def user_directory_path(instance, filename):
 
 class FileUpload(models.Model):
     user = models.ForeignKey(UserModel, related_name='user_file', on_delete=models.CASCADE)
-    title = models.CharField(max_length=100)
     file = ContentTypeRestrictedFileField(
         upload_to=user_directory_path,
         content_types=content_types,
@@ -42,15 +41,17 @@ class FileUpload(models.Model):
     exif = ExifField(
         source='file',
     )
+    class Meta:
+        ordering = ['-created']
 
     def get_absolute_url(self):
         return reverse('details', kwargs={'pk': self.id})
     
     def __unicode__(self):
-        return self.title
+        return str(self.modefied)
     
     def __str__(self):
-        return self.title
+        return str(self.created)
 
 
 

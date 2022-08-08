@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 //This part is for the responsiveness of the navigation on mobile view and allows the hambuger to function well.
 
+=======
+//This is for the hamburger menu
+>>>>>>> 7982b1bb661a839e22afc890e79af1ee8dfbec0b
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 
@@ -15,6 +19,7 @@ document.querySelectorAll(".nav-link").forEach((n) =>
   })
 );
 
+<<<<<<< HEAD
 //js code for the accordion
 const accordionItemHeaders = document.querySelectorAll(
   ".accordion-item-header"
@@ -31,3 +36,20 @@ accordionItemHeaders.forEach((accordionItemHeaders) => {
     }
   });
 });
+=======
+/*This is for the scroll back to top button
+const scrollBtn = document.querySelector(".scroll-to-top")
+
+scrollBtn.addEventListener("click", () => {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+});
+
+document.addEventListener("scroll", (e) => {
+  if (document.documentElement.scrollTop <= 5000) {
+    scrollBtn.style.display = "none";
+  } else {
+    scrollBtn.style.display = "block";
+  }
+});*/
+>>>>>>> 7982b1bb661a839e22afc890e79af1ee8dfbec0b

@@ -1,6 +1,8 @@
-from django.shortcuts import render
-from .forms import ContactForm
-from django.views.generic import TemplateView, DetailView
+from django.shortcuts import render, get_object_or_404
+from .forms import ContactForm, FileUploadForm
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.views.generic import TemplateView, DetailView, CreateView
+from django.views import View
 from .models import FileUpload
 from io import BytesIO
 from django.http import HttpResponse
@@ -52,14 +54,31 @@ class ContactSuccess(TemplateView):
 
 
 
-class DashboardView(TemplateView):
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        # Add in a QuerySet of all the books
-        if self.request.user is None:
-            return
-        context['file_list'] = self.request.user.user_file.all()
-        return context
+class DashboardView(LoginRequiredMixin, View):
+    template_name = 'dashboard.html'
+    form = FileUploadForm
+    context = {'form': form} 
+    def get(self, request):
+        self.context['file_list'] = self.request.user.user_file.all()
+        return render(request, self.template_name, self.context)
+    
+    def post(self, request):
+        form = self.form(request.POST, request.FILES)
+        if form.is_valid():
+            _form = form.save(commit=False)
+            _form.user = request.user
+            saved_data = form.save()
+            print(saved_data)
+            if saved_data:
+                self.context['new_data'] = get_object_or_404(FileUpload, pk=saved_data.id).exif
+
+            self.context['file_list'] = self.request.user.user_file.all()
+            
+            return render(request, self.template_name, self.context)
+        else:
+            self.context['form'] = form
+            return render(request, self.template_name, self.context)
+
 
 
 
@@ -79,3 +98,17 @@ class FileUploadDetailView(DetailView):
         content = "attachment; filename='%s'" %(filename)
         response['Content-Disposition'] = content
         return response
+
+class ShareFileUploadDetailView(DetailView):
+    model = FileUpload
+    def get(self, request, *args, **kwargs):
+        obj = self.get_object()
+        pdf = render_to_pdf('pdf_template.html', {'data': obj.exif})
+        return HttpResponse(pdf, content_type='application/pdf')
+
+# class CreateFilePuloadView(LoginRequiredMixin, CreateView):
+#     model = FileUpload
+#     fields = ['file']
+#     def form_valid(self, form):
+#         form.instance.user = self.request.user
+#         return super().form_valid(form)
