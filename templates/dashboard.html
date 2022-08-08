@@ -26,7 +26,7 @@
              
                 {% endfor %}
                </ul>
-                <form method="post" enctype="multipart/form-data">
+                <form method="post" enctype="multipart/form-data" class="dropzone">
                   {% csrf_token %}
                   {{ form.file.errors }}
                  <label>File Upload: {{ form.file }}</label> 
