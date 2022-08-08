@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="../favicon-16x16-blue.png">
+    <link rel="icon" href="../favicon-16x16-blue.png" />
 
     <link
       rel="stylesheet"
@@ -15,34 +15,24 @@
   </head>
   <body>
     <main>
+      <!--This is for header-->
       <header>
         <nav>
           <div class="logo generalflexselector">
-            <img src="./Home-Images/Horizontal Logo.svg" alt="" />
+            <a href=""><img src="./Home-Images/Horizontal Logo.svg" /></a>
           </div>
-          <!--This is for Mobile-->
-          <div id="toogle-nav-list" class="nav__mobile-list">
-            <ul>
-              <li><a href="">Home</a></li>
-              <li><a href="">Privacy</a></li>
-              <li><a href="">Contact</a></li>
-              <li><a href="">Upload</a></li>
-            </ul>
-            <button class="login-btn"><a href="">Login</a></button>
-            <button class="signup-btn"><a href="">Sign Up</a></button>
-          </div>
-
-          <!--This is the end of Mobile -->
-          <ul class="nav__list btn">
-            <li><a href="">Home</a></li>
-            <li><a href="">About </a></li>
-            <li><a href="">Support</a></li>
-            <li><a href="">Meta Data</a></li>
+          <ul class="nav-menu">
+            <li><a href="" class="nav-link">Home</a></li>
+            <li><a href="" class="nav-link">About </a></li>
+            <li><a href="" class="nav-link">Support</a></li>
+            <li><a href="" class="nav-link">Meta Data</a></li>
+            <button class="login-btn">
+              <a href="" class="nav-link">Login</a>
+            </button>
+            <button class="signup-btn">
+              <a href="" class="nav-link">Sign Up</a>
+            </button>
           </ul>
-          <div class="nav-btn">
-            <button class="login-btn"><a href="">Login</a></button>
-            <button class="signup-btn"><a href="">Sign Up</a></button>
-          </div>
           <div class="hamburger">
             <span class="bar"></span>
             <span class="bar"></span>
@@ -50,6 +40,9 @@
           </div>
         </nav>
       </header>
+      <!--This is the end of header -->
+
+      <!--This is beginning of hero section-->
       <section class="hero-section">
         <div class="hero-content generalflexselector">
           <div class="left-cont">
@@ -70,6 +63,9 @@
           <img src="Home-Images/Animation.gif" alt="" />
         </div>
       </section>
+      <!--This is end of hero section-->
+
+      <!--This is beginning of how-it-works section-->
       <section class="how-it-works">
         <div class="services">
           <h3>How Metlab Works in 5 Simple Steps</h3>
@@ -126,6 +122,9 @@
           </div>
         </div>
       </section>
+      <!--This is end of how-it-works section-->
+
+      <!--This is beginning of need-to-know section-->
       <section class="need-to-know">
         <div class="first">
           <div class="left">
@@ -212,6 +211,9 @@
           <button><a href="">Start Extracting Data</a></button>
         </div>
       </section>
+      <!--This is end of need-to-know section-->
+
+      <!--This is beginning of faq section-->
       <scetion class="faq">
         <h3>Frequently Asked Questions</h3>
         <div class="accordion">
@@ -257,6 +259,7 @@
           </div>
         </div>
       </scetion>
+      <!--This is end of faq section-->
     </main>
     <footer>
       <div class="footer-container">
@@ -296,6 +299,6 @@
         </div>
       </div>
     </footer>
-    <script src="Landing-page/home.js"></script>
   </body>
+  <script src="home.js"></script>
 </html>
