@@ -8,7 +8,8 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
   />
-    <title>Profile Page-Test</title>
+  <link rel="icon" href="../favicon-16x16-blue.png">
+  <title>Profile Page-Test</title>
     <link rel="stylesheet" href="profile.css" />
   </head>
   <body>
@@ -42,21 +43,17 @@
 
       <div class="rate-us">
         <p>How would you rate us</p>
-        <span>
+        <div class="rates">
             <img src="./Star 1star.png" class="star" alt="" />
-          </span>
-          <span>
+              
             <img src="./Star 1star.png" class="star" alt="" />
-          </span>
-          <span>
+        
             <img src="./Star 1star.png" class="star" alt="" />
-          </span>
-          <span>
+        
             <img src="./Star 1star.png" class="star" alt="" />
-          </span>
-          <span>
+        
             <img src="./Star 1star.png" class="star" alt="" />
-          </span>
+          </div>
         </div>
       </div>
     </header>
@@ -66,9 +63,10 @@
                 <h3 class="bold-grey">Hello Jane</h3>
                 <p class="light-gray">Welcome!</p>
               </div>
-              <div>
-                <form action="">
-                  <input type="search" name="" id="" title="#" class="profile-search" />
+              <div class="search-bar">
+                <form class="search-forms" action="">
+                  <button class="search-button" type="submit">Search</button>
+                  <input type="search" name="" id="" title="#" class="profile-search"  placeholder="Search here" />
                 </form>
               </div>
               <div class="bell-toggle">
@@ -107,13 +105,47 @@
               
         </section>
         <section class="main-flow">
-            <div class="text-area">
-              <h3>Type here</h3>
-              <p>Look for section with class text-area</p>
-             
+            <div class="upload-container">
+              <div class="upload-area">
+                <img src="./cloud-plus.svg" alt="">
+                <p>Drag and drop a file here or click to upload</p>
+              </div>
+              <div class="extraction-button">
+               <input class="extract-button" type="submit" value="Extract Metadata">           
+              </div>
             </div>
+              <div class="result-container">
+                <h3>Result</h3>
+                <div class="result-details">
+                  <p>File Name:</p>
+                </div>
+                <div class="result-details">
+                  <p>File Size:</p>
+                </div>
+                <div class="result-details">
+                  <p>File Type:</p>
+                </div>
+                <div class="result-details">
+                  <p>Mime Type:</p>
+                </div>
+                <div class="result-details">
+                  <p>Image Size:</p>
+                </div>
+                <div class="result-details">
+                  <p>File Category:</p>
+                </div>
+                <div class="result-buttons">
+                  <input type="submit" value="Save" class="save-button" id="save-result">
+                  <input type="submit" value="View full info" class="view-button" id="view-result">
+                </div>
+              </div>
+              
+             
+           
         </section>
-        
+        <section class="right-side">
+          
+        </section>
     </main>
   </body>
 </html>
