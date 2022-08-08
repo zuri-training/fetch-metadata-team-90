@@ -4,8 +4,7 @@ from django.contrib.auth import get_user_model
 
 
 from exiffield.fields import ExifField
-from django.db.models.signals import post_save, pre_save
-from django.dispatch import receiver
+from exiffield.getters import exifgetter
 from .validators import validate_file_extension
 
 from .filechecker import ContentTypeRestrictedFileField
@@ -36,10 +35,14 @@ class FileUpload(models.Model):
         max_upload_size=max_upload_size,
         validators=[validate_file_extension]
     )
+    file_name =  models.CharField( editable=False, max_length=100, blank=True, null=True)
     created = models.DateTimeField('created', auto_now_add=True)
     modified = models.DateTimeField('modified', auto_now=True)
     exif = ExifField(
         source='file',
+        denormalized_fields={
+            'file_name': exifgetter('FileName'),
+        },
     )
     class Meta:
         ordering = ['-created']

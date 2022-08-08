@@ -9,6 +9,8 @@ from django.http import HttpResponse
 from django.template.loader import get_template
 from django.views import View
 from xhtml2pdf import pisa
+from django.views.decorators.cache import never_cache
+from django.utils.decorators import method_decorator
 
 # to be placed in a differn=ent file  
 def render_to_pdf(template_src, context_dict={}):
@@ -58,21 +60,25 @@ class DashboardView(LoginRequiredMixin, View):
     template_name = 'dashboard.html'
     form = FileUploadForm
     context = {'form': form} 
+    @method_decorator(never_cache)
     def get(self, request):
         self.context['file_list'] = self.request.user.user_file.all()
         return render(request, self.template_name, self.context)
-    
+    @method_decorator(never_cache)
     def post(self, request):
         form = self.form(request.POST, request.FILES)
         if form.is_valid():
             _form = form.save(commit=False)
             _form.user = request.user
             saved_data = form.save()
-            print(saved_data)
-            if saved_data:
-                self.context['new_data'] = get_object_or_404(FileUpload, pk=saved_data.id).exif
-
+            print(saved_data.file_name)
             self.context['file_list'] = self.request.user.user_file.all()
+            if saved_data:
+                self.context['new_data'] = self.context['file_list'][0].exif
+            else :
+                self.context['new_data'] = none
+
+            
             
             return render(request, self.template_name, self.context)
         else:
