@@ -1,1 +1,2 @@
-console.log('its working')
+const taskList = document.querySelector("#taskList");
+console.log(taskList.length())
