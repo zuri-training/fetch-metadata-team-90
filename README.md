@@ -11,6 +11,8 @@ This is a platform that fetches and extracts metadata from files uploaded by use
 * Clone the repository to your local machine using git clone https://github.com/zuri-training/fetch-metadata-team-90.git
 * Open cloned repository in your code editor
 ### **For Backend:**
+### Requirement 
+- install exiftool on your pc https://exiftool.org/
 * Create a virtual environment
   * cd into your virtual environment
 * activate your virtual enviroment:

@@ -213,16 +213,15 @@ i{
         width: 100%;
         height: 100%;
         top: 0;
-        left: 5%;
+        left: 0%;
+        right: 0%;
+        margin-left: 1rem;
         padding: 10px;
     }
     .picture-side .heading-right{
         Width:330px;
-        Height:114px;
-        Left:20px;
     }
     .picture-side .logo{
-        Left:20px;
         margin-bottom: 20px;
     }
     
@@ -230,7 +229,7 @@ i{
         width: 100%;
         Height:202px;
         Top:224px;
-        left: 3px;
+        left: 0px;
         position: absolute;
     }
     
@@ -245,10 +244,9 @@ i{
     }
     
     .pattern{
-        width: 374px;
+        width: 100%;
         Height:153px;
-        Top:273px;
-        left: 1px;
+        left: 0px;
         position: absolute;
         
     }
