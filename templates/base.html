@@ -41,7 +41,7 @@
           <a href="{% url 'profile'%}">Profile</a>
           <a href="{% url 'logout'%}">Log Out</a>
           {% else %}
-          <a href="{% url 'signup' %}">Register</a>
+          <a href="{% url 'django_registration_register' %}">Register</a>
           <a href="{% url 'login' %}">Log In</a>
           {% endif %}
         </div>
