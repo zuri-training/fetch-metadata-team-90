@@ -54,7 +54,10 @@ def Contact(request):
 class ContactSuccess(TemplateView):
     template_name = "contactsuccess.html"
 
-
+class PrivacyView(TemplateView):
+    template_name = 'privacy.html'
+class TeamsConditionView(TemplateView):
+    template_name = 'teams_condition.html'
 
 class DashboardView(LoginRequiredMixin, View):
     template_name = 'dashboard.html'
