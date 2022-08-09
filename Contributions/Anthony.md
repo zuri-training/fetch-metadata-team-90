@@ -16,24 +16,23 @@ FRONTEND:
     *  WORK ON DEFAULT MODE AND BETA; DARK MODE
     *  MAKE THE PAGES RESPONSIVE
 
-               {REFERENCE LINK}
-               * https://github.com/zuri-training/fetch-metadata-team-90/commit/4c44a070bbcddfecb215de5d1ad07788f727b46e
-               * https://github.com/zuri-training/fetch-metadata-team-90/commit/72b48271106ae4097d92b2334d59732a6e3a1e7e
-               * https://github.com/zuri-training/fetch-metadata-team-90/commit/0f28c4202d5dc25dc0bd480ea682707d42dcc377
-               * https://github.com/zuri-training/fetch-metadata-team-90/commit/6ed163e2f3d6cc0f4cf22b6dffca6df0674376fc
-               * https://github.com/zuri-training/fetch-metadata-team-90/commit/4c44a070bbcddfecb215de5d1ad07788f727b46e
-                
+          {REFERENCE LINK}
+          * https://github.com/zuri-training/fetch-metadata-team-90/commit/4c44a070bbcddfecb215de5d1ad07788f727b46e
+          * https://github.com/zuri-training/fetch-metadata-team-90/commit/72b48271106ae4097d92b2334d59732a6e3a1e7e
+          * https://github.com/zuri-training/fetch-metadata-team-90/commit/0f28c4202d5dc25dc0bd480ea682707d42dcc377
+          * https://github.com/zuri-training/fetch-metadata-team-90/commit/6ed163e2f3d6cc0f4cf22b6dffca6df0674376fc
+          * https://github.com/zuri-training/fetch-metadata-team-90/commit/4c44a070bbcddfecb215de5d1ad07788f727b46e
+           
   * ASSIGNED TO CREATE THE PROFILE DASHBOARD;
     *  WORK ON DEFAULT MODE AND BETA; DARK MODE
     *  MAKE THE PAGES RESPONSIVE
 
-               {REFERENCE LINK}
-               * https://github.com/zuri-training/fetch-metadata-team-90/commit/3f1d49021611908df14f821389dacbe31edf81ef
-               * https://github.com/zuri-training/fetch-metadata-team-90/commit/d31e56932755fe5c92492fd061e739b0b339f06d
-               * https://github.com/zuri-training/fetch-metadata-team-90/commit/c7651327a0c3f164e12e5701b372c356562ea745
-               * https://github.com/zuri-training/fetch-metadata-team-90/commit/d5e16a69bb5eb629b3dcfaa2c7424737229ea596
-               * https://github.com/zuri-training/fetch-metadata-team-90/commit/8f092fb9acda3599caa5c672de0225b6b295bb89
-
+         {REFERENCE LINK}
+         * https://github.com/zuri-training/fetch-metadata-team-90/commit/3f1d49021611908df14f821389dacbe31edf81ef
+         * https://github.com/zuri-training/fetch-metadata-team-90/commit/d31e56932755fe5c92492fd061e739b0b339f06d
+         * https://github.com/zuri-training/fetch-metadata-team-90/commit/c7651327a0c3f164e12e5701b372c356562ea745
+         * https://github.com/zuri-training/fetch-metadata-team-90/commit/d5e16a69bb5eb629b3dcfaa2c7424737229ea596
+         * https://github.com/zuri-training/fetch-metadata-team-90/commit/8f092fb9acda3599caa5c672de0225b6b29
 EXTRA:
   
    * * ASSIGNED TO MAKE THE FIRST PRESENTATION FOR THE TEAM
