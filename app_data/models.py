@@ -23,7 +23,7 @@ content_types = [
     'image/svg+xml',
     'text/csv',
     ]
-max_upload_size = 5242880 #5mb
+max_upload_size = 10485760 #5mb
 
 
 
@@ -32,8 +32,7 @@ class FileUpload(models.Model):
     file = ContentTypeRestrictedFileField(
         upload_to=user_directory_path,
         content_types=content_types,
-        max_upload_size=max_upload_size,
-        validators=[validate_file_extension]
+        max_upload_size=max_upload_size
     )
     file_name =  models.CharField( editable=False, max_length=100, blank=True, null=True)
     created = models.DateTimeField('created', auto_now_add=True)
