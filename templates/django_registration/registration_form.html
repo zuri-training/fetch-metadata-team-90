@@ -40,6 +40,11 @@
             </div>
           
         <div class="form__fields">
+          <div class="card-box">
+            <span class="details">Create Username</span>
+           {{form.username.errors}}
+           {{form.username}}
+        </div>
             <div class="card-box">
               <span class="details">E-mail Address</span>
               {{ form.email.errors }}

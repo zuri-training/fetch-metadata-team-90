@@ -1,12 +1,24 @@
-{% extends "base.html" %}
+{% extends 'base.html' %} 
+{% load static %}
+<title>{% block title %}Email Verified{% endblock %}</title>
+{% block css %}<link rel="stylesheet"  href="{% static 'css/styles_email_verified_success.css' %}" /> {% endblock %}
 
-{% block title %}Activation Complete{% endblock %}
-{% block content %}
 
+{%block navbar%} {% endblock %}
+{% block content %} 
 
-<h2>Activation Complete</h2>
-<p>Your account is now activated! You can now log in and
-use MetaApp.</p>
-<p><a href="{% url "login" %}">Log In</a></p>
+<img src="{% static 'svg/wgewrnet_1.svg' %}" alt="email verified" />
+    <div class="main-section">
+      <div class="top-section">
+        <h3>Congratulations, you're verified</h3>
+      </div>
+      <div class="middle-section">
+        <p>
+          Thank you for your support, we have successfully verified your email
+          adress. You can proceed to your home page.
+        </p>
+      </div>
+      <a href="{% url "login" %}"><button>Log In</button></a>
+    </div>
 
 {% endblock %}
