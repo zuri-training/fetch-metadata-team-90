@@ -13,6 +13,9 @@ This is a platform that fetches and extracts metadata from files uploaded by use
 ### **For Backend:**
 ### Requirement 
 - install exiftool on your pc https://exiftool.org/
+* Linux Users
+  * sudo apt install libimage-exiftool-perl
+* Windows USers
 * Create a virtual environment
   * cd into your virtual environment
 * activate your virtual enviroment:

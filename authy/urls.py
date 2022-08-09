@@ -12,12 +12,12 @@ urlpatterns = [
    	
     path('profile/edit', EditProfile, name='edit-profile'),
 	path('accounts/profile/', UserProfile, name='profile'),
-	path("accounts/signup/", RegistrationView.as_view(form_class=AuthyRegistrationForm), name="signup"),
-	# path("accounts/password/reset/", auth_views.PasswordResetView.as_view(), name='password_reset'),
+	path("accounts/register/", RegistrationView.as_view(form_class=AuthyRegistrationForm), name="django_registration_register"),
+	path("accounts/", include("django_registration.backends.activation.urls")),
 	path('accounts/', include('django.contrib.auth.urls')),
 	path("accounts/", include("allauth.urls")),
 	
-	path("accounts/", include("django_registration.backends.activation.urls"))
+	
 
 
 

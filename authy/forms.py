@@ -27,8 +27,26 @@ def UniqueUser(value):
 	if User.objects.filter(username__iexact=value).exists():
 		raise ValidationError('User with this username already exists.')
 class AuthyRegistrationForm(RegistrationForm):
+	username = forms.CharField(widget=forms.TextInput(), max_length=30, required=True,)
 	class Meta(RegistrationForm.Meta):
 		model = User
+		fields = ('username', 'email', 'password1')
+
+
+	def __init__(self, *args, **kwargs):
+		super(AuthyRegistrationForm, self).__init__(*args, **kwargs)
+		self.fields['username'].validators.append(ForbiddenUsers)
+		self.fields['username'].validators.append(InvalidUser)
+		self.fields['username'].validators.append(UniqueUser)
+	
+	# def clean(self):
+	# 	super(AuthyRegistrationForm, self).clean()
+	# 	password = self.cleaned_data.get('password')
+	# 	confirm_password = self.cleaned_data.get('password')
+
+	# 	if password != confirm_password:
+	# 		self._errors['password'] = self.error_class(['Passwords do not match. Try again'])
+	# 	return self.cleaned_data
 
 
 # class SignupForm(forms.ModelForm):
