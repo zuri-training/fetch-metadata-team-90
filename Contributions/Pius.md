@@ -17,7 +17,7 @@ UI:
 
 
 ISSUES CREATED
-* CONTACT PAGE UPDATE (  )
+* CONTACT PAGE UPDATE ( https://github.com/zuri-training/fetch-metadata-team-90/issues/68#issue-1331986516 )
 
 
 SOLUTIONS TO THE ISSUES CREATED
