@@ -31,6 +31,7 @@ nav {
 }
 .logo {
   padding: 15px 30px 15px 50px;
+  line-height: 28px;
 }
 .nav-menu {
   float: right;

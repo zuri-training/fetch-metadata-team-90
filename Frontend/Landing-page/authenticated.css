@@ -1,0 +1,62 @@
+.login-btn a {
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: 700;
+  color: #ffffff;
+}
+.login-btn {
+  padding: 15px 0;
+  color: #ffffff;
+  background: none;
+  border: none;
+  margin-left: 150px;
+  margin-right: 1px;
+}
+.login-btn a {
+}
+.signup-btn {
+  padding: 15px 0;
+  color: #ffffff;
+  background: none;
+  border: none;
+  margin-right: 50px;
+}
+.dropdown {
+  float: right;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  padding: 14px 16px;
+  background-color: inherit;
+  margin: auto;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #1a75bb;
+  z-index: 1;
+  height: 400px;
+}
+
+.dropdown-content a {
+  float: none;
+  color: white;
+  padding: 3px 4px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  color: #56ccf2;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
