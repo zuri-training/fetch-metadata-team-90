@@ -190,10 +190,7 @@ i{
   color: rgba(86, 204, 242, 1);
 }
 
-.errorlist{
-        color: red;
-        list-style: none;
-    }
+
 
 @media (max-width:375px){
   body{
