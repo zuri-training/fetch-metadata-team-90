@@ -7,12 +7,17 @@
 }
 body {
     width: 100%;
-    /* margin-top: 16px; */
-    padding: 16px;
+    margin-top: 16px;
+    padding: 10px;
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
-    
+    display: flex;
+}
 
+.main-flow-flex{
+    display: flex;
+    background: #FAFAFA;
+    width: 100%;
 
 }
 
@@ -27,8 +32,9 @@ body {
     box-shadow: 0px 2px 10px rgba(36, 24, 24, 0.1);
     border-radius: 4px;
     padding: 15px;
-    position: fixed;
-    left: 16px;
+    position: sticky;
+    top: 0;
+    /* left: 16px; */
 }
 .metlab-logo img {
     height: 42px;
@@ -36,24 +42,27 @@ body {
 }
 
 .section-container {
+    width: 83%;
     display: flex;
     flex-direction: column;
-    position: relative;
+    background: #FAFAFA;
+    /* position: relative; */
 }
 
 .head-section {
-    width: 82%;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 100px;
     box-shadow: 0px 2px 10px rgba(36, 24, 24, 0.1);
     border-radius: 4px;
-    position: fixed;
-    top: 16px;
-    right: 16px;
+    position: sticky;
+    top: 0px;
+    /* right: 16px; */
     z-index: 50;
     background-color: white;
+    margin: auto 20px;
 }
 .profile-pic-name {
     display: inherit;
@@ -273,11 +282,41 @@ hr {
     display: flex;
     flex-direction: column;
     gap: 15px;
+
 }
 .dash-section {
     width: 100%;
 
+
 }
+.dash-section:hover{
+    background-color: #1A75BB;
+}
+
+.light-gray {
+    color: #6F6F6F;
+    display: flex;
+    gap: 2vw;
+}
+.light-gray a {
+    text-decoration: none;
+    color: #6F6F6F;
+}
+.light-gray:hover,
+.light-gray:active,
+.light-gray:focus {
+    background-color: #EDF7FF;
+    color: #56CCF2;
+    transition: all 0.1s linear;
+}
+.light-gray a:hover,
+.light-gray a:active,
+.light-gray a:focus {
+    background-color: #EDF7FF;
+    color: #56CCF2;
+
+}
+
 .rate-us {
     width: 100%;
     height: 152px;
@@ -318,41 +357,19 @@ hr {
 .bold-grey {
     color: #535353;
 }
-.light-gray {
-    color: #6F6F6F;
-    display: flex;
-    gap: 2vw;
-}
-.light-gray a {
-    text-decoration: none;
-    color: #6F6F6F;
-}
-.light-gray:hover,
-.light-gray:active,
-.light-gray:focus {
-    background-color: #EDF7FF;
-    color: #56CCF2;
-    transition: all 0.1s linear;
-}
-.light-gray a:hover,
-.light-gray a:active,
-.light-gray a:focus {
-    background-color: #EDF7FF;
-    color: #56CCF2;
 
-}
 /* MAIN FLOW  STARTS*/
 .main-flow {
-    width: 84%;
+    width: 70%;
     
-    position: absolute;
-    top: 120px;
-    right: 0;
+    /* position: absolute; */
+    /* top: 120px; */
+    /* right: 0; */
     box-shadow: 0px 2px 10px rgba(36, 24, 24, 0.1);
     border-radius: 4px;
     display: flex;
     flex-wrap: wrap;
-    background: #FAFAFA;
+    /* background: #FAFAFA; */
 
 
 }
@@ -397,7 +414,7 @@ hr {
     line-height: 28px;
     align-items: center;
     text-align: center;
-    color: #8A8A8A;
+    background-color: transparent;
       }
     
     .upload-area button:hover{
@@ -613,11 +630,14 @@ input#view-result:hover{
 /* RIGHT_SIDE BEGINS HERE */
 
 .right-side{
-position: absolute;
-width: 30%;
-height: 1000px;
-left: 900px;
-top: 142px;
+/* position: absolute; */
+width: 50%;
+height: 900px;
+align-self: stretch;
+margin: 20px 10px 0 auto;
+
+/* left: 900px; */
+/* top: 142px; */
 
 background: #FFFFFF;
 /* Shadow */
