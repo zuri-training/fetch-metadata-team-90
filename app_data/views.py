@@ -1,7 +1,6 @@
 from .forms import ContactForm
 from django.views.generic import TemplateView, DetailView
-=======
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from .forms import ContactForm, FileUploadForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import TemplateView, DetailView, CreateView
@@ -79,7 +78,7 @@ class DashboardView(LoginRequiredMixin, View):
             if saved_data:
                 self.context['new_data'] = self.context['file_list'][0].exif
             else :
-                self.context['new_data'] = none
+                self.context['new_data'] = None
 
             
             

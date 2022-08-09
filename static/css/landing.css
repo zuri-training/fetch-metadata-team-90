@@ -15,7 +15,7 @@ body {
   align-items: center;
 }
 header {
-  background-image: url(Home-Images/Hero.png);
+  background-image: url(../img/Home-Images/Hero.png);
   width: 100%;
   height: 100%;
   padding-top: 40px;
@@ -144,7 +144,7 @@ header nav ul li a {
 .hero-section {
   width: 100%;
   padding-top: 100px;
-  background-image: url(Home-Images/Hero.png);
+  background-image: url(../img/Home-Images/Hero.png);
 }
 .hero-content {
   padding: 0 59px;
@@ -297,7 +297,7 @@ header nav ul li a {
 /*This is the styling for the section of 5 simple steps of how metlab works*/
 .how-it-works {
   background-color: #ffffff;
-  background: url(Home-Images/Vector2.svg);
+  background: url(../img/Home-Images/Vector2.svg);
   height: 100%;
   width: 100%;
 }
@@ -559,7 +559,7 @@ header nav ul li a {
 footer {
   width: 100%;
   height: 100%;
-  background: url({{STATIC_URL}}/Home-Images/footer\ bg.png);
+  background: url(../img/Home-Images/footer/bg.png);
 }
 .footer-container {
   width: 100%;
