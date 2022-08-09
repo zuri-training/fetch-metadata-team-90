@@ -25,7 +25,7 @@
         <div>
 
           {% if user.is_authenticated and user == profile.user %}
-          <a href="{% url 'edit-profile' %}">Edit Profile</a>
+          <a href="{% url 'edit-profile' user.id %}">Edit Profile</a>
           {% endif %}
 
         	{% if profile.location %}

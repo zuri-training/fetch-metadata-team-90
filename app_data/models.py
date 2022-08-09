@@ -8,7 +8,8 @@ from exiffield.getters import exifgetter
 from .validators import validate_file_extension
 
 from .filechecker import ContentTypeRestrictedFileField
-
+def user_directory_path(instance, filename):
+    return f'user_{instance.user.id}/{filename}'
 # Create your models here.
 UserModel = get_user_model()
 content_types = [
@@ -24,8 +25,7 @@ content_types = [
     ]
 max_upload_size = 5242880 #5mb
 
-def user_directory_path(instance, filename):
-    return f'user_{instance.user.id}/{filename}'
+
 
 class FileUpload(models.Model):
     user = models.ForeignKey(UserModel, related_name='user_file', on_delete=models.CASCADE)
