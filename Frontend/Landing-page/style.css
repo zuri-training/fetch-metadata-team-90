@@ -309,7 +309,6 @@ nav {
   flex-wrap: wrap;
 }
 .how-it-works .row .col-md-3 {
-  position: relative;
   flex-direction: column;
   width: 256px;
   height: 302px;
@@ -410,7 +409,6 @@ nav {
   flex-wrap: wrap;
 }
 .need-to-know .container .boxes {
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -549,6 +547,87 @@ nav {
     font-size: 16px;
   }
 }
+/*Styling of the faq starts here*/
+.faq {
+  padding: 80px 10px;
+  background-color: #fafafa;
+
+}
+.faq h3 {
+  height: 56px;
+  font-size: 35px;
+  font-weight: 700;
+  text-align: center;
+  color: #66a3d2;
+}
+.accordion {
+  width: 70%;
+  max-width: 1000px;
+  margin: 30px auto;
+}
+.accordion-item {
+  background-color: #ffffff;
+  color: #6f6f6f;
+  margin: 20px 0;
+  border-radius: 4px;
+  box-shadow: 0px 13px 30px rgba(0, 0, 0, 0.25);
+}
+.accordion-item-header {
+  padding: 15px 25px 15px 20px;
+  display: flex;
+  min-height: 3.5rem;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 38px;
+  position: relative;
+  align-items: center;
+  cursor: pointer;
+}
+.accordion-item-header::after {
+  content: "\25BE";
+  font-size: 50px;
+  color: #408cc6;
+  position: absolute;
+  right: 25px;
+}
+.accordion-item-header.active::after {
+  transform: rotate(180deg);
+}
+.accordion-item-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.accordion-item-body-content {
+  padding: 16px;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: left;
+  width: 770px;
+  font-size: 20px;
+  font-weight: 400;
+}
+/*This is the styling of the mobile view/responsiveness of the need-to-know section*/
+@media (max-width: 720px) {
+  .faq h3 {
+  font-size: 25px;
+  }
+  .accordion {
+  width: 80%;
+}
+.accordion-item-header {
+  font-size: 20px;
+}
+.accordion-item-header::after {
+  content: "\25BE";
+  font-size: 30px;
+}
+.accordion-item-body-content {
+  text-align: justify;
+  width: 100%;
+  font-size: 16px;
+}
+}
 
 /*Styling of the Footer starts here*/
 footer {
@@ -567,7 +646,6 @@ footer {
 .footer-container .resourses {
   align-items: center;
   margin: 50px 50px;
-  position: relative;
   flex-direction: column;
 }
 .footer-container .resourses img {
@@ -620,7 +698,6 @@ footer .social {
 }
 footer .social .icons {
   margin: 20px 10px;
-  position: relative;
   display: flex;
   flex-direction: row;
 }
@@ -641,7 +718,6 @@ footer .social .icons i {
   .footer-container .resourses {
     display: flex;
     margin: 10px auto;
-    position: relative;
   }
   .footer-container {
     padding-top: 50px;
@@ -649,6 +725,9 @@ footer .social .icons i {
   .footer-txt p {
     font-size: 16px;
     margin: 15px 20px;
+  }
+  .resourses{
+    padding: 20px;
   }
 }
 

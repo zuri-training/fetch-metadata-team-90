@@ -1,3 +1,4 @@
+//This part is for the responsiveness of the navigation on mobile view and allows the hambuger to function well.
 //This is for the hamburger menu
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
@@ -14,7 +15,35 @@ document.querySelectorAll(".nav-link").forEach((n) =>
   })
 );
 
+<<<<<<< HEAD
 /*This is for the scroll back to top button*/
+=======
+//js code for the accordion
+const accordionItemHeaders = document.querySelectorAll(
+  ".accordion-item-header"
+);
+accordionItemHeaders.forEach((accordionItemHeaders) => {
+  accordionItemHeaders.addEventListener("click", (event) => {
+    const currentlyActiveAccordionItemHeader = document.querySelector(
+      ".accordion-item-header.active"
+    );
+    if (
+      currentlyActiveAccordionItemHeader &&
+      currentlyActiveAccordionItemHeader !== accordionItemHeaders) {
+      currentlyActiveAccordionItemHeader.classList.toggle("active");
+      currentlyActiveAccordionItemHeader.nextElementSibling.style.maxHeight = 0;
+    }
+    accordionItemHeaders.classList.toggle("active");
+    const accordionItemBody = accordionItemHeaders.nextElementSibling;
+    if (accordionItemHeaders.classList.contains("active")) {
+      accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
+    } else {
+      accordionItemBody.style.maxHeight = 0;
+    }
+  });
+});
+/*This is for the scroll back to top button
+>>>>>>> bd80075e36e863789c90c155b1c309eb7852e522
 const scrollBtn = document.querySelector(".scroll-to-top")
 
 scrollBtn.addEventListener("click", () => {
@@ -28,6 +57,7 @@ document.addEventListener("scroll", (e) => {
   } else {
     scrollBtn.style.display = "block";
   }
+<<<<<<< HEAD
 });
 
 window.onscroll = function() {
@@ -47,3 +77,6 @@ function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+=======
+});*/
+>>>>>>> bd80075e36e863789c90c155b1c309eb7852e522
