@@ -1,42 +1,118 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} 
 {% load static %}
 
-        
-{% block content %}
+<title>{% block title %}Login{% endblock %}</title>
 
-<div>
-    <form method="post" action="" role="form" class="col s12">
+{% block css %}
+<link rel="stylesheet"  href="{% static 'css/login.css' %}" /> 
+<link rel="icon" href="{% static 'img/favicon-16x16-blue.png' %}">
+{% endblock %}
+
+
+{%block navbar%} {% endblock %}
+{% block content %} 
+<main>
+  <div class="box">
+      <div class="inner-box">
+
+   <div class="forms-wrapper">
+    <form method="post" action="" role="form">
     {% csrf_token %}
-    <h3>Login</h3>
-      <div >
-        <div>
-          {{ form.username }}
-          <label for="email">email</label>
+      <div class="heading">
+        <p class="big">Login to continue</p>
+        
+    </div>
+    
+    <div class="card-box">
+        <span class="details">E-mail Address</span>
+        <div class="test">
+          {{ form.email }}
+            <i style="position: absolute; margin-right: 15px;" class="fa-regular fa-envelope"></i>
         </div>
-      </div>
-       <div >
-        <div>
+        
+    </div>
+    <div class="card-box">
+        <span class="details">Password</span>
+        <div class="test">
           {{ form.password }}
-          <label for="password">Password</label>
+            <span class="eye" onclick="myFunction()">
+                <i id="hide1" class="fa-regular fa-eye"></i>
+                <i id="hide2" class="fa-regular fa-eye-slash"></i>
+        </span>
         </div>
-      </div>
+    </div>
+    <div class="remember-me">
+      <span>
+        <input type="checkbox" name="Remember me" id="Remember-me">
+        <label class="reminder" for="Remember-me">Remember me</label>
+      </span>
+        <a href="{% url 'password_reset' %}">Forgot password?</a>
+    </div>
+    <div class="button">
       {% if form.errors %}
       <div >
         <div>
-          <span >Your username or password did not match.</span>
+          <span class='errorlist'>Your username or password did not match.</span>
         </div>
       </div>
       {% endif %}
-      <button type="submit" value="login" >Login</button>
-      <input type="hidden" name="next" value="{{ next }}">
-      <p> Forgot Password?<a href="{% url 'password_reset' %}">Reset password</a></p>
-      <button > <a href="{% url 'django_registration_register' %}">Create an account</a>  </button>
+        <input type="submit" value="Login">
+        <input type="hidden" name="next" value="{{ next }}">
+    </div>
+
+    <div class="or">
+        <p>or</p>
+    </div>
+
+    <a class="google_text google_content" href="{% url "google_login" %}">
+        <img class="google" src="{% static 'img/flat-color-icons_google.png' %}" alt="">
+        <span>Log in with Google</span>
+    </a>
+    <div class="buttom-text">
+        <p class="text">
+            Don't have an account?
+            <a href="{% url 'django_registration_register' %}">Signup</a>
+        </p>
+    </div>
     </form>
-
-
-    <p>
-      <a href="{% url "google_login" %}">Log in with Google</a>
-      </p>
   </div>
+   
+  <div class="picture-side">
+      <div class="logo">
+          <img src="{% static 'svg/Horizontal_Logo.svg' %}" alt="">
+      </div>
+      <div class="heading-right">
+          <p>Welcome back.</p>
+      </div>
+      <div class="image">
+          <img class="dots" src="{% static 'signup-img/25332_[Converted]_1.png' %}" alt="">
+          <img class="man" src="{% static 'img/Man_chatting_on_dating_site.png' %}" alt="">
+          <img class="pattern" src="{% static 'signup-img/Patter_Bg.png' %}" alt="">
+        </div>
+      </div>
+  </div>
+</div>
+</main>
+<script>
+function myFunction(){
+var x = document.getElementById("myInput");
+var y = document.getElementById("hide1");
+var z = document.getElementById("hide2");
+
+if(x.type === 'password'){
+  x.type ="text";
+  y.style.display = "block";
+  z.style.display = "none";
+}
+else{
+  x.type ="password";
+  y.style.display = "none";
+  z.style.display = "block";
+}
+}
+</script>
+
+
+
 
 {% endblock %}

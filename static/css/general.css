@@ -1,0 +1,46 @@
+
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+.errorlist{
+    color: red;
+    list-style: none;
+}
+
+input[type=email]::-webkit-input-placeholder::before {
+    content: "name@gmail";
+}
