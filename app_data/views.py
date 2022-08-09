@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .forms import ContactForm
 from django.views.generic import TemplateView, DetailView
 from .models import FileUpload
@@ -7,7 +7,7 @@ from django.http import HttpResponse
 from django.template.loader import get_template
 from django.views import View
 from xhtml2pdf import pisa
-
+from django.utils import timezone
 # to be placed in a differn=ent file  
 def render_to_pdf(template_src, context_dict={}):
 	template = get_template(template_src)
