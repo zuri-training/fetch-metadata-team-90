@@ -33,9 +33,10 @@ FRONTEND:
          * https://github.com/zuri-training/fetch-metadata-team-90/commit/c7651327a0c3f164e12e5701b372c356562ea745
          * https://github.com/zuri-training/fetch-metadata-team-90/commit/d5e16a69bb5eb629b3dcfaa2c7424737229ea596
          * https://github.com/zuri-training/fetch-metadata-team-90/commit/8f092fb9acda3599caa5c672de0225b6b29
-EXTRA:
+
+* EXTRA:
   
-   * * ASSIGNED TO MAKE THE FIRST PRESENTATION FOR THE TEAM
+  * ASSIGNED TO MAKE THE FIRST PRESENTATION FOR THE TEAM
 
 
 ****                                                    ISSUES CREATED
@@ -46,7 +47,8 @@ EXTRA:
 
 ****                                                    SOLUTION TO ISSUES ASSIGNED TO / CREATED
 
-RECTIFIED THW FOOTER DESIGN FOR ALL 
-{REFERENCE LINK}
-* https://github.com/zuri-training/fetch-metadata-team-90/commit/f52a5c380e5fcb236a9356258f59a923911e43cb
+* RECTIFIED THE FOOTER DESIGN FOR ALL 
+
+        {REFERENCE LINK}
+        * https://github.com/zuri-training/fetch-metadata-team-90/commit/f52a5c380e5fcb236a9356258f59a923911e43cb
 
