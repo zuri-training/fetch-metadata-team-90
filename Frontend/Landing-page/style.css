@@ -549,11 +549,12 @@ nav {
 }
 /*Styling of the faq starts here*/
 .faq {
+  padding: 80px 10px;
   background-color: #fafafa;
+
 }
 .faq h3 {
   height: 56px;
-  width: 1240px;
   font-size: 35px;
   font-weight: 700;
   text-align: center;
@@ -578,20 +579,18 @@ nav {
   font-weight: 700;
   font-size: 25px;
   line-height: 38px;
-  color: #6f6f6f;
   position: relative;
   align-items: center;
   cursor: pointer;
 }
 .accordion-item-header::after {
-  /* content: "\002b"; */
   content: "\25BE";
   font-size: 50px;
+  color: #408cc6;
   position: absolute;
   right: 25px;
 }
 .accordion-item-header.active::after {
-  /*content: "\2212";*/
   transform: rotate(180deg);
 }
 .accordion-item-body {
@@ -605,13 +604,30 @@ nav {
   letter-spacing: 0em;
   text-align: left;
   width: 770px;
-  color: #6f6f6f;
   font-size: 20px;
   font-weight: 400;
 }
-/* .accordion-item-header.active + .accordion-item-body {
-  max-height: 500px;
-} */
+/*This is the styling of the mobile view/responsiveness of the need-to-know section*/
+@media (max-width: 720px) {
+  .faq h3 {
+  font-size: 25px;
+  }
+  .accordion {
+  width: 80%;
+}
+.accordion-item-header {
+  font-size: 20px;
+}
+.accordion-item-header::after {
+  content: "\25BE";
+  font-size: 30px;
+}
+.accordion-item-body-content {
+  text-align: justify;
+  width: 100%;
+  font-size: 16px;
+}
+}
 
 /*Styling of the Footer starts here*/
 footer {
@@ -709,6 +725,9 @@ footer .social .icons i {
   .footer-txt p {
     font-size: 16px;
     margin: 15px 20px;
+  }
+  .resourses{
+    padding: 20px;
   }
 }
 
