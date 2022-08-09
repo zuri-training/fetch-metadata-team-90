@@ -6,20 +6,15 @@ from .forms import ContactForm, FileUploadForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import TemplateView, DetailView, CreateView
 from django.views import View
->>>>>>> e19d33562c36cef663fec7bed7732d7c0475ed28
 from .models import FileUpload
 from io import BytesIO
 from django.http import HttpResponse
 from django.template.loader import get_template
 from django.views import View
 from xhtml2pdf import pisa
-<<<<<<< HEAD
 from django.utils import timezone
-=======
 from django.views.decorators.cache import never_cache
 from django.utils.decorators import method_decorator
-
->>>>>>> e19d33562c36cef663fec7bed7732d7c0475ed28
 # to be placed in a differn=ent file  
 def render_to_pdf(template_src, context_dict={}):
 	template = get_template(template_src)
