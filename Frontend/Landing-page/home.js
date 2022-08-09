@@ -15,9 +15,7 @@ document.querySelectorAll(".nav-link").forEach((n) =>
   })
 );
 
-<<<<<<< HEAD
-/*This is for the scroll back to top button*/
-=======
+
 //js code for the accordion
 const accordionItemHeaders = document.querySelectorAll(
   ".accordion-item-header"
@@ -42,8 +40,8 @@ accordionItemHeaders.forEach((accordionItemHeaders) => {
     }
   });
 });
-/*This is for the scroll back to top button
->>>>>>> bd80075e36e863789c90c155b1c309eb7852e522
+
+/*This is for the scroll back to top button*/
 const scrollBtn = document.querySelector(".scroll-to-top")
 
 scrollBtn.addEventListener("click", () => {
@@ -57,7 +55,6 @@ document.addEventListener("scroll", (e) => {
   } else {
     scrollBtn.style.display = "block";
   }
-<<<<<<< HEAD
 });
 
 window.onscroll = function() {
@@ -77,6 +74,3 @@ function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
-=======
-});*/
->>>>>>> bd80075e36e863789c90c155b1c309eb7852e522
