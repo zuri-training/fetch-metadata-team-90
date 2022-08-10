@@ -16,3 +16,7 @@ def test(request, *args, **kwargs):
         'object': object,
     }
     return render(request, 'metadata.html', context)
+
+def home(request, *args, **kwargs):
+
+    return render(request, 'index.html', {})
