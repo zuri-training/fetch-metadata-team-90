@@ -20,4 +20,4 @@ commit link  {https://github.com/zuri-training/fetch-metadata-team-90/commit/dd2
 Issues created: making a page responsive both mobile and desktop pages.
 
 
-solution: Instead of creating desktop page separate and mobile page separate,i created one page making it responsive for both mobile and desktop using media querry @media
+solution: Instead of creating desktop page separate and mobile page separate,i created one page making it responsive for both mobile and desktop using media querry @media.
