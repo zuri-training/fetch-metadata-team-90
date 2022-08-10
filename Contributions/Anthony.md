@@ -49,7 +49,7 @@ FRONTEND:
 
 * RECTIFIED THE FOOTER DESIGN FOR ALL 
 
-        {REFERENCE LINK}
+     {REFERENCE LINK}
      
 * https://github.com/zuri-training/fetch-metadata-team-90/commit/f52a5c380e5fcb236a9356258f59a923911e43cb
 
