@@ -61,56 +61,12 @@
   </div> {% endcomment %}
   {% include 'side_menu.html'%}
   <main class="section-container">
-    <section class="head-section">
-        <div>
-            <h3 class="bold-grey">Hello Jane</h3>
-            <p class="light-gray">Welcome!</p>
-        </div>
-        <div>
-            <form action="">
-                <input type="search" name="" id="" title="#" class="profile-search"/>
-            </form>
-        </div>
-        <div class="bell-toggle">
-            <div>
-                <i class="fa fa-bell fa_custom"></i>
-            </div>
-            <div>
-                <label class="switch">
-                    <input type="checkbox" title="#"/>
-                    <span class="slider round"></span>
-                </label>
-            </div>
-        </div>
-        <div class="profile-pic-name">
-            <div class="profile-pic">
-                <img src="user_photo.jpg" alt=""/>
-            </div>
-            <div>
-                <h5 bold-grey>Jane Doe</h5>
-            </div>
-            <div class="navbar">
-                <div class="dropdown">
-                    <button class="dropbtn" type="button" title="#">
-                        <i class="fa fa-caret-down"></i>
-                    </button>
-                    <div class="dropdown-content">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
-                    </div>
-                </div>
-            </div>
-    
-        </section>
+    {% include 'top_menu.html' %}
         <section class="main-flow">
             <div class="text-area left">
                 <div class="top-left">
                     <h3>Personal Information</h3>
-                    <img src=".user_photo.jpg" alt="" class="image">
+                    <img src="{% static 'img/user_photo.png' %}" alt="" class="image">
                     <form action="" method="" enctype="multipart/form-data">
                         <a href="">
                           <input type="button" value="Upload" class="btn upload">
