@@ -6,7 +6,7 @@ from django.views.generic.edit import UpdateView
 from django.views.generic.base import TemplateView
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import update_session_auth_hash
-
+from django.views.generic import RedirectView
 from authy.models import Profile
 from django.template import loader
 from django.http import HttpResponse
@@ -14,6 +14,8 @@ from django.contrib.auth import get_user_model
 User = get_user_model()
 
 
+class SignupRedirectView(RedirectView):
+    pass
 class UserProfile(LoginRequiredMixin, TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
