@@ -53,7 +53,51 @@
     </nav>
  {% endblock %}
     {% block content %} {% endblock %}
-    {% block footer %} {% endblock %}
+    {% block footer %}
+    <footer>
+      <div class="footer-container">
+          <div class="resourses generalflexselector">
+              <h6>RESOURCES</h6>
+              <p>Customer Stories</p>
+              <p>Webinars</p>
+              <p>Featured Articles</p>
+              <p>Downloads</p>
+              <p>Documentation</p>
+          </div>
+          <div class="resourses">
+              <h6>RESOURCES</h6>
+              <p>Community & Support</p>
+              <p>Training</p>
+              <p>Startup Program</p>
+              <p>Academic Program</p>
+              <p><br /></p>
+          </div>
+          <div class="resourses">
+              <h6>COMPANY</h6>
+              <p>About</p>
+              <p>Blog</p>
+              <p>Contact</p>
+              <p>Jobs</p>
+              <p>Press</p>
+          </div>
+      </div>
+      <div class="footer-txt">
+          <p>Privacy | Website Terms of Use | Cookie Consent | COVID-19</p>
+          <p>© 2022 MetLab. All Rights Reserved</p>
+      </div>
+      <div class="social generalflexselector">
+          <div class="icons">
+              <i class="fa-brands fa-facebook-f"></i>
+          </div>
+          <div class="icons">
+              <i class="fa-brands fa-instagram"></i>
+          </div>
+          <div class="icons">
+              <i class="fa-brands fa-twitter"></i>
+          </div>
+      </div>
+  </footer>
+    {% endblock %}
     <script  src="{% static 'js/test.js' %}"></script>
   </body>
 </html>
