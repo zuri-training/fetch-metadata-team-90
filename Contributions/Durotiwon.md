@@ -1,6 +1,6 @@
-## TRACK: FULLSTACK (FRONTEND)
+## TRACK: FULLSTACK
 
-## ROLE ON THE TEAM: FRONTEND
+## ROLE ON PROJECT: FRONTEND
 
 
 ## 1. Created the the landing page for the unauthenticated user.
