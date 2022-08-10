@@ -20,10 +20,32 @@
   * https://github.com/zuri-training/fetch-metadata-team-90/blob/main/Design/yellow%20padlock%20with%20key.png
 
   ### Created web pages on Figma: COMPLETED
-  * 
+  * https://www.figma.com/file/j5FgfRv5BeXPiNNGSXMXdw/Project-Team-90-team-library?node-id=1086%3A6904
+  * https://www.figma.com/file/j5FgfRv5BeXPiNNGSXMXdw/Project-Team-90-team-library?node-id=688%3A2432
+  * https://www.figma.com/file/j5FgfRv5BeXPiNNGSXMXdw/Project-Team-90-team-library?node-id=638%3A2961
+  * https://www.figma.com/file/j5FgfRv5BeXPiNNGSXMXdw/Project-Team-90-team-library?node-id=638%3A2990
+  * https://www.figma.com/file/j5FgfRv5BeXPiNNGSXMXdw/Project-Team-90-team-library?node-id=548%3A1573
+  * https://www.figma.com/file/j5FgfRv5BeXPiNNGSXMXdw/Project-Team-90-team-library?node-id=548%3A1559
+  * https://www.figma.com/file/j5FgfRv5BeXPiNNGSXMXdw/Project-Team-90-team-library?node-id=548%3A1587
+  * https://www.figma.com/file/j5FgfRv5BeXPiNNGSXMXdw/Project-Team-90-team-library?node-id=803%3A3833
+  * https://www.figma.com/file/j5FgfRv5BeXPiNNGSXMXdw/Project-Team-90-team-library?node-id=803%3A3881
+  * https://www.figma.com/file/j5FgfRv5BeXPiNNGSXMXdw/Project-Team-90-team-library?node-id=803%3A3764
+  * https://www.figma.com/file/j5FgfRv5BeXPiNNGSXMXdw/Project-Team-90-team-library?node-id=803%3A3743
+  * https://www.figma.com/file/j5FgfRv5BeXPiNNGSXMXdw/Project-Team-90-team-library?node-id=688%3A2448
 
   ### Created mobile pages on Figma: ONGOING
-  * 
+  * https://www.figma.com/file/j5FgfRv5BeXPiNNGSXMXdw/Project-Team-90-team-library?node-id=2023%3A16600
+  * https://www.figma.com/file/j5FgfRv5BeXPiNNGSXMXdw/Project-Team-90-team-library?node-id=2023%3A16511
+  * https://www.figma.com/file/j5FgfRv5BeXPiNNGSXMXdw/Project-Team-90-team-library?node-id=2065%3A27597
+  * https://www.figma.com/file/j5FgfRv5BeXPiNNGSXMXdw/Project-Team-90-team-library?node-id=2023%3A16348
+  * https://www.figma.com/file/j5FgfRv5BeXPiNNGSXMXdw/Project-Team-90-team-library?node-id=2023%3A16356
+  * https://www.figma.com/file/j5FgfRv5BeXPiNNGSXMXdw/Project-Team-90-team-library?node-id=2023%3A16365
+  * https://www.figma.com/file/j5FgfRv5BeXPiNNGSXMXdw/Project-Team-90-team-library?node-id=2023%3A16374
+  * https://www.figma.com/file/j5FgfRv5BeXPiNNGSXMXdw/Project-Team-90-team-library?node-id=2023%3A16381
+  * https://www.figma.com/file/j5FgfRv5BeXPiNNGSXMXdw/Project-Team-90-team-library?node-id=2023%3A16393
+  * https://www.figma.com/file/j5FgfRv5BeXPiNNGSXMXdw/Project-Team-90-team-library?node-id=2125%3A16184
+  * https://www.figma.com/file/j5FgfRv5BeXPiNNGSXMXdw/Project-Team-90-team-library?node-id=2510%3A15631
+  * https://www.figma.com/file/j5FgfRv5BeXPiNNGSXMXdw/Project-Team-90-team-library?node-id=2023%3A16540
 
 # ISSUES CREATED:
   * https://github.com/zuri-training/fetch-metadata-team-90/issues/21 - CLOSED
