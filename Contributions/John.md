@@ -1,11 +1,11 @@
 # TRACK: PRODUCT DESIGN
-  * John Ademiluyi (John Jade)
+  * ### John Ademiluyi (John Jade)
 
 # TASKS COMPLETED/ON-GOING 
 ## UX CONTRIBUTIONS: COMPLETED
-  * User Research 1 (SHARED WITH THE UX TEAM) - https://docs.google.com/document/d/1fpToZTLiRPtkazxkl25kjeIYJl_CKhfenYt1J5BZB6s/edit 
-  * User Research 2 (SHARED WITH THE UX TEAM) - https://docs.google.com/document/d/1QkNrROtmkiUoLXjbJKHOE8s_VzBmmPAM2BO3oWMb6dw/edit
-  * Sitemap,IA, Userflow (SHARED WITH THE UX TEAM) - [https://www.figma.com/file/5pXddhc3ReUoQLfPFDjF7W/METLAB?node-id=245%3A490](https://www.figma.com/file/5pXddhc3ReUoQLfPFDjF7W/METLAB--RESEARCH-DOCUMENTATION?node-id=0%3A1)
+  * **User Research 1 (SHARED WITH THE UX TEAM)** - https://docs.google.com/document/d/1fpToZTLiRPtkazxkl25kjeIYJl_CKhfenYt1J5BZB6s/edit 
+  * **User Research 2 (SHARED WITH THE UX TEAM)** - https://docs.google.com/document/d/1QkNrROtmkiUoLXjbJKHOE8s_VzBmmPAM2BO3oWMb6dw/edit
+  * **Sitemap,IA, Userflow (SHARED WITH THE UX TEAM)** - [https://www.figma.com/file/5pXddhc3ReUoQLfPFDjF7W/METLAB?node-id=245%3A490](https://www.figma.com/file/5pXddhc3ReUoQLfPFDjF7W/METLAB--RESEARCH-DOCUMENTATION?node-id=0%3A1)
 
 ## UI TASKS:
   ### Modified 3D elements (Animation & Images): COMPLETED
@@ -48,6 +48,6 @@
   * https://www.figma.com/file/j5FgfRv5BeXPiNNGSXMXdw/Project-Team-90-team-library?node-id=2023%3A16540
 
 # ISSUES CREATED:
-  * https://github.com/zuri-training/fetch-metadata-team-90/issues/107 - OPEN
-  * https://github.com/zuri-training/fetch-metadata-team-90/issues/21 - CLOSED
-  * https://github.com/zuri-training/fetch-metadata-team-90/issues/101 - CLOSED
+  * https://github.com/zuri-training/fetch-metadata-team-90/issues/107 - **OPEN**
+  * https://github.com/zuri-training/fetch-metadata-team-90/issues/21 - ~~**CLOSED**~~
+  * https://github.com/zuri-training/fetch-metadata-team-90/issues/101 - ~~**CLOSED**~~
