@@ -48,5 +48,6 @@
   * https://www.figma.com/file/j5FgfRv5BeXPiNNGSXMXdw/Project-Team-90-team-library?node-id=2023%3A16540
 
 # ISSUES CREATED:
+  * https://github.com/zuri-training/fetch-metadata-team-90/issues/107 - OPEN
   * https://github.com/zuri-training/fetch-metadata-team-90/issues/21 - CLOSED
   * https://github.com/zuri-training/fetch-metadata-team-90/issues/101 - CLOSED
