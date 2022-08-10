@@ -1,9 +1,39 @@
-{% extends "base.html" %}
+{% extends 'base.html' %} 
+{% load static %}
+<title>{% block title %}Email Verification{% endblock %}</title>
+{% block css %}<link rel="stylesheet"  href="{% static 'css/styles_email_verification.css' %}" /> {% endblock %}
 
-{% block title %}Registration Successful{% endblock %}
-{% block content %}
 
-<h2>Your registration was successful</h2>
-<p>Check your email to validate your account.</p>
+{%block navbar%} {% endblock %}
+{% block content %} 
 
+<img
+      src="{% static 'svg/opened_envelope.svg' %}"
+      class=""
+      alt="image verification"
+    />
+    <div class="one">
+      <div class="two">
+        <h2>Verify your account</h2>
+      </div>
+
+      <div class="three">
+        <p>
+          We've sent an email to
+          <strong class="new">your email </strong> address to verify
+          your email and activate your account. The link in the email will
+          expire in 7 days
+        </p>
+      </div>
+
+      <div class="four">
+        <p>
+          <a href="{% url 'django_registration_register' %}">Click here</a> if you did not receive an email or
+          would like to change the email address you signed up with.
+        </p>
+      </div>
+    </div>
+{% endblock %}
+
+{% block footer %}
 {% endblock %}

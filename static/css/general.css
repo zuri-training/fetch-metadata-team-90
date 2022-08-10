@@ -1,0 +1,123 @@
+
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+.errorlist{
+    color: red;
+    list-style: none;
+}
+
+input[type=email]::-webkit-input-placeholder::before {
+    content: "name@gmail";
+}
+
+
+
+/*Styling of the Footer starts here*/
+footer {
+  margin-top: 100px;
+  width: 100%;
+  height: 100%;
+  background: url('img/footer_bg.png');
+}
+.footer-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.footer-container .resourses {
+  margin: 50px 140px;
+  position: relative;
+  flex-direction: column;
+}
+.footer-container .resourses h6 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: center;
+  color: #ffffff;
+}
+.footer-container .resourses p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+  padding: 7px 0;
+  color: #ffffff;
+}
+.footer-txt {
+  width: 100%;
+  margin: auto;
+}
+.footer-txt p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+  margin: 15px auto;
+  color: #ffffff;
+}
+footer .social {
+  width: 100%;
+  flex-wrap: wrap;
+}
+footer .social .icons {
+  margin: 20px 10px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+footer .social .icons i {
+  font-size: 25px;
+  color: #408cc6;
+  background-color: #ffffff;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 2px;
+}
+/*This is the styling of the mobile view/responsiveness of the footer*/
+@media (max-width: 768px) {
+  .footer-txt {
+    width: 100%;
+    margin: auto;
+  }
+}
+

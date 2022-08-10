@@ -7,7 +7,7 @@
 <div>
 <div>
     <div>
-      <div >
+      <div>
         <div>
           {% if profile.picture %}
           <a href="{{ profile.get_absolute_url }}"><img id="img-circle-custom-profile" src="{{ profile.picture.url }}"></a>
@@ -25,7 +25,7 @@
         <div>
 
           {% if user.is_authenticated and user == profile.user %}
-          <a href="{% url 'edit-profile' %}">Edit Profile</a>
+          <a href="{% url 'edit-profile' user.id %}">Edit Profile</a>
           {% endif %}
 
         	{% if profile.location %}
@@ -49,3 +49,5 @@
   </div>
 
 {% endblock %}
+{%block footer %}
+{%endblock%}

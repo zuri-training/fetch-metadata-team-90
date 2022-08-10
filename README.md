@@ -11,10 +11,22 @@ This is a platform that fetches and extracts metadata from files uploaded by use
 * Clone the repository to your local machine using git clone https://github.com/zuri-training/fetch-metadata-team-90.git
 * Open cloned repository in your code editor
 ### **For Backend:**
+### Requirement 
+- install exiftool on your pc https://exiftool.org/
+* Linux Users
+  * sudo apt install libimage-exiftool-perl
+* Windows USers
 * Create a virtual environment
+  * cd into your virtual environment
+* activate your virtual enviroment:
+  * ./scripts/activate for windows users
+  * ./bin/activate for mac-os users
+* cd fetch-metadata-team-90
 * On your terminal run:
   * pip install -r requirements.txt
   * python3 manage.py runserver
+* Create a superuser:
+  * python manage.py createsuperuser
 * Add your contributions/make changes
 * Commit with a descriptive message and push
 * Create a pull request

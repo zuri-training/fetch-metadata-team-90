@@ -44,6 +44,7 @@ class Dev(Configuration):
         'django.contrib.sites',
         'authy',
         'app_data',
+        "metadata_extraction",
         'allauth', 
         'allauth.account', 
         'allauth.socialaccount',
@@ -84,7 +85,11 @@ class Dev(Configuration):
                     'django.template.context_processors.request',
                     'django.contrib.auth.context_processors.auth',
                     'django.contrib.messages.context_processors.messages',
+                    
                 ],
+                'builtins': [
+                'authy.templatetags.placeholder',
+                ]
             },
         },
     ]
@@ -158,7 +163,7 @@ class Dev(Configuration):
      
     
     
-
+    LOGIN_REDIRECT_URL = 'dashboard'
     LOGOUT_REDIRECT_URL = '/'
     
     # Default primary key field type

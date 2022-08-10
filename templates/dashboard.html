@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+    <title> THETA Shell and API Tests</title>
+</head>
+<body>
+        <h1>THETA Shell and API Tests</h1>
+        Must have exiftool and ImageMagick installed on system as well as images.
+        For the THETA API test, you must have the THETA connected to your 
+        workstation or laptop with Wi-Fi.
+        <ul>
+           {% if  request.user.is_authenticated %}
+                {{ request.user.username }}
+                <ul id="taskList">
+                {% for file in file_list %}
+                <li>
+                   <a class="btn btn-info" href="{{ file.get_absolute_url}}?q=view" target="_blank">View</a>
+                   <a href={{ file.get_absolute_url}}>Download</a>
+                   <a class="btn btn-info shareLink" href="{% url 'share' file.id %}" target="_blank">Share</a>
+                </li>
+             
+                {% endfor %}
+               </ul>
+                <form method="post" enctype="multipart/form-data" class="dropzone">
+                  {% csrf_token %}
+                  {{ form.file.errors }}
+                 <label>File Upload: {{ form.file }}</label> 
+                  <input type="submit" value="Save">
+              </form>
+
+              <div>
+                 {% if new_data %}
+                 <table>
+                  {% for key, value in new_data.items %}
+                     <tr>
+                      <td>{{ value.desc }}: {{ value.val }}</td>
+                     </tr>
+                  {% endfor %}
+              </table>
+                 {% endif %}
+              </div>
+           {% endif %}
+        </ul>
+    <script>
+       const shareLink = document.querySelectorAll(".shareLink")
+       shareLink.forEach(share => {
+         share.addEventListener('click', function (event) {
+            event.preventDefault()
+           console.log(share.href);
+           navigator.clipboard.writeText(share.href)
+      
+         });
+       });
+
+    </script>
+   
+</body>
+</html>

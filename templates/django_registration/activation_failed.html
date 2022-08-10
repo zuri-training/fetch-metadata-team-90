@@ -1,9 +1,41 @@
-{% extends "base.html" %}
+{% extends 'base.html' %} 
+{% load static %}
+<title>{% block title %}Email Verification Failed{% endblock %}</title>
+{% block css %}<link rel="stylesheet"  href="{% static 'css/styles_email_verification_failed.css' %}" /> {% endblock %}
 
-{% block title %}Activation Failed{% endblock %}
-{% block content %}
 
-<h2>Activation Failed</h2>
-<p>Sorry, we couldn't activate your account.</p>
-<p>{{ activation_error.message }}</p>
+{%block navbar%} {% endblock %}
+{% block content %} 
+
+<div class="main">
+
+    <img src="{% static 'svg/close_window.svg' %}" class="head" alt="email verification failed">
+    
+    <div class="one">
+        
+        <div class="two">
+            <h1>Account verification failed!</h1>
+        </div>
+        
+        <div class="three">
+            <h4>Don't worry. Enter the email address associated with your account and we'll resend the link to verify your email.</h4>
+            <p>{{ activation_error.message }}</p>
+        </div>
+        <p>
+            <a href="{% url 'django_registration_register' %}">Sign Up</a>
+        </p>
+        
+        {% comment %} <form method='POST' action="" class="four">
+            <label for="email">E-mail Address</h4>
+            <div class="email__container">
+                <input id="email" type="email" placeholder="name@gmail.com" >
+                <img src="{% static 'svg/sms.svg' %}" alt="message">
+            </div>
+            <button type="submit">Click here to resend verification email</button>
+        </form> {% endcomment %}
+    </div>
+
+{% endblock %}
+
+{% block footer %}
 {% endblock %}
