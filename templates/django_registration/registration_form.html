@@ -85,7 +85,7 @@
               <p class="text">
                 By continuing with Google Apple or Email, I agree to MetLab's
                 <a href="{% url 'privacy' %}">Prvacy Policy</a> and
-                <a href="#">Terms of service</a>
+                <a href="{% url 'teams_conditions' %}">Terms of service</a>
               </p>
             </div>
           </div>
@@ -130,4 +130,5 @@
     }
   </script>
   {% endblock %}
-  
+  {% block footer %}
+  {% endblock %}
