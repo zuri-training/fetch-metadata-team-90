@@ -1,7 +1,0 @@
-## Built email verification page: 
-
-
-
-
-
-
