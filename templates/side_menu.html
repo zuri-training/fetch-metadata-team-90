@@ -7,9 +7,10 @@
     <hr>
     <div class="dash">
         <div>
-            <P class="light-gray">
+            <a href="{% url 'dashboard' %}" class="light-gray">
                 <span><img src="{% static 'svg/menu.svg' %}" alt=""></span>
-                Dashboard</P>
+                Dashboard
+            </a>
         </div>
         <div class="dash-section">
             <nav class="light-gray">
@@ -29,7 +30,7 @@
         <div class="dash-section">
             <nav class="light-gray">
                 <span><img src="{% static 'svg/setting-2.svg' %}" alt=""></span>
-                <a href="">Settings</a>
+                <a href="{% url 'edit-profile' request.user.id %}">Settings</a>
             </nav>
         </div>
         <div class="dash-section">
@@ -41,7 +42,7 @@
         <div class="dash-section">
             <nav class="light-gray">
                 <span><img src="{% static 'svg/logout.svg' %}" alt=""></span>
-                <a href="">Log Out</a>
+                <a href="{% url 'logout' %}">Log Out</a>
             </nav>
         </div>
     </div>
