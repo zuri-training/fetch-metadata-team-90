@@ -14,85 +14,66 @@
     justify-content: center;
     align-items: center;
   }
-  .overlay {
+  header {
+    background-image: url(./Hero.png);
     width: 100%;
     height: 100%;
-    position: absolute;
-    opacity: 0.7;
-  }
-  .hero-section {
-    /* background-image: url(/Frontend/Home-Images/Hero.png); */
-    width: 100%;
-    /* height: 1369px; */
-    left: 0px;
-    right: 0px;
-    top: 0px;
     padding-top: 40px;
-  } 
-.bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    background-color: #ffffff;
   }
-  .hamburger {
-    display: none;
-    cursor: pointer;
-  }
-  /* This is the starting point for styling of the nav links */
+   /* This is the starting point for styling of the nav links */
   
-  .logo img{
-    width: 132px;
-    height: 42px;
-  }
-  nav {
+   nav {
     padding: 0 20px;
     line-height: 98px;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
   }
-  nav ul {
-    float: right;
-    margin-right: 100px;
+  .logo {
+    padding: 15px 30px 15px 50px;
+    line-height: 28px;
   }
-  nav ul li {
+  .logo img{
+    width: 132px;
+height: 42px;
+  }
+  .nav-menu {
+    float: right;
+    margin-right: 50px;
+  }
+  .nav-menu li {
     display: inline;
     list-style: none;
   }
-  .hero-section nav ul li a {
+  .nav-menu li a {
     line-height: 28px;
     text-decoration: none;
     font-size: 20px;
-    color: #212121;
-    margin-left: 60px;
+    color:#212121;
+    padding-left: 60px;
     font-weight: 400;
   }
-  .nav-btn {
-    margin: 0 30px;
-  }
-  .login-btn a,
+  
   .signup-btn a {
     font-size: 20px;
     text-decoration: none;
     font-weight: 700;
     color: #ffffff;
   }
-  .login-btn a {
+
+  .login-btn a{
     font-size: 20px;
     text-decoration: none;
     font-weight: 700;
-    color: #56CCF2;
+    color: #56CCF2;;
   }
   .login-btn {
     padding: 15px 35px;
-    color: #56CCF2;
+    color: #ffffff;
     background: transparent;
-    border: 2px solid #56CCF2;
+    border: 2px solid #56CCF2;;
     border-radius: 4px;
+    margin-left: 150px;
     margin-right: 15px;
   }
   .signup-btn {
@@ -104,6 +85,19 @@
   }
   .nav__mobile-list {
     display: none;
+  }
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #ffffff;
+  }
+  .hamburger {
+    display: none;
+    cursor: pointer;
   }
   
   /* This is the ending point for styling of the nav links */
@@ -126,6 +120,7 @@
   /* the drop a message section styling begins here */
 .main-container{
    gap: 125px;
+   margin-top: 140px;
    margin-bottom: 32px;
 }
 
@@ -136,7 +131,7 @@ width: 505px;
 
 }
 .sub-title{
-    text-align: center;
+    /* text-align: center; */
     margin-bottom: 32px;
 
 }
@@ -144,33 +139,16 @@ form{
 
 }
 .sub-title h3{
-/* Drop us a message */
-
-
 width: 434px;
 height: 56px;
-
-/* Web/Header 3 */
-
 font-family: 'Work Sans';
 font-style: normal;
 font-weight: 700;
 font-size: 35px;
 line-height: 56px;
-/* identical to box height, or 160% */
-
 letter-spacing: -0.02em;
-
-/* Blue/Blue05 */
-
 color: #408CC6;
-
-
-/* Inside auto layout */
-
-flex: none;
-order: 0;
-flex-grow: 0;
+margin-bottom: 26px;
 }
 .sub-title p{
 /* We will get back to you as soon as possible */
@@ -384,87 +362,55 @@ flex-grow: 0;
 }
 
 .contact-us{
-
+margin-top: -70px;
 }
 
 .contact-us h1{
     width: 317px;
     height: 102px;
-  
-    /* Web/Header 1 */
     font-family: 'Work Sans';
     font-style: normal;
     font-weight: 700;
     font-size: 60px;
     line-height: 102px;
-    /* identical to box height, or 170% */
-    /* display: flex; */
     align-items: center;
     text-align: center;
     letter-spacing: -0.02em;
-    
-    /* Blue/Blue05 */
-      color: #408CC6;
-      margin-left: 210px;
-      margin-bottom: 28.9px;
+    color: #408CC6;
+     margin-left: 210px;
+     margin-bottom: 28.9px;
 }
 .contact-us img{
-    /* Man chatting remotely with woman colleague */
 width: 610px;
-/* right: 100px; */
-
 }
-  /* the drop a message section styling ends here */
+/* the drop a message section styling ends here */
 
 
 /* the get in touch section styling begins here */
 
 
-/* the get in touch section styling ends here */
-.sub-container{
-
-}
 .get-in h3{
-/* Get in Touch */
-margin: 160px 0px 0px 100px;
-
-
+margin: 20px 0 20px 5px;
 width: 209px;
-height: 56px;
-
-/* Web/Header 3 */
-
 font-family: 'Work Sans';
 font-style: normal;
 font-weight: 700;
 font-size: 35px;
 line-height: 56px;
-/* identical to box height, or 160% */
-
 align-items: center;
 text-align: center;
 letter-spacing: -0.02em;
-
-/* Blue/Blue05 */
-
 color: #408CC6;
 
 }
 .getting-in{
     padding: 40px;
     gap: 32px;
-    
     width: 1240px;
-    height: 598px;
-    
-    /* white */
-    
     background: #FFFFFF;
-    /* S1 */
-    
     box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15), 0px 0px 15px 4px rgba(0, 0, 0, 0.02);
     border-radius: 4px;
-    margin: 56px 50px 160px;
+    margin: 56px 50px 183px;
 }
 .getting-in span{
     font-family: 'Work Sans';
@@ -472,104 +418,48 @@ color: #408CC6;
     font-weight: 700;
     font-size: 25px;
     line-height: 38px;
-    /* identical to box height, or 150% */
-    
     letter-spacing: -0.02em;
     text-transform: uppercase;
-    
-    /* Grey/Grey07 */
-    
     color: #8A8A8A;
     
 }
 
 .getting-in p{
-/* Web/Body small */
-
 font-family: 'Work Sans';
 font-style: normal;
 font-weight: 400;
 font-size: 20px;
 line-height: 28px;
-
-/* or 140% */
-
-
-/* Grey/Grey07 */
-
 color: #8A8A8A;
 }
+
 .text-uno{
     width: 1159px;
-    height: 68px;
-    
-    /* Web/Body small */
-    
+    /* height: 68px; */
     font-family: 'Work Sans';
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 28px;
-    /* or 140% */
-    
-    /* Grey/Grey07 */
     color: #8A8A8A;
     
 }
-.text-duo{
-
-/* Auto layout */
-
-
+.text-duo, .text-trio,.text-quatro{
 padding: 0px;
 gap: 8px;
-
 width: 750px;
 height: 114px;
-margin-top: 32px;
+margin-top: 24px;
 }
-.text-trio{
-/* Auto layout */
-
-padding: 0px;
-gap: 8px;
-
-width: 750px;
-height: 74px;
-margin-top: 32px;
-
-}
-.text-quatro{
-/* Auto layout */
-
-padding: 0px;
-gap: 8px;
-
-width: 750px;
-height: 74px;
-margin-top: 32px;
 
 
-}
+
 .get-in-socials{
-/* Auto layout */
-
-display: flex;
 justify-content: center;
 align-items: flex-start;
-padding: 0px;
 gap: 16px;
 width: 189px;
-height: 60px;
-margin-top: 32px;
-
-
-
-/* Inside auto layout */
-
-flex: none;
-order: 4;
-flex-grow: 0;
+margin: 10px 0 20px;
 }
 .get-in-socials img{
     width: 60px;
@@ -578,25 +468,35 @@ flex-grow: 0;
     
 }
 
-  /*Styling of the Footer starts here*/
+/* the get in touch section styling ends here */
+
+/*Styling of the Footer starts here*/
 footer {
     width: 100%;
-    height: 500px;
+    height: 100%;
     background: url(./Footer.png);
   }
   .footer-container {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
   }
   .footer-container .resourses {
-    margin: 50px 140px;
+    align-items: center;
+    margin: 50px 50px;
     position: relative;
     flex-direction: column;
   }
+  .footer-container .resourses img {
+    height: 57px;
+    width: 206px;
+    margin-bottom: 15px;
+  }
   .footer-container .resourses h6 {
+    width: 269px;
     font-size: 20px;
     font-weight: 700;
     line-height: 30px;
@@ -604,21 +504,32 @@ footer {
     color: #ffffff;
   }
   .footer-container .resourses p {
-    font-size: 16px;
+    width: 234px;
+    font-size: 20px;
     font-weight: 400;
+    text-align: left;
     line-height: 20px;
-    text-align: center;
     padding: 7px 0;
     color: #ffffff;
   }
+  .footer-container .resourses li,
+  .footer-container .resourses li a {
+    text-align: center;
+    padding: 7px 0;
+    font-size: 16px;
+    font-weight: 400;
+    width: 269px;
+    list-style: none;
+    text-decoration: none;
+    color: #ffffff;
+  }
   .footer-txt {
-    width: 1190px;
+    width: 100%;
     margin: auto;
   }
   .footer-txt p {
     font-size: 16px;
     font-weight: 400;
-    line-height: 20px;
     text-align: center;
     margin: 15px auto;
     color: #ffffff;
@@ -627,56 +538,137 @@ footer {
     width: 100%;
     flex-wrap: wrap;
   }
-  footer .social .icon {
+  footer .social .icons {
     margin: 20px 10px;
-    /* position: relative; */
+    position: relative;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
   }
-  footer .social .icon img {
+  footer .social .icons i {
     font-size: 25px;
     color: #408cc6;
-    /* background-color: #ffffff; */
+    background-color: #ffffff;
     padding: 5px;
     cursor: pointer;
     border-radius: 2px;
   }
-
+  /*This is the styling of the mobile view/responsiveness of the footer*/
   @media (max-width: 720px) {
-    .nav__mobile-list {
-      display: none;
-      flex-direction: column;
-      min-width: 72px;
-      justify-content: flex-start;
-      align-items: flex-start;
+    .footer-txt {
+      width: 100%;
+      margin: auto;
     }
-    .nav__list,
-    .nav-btn {
-      display: none;
+    .footer-container .resourses {
+      display: flex;
+      margin: 10px auto;
+      position: relative;
     }
-    .hamburger {
-      display: block;
+    .footer-container {
+      padding-top: 50px;
     }
-    .signup-btn,
-    .login-btn {
-      padding: 8px 16px;
-      margin-bottom: 5px;
-    }
-    .hero-section nav ul li a {
-      line-height: 20px;
+    .footer-txt p {
       font-size: 16px;
+      margin: 15px 20px;
+    }
+  }
+/*This is the styling of the mobile view/responsiveness header/nav section*/
+@media (max-width: 720px) {
+    .nav-menu {
+      position: fixed;
+      left: -100%;
+      top: 90px;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      background-color: #408cc6;
+      transition: 0.3s;
+      text-align: center;
+    }
+    .nav-menu li a {
+      font-size: 18px;
       padding: 10px 0;
       margin: 10px 0;
       display: block;
     }
+    .nav-menu.active {
+      left: 0;
+    }
+    .hamburger {
+      display: block;
+    }
+    .hamburger.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+    .signup-btn,
+    .login-btn {
+      padding: 8px 5px;
+      margin-left: 10px;
+    }
+    .login-btn a,
+    .signup-btn a {
+      font-size: 16px;
+    }
+  
+    .logo {
+      margin: -25px;
+    }
   }
 
+  @media(max-width:600px){
+    .hero-section{
+        /* display:none; */
+    }
+
+    .main-container{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .getting-in{
+        width: 85%;
+        gap:0px;
+        margin:auto;
+    }
+
+    .text-uno{
+        width:90%;
+    }
+
+    .text-duo, .text-trio, .text-quatro{
+       width:90%; 
+       /* height: 0%; */
+    }
+
+    .contact-us img{
+        width: 95%;
+    }
+
+    input[id=fname], input[id=email], input[id=Subject], input[id=message]{
+        width:70%;
+        margin: auto;
+    }
+
+    label[class=fname]{
+        width:70%;
+        margin: auto;
+    }
+
+    input[type=submit]{
+        width: 60%;
+        margin: auto;
+        
+    }
+  }
   @media (max-width: 375px) {
   
-.hero-section{
-    display:none;
+header{
+    /* display:none; */
 }
 .main-container{
     display: flex;
@@ -712,7 +704,8 @@ footer {
 }
 
 .get-in{
-    width: 350px;
+    width: 93%;
+    margin: auto;
 }
 
 input[value]{
@@ -734,7 +727,7 @@ font-size: 14px;
 input[type=submit]{
     width: 188px;
     height:48px;
-    margin:auto;
+    margin:20px auto;
     text-align: center;
     
 }
@@ -742,7 +735,7 @@ input[type=submit]{
 input#submit{
     text-align: center;
     font-size: 16px;
-    margin:auto;
+    margin-bottom:20px;
     padding:10px;
 }
 .sub-container{

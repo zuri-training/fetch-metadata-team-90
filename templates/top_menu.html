@@ -1,0 +1,67 @@
+{% load static %}
+
+
+<section class="head-section">
+    <div>
+        <h3 class="bold-grey">
+          {% if request.user.username %}
+          {{ request.user.username}}
+          {% else %}
+          {{ request.user.email }}
+          {% endif %}
+        </h3>
+        <p class="light-gray">Welcome!</p>
+      </div>
+      <div class="search-bar">
+        <form class="search-forms" action="">
+          <button class="search-button" type="submit">Search</button>
+          <input type="search" name="" id="" title="#" class="profile-search"  placeholder="Search here" />
+        </form>
+      </div>
+      <div class="bell-toggle">
+        <div>
+          <i class="fa fa-bell fa_custom"></i>
+        </div>
+        <div>
+          <label class="switch">
+            <input type="checkbox" title="#" />
+            <span class="slider round"></span>
+          </label>
+        </div>
+      </div>
+      <div class="profile-pic-name">
+        <div class="profile-pic">
+          {% if request.user.profile.picture  %}
+          <img src={{ request.user.profile.picture.url }} alt="profile image"/>
+          {% else %}
+          
+          <img src="{% static 'img/user_photo.png' %}" alt="profile image" />
+          {% endif %}
+          
+        </div>
+        <div>
+          <h5 bold-grey>
+            {% if request.user.username %}
+          {{ request.user.username}}
+          {% else %}
+          {{ request.user.email }}
+          {% endif %}
+          </h5>
+        </div>
+        <div class="navbar">
+            <div class="dropdown">
+              <button class="dropbtn" type="button" title="#">
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+              </div>
+            </div>
+          </div>
+      
+</section>

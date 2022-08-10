@@ -1,61 +1,69 @@
-{% extends 'base.html' %}
+
+{% extends 'base.html' %} 
 {% load static %}
+<title>{% block title %}Profile{% endblock %}</title>
+{% block css %}<link rel="stylesheet"  href="{% static 'css/edit_profile.css' %}" /> {% endblock %}
 
-        
+
+{%block navbar%} {% endblock %}
 {% block content %}
-
-<div>
-    <form method="post" enctype="multipart/form-data" action="" role="form" >
-    {% csrf_token %}
-    <h3>Edit Profile</h3>
-      <div >
-      <div >
-      <div>
-        <span>File</span>
-        {{ form.picture }}
-      </div>
-      <div class="file-path-wrapper">
-        <input class="file-path validate" type="text">
-      </div>
-    </div>
-      </div>
-      <div >
-        <div >
-          {{ form.first_name }}
-          <label for="icon_prefix">First Name</label>
-        </div>
-        <div >
-          {{ form.last_name }}
-          <label for="icon_prefix">Last Name</label>
-        </div>
-      </div>
-       <div >
-        <div>
-          {{ form.location }}
-          <label for="location">location</label>
-        </div>
-      </div>
-      <div >
-        <div>
-          {{ form.url }}
-          <label for="url">URL</label>
-        </div>
-      </div>
-      <div >
-        <div >
-          {{ form.profile_info }}
-          <label for="profile_info">About</label>
-        </div>
-      </div>
-      <div >
-        <div >
-          <span>{{ form.errors }}</span>
-        </div>
-      </div>
-      <button type="submit" name="action">Update</button>
-    </form>
-  </div>
-
+  
+  {% include 'side_menu.html'%}
+  <main class="section-container">
+    {% include 'top_menu.html' %}
+        <section class="main-flow">
+            <div class="text-area left">
+                <div class="top-left">
+                    <h3>Personal Information</h3>
+                    {% if request.user.profile.picture  %}
+          <img src={{ request.user.profile.picture.url }} alt="" class="image"/>
+          {% else %}
+          
+          <img src="{% static 'img/user_photo.png' %}" alt="" class="image"/>
+          {% endif %}
+                    <form method="POST" enctype="multipart/form-data">
+                      {% csrf_token %}
+                        <a class="btn upload" href="">
+                          {{ form.picture }}
+                        </a>
+                   
+                </div>
+                <div class="submit__btn">
+               
+                        <button type="submit"  class="btn1 save">Save changes</button>
+                </div>
+            </div>
+            <div class="text-area right">
+               
+                  {% csrf_token %}
+                    <div class="input-house">
+                        <label for="FirstName" class="label">First Name</label><br>
+                        {{ form.first_name }}
+                    </div>
+                    <div class="input-house">
+                        <label for="LastName"  class="label">Last Name</label><br>
+                        {{ form.last_name }}
+                    </div>
+                     <div class="input-house">
+                        <label for="username"  class="label">Website Url</label><br>
+                        {{ form.url }}
+                    </div> 
+    
+                        <div class="input-house">
+                            <label for="profession"  class="label">Location</label><br>
+                            {{ form.location }}
+                        </div>
+    
+                        <div class="input-house">
+                            <label for="country"  class="label">Bio </label><br>
+                            {{ form.profile_info }}
+                        </div> 
+                   
+                    </form>
+                </div>
+            </section>
+    
+        </main>
 {% endblock %}
 
 {%block footer %}

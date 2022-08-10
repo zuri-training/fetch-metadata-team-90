@@ -59,10 +59,9 @@ class ContactSuccess(TemplateView):
 class PrivacyView(TemplateView):
     template_name = 'privacy-policies.html'
 
-    
-class TeamsConditionView(TemplateView):
+class TermsConditionView(TemplateView):
 
-    template_name = 'teams_condition.html'
+    template_name = 'terms-conditions.html'
 
 class DashboardView(LoginRequiredMixin, View):
     template_name = 'dashboard.html'
@@ -82,7 +81,7 @@ class DashboardView(LoginRequiredMixin, View):
             print(saved_data.file_name)
             self.context['file_list'] = self.request.user.user_file.all()
             if saved_data:
-                self.context['new_data'] = self.context['file_list'][0].exif
+                self.context['new_data'] = self.context['file_list'][0]
             else :
                 self.context['new_data'] = None
 

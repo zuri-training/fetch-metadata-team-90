@@ -1,0 +1,73 @@
+{% load static %}
+
+<header class="nav-aside">
+    <div class="metlab-logo">
+        <img src="{% static 'img/Horizontal_Logo.png' %}" alt=""/>
+    </div>
+    <hr>
+    <div class="dash">
+        <div>
+            <a href="{% url 'dashboard' %}" class="light-gray">
+                <span><img src="{% static 'svg/menu.svg' %}" alt=""></span>
+                Dashboard
+            </a>
+        </div>
+        <div class="dash-section">
+            <nav class="light-gray">
+                <span><img src="{% static 'img/profile-icon.png' %}" alt=""></span>
+                <a href="">Profile</a>
+            </nav>
+        </div>
+        <div class="dash-section">
+            <nav class="light-gray">
+                <span><img src="{% static 'svg/save-2.svg' %}" alt=""></span>
+                <a href="">Saved Data</a>
+            </nav>
+        </div>
+    </div>
+    <hr>
+    <div class="dash">
+        <div class="dash-section">
+            <nav class="light-gray">
+                <span><img src="{% static 'svg/setting-2.svg' %}" alt=""></span>
+                <a href="{% url 'edit-profile' request.user.id %}">Settings</a>
+            </nav>
+        </div>
+        <div class="dash-section">
+            <nav class="light-gray">
+                <span><img src="{% static 'svg/24-support.svg' %}" alt=""></span>
+                <a href="">Support</a>
+            </nav>
+        </div>
+        <div class="dash-section">
+            <nav class="light-gray">
+                <span><img src="{% static 'svg/logout.svg' %}" alt=""></span>
+                <a href="{% url 'logout' %}">Log Out</a>
+            </nav>
+        </div>
+    </div>
+    <hr>
+
+    <div class="rate-us">
+        <p>How would you rate us</p>
+        <span>
+            <img src="{% static 'img/Star_star.png' %}" class="star" alt=""/>
+        </span>
+        <span>
+            <img src="{% static 'img/Star_star.png' %}" class="star" alt=""/>
+        </span>
+        <span>
+            <img src="{% static 'img/Star_star.png' %}" class="star" alt=""/>
+        </span>
+        <span>
+            <img src="{% static 'img/Star_star.png' %}" class="star" alt=""/>
+        </span>
+        <span>
+            <img src="{% static 'img/Star_star.png' %}" class="star" alt=""/>
+        </span>
+    </div>
+</div>
+</header>
+
+
+

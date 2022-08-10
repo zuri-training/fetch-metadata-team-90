@@ -35,12 +35,14 @@ class FileUpload(models.Model):
         max_upload_size=max_upload_size
     )
     file_name =  models.CharField( editable=False, max_length=100, blank=True, null=True)
+    file_type =  models.CharField( editable=False, max_length=15, blank=True, null=True)
     created = models.DateTimeField('created', auto_now_add=True)
     modified = models.DateTimeField('modified', auto_now=True)
     exif = ExifField(
         source='file',
         denormalized_fields={
             'file_name': exifgetter('FileName'),
+            'file_type': exifgetter('FileTypeExtension'),
         },
     )
     class Meta:
