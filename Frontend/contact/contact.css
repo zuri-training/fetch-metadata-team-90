@@ -105,34 +105,7 @@
   .nav__mobile-list {
     display: none;
   }
-  @media (max-width: 720px) {
-    .nav__mobile-list {
-      display: none;
-      flex-direction: column;
-      min-width: 72px;
-      justify-content: flex-start;
-      align-items: flex-start;
-    }
-    .nav__list,
-    .nav-btn {
-      display: none;
-    }
-    .hamburger {
-      display: block;
-    }
-    .signup-btn,
-    .login-btn {
-      padding: 8px 16px;
-      margin-bottom: 5px;
-    }
-    .hero-section nav ul li a {
-      line-height: 20px;
-      font-size: 16px;
-      padding: 10px 0;
-      margin: 10px 0;
-      display: block;
-    }
-  }
+  
   /* This is the ending point for styling of the nav links */
   .hero-content h1 {
     text-align: center;
@@ -281,9 +254,9 @@ input[id=email]{
     box-sizing: border-box;
 
     /* Auto layout */
-    
+/*     
     display: flex;
-    flex-direction: row;
+    flex-direction: row; */
     align-items: center;
     padding: 10px 0px 10px 48px;
     gap: 10px;
@@ -438,7 +411,7 @@ flex-grow: 0;
 .contact-us img{
     /* Man chatting remotely with woman colleague */
 width: 610px;
-right: 100px;
+/* right: 100px; */
 
 }
   /* the drop a message section styling ends here */
@@ -670,4 +643,135 @@ footer {
     cursor: pointer;
     border-radius: 2px;
   }
+
+  @media (max-width: 720px) {
+    .nav__mobile-list {
+      display: none;
+      flex-direction: column;
+      min-width: 72px;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+    .nav__list,
+    .nav-btn {
+      display: none;
+    }
+    .hamburger {
+      display: block;
+    }
+    .signup-btn,
+    .login-btn {
+      padding: 8px 16px;
+      margin-bottom: 5px;
+    }
+    .hero-section nav ul li a {
+      line-height: 20px;
+      font-size: 16px;
+      padding: 10px 0;
+      margin: 10px 0;
+      display: block;
+    }
+  }
+
+  @media (max-width: 375px) {
   
+.hero-section{
+    display:none;
+}
+.main-container{
+    display: flex;
+    flex-direction:column-reverse;
+    width:350px;
+    margin: auto;
+
+}
+
+.contact-us img{
+    width: 80%;
+
+}
+
+.contact-us h1{
+    width: 200px;
+    font-size: 30px;
+    margin: 10px auto;
+    line-height: 0;
+}
+.sub-title h3{
+    display: none;
+}
+
+
+.sub-title p{
+    width: 332px;
+    margin:auto;
+}
+
+.drop-msg{
+    width:350px;
+}
+
+.get-in{
+    width: 350px;
+}
+
+input[value]{
+width: 335px;
+height: 56px;
+padding: 10px 0px 10px 48px;
+
+}
+
+label[class=fname]{
+    width:120px;
+    font-size: 15px;
+    line-height: 22px;
+}
+
+input::placeholder{
+font-size: 14px;
+}
+input[type=submit]{
+    width: 188px;
+    height:48px;
+    margin:auto;
+    text-align: center;
+    
+}
+
+input#submit{
+    text-align: center;
+    font-size: 16px;
+    margin:auto;
+    padding:10px;
+}
+.sub-container{
+    width: 350px;
+}
+.footer{
+    width:375px;
+    height:500px;
+}
+
+.getting-in{
+    width: 100%;
+    height: 800px;
+    margin: auto 10px;
+}
+
+.texty{
+    width:100%;
+}
+
+.text-duo{
+    margin-top:40px;
+
+}
+
+.texty span{
+  line-height: 24px;  
+  font-size: 20px;
+}
+
+
+}

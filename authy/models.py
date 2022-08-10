@@ -59,7 +59,7 @@ class Profile(models.Model):
 	url = models.CharField(max_length=80, null=True, blank=True)
 	profile_info = models.TextField(max_length=150, null=True, blank=True)
 	created = models.DateField(auto_now_add=True)
-	picture = models.ImageField(upload_to='profile_pictures', blank=True, null=True, verbose_name='Picture')
+	picture = models.ImageField(upload_to='profile', blank=True, null=True, verbose_name='Picture')
 
 def create_user_profile(sender, instance, created, **kwargs):
 	if created:
