@@ -44,33 +44,21 @@ accordionItemHeaders.forEach((accordionItemHeaders) => {
 /*This is for the scroll back to top button*/
 const scrollBtn = document.querySelector(".scroll-to-top")
 
+const refreshButtonVisibility = () => {
+  var scrolltotal = document.documentElement.scroll
+  if (document.documentElement.scrollTop <= 3000) {
+    scrollBtn.style.display = "none";
+  } else {
+    scrollBtn.style.display = "block";
+  }
+};
+refreshButtonVisibility();
+
 scrollBtn.addEventListener("click", () => {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 });
 
 document.addEventListener("scroll", (e) => {
-  if (document.documentElement.scrollTop <= 5000) {
-    scrollBtn.style.display = "none";
-  } else {
-    scrollBtn.style.display = "block";
-  }
+  refreshButtonVisibility();
 });
-
-window.onscroll = function() {
-  scrollFunction()
-};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 920 || document.documentElement.scrollTop > 920) {
-      document.getElementById("scroll-to-top").style.display = "block";
-  } else {
-      document.getElementById("scroll-to-top").style.display = "none";
-  }
-}
-
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-}
