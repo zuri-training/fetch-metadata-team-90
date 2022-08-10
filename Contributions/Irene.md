@@ -45,6 +45,7 @@ TASKS ASSIGNED
 * LOG IN PAGE (https://www.figma.com/file/k6l4E06XqOk7zbtCzFAe78/TEAM-90-DRAFT?node-id=2%3A1763)
 
 
+
 ISSUES CREATED
 
 * SAVED DATA UPDATE (https://github.com/zuri-training/fetch-metadata-team-90/issues?q=is%3Aissue+is%3Aclosed+label%3Afrontend )
