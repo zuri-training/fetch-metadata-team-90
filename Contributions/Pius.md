@@ -8,7 +8,7 @@ ROLE
 TASKS ASSIGNED
 
 UX:
-* UX RESEARCH (User Story) ( https://www.figma.com/file/5pXddhc3ReUoQLfPFDjF7W/METLAB--RESEARCH-DOCUMENTATION)
+* UX RESEARCH - SHARED WITH THE UX TEAM ( https://www.figma.com/file/5pXddhc3ReUoQLfPFDjF7W/METLAB--RESEARCH-DOCUMENTATION)
 
 UI:
 * DESIGN OF THE WEB APPLICATION LOGO ( https://drive.google.com/drive/folders/1MVJu8Km_RADYK6Rvo68cL7KcA3IGa-FE?usp=sharing)
