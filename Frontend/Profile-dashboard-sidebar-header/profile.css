@@ -7,12 +7,17 @@
 }
 body {
     width: 100%;
-    /* margin-top: 16px; */
-    padding: 16px;
+    margin-top: 16px;
+    padding: 10px;
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
-    
+    display: flex;
+}
 
+.main-flow-flex{
+    display: flex;
+    background: #FAFAFA;
+    width: 100%;
 
 }
 
@@ -27,8 +32,8 @@ body {
     box-shadow: 0px 2px 10px rgba(36, 24, 24, 0.1);
     border-radius: 4px;
     padding: 15px;
-    position: fixed;
-    left: 16px;
+    position: sticky;
+    top: 0;
 }
 .metlab-logo img {
     height: 42px;
@@ -36,24 +41,26 @@ body {
 }
 
 .section-container {
+    width: 83%;
     display: flex;
     flex-direction: column;
-    position: relative;
+    background: #FAFAFA;
+    
 }
 
 .head-section {
-    width: 82%;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 100px;
     box-shadow: 0px 2px 10px rgba(36, 24, 24, 0.1);
     border-radius: 4px;
-    position: fixed;
-    top: 16px;
-    right: 16px;
+    position: sticky;
+    top: 0px;
     z-index: 50;
     background-color: white;
+    margin: auto 20px;
 }
 .profile-pic-name {
     display: inherit;
@@ -66,7 +73,6 @@ body {
     height: 5vh;
     padding: 20px;
     background-color: #E5E5E5;
-    /* border: 1px solid rgb(118, 197, 202); */
     border: none;
 }
 .search-bar{
@@ -75,8 +81,7 @@ body {
     align-items: stretch;  
 }
 .search-forms{
-   /* color: #555; */
-  padding: 2px;
+   padding: 2px;
   border: 1px solid black;
   border-radius: 5px;
 
@@ -86,7 +91,6 @@ body {
     overflow: hidden;
     width: 40px;
     height: 100%;
-    
     padding: 0;
     margin: 0;
     border: 1px solid transparent;
@@ -117,6 +121,7 @@ font-size: 20px;
 line-height: 28px;
 color: #7D8284;
 }
+
 .profile-pic-name {
     display: inherit;
     justify-content: space-between;
@@ -273,11 +278,41 @@ hr {
     display: flex;
     flex-direction: column;
     gap: 15px;
+
 }
 .dash-section {
     width: 100%;
 
+
 }
+.dash-section:hover{
+    background-color: #1A75BB;
+}
+
+.light-gray {
+    color: #6F6F6F;
+    display: flex;
+    gap: 2vw;
+}
+.light-gray a {
+    text-decoration: none;
+    color: #6F6F6F;
+}
+.light-gray:hover,
+.light-gray:active,
+.light-gray:focus {
+    background-color: #EDF7FF;
+    color: #56CCF2;
+    transition: all 0.1s linear;
+}
+.light-gray a:hover,
+.light-gray a:active,
+.light-gray a:focus {
+    background-color: #EDF7FF;
+    color: #56CCF2;
+
+}
+
 .rate-us {
     width: 100%;
     height: 152px;
@@ -318,48 +353,17 @@ hr {
 .bold-grey {
     color: #535353;
 }
-.light-gray {
-    color: #6F6F6F;
-    display: flex;
-    gap: 2vw;
-}
-.light-gray a {
-    text-decoration: none;
-    color: #6F6F6F;
-}
-.light-gray:hover,
-.light-gray:active,
-.light-gray:focus {
-    background-color: #EDF7FF;
-    color: #56CCF2;
-    transition: all 0.1s linear;
-}
-.light-gray a:hover,
-.light-gray a:active,
-.light-gray a:focus {
-    background-color: #EDF7FF;
-    color: #56CCF2;
 
-}
 /* MAIN FLOW  STARTS*/
 .main-flow {
-    width: 84%;
-    
-    position: absolute;
-    top: 120px;
-    right: 0;
+    width: 70%;
     box-shadow: 0px 2px 10px rgba(36, 24, 24, 0.1);
     border-radius: 4px;
     display: flex;
     flex-wrap: wrap;
-    background: #FAFAFA;
-
-
 }
 .drag-area{
     border: 2px dashed #fff;
-    /* height: 400px; */
-    /* width: 700px; */
     border-radius: 5px;
     display: flex;
     align-items: center;
@@ -397,7 +401,11 @@ hr {
     line-height: 28px;
     align-items: center;
     text-align: center;
+<<<<<<< HEAD
     color: #8A8A8A;
+=======
+    background-color: transparent;
+>>>>>>> e19d33562c36cef663fec7bed7732d7c0475ed28
       }
     
     .upload-area button:hover{
@@ -443,7 +451,6 @@ hr {
 .upload-area p{
     width: 440px;
     height: 28px;
-     
     font-family: 'Work Sans';
     font-style: normal;
     font-weight: 400;
@@ -453,6 +460,7 @@ hr {
     text-align: center;
     color: #8A8A8A;
 }
+
 .upload-area p:hover{
     color:#1A75BB;
 }
@@ -461,7 +469,6 @@ hr {
     margin: auto 180px;
     align-items: center;
     justify-content: center;
-
 }
 
 input.extract-button {
@@ -473,8 +480,8 @@ width: 230px;
 margin: auto;
 cursor: pointer;
 border: none;
-
 }
+
 input.extract-button{
 font-family: 'Droid Sans';
 font-style: normal;
@@ -486,7 +493,6 @@ padding: 20px 31px;
 
 }
 input.extract-button:hover{
-    /* color: #1A75BB; */
     background-color: #56CCF2;
 }
 
@@ -498,9 +504,8 @@ input.extract-button:hover{
     box-shadow: 0px 2px 10px rgba(36, 24, 24, 0.1);
     border-radius: 4px;
     margin: 60px 24px;
-
-
 }
+
 .result-container h3{
 width: 77px;
 font-family: 'Work Sans';
@@ -517,6 +522,7 @@ color: #6F6F6F;
     border-bottom: 1px solid #6F6F6F;
     margin-bottom: 16px;
 }
+
 .result-details p{
     width: 195px;
     height: 30px;
@@ -525,13 +531,8 @@ color: #6F6F6F;
     font-weight: 700;
     font-size: 20px;
     line-height: 30px;
- 
     letter-spacing: -0.02em;
-    
-    /* Grey/Grey07 */
-    
     color: #8A8A8A;
-     
     flex: none;
     order: 0;
     flex-grow: 0;
@@ -543,8 +544,8 @@ padding: 0px;
 gap: 32px;
 width: 408px;
 height: 56px;
-
 }
+
 input.save-button{
 display: flex;
 flex-direction: row;
@@ -558,7 +559,6 @@ background: #E1E1E1;
 border-radius: 4px;
 cursor: pointer;
 border: 2px solid #E1E1E1;
-
 }
 input.save-button:hover{
     background-color: #56CCF2;
@@ -613,14 +613,11 @@ input#view-result:hover{
 /* RIGHT_SIDE BEGINS HERE */
 
 .right-side{
-position: absolute;
-width: 30%;
-height: 1000px;
-left: 900px;
-top: 142px;
-
+width: 50%;
+height: 900px;
+align-self: stretch;
+margin: 20px 10px 0 auto;
 background: #FFFFFF;
-/* Shadow */
 
 box-shadow: 0px 2px 10px rgba(36, 24, 24, 0.1);
 border-radius: 4px;
@@ -675,7 +672,6 @@ border-radius: 4px;
     background: #D8F0DB;
     border-radius: 4px;
     padding: 18px;
-    /* background: #1ABB32; */
 }
 .mtdata-img1{
     width: 64px;
@@ -683,7 +679,6 @@ border-radius: 4px;
     background: #D8F0EB;
     border-radius: 4px;
     padding: 18px;
-    /* background: #1ABB32; */
 }
 .mtdata-img2{
     width: 64px;
@@ -691,7 +686,6 @@ border-radius: 4px;
     background: #DDD8F0;
     border-radius: 4px;
     padding: 18px;
-    /* background: #1ABB32; */
 }
 .mtdata-img3{
     width: 64px;
@@ -699,7 +693,6 @@ border-radius: 4px;
     background: #EBD8F0;
     border-radius: 4px;
     padding: 18px;
-    /* background: #1ABB32; */
 }
 .mtdata-img4{
     width: 64px;
@@ -707,7 +700,6 @@ border-radius: 4px;
     background: #D8E5F0;
     border-radius: 4px;
     padding: 18px;
-    /* background: #1ABB32; */
 }
 .history-data img{
     width: 27px;
