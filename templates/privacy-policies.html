@@ -1,5 +1,7 @@
-{% extends 'base.html' %} {% load static %}
-<title>{% block title %}Metlab Pravcy and Policy {% endblock %}</title>
+{% extends 'base.html' %} {%load static%}
+<title>
+  {% block title %}Metlab Privacy and Policy Statements{% endblock %}
+</title>
 {% block css %}<link
   rel="stylesheet"
   href="{% static 'css/privacy-policy.css' %}"
@@ -7,9 +9,9 @@
 {% endblock %} {%block navbar%}
 <header class="hero-section">
   <nav>
-    <div class="logo generalflexselector">
+    <a href="#" class="logo generalflexselector">
       <img src="{% static 'svg/Horizontal_Logo.svg' %}" alt="" />
-    </div>
+    </a>
   </nav>
 </header>
 {% endblock %} {% block content %}
@@ -130,7 +132,9 @@
 <footer>
   <div class="footer-container">
     <div class="resourses generalflexselector">
-      <img src="{% static 'svg/Horizontal_Logo.svg'%}" />
+      <a href="#">
+        <img src="{% static 'svg/Horizontal_Logo.svg'%}" />
+      </a>
       <p>
         Extracting data quickly and effectively while providing accurate
         information about the data being extracted.
