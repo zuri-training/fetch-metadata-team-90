@@ -1,4 +1,6 @@
-from django.shortcuts import render, get_object_or_404
+from .forms import ContactForm
+from django.views.generic import TemplateView, DetailView
+from django.shortcuts import render, get_object_or_404, redirect
 from .forms import ContactForm, FileUploadForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import TemplateView, DetailView, CreateView
@@ -9,9 +11,9 @@ from django.http import HttpResponse
 from django.template.loader import get_template
 from django.views import View
 from xhtml2pdf import pisa
+from django.utils import timezone
 from django.views.decorators.cache import never_cache
 from django.utils.decorators import method_decorator
-
 # to be placed in a differn=ent file  
 def render_to_pdf(template_src, context_dict={}):
 	template = get_template(template_src)
@@ -54,7 +56,13 @@ def Contact(request):
 class ContactSuccess(TemplateView):
     template_name = "contactsuccess.html"
 
+class PrivacyView(TemplateView):
+    template_name = 'privacy-policies.html'
 
+    
+class TeamsConditionView(TemplateView):
+
+    template_name = 'teams_condition.html'
 
 class DashboardView(LoginRequiredMixin, View):
     template_name = 'dashboard.html'
@@ -76,7 +84,7 @@ class DashboardView(LoginRequiredMixin, View):
             if saved_data:
                 self.context['new_data'] = self.context['file_list'][0].exif
             else :
-                self.context['new_data'] = none
+                self.context['new_data'] = None
 
             
             

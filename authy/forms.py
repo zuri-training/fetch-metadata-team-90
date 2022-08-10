@@ -39,14 +39,7 @@ class AuthyRegistrationForm(RegistrationForm):
 		self.fields['username'].validators.append(InvalidUser)
 		self.fields['username'].validators.append(UniqueUser)
 	
-	# def clean(self):
-	# 	super(AuthyRegistrationForm, self).clean()
-	# 	password = self.cleaned_data.get('password')
-	# 	confirm_password = self.cleaned_data.get('password')
 
-	# 	if password != confirm_password:
-	# 		self._errors['password'] = self.error_class(['Passwords do not match. Try again'])
-	# 	return self.cleaned_data
 
 
 # class SignupForm(forms.ModelForm):
@@ -98,15 +91,3 @@ class ChangePasswordForm(forms.ModelForm):
 		if new_password != confirm_password:
 			self._errors['new_password'] =self.error_class(['Passwords do not match.'])
 		return self.cleaned_data
-
-class EditProfileForm(forms.ModelForm):
-	picture = forms.ImageField(required=False)
-	first_name = forms.CharField(widget=forms.TextInput(), max_length=50, required=False)
-	last_name = forms.CharField(widget=forms.TextInput(), max_length=50, required=False)
-	location = forms.CharField(widget=forms.TextInput(), max_length=25, required=False)
-	url = forms.URLField(widget=forms.TextInput(), max_length=60, required=False)
-	profile_info = forms.CharField(widget=forms.TextInput(), max_length=260, required=False)
-
-	class Meta:
-		model = Profile
-		fields = ('picture', 'first_name', 'last_name', 'location', 'url', 'profile_info')
