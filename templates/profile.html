@@ -1,6 +1,11 @@
-{% extends 'base.html' %}
-{% load static %}
 
+{% extends 'base.html' %} 
+{% load static %}
+<title>{% block title %}sign up {% endblock %}</title>
+{% block css %}<link rel="stylesheet"  href="{% static 'css/signup.css' %}" /> {% endblock %}
+
+
+{%block navbar%} {% endblock %}
         
 {% block content %}
 
@@ -49,5 +54,5 @@
   </div>
 
 {% endblock %}
-{%block footer %}
-{%endblock%}
+{% block footer %}
+{% endblock %}
