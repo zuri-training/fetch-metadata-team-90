@@ -734,3 +734,36 @@ line-height: 28px;
 color: #8A8A8A;
 }
 /* RIGHT_SIDE ENDS HERE */
+
+@media (max-width:720px) {
+    body{
+        flex-direction: column;
+        width: 100%;
+
+    }
+    .main-flow-flex{
+        flex-direction: column;
+        width: 80%;
+
+    }
+    .upload-container{
+        width:100%;
+    }
+    .main-flow{
+        width: 90%;
+        flex-direction: column;
+    }
+    .section-container{
+        width: 100%;
+    }
+    .nav-aside{
+        display: none;
+        
+    }
+.result-container{
+    width: 100%;
+}
+      .right-side{
+        width: 90%;
+   }
+}
