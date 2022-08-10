@@ -5,7 +5,7 @@ urlpatterns = [
    	path('', views.HomePageView.as_view(), name='index'),
     path('contact/', views.Contact, name='contact'),
     path('contact/success', views.ContactSuccess.as_view(), name='contactsuccess'),
-    path('privacy/', views.PrivacyView.as_view(), name='privacy'),
+    path('privacy-policies/', views.PrivacyView.as_view(), name='privacy'),
     path('teams_conditions/', views.TeamsConditionView.as_view(), name='teams_conditions'),
     path('dashboard/', views.DashboardView.as_view(), name='dashboard'),
     # path('dashboard/', views.CreateFilePuloadView.as_view(template_name='dashboard.html'), name='file_upload'),
