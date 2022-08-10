@@ -1,10 +1,14 @@
-{% extends 'base.html' %}
-{% load static %}
 
-        
+{% extends 'base.html' %} 
+{% load static %}
+<title>{% block title %}Profile{% endblock %}</title>
+{% block css %}<link rel="stylesheet"  href="{% static 'css/edit_profile.css' %}" /> {% endblock %}
+
+
+{%block navbar%} {% endblock %}
 {% block content %}
 
-<div>
+{% comment %} <div>
     <form method="post" enctype="multipart/form-data" action="" role="form" >
     {% csrf_token %}
     <h3>Edit Profile</h3>
@@ -54,8 +58,104 @@
       </div>
       <button type="submit" name="action">Update</button>
     </form>
-  </div>
-
+  </div> {% endcomment %}
+  {% include 'side_menu.html'%}
+  <main class="section-container">
+    <section class="head-section">
+        <div>
+            <h3 class="bold-grey">Hello Jane</h3>
+            <p class="light-gray">Welcome!</p>
+        </div>
+        <div>
+            <form action="">
+                <input type="search" name="" id="" title="#" class="profile-search"/>
+            </form>
+        </div>
+        <div class="bell-toggle">
+            <div>
+                <i class="fa fa-bell fa_custom"></i>
+            </div>
+            <div>
+                <label class="switch">
+                    <input type="checkbox" title="#"/>
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+        <div class="profile-pic-name">
+            <div class="profile-pic">
+                <img src="user_photo.jpg" alt=""/>
+            </div>
+            <div>
+                <h5 bold-grey>Jane Doe</h5>
+            </div>
+            <div class="navbar">
+                <div class="dropdown">
+                    <button class="dropbtn" type="button" title="#">
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </div>
+            </div>
+    
+        </section>
+        <section class="main-flow">
+            <div class="text-area left">
+                <div class="top-left">
+                    <h3>Personal Information</h3>
+                    <img src=".user_photo.jpg" alt="" class="image">
+                    <form action="" method="" enctype="multipart/form-data">
+                        <a href="">
+                          <input type="button" value="Upload" class="btn upload">
+                        </a>
+                    </form>
+                </div>
+                <div>
+                    <a href="">
+                        <button type="button" title="#" class="btn save">Save changes</button>
+                    </a>
+                </div>
+            </div>
+            <div class="text-area right">
+                <form action="" method="" enctype="multipart/form-data">
+                    <div class="input-house">
+                        <label for="FirstName" class="label">First Name</label><br>
+                        <input class="input" type="text" name="" id="" title="fname" placeholder="Enter Name">
+                    </div>
+                    <div class="input-house">
+                        <label for="LastName"  class="label">Last Name</label><br>
+                        <input  class="input" type="text" name="" id="" title="lname" placeholder="Enter Name">
+                    </div>
+                    <div class="input-house">
+                        <label for="username"  class="label">Username</label><br>
+                        <input  class="input" type="text" name="" id="" title="username" placeholder="username">
+                    </div>
+    
+                        <div class="input-house">
+                            <label for="profession"  class="label">profession</label><br>
+                            <input  class="input" type="text" name="" id="" title="profession" placeholder="Enter your position">
+                        </div>
+    
+                        <div class="input-house">
+                            <label for="country"  class="label">Country</label><br>
+                            <input  class="input" type="text" name="" id="" title="country" placeholder="Enter country">
+                        </div>
+                        <div class="input-house">
+                            <label for="country" class="label">E-mail</label><br>
+                            <input  class="input" type="email" name="" id="" title="email" placeholder="name@gmail.com">
+                        </div>
+                    </form>
+                </div>
+            </section>
+    
+        </main>
 {% endblock %}
 
 {%block footer %}
