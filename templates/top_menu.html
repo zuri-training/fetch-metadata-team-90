@@ -3,7 +3,13 @@
 
 <section class="head-section">
     <div>
-        <h3 class="bold-grey">Hello Jane</h3>
+        <h3 class="bold-grey">
+          {% if request.user.username %}
+          {{ request.user.username}}
+          {% else %}
+          {{ request.user.email }}
+          {% endif %}
+        </h3>
         <p class="light-gray">Welcome!</p>
       </div>
       <div class="search-bar">
@@ -25,10 +31,22 @@
       </div>
       <div class="profile-pic-name">
         <div class="profile-pic">
-          <img src="{% static 'img/user_photo.png' %}" alt="" />
+          {% if request.user.profile.picture  %}
+          <img src={{ request.user.profile.picture.url }} alt="profile image"/>
+          {% else %}
+          
+          <img src="{% static 'img/user_photo.png' %}" alt="profile image" />
+          {% endif %}
+          
         </div>
         <div>
-          <h5 bold-grey>Jane Doe</h5>
+          <h5 bold-grey>
+            {% if request.user.username %}
+          {{ request.user.username}}
+          {% else %}
+          {{ request.user.email }}
+          {% endif %}
+          </h5>
         </div>
         <div class="navbar">
             <div class="dropdown">
