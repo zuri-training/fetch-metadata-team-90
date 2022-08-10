@@ -5,7 +5,7 @@
 ## UX CONTRIBUTIONS: COMPLETED
   * User Research 1 (SHARED WITH THE UX TEAM) - https://docs.google.com/document/d/1fpToZTLiRPtkazxkl25kjeIYJl_CKhfenYt1J5BZB6s/edit 
   * User Research 2 (SHARED WITH THE UX TEAM) - https://docs.google.com/document/d/1QkNrROtmkiUoLXjbJKHOE8s_VzBmmPAM2BO3oWMb6dw/edit
-  * Full User Research (SHARED WITH THE UX TEAM) - https://www.figma.com/file/5pXddhc3ReUoQLfPFDjF7W/METLAB?node-id=245%3A490
+  * Sitemap,IA, Userflow (SHARED WITH THE UX TEAM) - [https://www.figma.com/file/5pXddhc3ReUoQLfPFDjF7W/METLAB?node-id=245%3A490](https://www.figma.com/file/5pXddhc3ReUoQLfPFDjF7W/METLAB--RESEARCH-DOCUMENTATION?node-id=0%3A1)
 
 ## UI TASKS:
   ### Modified 3D elements (Animation & Images): COMPLETED
@@ -24,3 +24,7 @@
 
   ### Created mobile pages on Figma: ONGOING
   * 
+
+# ISSUES CREATED:
+  * https://github.com/zuri-training/fetch-metadata-team-90/issues/21 - CLOSED
+  * https://github.com/zuri-training/fetch-metadata-team-90/issues/101 - CLOSED
