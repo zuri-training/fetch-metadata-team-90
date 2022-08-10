@@ -1,8 +1,8 @@
 **** TASK ASSIGNED
 
-TRACK: FULLSTACK (FRONTEND-MAJOR)
+## TRACK: FULLSTACK (FRONTEND)
 
-ROLE ON THE TEAM: FRONTEND
+## ROLE ON THE TEAM: FRONTEND
 
 
 ## 1. Created the the landing page for the unauthenticated user.
