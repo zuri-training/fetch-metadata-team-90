@@ -401,7 +401,11 @@ hr {
     line-height: 28px;
     align-items: center;
     text-align: center;
+<<<<<<< HEAD
+    color: #8A8A8A;
+=======
     background-color: transparent;
+>>>>>>> e19d33562c36cef663fec7bed7732d7c0475ed28
       }
     
     .upload-area button:hover{

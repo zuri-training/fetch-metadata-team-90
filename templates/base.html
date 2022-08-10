@@ -32,26 +32,37 @@
       rel="stylesheet"
       media="screen,projection"
     />
+    <link rel="stylesheet" href="{% static 'css/landing.css' %}" />
     {% endblock %}
 
   </head>
   <body>
     {%block navbar%}
-    <nav>
-      <div>
-        <a href="/">Home</a>
-        <div>
-          {% if request.user.is_active %}
-          <a href="{% url 'profile'%}">Profile</a>
-          <a href="{% url 'logout'%}">Log Out</a>
-          {% else %}
-          <a href="{% url 'django_registration_register' %}">Register</a>
-          <a href="{% url 'login' %}">Log In</a>
-          {% endif %}
+    <header>
+      <nav>
+        <div class="logo generalflexselector">
+          <a href=""><img src="{% static 'img/Home-Images/Horizontal Logo.svg' %}" /></a>
         </div>
-      </div>
-    </nav>
- {% endblock %}
+        <ul class="nav-menu">
+          <li><a href="" class="nav-link">Home</a></li>
+          <li><a href="" class="nav-link">About </a></li>
+          <li><a href="" class="nav-link">Support</a></li>
+          <li><a href="" class="nav-link">Meta Data</a></li>
+          <button class="login-btn">
+            <a href="" class="nav-link">Login</a>
+          </button>
+          <button class="signup-btn">
+            <a href="" class="nav-link">Sign Up</a>
+          </button>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+   {% endblock %}
     {% block content %} {% endblock %}
     {% block footer %}
     <footer>
