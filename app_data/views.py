@@ -59,10 +59,9 @@ class ContactSuccess(TemplateView):
 class PrivacyView(TemplateView):
     template_name = 'privacy-policies.html'
 
-    
-class TeamsConditionView(TemplateView):
+class TermsConditionView(TemplateView):
 
-    template_name = 'teams_condition.html'
+    template_name = 'terms-conditions.html'
 
 class DashboardView(LoginRequiredMixin, View):
     template_name = 'dashboard.html'
