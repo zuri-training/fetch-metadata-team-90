@@ -9,6 +9,13 @@ body{
     font-weight: 400;
     font-size: 20px;
 }
+
+body.bg-dark{
+    color: #C4C4C4;
+}
+body.bg-dark{
+    background-color: black;
+}
 .inner-box{
     display: flex;
     flex-direction: row;
@@ -30,7 +37,9 @@ body{
     padding: 60px;
     background: white;
 }
-
+.big-wrapper.bg-dark .forms-wrapper{
+    background-color: black;
+}
 .heading{
     margin-bottom: 1rem;
 }
@@ -46,7 +55,9 @@ body{
     font-size: 25px;
     color: rgba(111, 111, 111, 1);
 }
-
+.big-wrapper.bg-dark .heading .big{
+    color: #E1E1E1;
+}
 
 .details{
     color: rgba(55, 55, 55, 1);
@@ -62,11 +73,78 @@ body{
     padding: 60px;
     color: rgba(250, 250, 250, 1);
 }
-
+.picture-side-top{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
 .picture-side .logo{
     margin-bottom: 1rem;
 }
+/* TOGGLE */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 20px;
+}
 
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #E5E5E5;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 17px;
+    width: 17px;
+    left: 4px;
+    bottom: 2px;
+    background-color: #F6F6F5;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background-color: transparent;
+    box-shadow: 0 0 2px rgba(250, 250, 250, 1);
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 2px rgba(250, 250, 250, 1);
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
 .image{
     align-items: center;
     justify-content: center;
@@ -102,7 +180,9 @@ body{
     border: 1px solid rgba(166, 166, 166, 1);
     padding-left: 15px; 
 }
-
+.big-wrapper.bg-dark .card-box input{
+    background-color: rgba(83, 83, 83, 1);
+}
 
 form .button input{
     height: 56px;
@@ -235,6 +315,7 @@ i{
         padding: 40px;
         height: 100%;
         position: relative;
+        box-sizing: border-box;
     }
     .forms-wrapper{
         position: relative;
@@ -253,13 +334,14 @@ i{
     }
     
     .dots{
-        width: 100%;
+        width: 90%;
         left: 0px;
+        right: 0;
         position: absolute;
     }
     
     .woman{
-        width: 90%;
+        width: 80%;
         height: 177px;
         position: relative;
         z-index: 10;
@@ -269,8 +351,8 @@ i{
     }
     
     .pattern{
-        width: 374px;
-        Height:153px;
+        width: 300px;
+        Height:100px;
         Top:273px;
         left: 1px;
         position: absolute;
