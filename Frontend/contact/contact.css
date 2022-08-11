@@ -50,7 +50,7 @@ nav {
   line-height: 28px;
   text-decoration: none;
   font-size: 20px;
-  color: #212121;
+  color: #ffffff;
   padding-left: 60px;
   font-weight: 400;
 }
@@ -84,9 +84,6 @@ nav {
   border: none;
   border-radius: 4px;
 }
-.nav__mobile-list {
-  display: none;
-}
 .bar {
   display: block;
   width: 25px;
@@ -94,29 +91,61 @@ nav {
   margin: 5px auto;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  background-color: #ffffff;
+  background-color: #0c0b0b;
 }
 .hamburger {
   display: none;
   cursor: pointer;
-}
+} /* This is the ending point for styling of the nav links */
 
-/* This is the ending point for styling of the nav links */
-.hero-content h1 {
-  text-align: center;
-  color: #ffffff;
-  font-weight: 700;
-  font-size: 60px;
-  margin-top: 48px;
-  padding: 52px;
-}
-.hero-content p {
-  color: #ffffff;
-  text-align: center;
-  font-weight: 400;
-  font-size: 23px;
-  line-height: 36px;
-  margin: 0 205px;
+/*This is the styling of the mobile view/responsiveness header/nav section*/
+@media (max-width: 720px) {
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 90px;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: #408cc6;
+    transition: 0.3s;
+    text-align: center;
+  }
+  .nav-menu li a {
+    font-size: 18px;
+    padding: 10px 0;
+    margin: 10px 0;
+    display: block;
+  }
+  .nav-menu.active {
+    left: 0;
+  }
+  .hamburger {
+    display: block;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .signup-btn,
+  .login-btn {
+    padding: 8px 5px;
+    margin-left: 10px;
+  }
+  .login-btn a,
+  .signup-btn a {
+    font-size: 16px;
+    color: #ffffff;
+  }
+
+  .logo {
+    margin: -25px;
+  }
 }
 /* the drop a message section styling begins here */
 .main-container {
@@ -150,8 +179,7 @@ header {
   /* text-align: center; */
   margin-bottom: 32px;
 }
-form {
-}
+
 .sub-title h3 {
   width: 434px;
   height: 56px;
@@ -340,33 +368,30 @@ input[type="submit"] {
   color: #ffffff;
 }
 
-input::placeholder{
-    /* Button text */
+input::placeholder {
+  /* Button text */
 
+  width: 419px;
+  height: 76px;
 
-width: 419px;
-height: 76px;
+  /* Web/Body small */
 
-/* Web/Body small */
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  /* or 140% */
 
-font-family: 'Work Sans';
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: 28px;
-/* or 140% */
+  /* Grey/Grey06 */
 
+  color: #a6a6a6;
 
-/* Grey/Grey06 */
+  /* Inside auto layout */
 
-color: #A6A6A6;
-
-
-/* Inside auto layout */
-
-flex: none;
-order: 0;
-flex-grow: 0;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
 }
 
 .contact-us {
@@ -408,14 +433,15 @@ flex-grow: 0;
   letter-spacing: -0.02em;
   color: #408cc6;
 }
-.getting-in{
-    padding: 40px;
-    gap: 32px;
-    width: 1240px;
-    background: #FFFFFF;
-    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15), 0px 0px 15px 4px rgba(0, 0, 0, 0.02);
-    border-radius: 4px;
-    margin: 56px 50px 183px;
+.getting-in {
+  padding: 40px;
+  gap: 32px;
+  width: 1240px;
+  background: #ffffff;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15),
+    0px 0px 15px 4px rgba(0, 0, 0, 0.02);
+  border-radius: 4px;
+  margin: 56px 50px 183px;
 }
 .getting-in span {
   font-family: "Work Sans";
@@ -464,116 +490,115 @@ flex-grow: 0;
   width: 189px;
   margin: 10px 0 20px;
 }
-.get-in-socials img{
-    width: 60px;
-    height: 60px;
-    cursor: pointer;
-    
+.get-in-socials img {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
 }
 
 /* the get in touch section styling ends here */
 
 /*Styling of the Footer starts here*/
 footer {
-    width: 100%;
-    height: 100%;
-    background: url(./Footer.png);
-  }
-  .footer-container {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
-  .footer-container .resourses {
-    align-items: center;
-    margin: 50px 50px;
-    position: relative;
-    flex-direction: column;
-  }
-  .footer-container .resourses img {
-    height: 57px;
-    width: 206px;
-    margin-bottom: 15px;
-  }
-  .footer-container .resourses h6 {
-    width: 269px;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 30px;
-    text-align: center;
-    color: #ffffff;
-  }
-  .footer-container .resourses p {
-    width: 234px;
-    font-size: 20px;
-    font-weight: 400;
-    text-align: left;
-    line-height: 20px;
-    padding: 7px 0;
-    color: #ffffff;
-  }
-  .footer-container .resourses li,
-  .footer-container .resourses li a {
-    text-align: center;
-    padding: 7px 0;
-    font-size: 16px;
-    font-weight: 400;
-    width: 269px;
-    list-style: none;
-    text-decoration: none;
-    color: #ffffff;
-  }
+  width: 100%;
+  height: 100%;
+  background: url(./Footer.png);
+}
+.footer-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.footer-container .resourses {
+  align-items: center;
+  margin: 50px 50px;
+  position: relative;
+  flex-direction: column;
+}
+.footer-container .resourses img {
+  height: 57px;
+  width: 206px;
+  margin-bottom: 15px;
+}
+.footer-container .resourses h6 {
+  width: 269px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: center;
+  color: #ffffff;
+}
+.footer-container .resourses p {
+  width: 234px;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: left;
+  line-height: 20px;
+  padding: 7px 0;
+  color: #ffffff;
+}
+.footer-container .resourses li,
+.footer-container .resourses li a {
+  text-align: center;
+  padding: 7px 0;
+  font-size: 16px;
+  font-weight: 400;
+  width: 269px;
+  list-style: none;
+  text-decoration: none;
+  color: #ffffff;
+}
+.footer-txt {
+  width: 100%;
+  margin: auto;
+}
+.footer-txt p {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  margin: 15px auto;
+  color: #ffffff;
+}
+footer .social {
+  width: 100%;
+  flex-wrap: wrap;
+}
+footer .social .icons {
+  margin: 20px 10px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+footer .social .icons i {
+  font-size: 25px;
+  color: #408cc6;
+  background-color: #ffffff;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 2px;
+}
+/*This is the styling of the mobile view/responsiveness of the footer*/
+@media (max-width: 720px) {
   .footer-txt {
     width: 100%;
     margin: auto;
   }
+  .footer-container .resourses {
+    display: flex;
+    margin: 10px auto;
+    position: relative;
+  }
+  .footer-container {
+    padding-top: 50px;
+  }
   .footer-txt p {
     font-size: 16px;
-    font-weight: 400;
-    text-align: center;
-    margin: 15px auto;
-    color: #ffffff;
+    margin: 15px 20px;
   }
-  footer .social {
-    width: 100%;
-    flex-wrap: wrap;
-  }
-  footer .social .icons {
-    margin: 20px 10px;
-    position: relative;
-    display: flex;
-    flex-direction: row;
-  }
-  footer .social .icons i {
-    font-size: 25px;
-    color: #408cc6;
-    background-color: #ffffff;
-    padding: 5px;
-    cursor: pointer;
-    border-radius: 2px;
-  }
-  /*This is the styling of the mobile view/responsiveness of the footer*/
-  @media (max-width: 720px) {
-    .footer-txt {
-      width: 100%;
-      margin: auto;
-    }
-    .footer-container .resourses {
-      display: flex;
-      margin: 10px auto;
-      position: relative;
-    }
-    .footer-container {
-      padding-top: 50px;
-    }
-    .footer-txt p {
-      font-size: 16px;
-      margin: 15px 20px;
-    }
-  }
+}
 /*This is the styling of the mobile view/responsiveness header/nav section*/
 @media (max-width: 720px) {
   .nav-menu {
@@ -624,10 +649,6 @@ footer {
 }
 
 @media (max-width: 600px) {
-  .hero-section {
-    /* display:none; */
-  }
-
   .main-container {
     display: flex;
     flex-direction: column;
@@ -692,9 +713,6 @@ footer {
   }
 }
 @media (max-width: 375px) {
-  header {
-    /* display:none; */
-  }
   .main-container {
     display: flex;
     flex-direction: column-reverse;
