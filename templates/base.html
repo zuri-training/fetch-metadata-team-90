@@ -25,6 +25,7 @@
       type="text/css"
       rel="stylesheet"
     />
+
     <link rel="icon" href="{% static 'img/favicon-16x16-blue.png' %}">
     {% block css %}
     <link
@@ -37,8 +38,10 @@
     {% endblock %}
     <link rel="stylesheet" href="{% static 'css/index.css' %}" />
 
+ 
   </head>
   <body>
+
     {%block navbar%}
     <header>
       <nav>
@@ -64,12 +67,11 @@
               </div>
             </div>
           {% else %}
-          <button class="login-btn">
-            <a href="{% url 'login' %}" class="nav-link">Login</a>
-          </button>
-          <button class="signup-btn">
-            <a href="{% url 'django_registration_register' %}" class="nav-link">Sign Up</a>
-          </button>
+        
+            <a href="{% url 'login' %}" class="login-btn nav-link">Login</a>
+       
+            <a href="{% url 'django_registration_register' %}" class="nav-link signup-btn">Sign Up</a>
+          
           {% endif %}
          
          
@@ -85,6 +87,9 @@
 
    {% endblock %}
     {% block content %} {% endblock %}
+
+
+
     {% block footer %}
     <footer>
       <div class="footer-container">
@@ -136,10 +141,23 @@
       </button>
     </footer>
     {% endblock %}
+    <!--This is preloader -->
+    <div class="loader">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+  </div>
+
     
+    {% comment %} preloader is here  {% endcomment %}
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  
+   
     <script type="text/javascript"  src="{% static 'js/general.js' %}"></script>
+    <script type="text/javascript"  src="{% static 'js/loader.js' %}"></script>
     {% block js %}
     <script type="text/javascript" src="{% static 'js/index.js' %}"></script>
     {% endblock %}
+
   </body>
 </html>
