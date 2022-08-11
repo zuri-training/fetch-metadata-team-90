@@ -58,17 +58,17 @@
                    <h3>Result</h3>
                   
                 
-                  {% for key, value in new_data.items %}
+                  {% for key, value in new_data.exif.items %}
                   <div class="result-details">
-                    <p>{{ value.desc }}: {{ value.val }}</p>
+                    <p>{{ value.desc }}:  <span>{{ value.val }}<span></p>
                   </div>
                   {% endfor %}
            
                  
                   
                    <div class="result-buttons">
-                     <input type="submit" value="share" class="save-button" id="save-result">
-                     <input type="submit" value="View full info" class="view-button" id="view-result">
+                    <a class="save-button shareLink" id="view-result" href="{% url 'share' new_data.id %}" target="_blank">Share</a>
+                     <a class="view-button" id="save-result"  href={{ new_data.get_absolute_url}}>Download</a>
                    </div>
                  </div>
                  
@@ -79,11 +79,11 @@
              <h3>History</h3>
              <div class="day"><p>Today</p></div>
              {% for file in file_list %}
-             <a class="btn btn-info" href="{{ file.get_absolute_url}}?q=view" target="_blank">
+             <a href="{{ file.get_absolute_url}}?q=view" target="_blank">
              <div class="history-data">
               <div class="mtdata-img"><img src="{% static 'img/Vector.png' %}" alt=""></div>
               <div class="mtdata">
-                <span>Nigerian Map.jpg</span>
+                <span>{{ file.file_name }}</span>
                 <p>107 kb</p>
               </div>
             </div>
@@ -117,8 +117,7 @@
               </div>
             </div>
              <li>
-                <a href={{ file.get_absolute_url}}>Download</a>
-                <a class="btn btn-info shareLink" href="{% url 'share' file.id %}" target="_blank">Share</a>
+                
              </li> {% endcomment %}
              {% endfor %}
              
