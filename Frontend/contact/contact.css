@@ -1,379 +1,474 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;500;600;700&family=Work+Sans:wght@400;700&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  body {
-    font-family: "Work Sans";
-    font-style: normal;
-  }
-  .generalflexselector {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  header {
-    background-image: url(./Hero.png);
-    width: 100%;
-    height: 100%;
-    padding-top: 40px;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Work Sans";
+  font-style: normal;
+  overflow-x: hidden;
+}
+.generalflexselector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header {
+  background-image: url(./Hero.png);
+  width: 100%;
+  height: 100%;
+  padding-top: 40px;
+}
+/* This is the starting point for styling of the nav links */
 
-
-   /* This is the starting point for styling of the nav links */
-  
-   nav {
-    padding: 0 20px;
-    line-height: 98px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-  }
-  .logo {
-    padding: 15px 30px 15px 50px;
-    line-height: 28px;
-  }
-  .logo img{
+nav {
+  padding: 0 20px;
+  line-height: 98px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.logo {
+  padding: 15px 30px 15px 50px;
+  line-height: 28px;
+}
+.logo img {
   width: 132px;
   height: 42px;
-  }
-  .nav-menu {
-    float: right;
-    margin-right: 50px;
-  }
-  .nav-menu li {
-    display: inline;
-    list-style: none;
-  }
-  .nav-menu li a {
-    line-height: 28px;
-    text-decoration: none;
-    font-size: 20px;
-    color:#212121;
-    padding-left: 60px;
-    font-weight: 400;
-  }
-  
-  .signup-btn a {
-    font-size: 20px;
-    text-decoration: none;
-    font-weight: 700;
-    color: #ffffff;
-  }
-
-  .login-btn a{
-    font-size: 20px;
-    text-decoration: none;
-    font-weight: 700;
-    color: #56CCF2;
-  }
-  .login-btn {
-    padding: 15px 35px;
-    color: #ffffff;
-    background: transparent;
-    border: 2px solid #56CCF2;;
-    border-radius: 4px;
-    margin-left: 150px;
-    margin-right: 15px;
-  }
-
-   .login-btn a:hover{
-    color: #408cc6;
-  }
-  .signup-btn {
-    padding: 15px 30px;
-    color: #ffffff;
-    background-color: #56ccf2;
-    border: none;
-    border-radius: 4px;
-  }
-
-  .signup-btn a:hover{
-    color: #408cc6;
-  }
-  .nav__mobile-list {
-    display: none;
-  }
-  .bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    background-color: #ffffff;
-  }
-  .hamburger {
-    display: none;
-    cursor: pointer;
-  }
-  
-  /* This is the ending point for styling of the nav links */
-  .hero-content h1 {
-    text-align: center;
-    color: #ffffff;
-    font-weight: 700;
-    font-size: 60px;
-    margin-top: 48px;
-    padding: 52px;
-  }
-  .hero-content p {
-    color: #ffffff;
-    text-align: center;
-    font-weight: 400;
-    font-size: 23px;
-    line-height: 36px;
-    margin: 0 205px;
-  }
-  /* the drop a message section styling begins here */
-.main-container{
-   gap: 125px;
-   margin-top: 140px;
-   margin-bottom: 32px;
+}
+.nav-menu {
+  float: right;
+  margin-right: 50px;
+}
+.nav-menu li {
+  display: inline;
+  list-style: none;
+}
+.nav-menu li a {
+  line-height: 28px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #212121;
+  padding-left: 60px;
+  font-weight: 400;
 }
 
-.drop-msg{
-padding: 0px;
-width: 505px;
+.signup-btn a {
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: 700;
+  color: #ffffff;
+}
 
+.login-btn a {
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: 700;
+  color: #56ccf2;
+}
+.login-btn {
+  padding: 15px 35px;
+  color: #ffffff;
+  background: transparent;
+  border: 2px solid #56ccf2;
+  border-radius: 4px;
+  margin-left: 150px;
+  margin-right: 15px;
+}
+.signup-btn {
+  padding: 15px 30px;
+  color: #ffffff;
+  background-color: #56ccf2;
+  border: none;
+  border-radius: 4px;
+}
+.nav__mobile-list {
+  display: none;
+}
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #ffffff;
+}
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
 
+/* This is the ending point for styling of the nav links */
+.hero-content h1 {
+  text-align: center;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 60px;
+  margin-top: 48px;
+  padding: 52px;
 }
-.sub-title{
-    /* text-align: center; */
-    margin-bottom: 32px;
+.hero-content p {
+  color: #ffffff;
+  text-align: center;
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 36px;
+  margin: 0 205px;
+}
+/* the drop a message section styling begins here */
+.main-container {
+  gap: 125px;
+  margin-top: 140px;
+  margin-bottom: 32px;
+}
+body {
+  font-family: "Work Sans";
+  font-style: normal;
+  overflow-x: hidden;
+}
+.generalflexselector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header {
+  background-image: url(./Hero.png);
+  width: 100%;
+  height: 100%;
+  padding-top: 40px;
+}
+/* This is the starting point for styling of the nav links */
 
+.drop-msg {
+  padding: 0px;
+  width: 505px;
 }
-form{
+.sub-title {
+  /* text-align: center; */
+  margin-bottom: 32px;
+}
+form {
+}
+.sub-title h3 {
+  width: 434px;
+  height: 56px;
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 56px;
+  letter-spacing: -0.02em;
+  color: #408cc6;
+  margin-bottom: 26px;
+}
+.sub-title p {
+  /* We will get back to you as soon as possible */
 
+  width: 434px;
+  height: 28px;
+
+  /* Web/Body small */
+
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  /* identical to box height, or 140% */
+
+  /* Grey/Grey08 */
+
+  color: #6f6f6f;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
 }
-.sub-title h3{
-width: 434px;
-height: 56px;
-font-family: 'Work Sans';
-font-style: normal;
-font-weight: 700;
-font-size: 35px;
-line-height: 56px;
-letter-spacing: -0.02em;
-color: #408CC6;
-margin-bottom: 26px;
+label[class="fname"] {
+  width: 200px;
+  height: 40px;
+
+  /* Web/Body small */
+
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  /* identical to box height, or 140% */
+
+  display: flex;
+  align-items: center;
+
+  /* Grey/Grey10 */
+
+  color: #373737;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
 }
-.sub-title p{
-width: 434px;
-height: 28px;
-font-family: 'Work Sans';
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: 28px;
-color: #6F6F6F;
+input[id="fname"] {
+  box-sizing: border-box;
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 0px 10px 48px;
+  gap: 10px;
+
+  width: 504px;
+  height: 56px;
+
+  border: 2px solid #9ca2ac;
+  border-radius: 4px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
 }
-label[class=fname]{
-    width: 200px;
-    height: 40px;
-    font-family: 'Work Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 28px;
+input[id="email"] {
+  box-sizing: border-box;
+
+  /* Auto layout */
+  /*     
     display: flex;
-    align-items: center;
-    color: #373737;
-    }
-input[id=fname]{
-    box-sizing: border-box;
-   display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 10px 0px 10px 48px;
-    gap: 10px;
-    width: 504px;
-    height: 56px;
-    border: 2px solid #9CA2AC;
-    border-radius: 4px;
-    }
+    flex-direction: row; */
+  align-items: center;
+  padding: 10px 0px 10px 48px;
+  gap: 10px;
 
-input[id=email]{
-    box-sizing: border-box;
-    align-items: center;
-    padding: 10px 0px 10px 48px;
-    gap: 10px;
-    width: 504px;
-    height: 56px;
-    border: 2px solid #9CA2AC;
-    border-radius: 4px;
-    
-  }
-input[id=Subject]{
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 10px 0px 10px 48px;
-    gap: 10px;
-    width: 504px;
-    height: 56px;
-    border: 2px solid #9CA2AC;
-    border-radius: 4px;
-    
+  width: 504px;
+  height: 56px;
+
+  border: 2px solid #9ca2ac;
+  border-radius: 4px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
 }
-input[id=message]{
-box-sizing: border-box;
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 10px 0px 10px 48px;
-gap: 10px;
-width: 504px;
-height: 98px;
-border: 2px solid #9CA2AC;
-border-radius: 4px;
+input[id="Subject"] {
+  box-sizing: border-box;
 
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 0px 10px 48px;
+  gap: 10px;
+
+  width: 504px;
+  height: 56px;
+
+  border: 2px solid #9ca2ac;
+  border-radius: 4px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
 }
+input[id="message"] {
+  /* Input Fields */
 
-input[type=submit]{
-justify-content: center;
-align-items: center;
-padding: 10px;
-width: 505px;
-height: 56px;
-background: #56CCF2;
-border-radius: 4px;
-cursor: pointer;
-font-family: 'Droid Sans';
-font-style: normal;
-font-weight: 700;
-font-size: 20px;
-line-height: 16px;
-display: flex;
-align-items: center;
-border: 0px;
-color: #FFFFFF;
+  box-sizing: border-box;
 
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 0px 10px 48px;
+  gap: 10px;
+
+  width: 504px;
+  height: 98px;
+
+  border: 2px solid #9ca2ac;
+  border-radius: 4px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+input[type="submit"] {
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  width: 505px;
+  height: 56px;
+
+  background: #56ccf2;
+  border-radius: 4px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 5;
+  flex-grow: 0;
+  cursor: pointer;
+
+  font-family: "Droid Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 16px;
+  /* identical to box height, or 80% */
+  display: flex;
+  align-items: center;
+  border: 0px;
+
+  /* white */
+  color: #ffffff;
 }
 
 input::placeholder{
+    /* Button text */
+
+
 width: 419px;
 height: 76px;
+
+/* Web/Body small */
+
 font-family: 'Work Sans';
 font-style: normal;
 font-weight: 400;
 font-size: 20px;
 line-height: 28px;
+/* or 140% */
+
+
+/* Grey/Grey06 */
+
 color: #A6A6A6;
+
+
+/* Inside auto layout */
+
 flex: none;
 order: 0;
 flex-grow: 0;
 }
 
-.contact-us{
-margin-top: -70px;
+.contact-us {
+  margin-top: -70px;
 }
 
-.contact-us h1{
-    width: 317px;
-    height: 102px;
-    font-family: 'Work Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 60px;
-    line-height: 102px;
-    align-items: center;
-    text-align: center;
-    letter-spacing: -0.02em;
-    color: #408CC6;
-     margin-left: 210px;
-     margin-bottom: 28.9px;
+.contact-us h1 {
+  width: 317px;
+  height: 102px;
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 102px;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #408cc6;
+  margin-left: 210px;
+  margin-bottom: 28.9px;
 }
-.contact-us img{
-width: 610px;
+.contact-us img {
+  width: 610px;
 }
 /* the drop a message section styling ends here */
 
-
 /* the get in touch section styling begins here */
 
-
-.get-in h3{
-margin: 20px 0 20px 5px;
-width: 209px;
-font-family: 'Work Sans';
-font-style: normal;
-font-weight: 700;
-font-size: 35px;
-line-height: 56px;
-align-items: center;
-text-align: center;
-letter-spacing: -0.02em;
-color: #408CC6;
-
+.get-in h3 {
+  margin: 20px 0 20px 5px;
+  width: 209px;
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 56px;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #408cc6;
 }
 .getting-in{
     padding: 40px;
     gap: 32px;
     width: 1240px;
     background: #FFFFFF;
-    box-shadow: 0px 0px 12px #00000026, 0px 0px 15px 4px #00000005;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15), 0px 0px 15px 4px rgba(0, 0, 0, 0.02);
     border-radius: 4px;
     margin: 56px 50px 183px;
 }
-.getting-in span{
-    font-family: 'Work Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 25px;
-    line-height: 38px;
-    letter-spacing: -0.02em;
-    text-transform: uppercase;
-    color: #8A8A8A;
-    
+.getting-in span {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 38px;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #8a8a8a;
 }
 
-.getting-in p{
-font-family: 'Work Sans';
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: 28px;
-color: #8A8A8A;
+.getting-in p {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: #8a8a8a;
 }
 
-.text-uno{
-    width: 1159px;
-    /* height: 68px; */
-    font-family: 'Work Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 28px;
-    color: #8A8A8A;
-    
+.text-uno {
+  width: 1159px;
+  /* height: 68px; */
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: #8a8a8a;
 }
-.text-duo, .text-trio,.text-quatro{
-padding: 0px;
-gap: 8px;
-width: 750px;
-height: 114px;
-margin-top: 24px;
-}
-
-
-
-.get-in-socials{
-justify-content: center;
-align-items: flex-start;
-gap: 16px;
-width: 189px;
-margin: 10px 0 20px;
+.text-duo,
+.text-trio,
+.text-quatro {
+  padding: 0px;
+  gap: 8px;
+  width: 750px;
+  height: 114px;
+  margin-top: 24px;
 }
 
+.get-in-socials {
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+  width: 189px;
+  margin: 10px 0 20px;
+}
 .get-in-socials img{
     width: 60px;
     height: 60px;
     cursor: pointer;
-   
+    
 }
 
 /* the get in touch section styling ends here */
@@ -392,20 +487,17 @@ footer {
     justify-content: center;
     align-items: center;
   }
-
   .footer-container .resourses {
     align-items: center;
     margin: 50px 50px;
     position: relative;
     flex-direction: column;
   }
-
   .footer-container .resourses img {
     height: 57px;
     width: 206px;
     margin-bottom: 15px;
   }
-
   .footer-container .resourses h6 {
     width: 269px;
     font-size: 20px;
@@ -484,198 +576,213 @@ footer {
   }
 /*This is the styling of the mobile view/responsiveness header/nav section*/
 @media (max-width: 720px) {
-    .nav-menu {
-      position: fixed;
-      left: -100%;
-      top: 90px;
-      flex-direction: column;
-      width: 100%;
-      height: 100%;
-      background-color: #408cc6;
-      transition: 0.3s;
-      text-align: center;
-    }
-    .nav-menu li a {
-      font-size: 18px;
-      padding: 10px 0;
-      margin: 10px 0;
-      display: block;
-    }
-    .nav-menu.active {
-      left: 0;
-    }
-    .hamburger {
-      display: block;
-    }
-    .hamburger.active .bar:nth-child(2) {
-      opacity: 0;
-    }
-    .hamburger.active .bar:nth-child(1) {
-      transform: translateY(8px) rotate(45deg);
-    }
-    .hamburger.active .bar:nth-child(3) {
-      transform: translateY(-8px) rotate(-45deg);
-    }
-    .signup-btn,
-    .login-btn {
-      padding: 8px 5px;
-      margin-left: 10px;
-    }
-    .login-btn a,
-    .signup-btn a {
-      font-size: 16px;
-    }
-  
-    .logo {
-      margin: -25px;
-    }
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 90px;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: #408cc6;
+    transition: 0.3s;
+    text-align: center;
+  }
+  .nav-menu li a {
+    font-size: 18px;
+    padding: 10px 0;
+    margin: 10px 0;
+    display: block;
+  }
+  .nav-menu.active {
+    left: 0;
+  }
+  .hamburger {
+    display: block;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .signup-btn,
+  .login-btn {
+    padding: 8px 5px;
+    margin-left: 10px;
+  }
+  .login-btn a,
+  .signup-btn a {
+    font-size: 16px;
   }
 
-  @media(max-width:600px){
-    .hero-section{
-        /* display:none; */
-    }
-
-    .main-container{
-        display: flex;
-        flex-direction: column-reverse;
-    }
-
-    .getting-in{
-        width: 85%;
-        gap:0px;
-        margin:auto;
-    }
-
-    .text-uno{
-        width:90%;
-    }
-
-    .text-duo, .text-trio, .text-quatro{
-       width:90%; 
-       /* height: 0%; */
-    }
-
-    .contact-us img{
-        width: 95%;
-    }
-
-    input[id=fname], input[id=email], input[id=Subject], input[id=message]{
-        width:70%;
-        margin: auto;
-    }
-
-    label[class=fname]{
-        width:70%;
-        margin: auto;
-    }
-
-    input[type=submit]{
-        width: 60%;
-        margin: auto;
-        
-    }
+  .logo {
+    margin: -25px;
   }
-  @media (max-width: 375px) {
-  
-header{
+}
+
+@media (max-width: 600px) {
+  .hero-section {
     /* display:none; */
-}
-.main-container{
+  }
+
+  .main-container {
     display: flex;
-    flex-direction:column-reverse;
-    width:350px;
+    flex-direction: column;
+  }
+  .main-container h3 {
+    text-align: center;
+    font-size: 30px;
+    width: 500px;
+  }
+  .main-container p {
+    text-align: center;
+    font-size: 18px;
+    width: 500px;
+  }
+
+  .getting-in {
+    width: 85%;
+    gap: 0px;
     margin: auto;
+  }
 
+  .text-uno {
+    width: 90%;
+  }
+
+  .text-duo,
+  .text-trio,
+  .text-quatro {
+    width: 90%;
+    /* height: 0%; */
+  }
+
+  .contact-us img {
+    width: 95%;
+    height: 500px;
+  }
+
+  input[id="fname"],
+  input[id="email"],
+  input[id="Subject"],
+  input[id="message"] {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: auto;
+  }
+
+  label[class="fname"] {
+    width: 70%;
+    margin: auto;
+  }
+
+  input[type="submit"] {
+    width: 60%;
+    margin: auto;
+  }
+  .main-container .contact-us h1 {
+    text-align: center;
+    width: 500px;
+    font-size: 40px;
+    margin: auto;
+  }
 }
+@media (max-width: 375px) {
+  header {
+    /* display:none; */
+  }
+  .main-container {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 350px;
+    margin: auto;
+  }
 
-.contact-us img{
+  .contact-us img {
     width: 80%;
+  }
 
-}
-
-.contact-us h1{
+  .contact-us h1 {
     width: 200px;
     font-size: 30px;
     margin: 10px auto;
     line-height: 0;
-}
-.sub-title h3{
+  }
+  .sub-title h3 {
     display: none;
-}
+  }
 
-
-.sub-title p{
+  .sub-title p {
     width: 332px;
-    margin:auto;
-}
+    margin: auto;
+  }
 
-.drop-msg{
-    width:350px;
-}
+  .drop-msg {
+    width: 350px;
+  }
 
-.get-in{
+  .get-in {
     width: 93%;
     margin: auto;
-}
+  }
 
-input[value]{
-width: 335px;
-height: 56px;
-padding: 10px 0px 10px 48px;
+  input[value] {
+    width: 335px;
+    height: 56px;
+    padding: 10px 0px 10px 48px;
+  }
 
-}
-
-label[class=fname]{
-    width:120px;
+  label[class="fname"] {
+    width: 120px;
     font-size: 15px;
     line-height: 22px;
-}
+  }
 
-input::placeholder{
-font-size: 14px;
-}
-input[type=submit]{
+  input::placeholder {
+    font-size: 14px;
+  }
+  input[type="submit"] {
     width: 188px;
-    height:48px;
-    margin:20px auto;
+    height: 48px;
+    margin: 20px auto;
     text-align: center;
-    
-}
+  }
 
-input#submit{
+  input#submit {
     text-align: center;
     font-size: 16px;
-    margin-bottom:20px;
-    padding:10px;
-}
-.sub-container{
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+  .sub-container {
     width: 350px;
-}
-.footer{
-    width:375px;
-    height:500px;
-}
+    padding-bottom: 500px;
+  }
+  .footer {
+    width: 375px;
+    height: 500px;
+  }
 
-.getting-in{
+  .getting-in {
     width: 100%;
     height: 800px;
     margin: auto 10px;
-}
+  }
 
-.texty{
-    width:100%;
-}
+  .texty {
+    width: 100%;
+  }
 
-.text-duo{
-    margin-top:40px;
+  .text-duo {
+    margin-top: 40px;
+  }
 
-}
-
-.texty span{
-  line-height: 24px;  
-  font-size: 20px;
-}
-
-
+  .texty span {
+    line-height: 24px;
+    font-size: 20px;
+  }
 }
