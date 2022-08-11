@@ -11,17 +11,15 @@
   <main>
     <div class="box">
       <div class="inner-box">
-        <div class="picture-side">
-          <div class="logo">
+          <div class="picture-side">
+              <div class="picture__logo-content">
+              <div class="logo">
             <img src="{% static 'signup-img/logo.svg' %}" alt="" />
           </div>
           <div class="heading-right">
-            <p>
-              A data extraction tool that can be used to extract data quickly and
-              effectively while providing accurate information about the data
-              being extracted.
-            </p>
+              <p>A data extraction tool that can be used to extract data quickly and effectively while providing accurate information about the data being extracted.</p>
           </div>
+      </div>
           <div class="image">
             <img class="dots" src="{% static 'signup-img/25332_[Converted]_1.png' %}"  alt="" />
             <img class="woman" src="{% static 'signup-img/woman _signup.png' %}" alt="" />
@@ -32,6 +30,7 @@
         <div class="forms-wrapper">
           <form method="post" action="">
             {% csrf_token %}
+            <div class="field_wrapper">
             <div class="heading">
               <p class="big">Start for free</p>
               <h3>Create new account</h3>
@@ -40,6 +39,11 @@
             </div>
           
         <div class="form__fields">
+          <div class="card-box">
+            <span class="details">Create Username</span>
+           {{form.username.errors}}
+           {{form.username}}
+        </div>
             <div class="card-box">
               <span class="details">E-mail Address</span>
               {{ form.email.errors }}
@@ -80,11 +84,12 @@
             <div class="buttom-text">
               <p class="text">
                 By continuing with Google Apple or Email, I agree to MetLab's
-                <a href="#">Prvacy Policy</a> and
-                <a href="#">Terms of service</a>
+                <a href="{% url 'privacy-policies' %}">Prvacy Policy</a> and
+                <a href="{% url 'terms-conditions' %}">Terms of service</a>
               </p>
             </div>
           </div>
+        </div>
           </form>
         </div>
       </div>
@@ -125,4 +130,5 @@
     }
   </script>
   {% endblock %}
-  
+  {% block footer %}
+  {% endblock %}

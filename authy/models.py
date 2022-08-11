@@ -52,14 +52,14 @@ class User(AbstractUser):
 # do not touch
 
 class Profile(models.Model):
-	user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+	user = models.OneToOneField(settings.AUTH_USER_MODEL, related_name="profile", on_delete=models.CASCADE)
 	first_name = models.CharField(max_length=50, null=True, blank=True)
 	last_name = models.CharField(max_length=50, null=True, blank=True)
 	location = models.CharField(max_length=50, null=True, blank=True)
-	url = models.CharField(max_length=80, null=True, blank=True)
-	profile_info = models.TextField(max_length=150, null=True, blank=True)
+	url = models.URLField(max_length=80, null=True, blank=True)
+	profile_info = models.CharField(max_length=150, null=True, blank=True)
 	created = models.DateField(auto_now_add=True)
-	picture = models.ImageField(upload_to='profile_pictures', blank=True, null=True, verbose_name='Picture')
+	picture = models.ImageField(upload_to='profile', blank=True, null=True, verbose_name='Picture')
 
 def create_user_profile(sender, instance, created, **kwargs):
 	if created:

@@ -27,8 +27,19 @@ def UniqueUser(value):
 	if User.objects.filter(username__iexact=value).exists():
 		raise ValidationError('User with this username already exists.')
 class AuthyRegistrationForm(RegistrationForm):
+	username = forms.CharField(widget=forms.TextInput(), max_length=30, required=True,)
 	class Meta(RegistrationForm.Meta):
 		model = User
+		fields = ('username', 'email', 'password1')
+
+
+	def __init__(self, *args, **kwargs):
+		super(AuthyRegistrationForm, self).__init__(*args, **kwargs)
+		self.fields['username'].validators.append(ForbiddenUsers)
+		self.fields['username'].validators.append(InvalidUser)
+		self.fields['username'].validators.append(UniqueUser)
+	
+
 
 
 # class SignupForm(forms.ModelForm):
@@ -80,15 +91,3 @@ class ChangePasswordForm(forms.ModelForm):
 		if new_password != confirm_password:
 			self._errors['new_password'] =self.error_class(['Passwords do not match.'])
 		return self.cleaned_data
-
-class EditProfileForm(forms.ModelForm):
-	picture = forms.ImageField(required=False)
-	first_name = forms.CharField(widget=forms.TextInput(), max_length=50, required=False)
-	last_name = forms.CharField(widget=forms.TextInput(), max_length=50, required=False)
-	location = forms.CharField(widget=forms.TextInput(), max_length=25, required=False)
-	url = forms.URLField(widget=forms.TextInput(), max_length=60, required=False)
-	profile_info = forms.CharField(widget=forms.TextInput(), max_length=260, required=False)
-
-	class Meta:
-		model = Profile
-		fields = ('picture', 'first_name', 'last_name', 'location', 'url', 'profile_info')

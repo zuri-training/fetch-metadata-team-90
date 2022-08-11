@@ -7,7 +7,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{% block title %}Welcome to {% endblock %}</title>
-   
+    
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
@@ -18,9 +18,14 @@
       href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
-    
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" /> 
+    <link
+      href="{% static 'css/general.css' %}"
+      type="text/css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="{% static 'img/favicon-16x16-blue.png' %}">
     {% block css %}
     <link
       href="{% static 'css/style.css' %}"
@@ -28,28 +33,79 @@
       rel="stylesheet"
       media="screen,projection"
     />
+    <link rel="stylesheet" href="{% static 'css/landing.css' %}" />
     {% endblock %}
 
   </head>
   <body>
     {%block navbar%}
-    <nav>
-      <div>
-        <a href="/">Home</a>
-        <div>
-          {% if request.user.is_active %}
-          <a href="{% url 'profile'%}">Profile</a>
-          <a href="{% url 'logout'%}">Log Out</a>
-          {% else %}
-          <a href="{% url 'signup' %}">Register</a>
-          <a href="{% url 'login' %}">Log In</a>
-          {% endif %}
+    <header>
+      <nav>
+        <div class="logo generalflexselector">
+          <a href=""><img src="{% static 'img/Home-Images/Horizontal Logo.svg' %}" /></a>
         </div>
-      </div>
-    </nav>
- {% endblock %}
+        <ul class="nav-menu">
+          <li><a href="" class="nav-link">Home</a></li>
+          <li><a href="" class="nav-link">About </a></li>
+          <li><a href="" class="nav-link">Support</a></li>
+          <li><a href="" class="nav-link">Meta Data</a></li>
+          <button class="login-btn">
+            <a href="{% url 'login' %}" class="nav-link">Login</a>
+          </button>
+          <button class="signup-btn">
+            <a href="{% url 'django_registration_register' %}" class="nav-link">Sign Up</a>
+          </button>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+   {% endblock %}
     {% block content %} {% endblock %}
-
-    <script src="{% static 'js/test.js' %}"></script>
+    {% block footer %}
+    <footer>
+      <div class="footer-container">
+         <div class="resourses generalflexselector">
+         <img src="{% static 'img/Home-Images/Horizontal Logo.svg' %}" />
+         <p>
+            Extracting data quickly and effectively while providing accurate
+            information about the data being extracted.
+         </p>
+         </div>
+         <div class="resourses">
+         <h6>RESOURCES</h6>
+         <li><a href="">Getting Started</a></li>
+         <li><a href="">Documentation</a></li>
+         <li><a href="">Status</a></li>
+         </div>
+         <div class="resourses">
+         <h6>COMPANY</h6>
+         <li><a href="">Aunthenticate</a></li>
+         <li><a href="">Support</a></li>
+         <li><a href="">Meta Data</a></li>
+         </div>
+      </div>
+      <div class="footer-txt">
+         <p>Privacy | Website Terms of Use | Cookie Consent | COVID-19</p>
+         <p>© 2022 MetLab. All Rights Reserved</p>
+      </div>
+      <div class="social generalflexselector">
+         <div class="icons">
+         <i class="fa-brands fa-facebook-f"></i>
+         </div>
+         <div class="icons">
+         <i class="fa-brands fa-instagram"></i>
+         </div>
+         <div class="icons">
+         <i class="fa-brands fa-twitter"></i>
+         </div>
+      </div>
+      <button class="scroll-to-top"> <img src="{% static 'img/Home-Images/Scroll Back To Top (1).png' %}" alt="Image" class="scroll"></button>
+   </footer>
+    {% endblock %}
+    <script  src="{% static 'js/test.js' %}"></script>
   </body>
 </html>

@@ -31,25 +31,23 @@ nav {
 }
 .logo {
   padding: 15px 30px 15px 50px;
+  line-height: 28px;
 }
-nav ul {
+.nav-menu {
   float: right;
-  margin-right: 100px;
+  margin-right: 50px;
 }
-nav ul li {
+.nav-menu li {
   display: inline;
   list-style: none;
 }
-header nav ul li a {
+.nav-menu li a {
   line-height: 28px;
   text-decoration: none;
   font-size: 20px;
   color: #ffffff;
-  margin-left: 60px;
+  padding-left: 60px;
   font-weight: 400;
-}
-.nav-btn {
-  margin: 0 30px;
 }
 .login-btn a,
 .signup-btn a {
@@ -64,6 +62,7 @@ header nav ul li a {
   background: transparent;
   border: 2px solid #ffffff;
   border-radius: 4px;
+  margin-left: 150px;
   margin-right: 15px;
 }
 .signup-btn {
@@ -91,25 +90,25 @@ header nav ul li a {
 }
 /*This is the styling of the mobile view/responsiveness header/nav section*/
 @media (max-width: 720px) {
-  .nav__mobile-list {
-    display: block;
+  .nav-menu {
     position: fixed;
     left: -100%;
+    top: 90px;
     flex-direction: column;
-    min-width: 72px;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin: 40px 0;
+    width: 100%;
+    height: 100%;
+    background-color: #408cc6;
+    transition: 0.3s;
+    text-align: center;
   }
-  .nav__mobile-list a {
+  .nav-menu li a {
     font-size: 18px;
+    padding: 10px 0;
+    margin: 10px 0;
+    display: block;
   }
-  .nav__mobile-list.active {
+  .nav-menu.active {
     left: 0;
-  }
-  .nav__list,
-  .nav-btn {
-    display: none;
   }
   .hamburger {
     display: block;
@@ -125,17 +124,14 @@ header nav ul li a {
   }
   .signup-btn,
   .login-btn {
-    width: 50%;
-    padding: 8px 16px;
-    margin-left: 100px;
+    padding: 8px 5px;
+    margin-left: 10px;
   }
-  header nav ul li a {
-    line-height: 20px;
+  .login-btn a,
+  .signup-btn a {
     font-size: 16px;
-    padding: 10px 0;
-    margin: 10px 0;
-    display: block;
   }
+
   .logo {
     margin: -25px;
   }
@@ -202,14 +198,14 @@ header nav ul li a {
 }
 .hero-content button {
   height: 56px;
-  width: 200px;
+  width: 350px;
   left: 386px;
   top: 0px;
   border-radius: 4px;
   border: none;
   padding: 10px;
   background: #56ccf2;
-  margin-left: 5px;
+  margin: 20px 0;
 }
 .hero-content button a {
   font-size: 20px;
@@ -262,16 +258,6 @@ header nav ul li a {
     text-align: center;
     margin-bottom: 0;
   }
-  .hero-content input {
-    height: 50px;
-    width: 357px;
-    font-size: 18px;
-    color: #ffffff;
-  }
-  .hero-content input::placeholder {
-    font-size: 16px;
-    text-align: left;
-  }
   .hero-content button {
     height: 48px;
     width: 357px;
@@ -282,9 +268,7 @@ header nav ul li a {
     text-align: center;
   }
   .hero-content img {
-    height: 400px;
-    width: 300px;
-    margin-top: 30px;
+    display: none;
   }
   .animation {
     width: 100%;
@@ -314,7 +298,6 @@ header nav ul li a {
   flex-wrap: wrap;
 }
 .how-it-works .row .col-md-3 {
-  position: relative;
   flex-direction: column;
   width: 256px;
   height: 302px;
@@ -415,7 +398,6 @@ header nav ul li a {
   flex-wrap: wrap;
 }
 .need-to-know .container .boxes {
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -554,6 +536,86 @@ header nav ul li a {
     font-size: 16px;
   }
 }
+/*Styling of the faq starts here*/
+.faq {
+  padding: 80px 10px;
+  background-color: #fafafa;
+}
+.faq h3 {
+  height: 56px;
+  font-size: 35px;
+  font-weight: 700;
+  text-align: center;
+  color: #66a3d2;
+}
+.accordion {
+  width: 70%;
+  max-width: 1000px;
+  margin: 30px auto;
+}
+.accordion-item {
+  background-color: #ffffff;
+  color: #6f6f6f;
+  margin: 20px 0;
+  border-radius: 4px;
+  box-shadow: 0px 13px 30px rgba(0, 0, 0, 0.25);
+}
+.accordion-item-header {
+  padding: 15px 25px 15px 20px;
+  display: flex;
+  min-height: 3.5rem;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 38px;
+  position: relative;
+  align-items: center;
+  cursor: pointer;
+}
+.accordion-item-header::after {
+  content: "\25BE";
+  font-size: 50px;
+  color: #408cc6;
+  position: absolute;
+  right: 25px;
+}
+.accordion-item-header.active::after {
+  transform: rotate(180deg);
+}
+.accordion-item-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.accordion-item-body-content {
+  padding: 16px;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: left;
+  width: 770px;
+  font-size: 20px;
+  font-weight: 400;
+}
+/*This is the styling of the mobile view/responsiveness of the need-to-know section*/
+@media (max-width: 720px) {
+  .faq h3 {
+    font-size: 25px;
+  }
+  .accordion {
+    width: 80%;
+  }
+  .accordion-item-header {
+    font-size: 20px;
+  }
+  .accordion-item-header::after {
+    content: "\25BE";
+    font-size: 30px;
+  }
+  .accordion-item-body-content {
+    text-align: justify;
+    width: 100%;
+    font-size: 16px;
+  }
+}
 
 /*Styling of the Footer starts here*/
 footer {
@@ -572,7 +634,6 @@ footer {
 .footer-container .resourses {
   align-items: center;
   margin: 50px 50px;
-  position: relative;
   flex-direction: column;
 }
 .footer-container .resourses img {
@@ -625,7 +686,6 @@ footer .social {
 }
 footer .social .icons {
   margin: 20px 10px;
-  position: relative;
   display: flex;
   flex-direction: row;
 }
@@ -646,7 +706,6 @@ footer .social .icons i {
   .footer-container .resourses {
     display: flex;
     margin: 10px auto;
-    position: relative;
   }
   .footer-container {
     padding-top: 50px;
@@ -655,4 +714,51 @@ footer .social .icons i {
     font-size: 16px;
     margin: 15px 20px;
   }
+  .resourses {
+    padding: 20px;
+  }
+}
+
+/*This is the styling for the scroll to top button
+.scroll-to-top{
+  position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 50px;
+    border: none;
+    display: none;
+  
+  
+    
+    z-index: 99; 
+  
+    outline: none; 
+    cursor: pointer; 
+     
+    
+}
+    
+#scrolltopbtn {
+    height: 100px;
+    width: 150px;
+}
+=======
+/*This is the styling for the scroll to top button*/
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 0;
+  border: none;
+  background: url("/Frontend/Landing-page/Home-Images/Scroll Back To Top (1).png");
+  border-radius: 0px 0px 0px 0px;
+  background-size: 100%;
+  cursor: pointer;
+  margin-bottom: 15px;
+  opacity: 0.9;
+}
+.scrolltopbtn {
+  height: 60px;
+  width: 60px;
 }

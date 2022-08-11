@@ -8,7 +8,7 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
   />
-  <link rel="icon" href="../favicon-16x16-blue.png">
+  <link rel="icon" href="./favicon-16x16-blue.png">
   <title>Profile Page-Test</title>
     <link rel="stylesheet" href="profile.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
@@ -20,7 +20,7 @@
         <img src="./Horizontal Logo.png" alt="" />
       </div>
       <hr>
-      <div  class="dash">
+      <div class="dash">
         <div><P class="light-gray"><span><img src="./menu.svg" alt=""></span> Dashboard</P></div>
         <div class="dash-section">
         <nav  class="light-gray"><span><img src="./profile-icon.png" alt=""></span><a href="">Profile</a></nav>
@@ -106,18 +106,13 @@
                   </div>
               
         </section>
+      <div class="main-flow-flex">
         <section class="main-flow">
             <div class="upload-container">
-              <!-- <div class="upload-area">
-                <img src="./cloud-plus.svg" alt="">
-                <p>Drag and drop a file here or click to upload</p>
-              </div> -->
-
-              <div class="drag-area">
-                <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
-                <header>Drag & Drop to Upload File</header>
-                <span>OR</span>
-                <button>Browse File</button>
+               <div class="upload-area">
+                <div class="icon"><img class="cloud-icon" src="./cloud-plus.svg" alt=""></div>
+                <p> Drag & Drop to Upload File or <button>click to upload</button></p>
+                
                 <input type="file" hidden>
               </div>
               <script src="profile.js"></script>
@@ -197,6 +192,7 @@
             </div>
           </div>
         </section>
+      </div>
     </main>
   </body>
 </html>
