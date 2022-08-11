@@ -1,5 +1,4 @@
 //This part is for the responsiveness of the navigation on mobile view and allows the hambuger to function well.
-//This is for the hamburger menu
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 
