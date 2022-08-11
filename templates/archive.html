@@ -1,7 +1,6 @@
 {% extends 'base.html' %} {%load static%}
 <title>{% block title %}MetLab Archives{% endblock %}</title>
 {% block css %}<link rel="stylesheet" href="{% static 'css/archives.css' %}" />
-<script src="{% static 'js/archives.js'%}"></script>
 {% endblock %} {%block navbar%}
 <!--This is for header-->
 <header>
@@ -113,5 +112,7 @@
     </div>
   </section>
 </main>
+
+<script src="{% static 'js/archives.js'%}"></script>
 
 {%endblock%}

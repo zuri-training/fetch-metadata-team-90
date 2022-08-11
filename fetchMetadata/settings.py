@@ -13,169 +13,165 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 from pathlib import Path
 
 import os
-from configurations import Configuration
-from configurations import values
+import environ
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-class Dev(Configuration):
+env = environ.Env()
+environ.Env.read_env()
 
-    # Quick-start development settings - unsuitable for production
-    # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
+# Quick-start development settings - unsuitable for production
+# See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
-    # SECURITY WARNING: keep the secret key used in production secret!
-    SECRET_KEY = 'django-insecure-j(8)@r_)%z^axflen4v%!dj_#_bjo$^d$hg^^elj=^th9#mtzy'
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = "django-insecure-j(8)@r_)%z^axflen4v%!dj_#_bjo$^d$hg^^elj=^th9#mtzy"
 
-    # SECURITY WARNING: don't run with debug turned on in production!
-    DEBUG = True
-
-    ALLOWED_HOSTS = ['*']
-
-
-    # Application definition
-
-    INSTALLED_APPS = [
-        'django.contrib.admin',
-        'django.contrib.auth',
-        'django.contrib.contenttypes',
-        'django.contrib.sessions',
-        'django.contrib.messages',
-        'django.contrib.staticfiles',
-        'django.contrib.sites',
-        'authy',
-        'app_data',
-        "metadata_extraction",
-        'allauth', 
-        'allauth.account', 
-        'allauth.socialaccount',
-        'allauth.socialaccount.providers.google',
-    ]
-
-    AUTH_USER_MODEL = "authy.User"
-    ACCOUNT_ACTIVATION_DAYS = 7
-    SITE_ID = 1
-    SOCIALACCOUNT_LOGIN_ON_GET=True
-    ACCOUNT_LOGOUT_ON_GET= True
-    
-    ACCOUNT_EMAIL_REQUIRED = True
-    ACCOUNT_USERNAME_REQUIRED = True
-    ACCOUNT_AUTHENTICATION_METHOD = "email"
-    SOCIALACCOUNT_QUERY_EMAIL = True
-
-    MIDDLEWARE = [
-        'django.middleware.security.SecurityMiddleware',
-        'django.contrib.sessions.middleware.SessionMiddleware',
-        'django.middleware.common.CommonMiddleware',
-        'django.middleware.csrf.CsrfViewMiddleware',
-        'django.contrib.auth.middleware.AuthenticationMiddleware',
-        'django.contrib.messages.middleware.MessageMiddleware',
-        'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    ]
-
-    ROOT_URLCONF = 'fetchMetadata.urls'
-
-    TEMPLATES = [
-        {
-            'BACKEND': 'django.template.backends.django.DjangoTemplates',
-            'DIRS': [BASE_DIR / 'templates/'],
-            'APP_DIRS': True,
-            'OPTIONS': {
-                'context_processors': [
-                    'django.template.context_processors.debug',
-                    'django.template.context_processors.request',
-                    'django.contrib.auth.context_processors.auth',
-                    'django.contrib.messages.context_processors.messages',
-                    
-                ],
-                'builtins': [
-                'authy.templatetags.placeholder',
-                ]
-            },
-        },
-    ]
-
-    WSGI_APPLICATION = 'fetchMetadata.wsgi.application'
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
 
 
-    # Database
-    # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
-
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
-        }
-    }
+ALLOWED_HOSTS = ["*"]
 
 
-    # Password validation
-    # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
+# Application definition
 
-    AUTH_PASSWORD_VALIDATORS = [
-        {
-            'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
-        },
-        {
-            'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-        },
-        {
-            'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
-        },
-        {
-            'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-        },
-    ]
-
-
-    # Internationalization
-    # https://docs.djangoproject.com/en/4.0/topics/i18n/
-
-    LANGUAGE_CODE = 'en-us'
-
-    TIME_ZONE = 'UTC'
-
-    USE_I18N = True
-
-    USE_TZ = True
-
-
-    # Static files (CSS, JavaScript, Images)
-    # https://docs.djangoproject.com/en/4.0/howto/static-files/
-
-    STATIC_URL = '/static/'
-
-    
-    STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')
+INSTALLED_APPS = [
+    "django.contrib.admin",
+    "django.contrib.auth",
+    "django.contrib.contenttypes",
+    "django.contrib.sessions",
+    "django.contrib.messages",
+    "django.contrib.staticfiles",
+    "django.contrib.sites",
+    "authy",
+    "app_data",
+    "metadata_extraction",
+    "allauth",
+    "allauth.account",
+    "allauth.socialaccount",
+    "allauth.socialaccount.providers.google",
 ]
 
-    MEDIA_URL = '/media/'
-    MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+AUTH_USER_MODEL = "authy.User"
+ACCOUNT_ACTIVATION_DAYS = 7
+SITE_ID = 1
+SOCIALACCOUNT_LOGIN_ON_GET = True
+ACCOUNT_LOGOUT_ON_GET = True
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_USERNAME_REQUIRED = True
+ACCOUNT_AUTHENTICATION_METHOD = "email"
+SOCIALACCOUNT_QUERY_EMAIL = True
 
-    ### SMTP configuration; simple mail transfer protocol
-    
-    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-    # EMAIL_HOST =    'smtp.gmail.com'
-    # EMAIL_PORT= 587
-    # EMAIL_USE_TLS= True
-    # EMAIL_HOST_USER= ''
-    # EMAIL_HOST_PASSWORD= ''
-     
-    
-    
-    LOGIN_REDIRECT_URL = 'dashboard'
-    LOGOUT_REDIRECT_URL = '/'
-    
-    # Default primary key field type
-    # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
+MIDDLEWARE = [
+    "django.middleware.security.SecurityMiddleware",
+    "django.contrib.sessions.middleware.SessionMiddleware",
+    "django.middleware.common.CommonMiddleware",
+    "django.middleware.csrf.CsrfViewMiddleware",
+    "django.contrib.auth.middleware.AuthenticationMiddleware",
+    "django.contrib.messages.middleware.MessageMiddleware",
+    "django.middleware.clickjacking.XFrameOptionsMiddleware",
+]
 
-    DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+ROOT_URLCONF = "fetchMetadata.urls"
+
+TEMPLATES = [
+    {
+        "BACKEND": "django.template.backends.django.DjangoTemplates",
+        "DIRS": [BASE_DIR / "templates/"],
+        "APP_DIRS": True,
+        "OPTIONS": {
+            "context_processors": [
+                "django.template.context_processors.debug",
+                "django.template.context_processors.request",
+                "django.contrib.auth.context_processors.auth",
+                "django.contrib.messages.context_processors.messages",
+            ],
+            "builtins": [
+                "authy.templatetags.placeholder",
+            ],
+        },
+    },
+]
+
+WSGI_APPLICATION = "fetchMetadata.wsgi.application"
 
 
+# Database
+# https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-class Prod(Dev):
-    DEBUG=False
-    SECRET_KEY = values.SecretValue()
-    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-    ALLOWED_HOSTS = values.ListValue(["localhost", "0.0.0.0"])
-    # DATABASES = values.DatabaseURLValue(f"sqlite:///{BASE_DIR}/db.sqlite3")
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
+    }
+}
+
+
+# Password validation
+# https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
+
+AUTH_PASSWORD_VALIDATORS = [
+    {
+        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
+    },
+    {
+        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",
+    },
+    {
+        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",
+    },
+    {
+        "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
+    },
+]
+
+
+# Internationalization
+# https://docs.djangoproject.com/en/4.0/topics/i18n/
+
+LANGUAGE_CODE = "en-us"
+
+TIME_ZONE = "UTC"
+
+USE_I18N = True
+
+USE_TZ = True
+
+
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/4.0/howto/static-files/
+
+STATIC_URL = "/static/"
+
+#STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
+### SMTP configuration; simple mail transfer protocol
+#for development only
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# for production only
+# EMAIL_BACKEND = "django.core.mail.backends.smtp"
+# EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+# EMAIL_HOST = "smtp.gmail.com"
+# EMAIL_PORT = 587
+# EMAIL_HOST_USER = "zurimetlab@gmail.com"
+# EMAIL_HOST_PASSWORD = env("METLAB_EMAIL_PASSWORD")
+# EMAIL_USE_TLS = True
+
+
+# SERVER_EMAIL = "zurimetlab@gmail.com"
+# ADMINS = [("fidekg123@gmail.com", "zurimetlab@gmail.com")]
+
+
+LOGIN_REDIRECT_URL = "dashboard"
+LOGOUT_REDIRECT_URL = "/"
+
+# Default primary key field type
+# https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
+
+DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"

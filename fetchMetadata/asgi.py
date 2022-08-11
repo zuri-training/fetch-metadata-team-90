@@ -11,9 +11,8 @@ import os
 
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'fetchMetadata.settings')
-os.environ.setdefault('DJANGO_CONFIGURATION', 'Prod')
 
-from configurations.asgi import get_asgi_application
+from django.core.asgi import get_asgi_application
 
 
 application = get_asgi_application()
