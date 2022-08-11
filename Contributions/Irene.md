@@ -1,6 +1,18 @@
+TEAM GITHUB LINK: https://github.com/orgs/zuri-training/teams/fetch-metadata-team-90
+
+NAME: MAMA IHECHI IRENE
+
 TRACK: PRODUCT DESIGN 
 
 TASKS ASSIGNED
+
+A) UX CONTRIBUTIONS
+
+* USER RESEARCH 1 (SHARED WITH THE UX TEAM) - https://docs.google.com/document/d/1fpToZTLiRPtkazxkl25kjeIYJl_CKhfenYt1J5BZB6s/edit
+
+* USER RESEARCH 2 (SHARED WITH THE UX TEAM) - https://docs.google.com/document/d/1QkNrROtmkiUoLXjbJKHOE8s_VzBmmPAM2BO3oWMb6dw/edit
+
+B) UI TASKS
 
 1) WIREFRAMES
 * ERROR PAGE (https://www.figma.com/file/k6l4E06XqOk7zbtCzFAe78/TEAM-90-DRAFT?node-id=6%3A22686)
