@@ -72,9 +72,6 @@ nav {
   border: none;
   border-radius: 4px;
 }
-.nav__mobile-list {
-  display: none;
-}
 .bar {
   display: block;
   width: 25px;
