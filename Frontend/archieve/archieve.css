@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;500;600;700&family=Work+Sans:wght@400;700&display=swap");
+
+:root{
+    --blue: #408cc6;
+    --light-blue: #01AEFD;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family:"Work Sans";
+    font-size: 400;
+}
+header{
+    background-color: var(--blue);
+    padding: 25px 12px;
+}
+a{
+    color: var(--light-blue)
+}
+.navbar-section{
+    padding: 7px 12px 10px;
+}
+.section-1{
+    margin-top: 70px;
+    height: fit-content;
+}
+.main-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 40px;
+    margin-top: 10px;
+}
+hr{
+    width: 92%;
+}
+.button-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section-2{
+    margin: 60px 0;
+}
+.button-container{
+    padding-top: 15px;
+}
+@media screen  and (max-width:720px){
+    .datetime{
+        padding: 0 10px;
+    }
+    .issues{
+        padding: 0 10px;
+    }
+
+    
+}
+button{
+    background-color: white;
+    box-shadow: 5px 10px 20px -10px;
+    border: 5px solid white;
+    border-left: 1px solid black;
+    filter: brightness(100%) opacity(1);
+    cursor: pointer;
+    transition: 2s ease;
+}
+.less-than-button{
+    border-left: none;
+}
+button:hover{
+    background-color: var(--blue);
+}
+.btn-9, .btn-10, .btn-eliceps-1{
+    display: none;
+}
+.display-none{
+    display: none !important;
+}
+
+/* styling for the footer */
+footer {
+    width: 100%;
+    height: 100%;
+    background: url(images/footer-bg.png);
+  }
+  .footer-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer-container .resourses {
+    align-items: center;
+    margin: 50px 50px;
+    flex-direction: column;
+  }
+  .footer-container .resourses img {
+    height: 57px;
+    width: 206px;
+    margin-bottom: 15px;
+  }
+  .footer-container .resourses h6 {
+    width: 269px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: center;
+    color: #ffffff;
+  }
+  .footer-container .resourses p {
+    width: 234px;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: left;
+    line-height: 20px;
+    padding: 7px 0;
+    color: #ffffff;
+  }
+  .footer-container .resourses li,
+  .footer-container .resourses li a {
+    text-align: center;
+    padding: 7px 0;
+    font-size: 16px;
+    font-weight: 400;
+    width: 269px;
+    list-style: none;
+    text-decoration: none;
+    color: #ffffff;
+  }
+  .footer-txt {
+    width: 100%;
+    margin: auto;
+  }
+  .footer-txt p {
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    margin: 15px auto;
+    color: #ffffff;
+  }
+  footer .social {
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+  footer .social .icons {
+    margin: 20px 10px;
+    display: flex;
+    flex-direction: row;
+  }
+  footer .social .icons i {
+    font-size: 25px;
+    color: #408cc6;
+    background-color: #ffffff;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 2px;
+  }
+  /*This is the styling of the mobile view/responsiveness of the footer*/
+  @media (max-width: 720px) {
+    .footer-txt {
+      width: 100%;
+      margin: auto;
+    }
+    .footer-container .resourses {
+      display: flex;
+      margin: 10px auto;
+    }
+    .footer-container {
+      padding-top: 50px;
+    }
+    .footer-txt p {
+      font-size: 16px;
+      margin: 15px 20px;
+    }
+    .resourses {
+      padding: 20px;
+    }
+  }
+  
