@@ -153,6 +153,23 @@ nav {
   margin-top: 140px;
   margin-bottom: 32px;
 }
+body {
+  font-family: "Work Sans";
+  font-style: normal;
+  overflow-x: hidden;
+}
+.generalflexselector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header {
+  background-image: url(./Hero.png);
+  width: 100%;
+  height: 100%;
+  padding-top: 40px;
+}
+/* This is the starting point for styling of the nav links */
 
 .drop-msg {
   padding: 0px;
@@ -477,13 +494,15 @@ input::placeholder {
   width: 60px;
   height: 60px;
   cursor: pointer;
-} /* the get in touch section styling ends here */
+}
+
+/* the get in touch section styling ends here */
 
 /*Styling of the Footer starts here*/
 footer {
   width: 100%;
   height: 100%;
-  background: url(Footer.png);
+  background: url(./Footer.png);
 }
 .footer-container {
   width: 100%;
@@ -496,6 +515,7 @@ footer {
 .footer-container .resourses {
   align-items: center;
   margin: 50px 50px;
+  position: relative;
   flex-direction: column;
 }
 .footer-container .resourses img {
@@ -535,14 +555,12 @@ footer {
   width: 100%;
   margin: auto;
 }
-.footer-txt p,
-.footer-txt p a {
+.footer-txt p {
   font-size: 16px;
   font-weight: 400;
   text-align: center;
   margin: 15px auto;
   color: #ffffff;
-  text-decoration: none;
 }
 footer .social {
   width: 100%;
@@ -550,6 +568,7 @@ footer .social {
 }
 footer .social .icons {
   margin: 20px 10px;
+  position: relative;
   display: flex;
   flex-direction: row;
 }
@@ -561,7 +580,6 @@ footer .social .icons i {
   cursor: pointer;
   border-radius: 2px;
 }
-
 /*This is the styling of the mobile view/responsiveness of the footer*/
 @media (max-width: 720px) {
   .footer-txt {
@@ -571,6 +589,7 @@ footer .social .icons i {
   .footer-container .resourses {
     display: flex;
     margin: 10px auto;
+    position: relative;
   }
   .footer-container {
     padding-top: 50px;
@@ -579,8 +598,53 @@ footer .social .icons i {
     font-size: 16px;
     margin: 15px 20px;
   }
-  .resourses {
-    padding: 20px;
+}
+/*This is the styling of the mobile view/responsiveness header/nav section*/
+@media (max-width: 720px) {
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 90px;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: #408cc6;
+    transition: 0.3s;
+    text-align: center;
+  }
+  .nav-menu li a {
+    font-size: 18px;
+    padding: 10px 0;
+    margin: 10px 0;
+    display: block;
+  }
+  .nav-menu.active {
+    left: 0;
+  }
+  .hamburger {
+    display: block;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .signup-btn,
+  .login-btn {
+    padding: 8px 5px;
+    margin-left: 10px;
+  }
+  .login-btn a,
+  .signup-btn a {
+    font-size: 16px;
+  }
+
+  .logo {
+    margin: -25px;
   }
 }
 
