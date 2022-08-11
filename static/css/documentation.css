@@ -1,93 +1,127 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;500;600;700&family=Work+Sans:wght@400;700&display=swap");
-
-:root {
-  --blue: #408cc6;
-  --light-blue: #01aefd;
-}
-
-body {
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+body {
   font-family: "Work Sans";
-  font-size: 400;
+  font-style: normal;
+  overflow-x: hidden;
+}
+.generalflexselector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 header {
-  background-color: var(--blue);
-  padding: 40px 12px;
-}
-a {
-  color: var(--light-blue);
-}
-.navbar-section {
-  padding: 7px 12px 10px;
-}
-.section-1 {
-  margin-top: 70px;
-  height: fit-content;
-}
-.main-container {
-  display: flex;
-  flex-direction: column;
-  margin-top: 15px;
-}
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 5px 40px;
-  margin-top: 10px;
-}
-hr {
-  width: 92%;
-}
-.button-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.section-2 {
-  margin: 60px 0;
-}
-.button-container {
-  padding-top: 15px;
-}
-@media screen and (max-width: 720px) {
-  .datetime {
-    padding: 0 10px;
-  }
-  .issues {
-    padding: 0 10px;
-  }
-}
-button {
-  background-color: white;
-  box-shadow: 5px 10px 20px -10px;
-  border: 5px solid white;
-  border-left: 1px solid black;
-  filter: brightness(100%) opacity(1);
-  cursor: pointer;
-  transition: 2s ease;
-}
-.less-than-button {
-  border-left: none;
-}
-button:hover {
-  background-color: var(--blue);
-}
-.btn-9,
-.btn-10,
-.btn-eliceps-1 {
-  display: none;
-}
-.display-none {
-  display: none !important;
+  background-image: url("../img/Home-Images/Hero.png");
+  width: 100%;
+  /* height: 100%; */
+  padding-top: 40px;
 }
 
-/* styling for the footer */
+/* This is the starting point for styling of the nav links */
+nav {
+  padding: 0 20px 40px 20px;
+  line-height: 98px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.logo {
+  padding: 15px 30px 15px 50px;
+  line-height: 28px;
+}
+
+.doc-main-container {
+  width: 100%;
+  /* height: 897px; */
+  background: #fafafa;
+}
+
+.doc-sub-head {
+}
+.doc-sub-head h1 {
+  font-weight: 700;
+  font-size: 34px;
+  letter-spacing: -0.02em;
+  color: #408cc6;
+  padding: 106px 0 78px 97px;
+}
+.doc-sub-head p {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: -0.02em;
+  color: #6f6f6f;
+  padding: 0px 0 78px 97px;
+}
+
+.doc-links {
+  gap: 20px;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.sub-links {
+  gap: 24px;
+}
+
+.sub-links a {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.02em;
+  color: #56ccf2;
+  text-decoration: none;
+}
+
+hr {
+  margin: 50px 40px;
+  border: 1px solid grey;
+}
+
+.doc-sub-container {
+  justify-content: space-around;
+  justify-items: left;
+  align-items: flex-start;
+  margin-bottom: 200px;
+}
+
+.meta-art {
+  flex-direction: column;
+  justify-content: space-around;
+}
+.meta-art h6 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #408cc6;
+  margin-bottom: 20px;
+}
+
+.folders {
+  justify-content: left;
+}
+
+.folders a {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: #6f6f6f;
+  text-decoration: none;
+}
+
+/*Styling of the Footer starts here*/
 footer {
   width: 100%;
   height: 100%;
-  background: url(images/footer-bg.png);
+  background: url("../img/Home-Images/footer-bg.png");
 }
 .footer-container {
   width: 100%;
@@ -149,9 +183,6 @@ footer {
 footer .social {
   width: 100%;
   flex-wrap: wrap;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 footer .social .icons {
   margin: 20px 10px;
@@ -166,6 +197,7 @@ footer .social .icons i {
   cursor: pointer;
   border-radius: 2px;
 }
+
 /*This is the styling of the mobile view/responsiveness of the footer*/
 @media (max-width: 720px) {
   .footer-txt {

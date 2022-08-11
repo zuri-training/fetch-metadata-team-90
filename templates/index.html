@@ -1,176 +1,185 @@
 {% extends 'base.html' %}
 
 {% load static %}
-
+{% block css %} 
+<link rel="stylesheet" href="{% static 'css/index.css' %}" />
+{% endblock %}
 {% block content %}
-   {% block css %} 
-      <link rel="stylesheet" href="{% static 'css/landing.css' %}" /> 
-      <link rel="stylesheet" href="{% static 'css/scroll.css' %}">
-   {% endblock %}
-
+   <!--This is beginning of hero section-->
    <section class="hero-section">
       <div class="hero-content generalflexselector">
-      <div class="left-cont">
-         <h3>Online Metadata Viewer</h3>
-         <p>
+        <div class="left-cont">
+          <h3>Online Metadata Viewer</h3>
+          <p>
             Search your files for any hidden metadata. Find out when and where
             the file was captured. Without risking your privacy, extract the
             contents from the file.
-         </p>
-         <input type="text" name="text" placeholder="Your Email" />
-         <button><a href="">Get Started</a></button>
-      </div>
-      <div class="right-cont">
-         <img src="{% static 'img/Home-Images/Featured Image.png' %}" alt="" />
-      </div>
+          </p>
+          <button><a href="{% url 'dashboard' %}">Go To Dashboard</a></button>
+        </div>
+        <div class="right-cont">
+          <img src="{% static 'img/Featured_Image.png' %}" alt="" />
+        </div>
       </div>
       <div class="animation">
-      <img src="{% static 'img/Home-Images/Animation.gif' %}" alt="" />
+        <img src="{% static 'img/Animation.gif' %}" alt="" />
       </div>
-   </section>
-   <section class="how-it-works">
+    </section>
+    <!--This is end of hero section-->
+
+    <!--This is beginning of how-it-works section-->
+    <section class="how-it-works">
       <div class="services">
-      <h3>How Metlab Works in 5 Simple Steps</h3>
+        <h3>How Metlab Works in 5 Simple Steps</h3>
       </div>
       <div class="row generalflexselector">
-      <div class="col-md-3 generalflexselector">
-         <div class="icon generalflexselector">
-            <img src="{% static 'img/Home-Images/ghost.svg' %}" />
-         </div>
-         <h6>Sign up</h6>
-         <p>
+        <div class="col-md-3 generalflexselector">
+          <div class="icon generalflexselector">
+            <img src="{% static 'svg/ghost.svg' %}" />
+          </div>
+          <h6>Sign up</h6>
+          <p>
             To Upload any file to the Metlab Viewer, We'll spool it and
             disclose its contents.
-         </p>
-      </div>
-      <div class="col-md-3 text-center">
-         <div class="icon">
-            <img src="{% static 'img/Home-Images/document-upload.svg' %}" />
-         </div>
-         <h6>Upload your file</h6>
-         <p>
+          </p>
+        </div>
+        <div class="col-md-3 text-center generalflexselector">
+          <div class="icon generalflexselector">
+            <img src="{% static 'svg/document-upload.svg' %}" />
+          </div>
+          <h6>Upload your file</h6>
+          <p>
             To Upload any file to the Metlab Viewer, We'll spool it and
             disclose its contents.
-         </p>
-      </div>
-      <div class="col-md-3 text-center">
-         <div class="icon">
-            <img src="{%  static 'img/Home-Images/document-filter.svg' %}" />
-         </div>
-         <h6>Extract</h6>
-         <p>
-            Download the extracted file. It's good to protect your privacy.
-         </p>
-      </div>
-      <div class="col-md-3 text-center">
-         <div class="icon">
-            <img src="{%  static 'img/Home-Images/search-status.svg' %}" />
-         </div>
-         <h6>View</h6>
-         <p>
+          </p>
+        </div>
+        <div class="col-md-3 text-center generalflexselector">
+          <div class="icon generalflexselector">
+            <img src="{% static 'svg/document-filter.svg' %}" />
+          </div>
+          <h6>Extract</h6>
+          <p>
+            Download the extracted file. It’s good to protect your privacy.
+            <br />
+            <br />
+            <br />
+          </p>
+        </div>
+        <div class="col-md-3 text-center generalflexselector">
+          <div class="icon generalflexselector">
+            <img src="{% static 'svg/search-status.svg' %}" />
+          </div>
+          <h6>View</h6>
+          <p>
             View the metadata recorded in the file. Date, time, file size,
             camera settings and many more.
-         </p>
-      </div>
-      <div class="col-md-3 text-center">
-         <div class="icon">
-            <img src="{%  static 'img/Home-Images/task-square.svg' %}" />
-         </div>
-         <h6>Download/Save</h6>
-         <p>
+          </p>
+        </div>
+        <div class="col-md-3 text-center generalflexselector">
+          <div class="icon generalflexselector">
+            <img src="{% static 'svg/task-square.svg' %}" />
+          </div>
+          <h6>Download/Save</h6>
+          <p>
             View the metadata recorded in the file. Date, time, file size,
             camera settings and many more.
-         </p>
+          </p>
+        </div>
       </div>
-      </div>
-   </section>
-   <section class="need-to-know">
+    </section>
+    <!--This is end of how-it-works section-->
+
+    <!--This is beginning of need-to-know section-->
+    <section class="need-to-know">
       <div class="first">
-      <div class="left">
-         <img src="{% static 'img/Home-Images/add file.svg' %}" alt="" />
-      </div>
-      <div class="right">
-         <h3>What You Need to Know</h3>
-         <p>
+        <div class="left">
+          <img src="{% static 'svg/add file.svg' %}" alt="" />
+        </div>
+        <div class="right">
+          <h3>What You Need to Know</h3>
+          <p>
             MetaLab is a Data extraction tool that can be used to extract data
             quickly and effectively while providing accurate information about
             the data being extracted.
-         </p>
-         <p>
+          </p>
+          <p>
             With this free online tool you can extract metadata from files of
             arbitrary type. Metadata might contain the name and login of the
             author, the creation date or other interesting details. At the
             moment we support the following file types:
-         </p>
-      </div>
+          </p>
+        </div>
       </div>
       <div class="container generalflexselector">
-      <div class="boxes">
-         <div class="icon">
-            <img src="{%  static 'img/Home-Images/Box1.svg' %}" />
-         </div>
-         <h6>Image properties</h6>
-         <div class="list">
+        <div class="boxes">
+          <div class="icon">
+            <img src="{% static 'svg/Box1.svg' %}" />
+          </div>
+          <h6>Image properties</h6>
+          <div class="list">
             <ul>
-            <li>File name</li>
-            <li>File size</li>
-            <li>MIME type</li>
-            <li>Image size</li>
-            <li>Color space</li>
+              <li>File name</li>
+              <li>File size</li>
+              <li>MIME type</li>
+              <li>Image size</li>
+              <li>Color space</li>
             </ul>
-         </div>
-      </div>
-      <div class="boxes">
-         <div class="icon">
-            <img src="{%  static 'img/Home-Images/folder-2.svg' %}" />
-         </div>
-         <h6>MS office data</h6>
-         <div class="list">
+          </div>
+        </div>
+        <div class="boxes">
+          <div class="icon">
+            <img src="{% static 'svg/folder-2.svg' %}" />
+          </div>
+          <h6>MS office data</h6>
+          <div class="list">
             <ul>
-            <li>File name</li>
-            <li>File size</li>
-            <li>File format</li>
-            <li>Creator</li>
-            <li>Date created</li>
+              <li>File name</li>
+              <li>File size</li>
+              <li>File format</li>
+              <li>Creator</li>
+              <li>Date created</li>
             </ul>
-         </div>
-      </div>
-      <div class="boxes">
-         <div class="icon">
-            <img src="{% static 'img/Home-Images/user-tick.svg' %}" />
-         </div>
-         <h6>Copyright info</h6>
-         <div class="list">
+          </div>
+        </div>
+        <div class="boxes">
+          <div class="icon">
+            <img src="{% static 'svg/user-tick.svg' %}" />
+          </div>
+          <h6>Copyright info</h6>
+          <div class="list">
             <ul>
-            <li>Creator</li>
-            <li>Copyright</li>
-            <li>Right holder</li>
-            <li>Legal notice</li>
-            <br />
+              <li>Creator</li>
+              <li>Copyright</li>
+              <li>Right holder</li>
+              <li>Legal notice</li>
+              <br />
             </ul>
-         </div>
-      </div>
-      <div class="boxes">
-         <div class="icon">
-            <img src="{%  static 'img/Home-Images/convertshape-2.svg' %}" />
-         </div>
-         <h6>Other data</h6>
-         <div class="list">
+          </div>
+        </div>
+        <div class="boxes">
+          <div class="icon">
+            <img src="{% static 'svg/convertshape-2.svg' %}" />
+          </div>
+          <h6>Other data</h6>
+          <div class="list">
             <ul>
-            <li>Date and time</li>
-            <li>Thumbnails</li>
-            <li>Software</li>
-            <li>Creator</li>
+              <li>Date and time</li>
+              <li>Thumbnails</li>
+              <li>Software</li>
+              <li>Creator</li>
             </ul>
             <p>..and many more</p>
-         </div>
-      </div>
+          </div>
+        </div>
       </div>
       <div class="start-btn generalflexselector">
-      <button><a href="">Start Extracting Data</a></button>
+        <button><a href="">Start Extracting Data</a></button>
       </div>
-   </section>
-   <scetion class="faq">
+    </section>
+    <!--This is end of need-to-know section-->
+
+    <!--This is beginning of faq section-->
+    <section class="faq">
       <h3>Frequently Asked Questions</h3>
       <div class="accordion">
         <div class="accordion-item">
@@ -216,13 +225,16 @@
           </div>
         </div>
       </div>
-   </scetion>
-   </main>
-  
-   <script src="{% static 'js/landingPage/scripts.js' %}"></script>
-   <script src="{% static 'js/landingPage/scroll.js' %}"></script>
+    </section>
+    <!--This is end of faq section-->
+  </main>
+
+
+ 
 
 {% endblock %}
+
+
 
 
 
