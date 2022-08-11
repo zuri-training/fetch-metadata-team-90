@@ -69,6 +69,9 @@ class TermsConditionView(TemplateView):
 class DocumentationView(TemplateView):
     template_name = 'documentation.html'  
 
+class ArchiveView(TemplateView):
+    template_name = 'archive.html'
+
 class DashboardView(LoginRequiredMixin, View):
     template_name = 'dashboard.html'
     form = FileUploadForm
