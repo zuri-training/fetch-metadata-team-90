@@ -1,0 +1,117 @@
+{% extends 'base.html' %} {%load static%}
+<title>{% block title %}MetLab Archives{% endblock %}</title>
+{% block css %}<link rel="stylesheet" href="{% static 'css/archives.css' %}" />
+<script src="{% static 'js/archives.js'%}"></script>
+{% endblock %} {%block navbar%}
+<!--This is for header-->
+<header>
+  <nav>
+    <div class="logo generalflexselector">
+      <a href="{% url 'index'%}"
+        ><img src="{% static 'svg/Horizontal_Logo.svg' %}"
+      /></a>
+    </div>
+  </nav>
+</header>
+{% endblock %} {% block content %}
+<main>
+  <section class="section-1">
+    <div class="main-container">
+      <div class="container">
+        <div class="issues">
+          <a href="">Dashboard Regular Servicing</a>
+        </div>
+        <div class="datetime">
+          <p>08/10/2022</p>
+        </div>
+      </div>
+      <hr />
+    </div>
+    <div class="main-container">
+      <div class="container">
+        <div class="issues">
+          <a href="">Issues with Dashboard Metrics</a>
+        </div>
+        <div class="datetime">
+          <p>08/07/2022</p>
+        </div>
+      </div>
+      <hr />
+    </div>
+    <div class="main-container">
+      <div class="container">
+        <div class="issues">
+          <a href="">Issues with Logout Button</a>
+        </div>
+        <div class="datetime">
+          <p>08/05/2022</p>
+        </div>
+      </div>
+      <hr />
+    </div>
+    <div class="main-container">
+      <div class="container">
+        <div class="issues">
+          <a href="">Meta-Data Functionality Implementation</a>
+        </div>
+        <div class="datetime">
+          <p>08/04/2022</p>
+        </div>
+      </div>
+      <hr />
+    </div>
+    <div class="main-container">
+      <div class="container">
+        <div class="issues">
+          <a href="">Monthly Web Application Testing</a>
+        </div>
+        <div class="datetime">
+          <p>08/1/2022</p>
+        </div>
+      </div>
+      <hr />
+    </div>
+    <div class="main-container">
+      <div class="container">
+        <div class="issues">
+          <a href="">Authentication Email Implementation</a>
+        </div>
+        <div class="datetime">
+          <p>07/28/2022</p>
+        </div>
+      </div>
+      <hr />
+    </div>
+    <div class="main-container">
+      <div class="container">
+        <div class="issues">
+          <a href="">DataBase Performance and Security Checks</a>
+        </div>
+        <div class="datetime">
+          <p>07/25/2022</p>
+        </div>
+      </div>
+      <hr />
+    </div>
+  </section>
+  <section class="section-2">
+    <div class="button-container">
+      <button class="less-than-button">&lt</button>
+      <button class="btn-eliceps-1">...</button>
+      <button class="btn-1">1</button>
+      <button class="btn-2">2</button>
+      <button class="btn-3">3</button>
+      <button class="btn-4">4</button>
+      <button class="btn-5">5</button>
+      <button class="btn-6">6</button>
+      <button class="btn-7">7</button>
+      <button class="btn-8">8</button>
+      <button class="btn-eliceps-2">...</button>
+      <button class="btn-9">9</button>
+      <button class="btn-10">10</button>
+      <button class="greater-than-button">&gt</button>
+    </div>
+  </section>
+</main>
+
+{%endblock%}
