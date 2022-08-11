@@ -49,31 +49,50 @@ nav {
   padding-left: 60px;
   font-weight: 400;
 }
-.login-btn a,
-.signup-btn a {
-  font-size: 20px;
+
+.dashboard-btn {
+  padding: 15px 0;
+  color: #ffffff;
+  background: none;
+  border: none;
+  margin-left: 150px;
+  margin-right: 1px;
+  font-size: 18px;
   text-decoration: none;
   font-weight: 700;
   color: #ffffff;
 }
-.login-btn {
-  padding: 15px 35px;
-  color: #ffffff;
-  background: transparent;
-  border: 2px solid #ffffff;
-  border-radius: 4px;
-  margin-left: 150px;
-  margin-right: 15px;
+.dropdown {
+  float: right;
+  overflow: hidden;
 }
-.signup-btn {
-  padding: 15px 30px;
-  color: #ffffff;
-  background-color: #56ccf2;
+
+.dropdown .dropbtn {
+  font-size: 16px;
   border: none;
-  border-radius: 4px;
+  outline: none;
+  color: #ffffff;
+  padding: 14px 16px;
+  background-color: inherit;
 }
-.nav__mobile-list {
+
+.dropdown-content {
   display: none;
+  position: absolute;
+  background-color: #1a75bb;
+  height: 400px;
+}
+
+.dropdown-content a {
+  float: none;
+  color: white;
+  padding: 3px 4px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 .bar {
   display: block;
@@ -122,18 +141,35 @@ nav {
   .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
-  .signup-btn,
-  .login-btn {
+  .dashboard-btn {
     padding: 8px 5px;
     margin-left: 10px;
   }
-  .login-btn a,
-  .signup-btn a {
+  .dashboard-btn a {
     font-size: 16px;
   }
 
   .logo {
     margin: -25px;
+  }
+  .dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    padding: 14px 16px;
+    background-color: inherit;
+  }
+  .dropdown-content a {
+    float: none;
+    color: white;
+    padding: 3px 4px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
   }
 }
 /*Styling of the hero section starts here*/
@@ -174,27 +210,6 @@ nav {
   text-align: justify;
   letter-spacing: -0.02em;
   margin-bottom: 50px;
-}
-.hero-content input {
-  height: 56px;
-  width: 410px;
-  border-radius: 4px;
-  border: #ffffff 1px solid;
-  color: #ffffff;
-  font-size: 20px;
-  background-color: transparent;
-  padding: 10px, 0px, 10px, 48px;
-  margin: 15px 0;
-  outline: none;
-}
-.hero-content input::placeholder {
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 28px;
-  letter-spacing: 0em;
-  text-align: left;
-  padding-left: 40px;
-  color: #fafafa;
 }
 .hero-content button {
   height: 56px;
@@ -260,8 +275,8 @@ nav {
   }
   .hero-content button {
     height: 48px;
-    width: 357px;
-    margin-left: 0px;
+    width: 300px;
+    margin: auto 40px;
   }
   .hero-content button a {
     font-size: 16px;
@@ -269,6 +284,9 @@ nav {
   }
   .hero-content img {
     display: none;
+    height: 400px;
+    width: 300px;
+    margin-top: 30px;
   }
   .animation {
     width: 100%;
@@ -280,7 +298,8 @@ nav {
 
 /*This is the styling for the section of 5 simple steps of how metlab works*/
 .how-it-works {
-  background: url(Home-Images/Vector2.svg);
+  padding-top: 50px;
+  background-color: #1f1f1f;
   height: 100%;
   width: 100%;
 }
@@ -362,7 +381,7 @@ nav {
 
 /*Stling what you need to know section goes here*/
 .need-to-know {
-  background-color: #fafafa;
+  background-color: #1f1f1f;
 }
 .need-to-know .first {
   display: flex;
@@ -537,7 +556,7 @@ nav {
 /*Styling of the faq starts here*/
 .faq {
   padding: 80px 10px;
-  background-color: #fafafa;
+  background-color: #1f1f1f;
 }
 .faq h3 {
   height: 56px;
@@ -715,7 +734,6 @@ footer .social .icons i {
   height: 60px;
   width: 60px;
 }
-
 /*This is the styling of the mobile view/responsiveness of the footer*/
 @media (max-width: 720px) {
   .footer-txt {

@@ -1,5 +1,4 @@
 //This part is for the responsiveness of the navigation on mobile view and allows the hambuger to function well.
-//This is for the hamburger menu
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 
@@ -15,7 +14,6 @@ document.querySelectorAll(".nav-link").forEach((n) =>
   })
 );
 
-
 //js code for the accordion
 const accordionItemHeaders = document.querySelectorAll(
   ".accordion-item-header"
@@ -27,7 +25,8 @@ accordionItemHeaders.forEach((accordionItemHeaders) => {
     );
     if (
       currentlyActiveAccordionItemHeader &&
-      currentlyActiveAccordionItemHeader !== accordionItemHeaders) {
+      currentlyActiveAccordionItemHeader !== accordionItemHeaders
+    ) {
       currentlyActiveAccordionItemHeader.classList.toggle("active");
       currentlyActiveAccordionItemHeader.nextElementSibling.style.maxHeight = 0;
     }
@@ -42,10 +41,10 @@ accordionItemHeaders.forEach((accordionItemHeaders) => {
 });
 
 /*This is for the scroll back to top button*/
-const scrollBtn = document.querySelector(".scroll-to-top")
+const scrollBtn = document.querySelector(".scroll-to-top");
 
 const refreshButtonVisibility = () => {
-  var scrolltotal = document.documentElement.scroll
+  var scrolltotal = document.documentElement.scroll;
   if (document.documentElement.scrollTop <= 3000) {
     scrollBtn.style.display = "none";
   } else {
