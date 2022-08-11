@@ -736,16 +736,3 @@ footer .social .icons i {
     padding: 20px;
   }
 }
-
-/*This is the styling for the scroll to top button*/
-.scroll-to-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  font-size: 0;
-  border: none;
-}
-.scrolltopbtn {
-  height: 10px;
-  width: 10px;
-}
