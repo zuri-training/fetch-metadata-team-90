@@ -14,6 +14,7 @@ urlpatterns = [
     path('terms-conditions/', views.TermsConditionView.as_view(), name='terms-conditions'),
     path('documentations/', views.DocumentationView.as_view(), name='documentations'),
     path('archives/', views.ArchiveView.as_view(), name='archives'),
+    path('status/', views.StatusView.as_view(), name='status'),
     path('dashboard/', views.DashboardView.as_view(), name='dashboard'),
     path('save-page/', views.SavePageView.as_view(), name='save-page'),
     # path('dashboard/', views.CreateFilePuloadView.as_view(template_name='dashboard.html'), name='file_upload'),

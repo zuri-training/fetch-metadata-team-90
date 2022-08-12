@@ -87,6 +87,9 @@ class DocumentationView(TemplateView):
 class ArchiveView(TemplateView):
     template_name = 'archive.html'
 
+class StatusView(TemplateView):
+    template_name = 'status.html'
+
 class DashboardView(LoginRequiredMixin, View):
     template_name = 'dashboard.html'
     form = FileUploadForm
