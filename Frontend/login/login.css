@@ -85,7 +85,8 @@ body.bg-dark{
 /* TOGGLE */
 .switch {
     position: relative;
-    display: inline-block;
+    /* display was formally in "inline-block"  */
+    display: none; 
     width: 50px;
     height: 20px;
 }

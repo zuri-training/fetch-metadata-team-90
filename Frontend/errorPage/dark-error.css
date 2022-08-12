@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: #1F1F1F;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  .errorMessage {
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+    position: absolute;
+    left: 5rem;
+    height: 100px;
+    top: 150px;
+  }
+  
+  .pageNotFound {
+    /* Oops... Page not found */
+    width: 434px;
+    height: 80px;
+  
+    /* Header 1 */
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.02em;
+  
+    /* Blue/Blue05 */
+    color: #408cc6;
+  
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+  }
+  
+  .message {
+    width: 434px;
+    height: 72px;
+  
+    /* Web/Body big */
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    /* or 150% */
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.02em;
+  
+    /* Grey/Grey07 */
+    color: #8a8a8a;
+  
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+  }
+  
+  .buttons {
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    position: absolute;
+    height: 56px;
+    left: 5rem;
+    right: 895px;
+    top: 430px;
+  }
+  
+  .home {
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+    width: 202.5px;
+    height: 56px;
+    color: white;
+  
+    /* Maya Blue/maya blue */
+    background: linear-gradient(208.39deg, #1A75BB -72.1%, rgba(26, 117, 187, 0) 536.07%);
+    border: none;
+    border-radius: 4px;
+  
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+  }
+  
+  .support {
+    box-sizing: border-box;
+  
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+  
+    width: 202.5px;
+    height: 56px;
+    color: #408cc6;
+    /* Maya Blue/maya blue */
+    border: 2px solid #408CC6;
+    border-radius: 4px;
+  
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 1;
+  }
+  
+  .errorPad img{
+    position: absolute;
+    width: 30%;
+    height: 45%;
+    right: 208px;
+    top: 40px;
+  }
+  
+  .errorCode img{
+    position: absolute;
+    width: 20%;
+    height: 25%;
+    right: 290px;
+    top: 350px;
+  }
+
+
+  @media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .errorPad {
+      display: none;
+    }
+    .errorCode.small{
+      display: none;
+    }
+    .errorPage {
+      position: absolute;
+      width: 280px;
+      height: 180px;
+      left: calc(25%/2);
+      top: 3rem;
+      background: url(404signsmall.png) no-repeat;
+      background-size: cover;
+    }
+    .errorMessage {
+      /* Auto layout */
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0px;
+      gap: 14px;
+      position: absolute;
+      height: 128px;
+      left: 2rem;
+      top: 12rem;
+    }
+  
+    .pageNotFound {
+      width: 300px;
+      height: 64px;
+  
+      /* Mobile/Header 0 */
+      font-family: 'Work Sans';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 32px;
+      /* or 133% */
+      display: flex;
+      align-items: center;
+      text-align: center;
+      letter-spacing: -0.01em;
+  
+      /* Blue/Blue05 */
+      color: #408cc6;
+  
+      /* Inside auto layout */
+      flex: none;
+      order: 0;
+      flex-grow: 0;
+    }
+  
+    .message {
+      width: 300px;
+      height: 48px;
+      margin-left: -15%;
+  
+      /* Mobile/Body text medium */
+      font-family: 'Work Sans';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      left: -3rem;
+      /* or 150% */
+      display: flex;
+      align-items: center;
+      text-align: center;
+  
+      /* Grey/Grey07 */
+      color: #8a8a8a;
+  
+      /* Inside auto layout */
+      flex: none;
+      order: 1;
+      flex-grow: 0;
+    }
+  
+    .home {
+      box-sizing: border-box;
+  
+      /* Auto layout */
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      gap: 10px;
+  
+      position: absolute;
+      width: 188px;
+      height: 48px;
+      left: -2rem;
+      top: 7rem;
+    }
+  
+    .support {
+      box-sizing: border-box;
+  
+      /* Auto layout */
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      gap: 10px;
+  
+      position: absolute;
+      width: 188px;
+      height: 48px;
+      left: -2rem;
+      top: 11.5rem;
+    }
+  
+    .buttons {
+      /* Auto layout */
+      display: block;
+      flex-direction: column;
+    
+      position: absolute;
+      top: 242px;
+    }
+  }
+
+  

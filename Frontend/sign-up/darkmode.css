@@ -8,7 +8,10 @@ body{
     font-family: 'Work Sans', sans-serif;
     font-weight: 400;
     font-size: 20px;
+    color: #C4C4C4;
+    background-color: black;
 }
+
 
 .box{
     max-height: 100vh;
@@ -20,7 +23,7 @@ body{
 }
 .forms-wrapper{
     flex: 1;
-    background: white;
+    background-color: black;
     display: flex;
     justify-content: center;
 }
@@ -62,12 +65,12 @@ body{
     margin-top: 1rem;
     margin-bottom: 1rem;
     font-weight: 700;
-    color: rgba(111, 111, 111, 1);
+    color: #E1E1E1;
   }
   
   .heading h3{
     margin-bottom: 1rem;
-    color: rgba(111, 111, 111, 1);
+    color: #E1E1E1;
     font-weight: 700;
     top: 38px;
     font-size: 40px;
@@ -96,15 +99,15 @@ body{
     Left:100px;
     
     /* margin-bottom: 2rem; */
-  }
+}
   
-  .picture-side .heading-right{
+.picture-side .heading-right{
     Width:100%;
     Height:112px;
     Top:184px;
     Left:100px;
     
-  }
+}
 
 
 
@@ -118,7 +121,7 @@ body{
 }
 
 .pattern{
-    height: 250px;
+    height: 200px;
 }
 .card-box{
     max-height: 100vh;
@@ -133,6 +136,7 @@ body{
     border-radius: 4px;
     border: 1px solid rgba(166, 166, 166, 1);
     padding-left: 15px; 
+    background-color: rgba(83, 83, 83, 1);
 }
 
 form .button input{
@@ -168,7 +172,7 @@ i{
 }
 
 .card-box.last{
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .card-box .test{
@@ -204,9 +208,13 @@ i{
     }
     .picture-side{
         width: 100%;
-        padding: 40px;
+        padding: 10px;
         height: 100%;
         position: relative;
+    }
+    .picture__logo-content{
+        padding: 10px 0px 0px;
+    
     }
     .forms-wrapper{
         position: relative;
@@ -218,8 +226,9 @@ i{
         left: 0%;
         right: 0%;
         margin-left: 1rem;
-        padding: 10px;
+        padding: 0;
     }
+    
     .picture-side .heading-right{
         Width:330px;
     }
@@ -230,19 +239,19 @@ i{
     .dots{
         width: 100%;
         Height:202px;
-        Top:224px;
+        Top:0px;
         left: 0px;
         position: absolute;
     }
     
     .woman{
-        width: 90%;
+        width: 100%;
         height: 177px;
         position: relative;
         z-index: 10;
-        left: 16.8%;
-        right: 16.53%;
-        top: 10px;
+        left: 0%;
+        right: 0%;
+        top: 0px;
     }
     
     .pattern{
