@@ -14,8 +14,7 @@
 * ### https://github.com/durobolu/fetch-metadata-team-90/commit/d82b12d20955828f55759e62791817b32001274c
 ## 5. I created the header with the hamburger for mobile view and footer section for all landing pages both authenticated and unauthenticated users and every other page using thesame header and footer and made it responsive. 
 * ### https://github.com/durobolu/fetch-metadata-team-90/commit/8f36f7ddadb865eda58b08e4088d2b24a343d772
-
-
-
-
-
+## 6. I worked on and completed the mobile responsiveness for contact page.
+* ### https://github.com/zuri-training/fetch-metadata-team-90/commit/769a2e3c3f37357f7a0f934b43d8e91f2b1eb3c2
+## 7. I made email verification failed page responsive both on light mode and dark mode
+* ### https://github.com/zuri-training/fetch-metadata-team-90/commit/b44c0cbd338d774b0f18f3f97b9108d261d74d19
