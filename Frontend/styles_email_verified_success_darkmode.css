@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
+body {
+    background-color: black;
+    font-size: 15px;
+    text-align: center;
+    line-height: 20px;
+    font-family: "Work Sans", sans-serif;
+    margin-top: 20vh;
+}
+
+img {
+    height: 200px;
+    width: 232px;
+}
+
+.main-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70vw;
+    margin: auto;
+}
+
+.top-section h3 {
+    color: #408cc6;
+    font-size: 45px;
+    font-weight: 700;
+}
+
+.middle-section p {
+    color: #8a8a8a;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    width: 696px;
+    height: 56px;
+}
+
+button {
+    width: 269px;
+    height: 56px;
+    font-size: 20px;
+    font-weight: 400;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    padding: 10px;
+    border: none;
+    /* change color */
+    background-color: #1A75BB
+    ;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+@media (min-width: 375px) and (max-width: 900px) {
+    .img {
+        width: 40vw;
+    }
+  
+    .main-section{
+        /* width: 50vw; */
+        font-size: 20px;
+    }
+  
+    .top-section h3{
+       font-weight: 100px; 
+    }
+  
+    .middle-section p{
+        font-size: 15px;
+        text-align: center;
+        width: 450px;    
+    }
+    
+    .button{
+       
+        font-weight: 200;
+        font-size: 15px;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        border-radius: 2px;
+
+    }
+
+    .top-section h3 {
+        font-size: 20px;
+    }
+  }
