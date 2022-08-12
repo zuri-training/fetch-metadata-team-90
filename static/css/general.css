@@ -167,3 +167,130 @@ footer .social .icons i {
     padding: 20px;
   }
 }
+
+
+.toast-wrapper{
+  width: 420px;
+  padding: 30px 20px;
+  position: absolute;
+  bottom: 50px;
+  right: 0;
+  overflow: hidden;
+  font-family: 'Work Sans';
+  font-size: 14px;
+  bottom: 80%;
+}
+#show-alert-success{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    background-color: #56CCF2;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+  
+}
+#close-success {
+  border: none;
+
+}
+#toast-success{
+    width: 380px;
+    height: 80px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 10px 20px rgba(75, 50, 50, 0.05);
+    border-left: 8px solid #56CCF2;
+    border-radius: 7px;
+    display: grid;
+    grid-template-columns: 1.2fr 6fr 0.5fr;
+    transform: translate(400px);
+    transition: 1s;
+    
+}
+.container-success,.container-success{
+    align-self: center;
+}
+.container-success i{
+    font-size: 40px;
+    color: #56CCF2;
+}
+.container-success p:first-child{
+    color: #101020;
+    font-weight: 600;
+    font-size: 16px;
+}
+.container-success p:last-child{
+    font-size: 12px;
+    color: #656565;
+    font-weight: 400;
+}
+#toast-success button{
+    align-self: flex-start;
+    background-color: transparent;
+    font-size: 25px;
+    line-height: 0;
+    color: #656565;
+    cursor: pointer;
+}
+
+
+#show-alert-error{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    background-color: #56CCF2;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+  
+}
+#close-error {
+  border: none;
+
+}
+#toast-error{
+    width: 380px;
+    height: 80px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 10px 20px rgba(75, 50, 50, 0.05);
+    border-left: 8px solid #E11D25;
+    border-radius: 7px;
+    display: grid;
+    grid-template-columns: 1.2fr 6fr 0.5fr;
+    transform: translate(400px);
+    transition: 1s;
+    
+}
+.container-error,.container-error{
+    align-self: center;
+}
+.container-error i{
+    font-size: 40px;
+    color: #E11D25;
+}
+.container-error p:first-child{
+    color: #101020;
+    font-weight: 600;
+    font-size: 16px;
+}
+.container-error p:last-child{
+    font-size: 12px;
+    color: #656565;
+    font-weight: 400;
+}
+#toast-error button{
+    align-self: flex-start;
+    background-color: transparent;
+    font-size: 25px;
+    line-height: 0;
+    color: #656565;
+    cursor: pointer;
+}
