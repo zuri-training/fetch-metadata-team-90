@@ -13,9 +13,9 @@
         <p class="light-gray">Welcome!</p>
       </div>
       <div class="search-bar">
-        <form class="search-forms" action="">
+        <form class="search-forms" action="{% url 'search' %}" method="post"> {% csrf_token %}
           <button class="search-button" type="submit">Search</button>
-          <input type="search" name="" id="" title="#" class="profile-search"  placeholder="Search here" />
+          <input type="search" name="q" id="" title="#" class="profile-search"  placeholder="Search here" />
         </form>
       </div>
       <div class="bell-toggle">
@@ -63,5 +63,15 @@
               </div>
             </div>
           </div>
+
+          <script>
+            // form = document.querySelector('.search-forms')
+            // const myFunc = (e) => {
+            //    return (
+            //     e.preventDefault()
+            //   )
+            // }
+            // form.addEventListener('submit', (e)=>myFunc(e))
+          </script>
       
 </section>

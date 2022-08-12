@@ -584,9 +584,6 @@ input.extract-button:hover {
 }
 
 
-#save-result:hover {
-  /* color: #1A75BB; */
-}
 #view-result, #save-result {
   font-family: "Droid Sans";
   font-style: normal;
