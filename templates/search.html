@@ -1,0 +1,63 @@
+{% extends 'base.html' %} 
+{% load static %}
+<title>{% block title %}Dashboard{% endblock %}</title>
+{% block css %}
+    <link rel="stylesheet"  href="{% static 'css/dashboard.css' %}" /> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">   
+{% endblock %}
+
+
+{%block navbar%} {% endblock %}
+{% block content %}
+
+   {% if request.user.is_authenticated %}
+     
+        {% include 'side_menu.html' %}   
+            <nav class="navbar navbar-expand-lg fixed-top" style="width:100%">
+                    <div style="width: 100%; margin-left: 0;">
+                        {% include 'top_menu.html' %} 
+                    </div>
+
+            </nav>
+           <div class="container text-center">
+            {% for file in files %}
+                <a href="{{ file.get_absolute_url}}?q=view" target="_blank" style="padding-top: 30px;">
+                    <div class="container-fluid"  style="background-color: whitesmoke;">
+                        <span >
+                            <div class=""><img src="{% static 'img/Vector.png' %}" alt=""></div>
+                            <div>
+                                <span>{{ file.file_name }}</span>
+                                <p>107 kb</p>
+                            </div>
+                        </span>
+                    </div>
+                </a>
+            {% endfor %}
+
+           </div>
+           <section class="right-side">
+                <h3>History</h3>
+                <div class="day"><p>Today</p></div>
+                {% for file in user %}
+                <a href="{{ file.get_absolute_url}}?q=view" target="_blank">
+                    <div class="container-fluid"  style="background-color: whitesmoke;">
+                        <span >
+                            <div class=""><img src="{% static 'img/Vector.png' %}" alt=""></div>
+                            <div>
+                                <span>{{ file.file_name }}</span>
+                                <p>107 kb</p>
+                            </div>
+                        </span>
+                    </div>
+                </a>
+                {% endfor %}
+                
+            </section>
+    {% endif %}       
+
+
+    {% block footer %}{% endblock %}
+    {% block js %}{% endblock %}
+    <script type="text/javascript"  src="{% static 'js/dashboard.js' %}"></script>
+ 
+{% endblock %}
