@@ -579,7 +579,7 @@ nav {
   box-shadow: 0px 13px 30px rgba(0, 0, 0, 0.25);
 }
 .accordion-item-header {
-  padding: 15px 25px;
+  padding: 15px 35px;
   display: flex;
   min-height: 3.5rem;
   font-weight: 700;
@@ -590,14 +590,20 @@ nav {
   cursor: pointer;
 }
 .accordion-item-header::after {
-  content: "\005E";
+  content: "\002B";
   font-size: 30px;
   color: #6f6f6f;
   position: absolute;
   right: 25px;
+  font-weight: 200;
 }
 .accordion-item-header.active::after {
-  transform: rotate(180deg);
+  content: "\002D";
+  font-size: 30px;
+  color: #6f6f6f;
+  position: absolute;
+  right: 25px;
+  font-weight: 200;
 }
 .accordion-item-body {
   padding-left: 20px;
@@ -623,10 +629,9 @@ nav {
     width: 80%;
   }
   .accordion-item-header {
-    font-size: 20px;
+    font-size: 18px;
   }
   .accordion-item-header::after {
-    content: "\005E";
     font-size: 25px;
   }
   .accordion-item-body-content {
