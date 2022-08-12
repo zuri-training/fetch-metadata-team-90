@@ -1,103 +1,139 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
 body {
-    background-color: black;
-    font-size: 15px;
-    text-align: center;
-    line-height: 20px;
-    font-family: "Work Sans", sans-serif;
-    margin-top: 20vh;
+  background-color: black;
+  font-size: 15px;
+  text-align: center;
+  line-height: 20px;
+  font-family: "Work Sans", sans-serif;
+  margin-top: 20vh;
 }
 
 .main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 70vw;
-    margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  margin: auto;
 }
 
 img {
-    width: 10vw;
+  width: 10%;
 }
 
 .one {
-    text-align: center;
+  text-align: center;
 }
 
 .two {
-    color: #408cc6;
+  color: #408cc6;
 }
 
 .two h1 {
-    font-size: 45px;
-    font-weight: 700;
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 28px;
 }
 
 .three {
-    color: #8a8a8a;
-    max-width: 570px;
-    font-size: 20px;
-    font-weight: 400;
+  color: #ffffff;
+  line-height: 25px;
+  max-width: 570px;
+  font-size: 20px;
+  font-weight: 400;
 }
 
 .four {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-content: flex-start;
+  width: 100%;
+}
+
+.four label {
+  font-size: 20px;
+  width: 220px;
+  color: #ffffff;
+}
+
+button {
+  width: 524px;
+  margin-left: 2rem;
+  margin-right: 4rem;
+  padding: 10px 0;
+  /* change color */
+  background-color: #56ccf2;
+  color: #fff;
+  border-radius: 4px;
+  border: 2px solid #56ccf2;
+  font-size: 20px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.email__container {
+  margin-top: 7px;
+  border: 2px solid #9ca2ac;
+  height: 40px;
+  width: 524px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 2rem;
+  margin-bottom: 30px;
+  border-radius: 4px;
+}
+
+.email__container input {
+  width: 100%;
+  height: 80%;
+  border: none;
+  outline: none;
+  padding: 0 0.3rem;
+}
+
+.email__container input::placeholder {
+  font-size: 20px;
+  font-weight: 400;
+  color: #a6a6a6;
+  padding-left: 25px;
+}
+
+.email__container img {
+  cursor: pointer;
+  height: 20px;
+}
+@media (max-width: 768px) {
+  img {
+    width: 100px;
+    height: 100px;
+  }
+  .two h1 {
+    font-size: 25px;
+  }
+  .three {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    width: 400px;
+  }
+  .four {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
     align-content: flex-start;
-    /* width: 100vw; */
-}
+  }
 
-.four label {
-    font-size: 20px;
+  .four label {
+    font-size: 18px;
     width: 220px;
-}
-
-button {
-    width: 524px;
-    margin-left: 2rem;
-    margin-right: 4rem;
-    padding: 10px 0;
-    /* change color */
-    background-color: #56ccf2;
-    color: #fff;
-    border-radius: 4px;
-    border: 2px solid #56ccf2;
-    font-size: 20px;
-    font-weight: 400;
-    cursor: pointer;
-}
-
-.email__container {
-    margin-top: 7px;
-    border: 2px solid #9ca2ac;
-    height: 40px;
-    width: 524px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 2rem;
-    margin-bottom: 30px;
-    border-radius: 4px;
-}
-
-.email__container input {
-    width: 100%;
-    height: 80%;
-    border: none;
-    outline: none;
-    padding: 0 0.3rem;
-}
-
-.email__container input::placeholder {
-    font-size: 20px;
-    font-weight: 400;
-    color: #a6a6a6;
-    padding-left: 25px;
-}
-
-.email__container img {
-    cursor: pointer;
-    height: 20px;
+  }
+  .email__container {
+    width: 300px;
+  }
+  button {
+    width: 300px;
+    font-size: 16px;
+  }
 }
