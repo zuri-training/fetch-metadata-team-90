@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700 &family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700 &family=Poppins&display=swap");
 
 * {
   box-sizing: border-box;
@@ -8,7 +8,7 @@
 body {
   width: 100%;
   padding: 16px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 14px;
 }
 
@@ -87,8 +87,7 @@ body {
 
 /* DROPDOWN */
 .navbar {
-  overflow: hidden;
-  background-color: white;
+  display: none;
 }
 
 .dropdown {
@@ -171,7 +170,7 @@ body {
 
 .slider:before {
   position: absolute;
-  content: '';
+  content: "";
   height: 17px;
   width: 17px;
   left: 4px;
@@ -285,8 +284,8 @@ hr {
   align-items: center;
   gap: 20px;
 }
-.top-left h3{
-    color: #535353;
+.top-left h3 {
+  color: #535353;
 }
 .image {
   width: 150px;
@@ -309,8 +308,8 @@ hr {
 .upload {
   background-color: #56ccf2;
 }
-.save{
-    background-color: #E1E1E1;
+.save {
+  background-color: #e1e1e1;
 }
 
 .right {
@@ -320,13 +319,63 @@ hr {
 .input-house {
   padding-bottom: 25px;
 }
-.label{
-    color: #373737;
+.label {
+  color: #373737;
 }
 .input {
+  margin-top: 10px;
   width: 35vw;
   height: 28px;
   padding: 0 15px;
   border: 1px solid #a6a6a6;
   border-radius: 4px;
+}
+@media (max-width: 760px) {
+  body {
+    width: 100%;
+  }
+  .navbar {
+    display: block;
+  }
+  .navbar .dropbtn i {
+    margin-right: 50px;
+    font-size: 20px;
+    color: black;
+  }
+  .nav-aside {
+    display: none;
+  }
+  .profile-pic-name h5 {
+    margin-left: 0;
+  }
+  .head-section {
+    width: 100%;
+  }
+  .section-container h3 {
+    font-size: 20px;
+  }
+  .section-container .profile-search {
+    display: none;
+  }
+  .section-container .bell-toggle {
+    display: none;
+  }
+  .main-flow {
+    width: 100%;
+  }
+  .main-flow .text-area .left h3 {
+    margin: 0 40px;
+    text-align: center;
+  }
+  .top-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .text-area .right {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
 }
