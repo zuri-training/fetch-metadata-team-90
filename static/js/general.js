@@ -2,7 +2,6 @@
 
 // closing of alert 
 setTimeout(function () {
-  
-    // Closing the alert
-    $('#alert').alert('close');
+    document.getElementById("alert").style.display = "none";
+    
 }, 5000);

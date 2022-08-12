@@ -21,13 +21,13 @@ from django.contrib import messages
 
 # to be placed in a differn=ent file  
 def render_to_pdf(template_src, context_dict={}):
-	template = get_template(template_src)
-	html  = template.render(context_dict)
-	result = BytesIO()
-	pdf = pisa.pisaDocument(BytesIO(html.encode("ISO-8859-1")), result)
-	if not pdf.err:
-		return HttpResponse(result.getvalue(), content_type='application/pdf')
-	return None
+    template = get_template(template_src)
+    html  = template.render(context_dict)
+    result = BytesIO()
+    pdf = pisa.pisaDocument(BytesIO(html.encode("ISO-8859-1")), result)
+    if not pdf.err:
+        return HttpResponse(result.getvalue(), content_type='application/pdf')
+    return None
 
 
 class HomePageView(TemplateView):
@@ -46,8 +46,20 @@ class ContactView(View):
     def post(self, request):
         form = self.form(request.POST)
         if form.is_valid():
-            print(form)
-            return render(request, self.template_name, self.context)
+            name_email = request.POST['name']
+            email = request.POST['sender_email']
+            subject = request.POST['subject']
+            message_email = request.POST['message']
+            message_email2 = f'{message_email} from {email}'
+            try:
+                send_mail(subject, message_email2, email, 
+                [settings.EMAIL_HOST_USER], fail_silently=False,)
+                messages.success(request, 'Thanks, A response has been sent to your mail')
+                return render(request, self.template_name, self.context)
+            except:
+                messages.error(request, 'Email not sent, Something went wrong. Try again!')
+                return render(request, self.template_name, self.context)
+            
         else:
             self.context['form'] = form
             return render(request, self.template_name, self.context)
