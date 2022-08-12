@@ -221,6 +221,18 @@
       </section>
       
   </main>
+  <script>
+    const shareLink = document.querySelectorAll(".shareLink")
+    shareLink.forEach(share => {
+      share.addEventListener('click', function (event) {
+         event.preventDefault()
+        console.log(share.href);
+        navigator.clipboard.writeText(share.href)
+   
+      });
+    });
+ 
+ </script>
 {% endblock %}
 {% block footer %}
 {% endblock %}

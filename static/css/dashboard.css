@@ -13,7 +13,33 @@ body {
   font-size: 14px;
   display: flex;
 }
-
+.id_file{
+  border: 2px dashed #fff;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 32px;
+}
+.id_file.active{
+  border: 2px solid #fff;
+}
+.id_file .icon{
+  font-size: 201px;
+  color: rgb(96, 168, 180);
+}
+.id_file header{
+  font-size: 30px;
+  font-weight: 500;
+  color: rgb(18, 141, 150);
+}
+.id_file span{
+  font-size: 25px;
+  font-weight: 500;
+  color: rgb(27, 100, 129);
+  margin: 10px 0 15px 0;
+}
 .main-flow-flex {
   display: flex;
   background: #fafafa;
