@@ -1,15 +1,30 @@
 
 {% extends 'base.html' %}
 {% load static %}
-
-        
+{%block navbar%} {% endblock %}
+{% block css %}<link rel="stylesheet" href="{% static 'css/errorPage.css' %}" /> {%endblock%}
+<title>{% block title %}Error Page{%endblock%} </title>       
 {% block content %}
+    <section class="errorPage">
+        <div class="errorMessage">
+        <div class="pageNotFound">Oops... <br> Page not found</div>
+        <div class="message">
+            The page you are looking for might be removed or is temporarily
+            unavailable.
+        </div>
+        </div>
 
-404 only works when Debug is False(Production)
-if u wish to test Make DEBUG=False in settings.py
-<p>Page not found!</p>
-{% endblock %}
+        <div class="buttons">
+           {% if request.user.is_authenticated %} 
+                <a href="{% url 'dashboard' %}"><button class="home" style="cursor: pointer;">Back to Home</button></a>
+            {% endif %}
+    
+            <a href="{% url 'contact' %}"><button class="support" style="cursor: pointer;">Contact Support</button></a>
+        </div>
 
+        <div class="errorPad"><img src="{% static 'img/errorPad.png' %}" alt=""></div>
+        <div class="errorCode small"><img src="{% static 'img/404signsmall.png' %}" alt=""></div>
+    </section>
 
-{%block footer %}
+    {%block footer %} {% endblock%}
 {%endblock%}
