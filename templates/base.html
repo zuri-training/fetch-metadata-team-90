@@ -25,6 +25,7 @@
       type="text/css"
       rel="stylesheet"
     />
+
     <link rel="icon" href="{% static 'img/favicon-16x16-blue.png' %}">
     {% block css %}
     <link
@@ -33,12 +34,21 @@
       rel="stylesheet"
       media="screen,projection"
     />
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
   
     {% endblock %}
-    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
-
+   
+    <script type="text/javascript"  src="{% static 'js/general.js' %}"></script>
+ 
   </head>
   <body>
+    {% if messages %}
+    {% for message in messages %}
+      <div id="alert" style="text-align: center;" class="alert {{ message.tags }}" role="alert">
+         <span > {{ message }}</span>
+      </div>
+    {% endfor %}
+{% endif %}
     {%block navbar%}
     <header>
       <nav>
@@ -64,12 +74,11 @@
               </div>
             </div>
           {% else %}
-          <button class="login-btn">
-            <a href="{% url 'login' %}" class="nav-link">Login</a>
-          </button>
-          <button class="signup-btn">
-            <a href="{% url 'django_registration_register' %}" class="nav-link">Sign Up</a>
-          </button>
+        
+            <a href="{% url 'login' %}" class="login-btn nav-link">Login</a>
+       
+            <a href="{% url 'django_registration_register' %}" class="nav-link signup-btn">Sign Up</a>
+          
           {% endif %}
          
          
@@ -85,6 +94,9 @@
 
    {% endblock %}
     {% block content %} {% endblock %}
+
+
+
     {% block footer %}
     <footer>
       <div class="footer-container">
@@ -136,10 +148,21 @@
       </button>
     </footer>
     {% endblock %}
+    <!--This is preloader -->
+    <div class="loader">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+
     
-    <script type="text/javascript"  src="{% static 'js/general.js' %}"></script>
-    {% block js %}
+   
+
+    <script type="text/javascript"  src="{% static 'js/loader.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/index.js' %}"></script>
+    {% block js %}
+    
     {% endblock %}
+
   </body>
 </html>
