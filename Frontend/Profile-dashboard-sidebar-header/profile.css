@@ -74,6 +74,7 @@ font-size: 25px;
 line-height: 38px;
 letter-spacing: -0.02em;
 color: #535353;
+margin-bottom: 8px;
 }
 .head-section p{
 /* font-family: 'Work Sans'; */
@@ -82,11 +83,13 @@ font-weight: 400;
 font-size: 16px;
 line-height: 20px;
 color: #6F6F6F;
+align-items: flex-start;
+text-align: left;
 
 }
 .hello{
-    text-align: left;
-    justify-content: left;
+
+    
 }
 .profile-pic-name {
     display: inherit;
@@ -442,7 +445,7 @@ span img:checked {
     outline: none;
     color: #3eaaad;
     cursor: pointer;
-    font-family: 'Work Sans';
+    /* font-family: 'Work Sans'; */
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -527,7 +530,7 @@ border: none;
 }
 
 input.extract-button{
-font-family: 'Droid Sans';
+/* font-family: 'Droid Sans'; */
 font-style: normal;
 font-weight: 700;
 font-size: 20px;
@@ -552,7 +555,7 @@ input.extract-button:hover{
 
 .result-container h3{
 width: 77px;
-font-family: 'Work Sans';
+/* font-family: 'Work Sans'; */
 font-style: normal;
 font-weight: 700;
 font-size: 25px;
@@ -570,7 +573,7 @@ color: #6F6F6F;
 .result-details p{
     width: 195px;
     height: 30px;
-    font-family: 'Work Sans';
+    /* font-family: 'Work Sans'; */
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
@@ -625,7 +628,7 @@ input.view-button:hover{
     background-color: #56CCF2;
 }
 input#save-result{
-font-family: 'Droid Sans';
+/* font-family: 'Droid Sans'; */
 font-style: normal;
 font-weight: 700;
 font-size: 20px;
@@ -638,7 +641,7 @@ input#save-result:hover{
     /* color: #1A75BB; */
 }
 input#view-result{
-font-family: 'Droid Sans';
+/* font-family: 'Droid Sans'; */
 font-style: normal;
 font-weight: 700;
 font-size: 20px;
@@ -668,7 +671,7 @@ border-radius: 4px;
 }
 
 .right-side h3{
-    font-family: 'Work Sans';
+    /* font-family: 'Work Sans'; */
     font-style: normal;
     font-weight: 700;
     font-size: 25px;
@@ -762,17 +765,17 @@ margin-bottom: 20px;
 }
 
 .mtdata span{
-    font-family: 'Work Sans';
+    /* font-family: 'Work Sans'; */
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
     line-height: 30px;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.04em;
     color: #6F6F6F;
 }
 
 .mtdata p{
-font-family: 'Work Sans';
+/* font-family: 'Work Sans'; */
 font-style: normal;
 font-weight: 400;
 font-size: 20px;
