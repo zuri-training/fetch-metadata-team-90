@@ -6,7 +6,6 @@ body {
   text-align: center;
   line-height: 20px;
   font-family: "Work Sans", sans-serif;
-
   margin-top: 20vh;
 }
 
@@ -15,12 +14,12 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 70vw;
+  width: 70%;
   margin: auto;
 }
 
 img {
-  width: 10vw;
+  width: 10%;
 }
 
 .one {
@@ -37,6 +36,7 @@ img {
 
 .three {
   color: #8a8a8a;
+  line-height: 25px;
   max-width: 570px;
   font-size: 20px;
   font-weight: 400;
@@ -47,7 +47,7 @@ img {
   align-items: flex-start;
   justify-content: flex-start;
   align-content: flex-start;
-  /* width: 100vw; */
+  width: 100%;
 }
 
 .four label {
@@ -62,9 +62,9 @@ button {
   padding: 10px 0;
   /* change color */
   background-color: #56ccf2;
+  border: 2px solid #56ccf2;
   color: #fff;
   border-radius: 4px;
-  border: 2px solid #56ccf2;
   font-size: 20px;
   font-weight: 400;
   cursor: pointer;
@@ -99,4 +99,38 @@ button {
 .email__container img {
   cursor: pointer;
   height: 20px;
+}
+@media (max-width: 768px) {
+  img {
+    width: 100px;
+    height: 100px;
+  }
+  .two h1 {
+    font-size: 25px;
+  }
+  .three {
+    color: #8a8a8a;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    width: 400px;
+  }
+  .four {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-content: flex-start;
+  }
+
+  .four label {
+    font-size: 18px;
+    width: 220px;
+  }
+  .email__container {
+    width: 300px;
+  }
+  button {
+    width: 300px;
+    font-size: 16px;
+  }
 }
