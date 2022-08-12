@@ -1,0 +1,808 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;500;600;700&family=Work+Sans:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Work Sans";
+  font-style: normal;
+  overflow-x: hidden;
+  background: #1F1F1F;
+}
+.generalflexselector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header {
+  background-image: url(./Hero.png);
+  width: 100%;
+  height: 100%;
+  padding-top: 40px;
+}
+/* This is the starting point for styling of the nav links */
+
+nav {
+  padding: 0 20px;
+  line-height: 98px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.logo {
+  padding: 15px 30px 15px 50px;
+  line-height: 28px;
+}
+.logo img {
+  width: 132px;
+  height: 42px;
+}
+.nav-menu {
+  float: right;
+  margin-right: 50px;
+}
+.nav-menu li {
+  display: inline;
+  list-style: none;
+}
+.nav-menu li a {
+  line-height: 28px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #E1E1E1;
+    padding-left: 60px;
+  font-weight: 400;
+}
+
+.signup-btn a {
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.login-btn a {
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: 700;
+  color: #1e7e9e;
+}
+.login-btn {
+  padding: 15px 35px;
+  color: #ffffff;
+  background: transparent;
+  border: 2px solid #1e7e9e;
+  border-radius: 4px;
+  margin-left: 150px;
+  margin-right: 15px;
+}
+.signup-btn {
+  padding: 15px 30px;
+  color: #ffffff;
+  background: linear-gradient(208.39deg, #1A75BB -72.1%, rgba(26, 117, 187, 0) 536.07%);  border: none;
+  border-radius: 4px;
+}
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #0c0b0b;
+}
+.hamburger {
+  display: none;
+  cursor: pointer;
+} /* This is the ending point for styling of the nav links */
+
+/*This is the styling of the mobile view/responsiveness header/nav section*/
+@media (max-width: 720px) {
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 90px;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: #408cc6;
+    transition: 0.3s;
+    text-align: center;
+  }
+  .nav-menu li a {
+    font-size: 18px;
+    padding: 10px 0;
+    margin: 10px 0;
+    display: block;
+  }
+  .nav-menu.active {
+    left: 0;
+  }
+  .hamburger {
+    display: block;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .signup-btn,
+  .login-btn {
+    padding: 8px 5px;
+    margin-left: 10px;
+  }
+  .login-btn a,
+  .signup-btn a {
+    font-size: 16px;
+    color: #ffffff;
+  }
+
+  .logo {
+    margin: -25px;
+  }
+}
+/* the drop a message section styling begins here */
+.main-container {
+  gap: 125px;
+  margin-top: 140px;
+  margin-bottom: 32px;
+}
+body {
+  font-family: "Work Sans";
+  font-style: normal;
+  overflow-x: hidden;
+}
+.generalflexselector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header {
+  background-image: url(./Hero.png);
+  width: 100%;
+  height: 100%;
+  padding-top: 40px;
+}
+/* This is the starting point for styling of the nav links */
+
+.drop-msg {
+  padding: 0px;
+  width: 505px;
+}
+.sub-title {
+  /* text-align: center; */
+  margin-bottom: 32px;
+}
+
+.sub-title h3 {
+  width: 434px;
+  height: 56px;
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 56px;
+  letter-spacing: -0.02em;
+  color: #408cc6;
+  margin-bottom: 26px;
+}
+.sub-title p {
+  /* We will get back to you as soon as possible */
+
+  width: 434px;
+  height: 28px;
+
+  /* Web/Body small */
+
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  /* identical to box height, or 140% */
+
+  /* Grey/Grey08 */
+  color: #C4C4C4;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+input{
+  background: #303233;
+}
+label[class="fname"] {
+  width: 200px;
+  height: 40px;
+
+  /* Web/Body small */
+
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  /* identical to box height, or 140% */
+
+  display: flex;
+  align-items: center;
+
+  /* Grey/Grey10 */
+
+  color: #E1E1E1;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+input[id="fname"] {
+  box-sizing: border-box;
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 0px 10px 48px;
+  gap: 10px;
+
+  width: 504px;
+  height: 56px;
+
+  border: 2px solid #9ca2ac;
+  border-radius: 4px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+input[id="email"] {
+  box-sizing: border-box;
+
+  /* Auto layout */
+  /*     
+    display: flex;
+    flex-direction: row; */
+  align-items: center;
+  padding: 10px 0px 10px 48px;
+  gap: 10px;
+
+  width: 504px;
+  height: 56px;
+
+  border: 2px solid #9ca2ac;
+  border-radius: 4px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+input[id="Subject"] {
+  box-sizing: border-box;
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 0px 10px 48px;
+  gap: 10px;
+
+  width: 504px;
+  height: 56px;
+
+  border: 2px solid #9ca2ac;
+  border-radius: 4px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+input[id="message"] {
+  /* Input Fields */
+
+  box-sizing: border-box;
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 0px 10px 48px;
+  gap: 10px;
+
+  width: 504px;
+  height: 98px;
+
+  border: 2px solid #9ca2ac;
+  border-radius: 4px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+input[type="submit"] {
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  width: 505px;
+  height: 56px;
+
+  background: #56ccf2;
+  border-radius: 4px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 5;
+  flex-grow: 0;
+  cursor: pointer;
+
+  font-family: "Droid Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 16px;
+  /* identical to box height, or 80% */
+  display: flex;
+  align-items: center;
+  border: 0px;
+
+  /* white */
+  color: #ffffff;
+}
+
+input::placeholder {
+  /* Button text */
+
+  width: 419px;
+  height: 76px;
+
+  /* Web/Body small */
+
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  /* or 140% */
+
+  /* Grey/Grey06 */
+  color: #C4C4C4;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.contact-us {
+  margin-top: -70px;
+}
+
+.contact-us h1 {
+  width: 317px;
+  height: 102px;
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 102px;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #408cc6;
+  margin-left: 210px;
+  margin-bottom: 28.9px;
+}
+.contact-us img {
+  width: 610px;
+}
+/* the drop a message section styling ends here */
+
+/* the get in touch section styling begins here */
+
+.get-in h3 {
+  margin: 20px 0 20px 5px;
+  width: 209px;
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 56px;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #408cc6;
+}
+.getting-in {
+  padding: 40px;
+  gap: 32px;
+  width: 1240px;
+  background: #303233;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15),
+    0px 0px 15px 4px rgba(0, 0, 0, 0.02);
+  border-radius: 4px;
+  margin: 56px 50px 183px;
+}
+.getting-in span {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 38px;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #E1E1E1;}
+
+.getting-in p {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: #C4C4C4;}
+
+.text-uno {
+  width: 1159px;
+  /* height: 68px; */
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: #C4C4C4;
+}
+.text-duo,
+.text-trio,
+.text-quatro {
+  padding: 0px;
+  gap: 8px;
+  width: 750px;
+  height: 114px;
+  margin-top: 24px;
+}
+
+.get-in-socials {
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+  width: 189px;
+  margin: 10px 0 20px;
+}
+.get-in-socials img {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+
+/* the get in touch section styling ends here */
+
+/*Styling of the Footer starts here*/
+footer {
+  width: 100%;
+  height: 100%;
+  background: url(./Footer.png);
+}
+.footer-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.footer-container .resourses {
+  align-items: center;
+  margin: 50px 50px;
+  position: relative;
+  flex-direction: column;
+}
+.footer-container .resourses img {
+  height: 57px;
+  width: 206px;
+  margin-bottom: 15px;
+}
+.footer-container .resourses h6 {
+  width: 269px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: center;
+  color: #ffffff;
+}
+.footer-container .resourses p {
+  width: 234px;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: left;
+  line-height: 20px;
+  padding: 7px 0;
+  color: #ffffff;
+}
+.footer-container .resourses li,
+.footer-container .resourses li a {
+  text-align: center;
+  padding: 7px 0;
+  font-size: 16px;
+  font-weight: 400;
+  width: 269px;
+  list-style: none;
+  text-decoration: none;
+  color: #ffffff;
+}
+.footer-txt {
+  width: 100%;
+  margin: auto;
+}
+.footer-txt p,
+.footer-txt p a {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  margin: 15px auto;
+  color: #ffffff;
+  text-decoration: none;
+}
+footer .social {
+  width: 100%;
+  flex-wrap: wrap;
+}
+footer .social .icons {
+  margin: 20px 10px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+footer .social .icons i {
+  font-size: 25px;
+  color: #408cc6;
+  background-color: #ffffff;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 2px;
+}
+/*This is the styling of the mobile view/responsiveness of the footer*/
+@media (max-width: 720px) {
+  .footer-txt {
+    width: 100%;
+    margin: auto;
+  }
+  .footer-container .resourses {
+    display: flex;
+    margin: 10px auto;
+    position: relative;
+  }
+  .footer-container {
+    padding-top: 50px;
+  }
+  .footer-txt p {
+    font-size: 16px;
+    margin: 15px 20px;
+  }
+}
+/*This is the styling of the mobile view/responsiveness header/nav section*/
+@media (max-width: 720px) {
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 90px;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: #408cc6;
+    transition: 0.3s;
+    text-align: center;
+  }
+  .nav-menu li a {
+    font-size: 18px;
+    padding: 10px 0;
+    margin: 10px 0;
+    display: block;
+  }
+  .nav-menu.active {
+    left: 0;
+  }
+  .hamburger {
+    display: block;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .signup-btn,
+  .login-btn {
+    padding: 8px 5px;
+    margin-left: 10px;
+  }
+  .login-btn a,
+  .signup-btn a {
+    font-size: 16px;
+  }
+
+  .logo {
+    margin: -25px;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .main-container h3 {
+    text-align: center;
+    font-size: 30px;
+    width: 500px;
+  }
+  .main-container p {
+    text-align: center;
+    font-size: 18px;
+    width: 500px;
+  }
+
+  .getting-in {
+    width: 85%;
+    gap: 0px;
+    margin: auto;
+  }
+
+  .text-uno {
+    width: 90%;
+  }
+
+  .text-duo,
+  .text-trio,
+  .text-quatro {
+    width: 90%;
+    /* height: 0%; */
+  }
+
+  .contact-us img {
+    width: 95%;
+    height: 500px;
+  }
+
+  input[id="fname"],
+  input[id="email"],
+  input[id="Subject"],
+  input[id="message"] {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: auto;
+  }
+
+  label[class="fname"] {
+    width: 70%;
+    margin: auto;
+  }
+
+  input[type="submit"] {
+    width: 60%;
+    margin: auto;
+  }
+  .main-container .contact-us h1 {
+    text-align: center;
+    width: 500px;
+    font-size: 40px;
+    margin: auto;
+  }
+}
+@media (max-width: 375px) {
+  .main-container {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 350px;
+    margin: auto;
+  }
+
+  .contact-us img {
+    width: 80%;
+  }
+
+  .contact-us h1 {
+    width: 200px;
+    font-size: 30px;
+    margin: 10px auto;
+    line-height: 0;
+  }
+  .sub-title h3 {
+    display: none;
+  }
+
+  .sub-title p {
+    width: 332px;
+    margin: auto;
+  }
+
+  .drop-msg {
+    width: 350px;
+  }
+
+  .get-in {
+    width: 93%;
+    margin: auto;
+  }
+
+  input[value] {
+    width: 335px;
+    height: 56px;
+    padding: 10px 0px 10px 48px;
+  }
+
+  label[class="fname"] {
+    width: 120px;
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  input::placeholder {
+    font-size: 14px;
+  }
+  input[type="submit"] {
+    width: 188px;
+    height: 48px;
+    margin: 20px auto;
+    text-align: center;
+  }
+
+  input#submit {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+  .sub-container {
+    width: 350px;
+    padding-bottom: 500px;
+  }
+  .footer {
+    width: 375px;
+    height: 500px;
+  }
+
+  .getting-in {
+    width: 100%;
+    height: 800px;
+    margin: auto 10px;
+  }
+
+  .texty {
+    width: 100%;
+  }
+
+  .text-duo {
+    margin-top: 40px;
+  }
+
+  .texty span {
+    line-height: 24px;
+    font-size: 20px;
+  }
+}

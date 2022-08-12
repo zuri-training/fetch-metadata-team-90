@@ -88,7 +88,7 @@ hr {
   justify-content: space-around;
   justify-items: left;
   align-items: flex-start;
-  margin-bottom: 200px;
+  padding-bottom: 200px;
 }
 
 .meta-art {
@@ -117,8 +117,7 @@ hr {
   text-decoration: none;
 }
 
-*Styling of the Footer starts here*/
-footer {
+*Styling of the Footer starts here*/ footer {
   width: 100%;
   height: 100%;
   background: url("footer_bg_img/footer_bg.png");
