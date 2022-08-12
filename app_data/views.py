@@ -90,6 +90,9 @@ class DashboardView(LoginRequiredMixin, View):
     context = {'form': form} 
     @method_decorator(never_cache)
     def get(self, request):
+        q = request.GET.get('q')
+        if q:
+            self.context['file_list'] = FileUpload.objects.search(q)
         self.context['file_list'] = self.request.user.user_file.all()
         return render(request, self.template_name, self.context)
     @method_decorator(never_cache)
@@ -146,3 +149,18 @@ class ShareFileUploadDetailView(DetailView):
 #     def form_valid(self, form):
 #         form.instance.user = self.request.user
 #         return super().form_valid(form)
+def search(request, *args, **kwargs):
+    query = request.POST.get('q')
+    if request.user.is_authenticated:
+        user = request.user
+        user_files = user.user_file.all()
+    else:
+        user_files = None
+    result = FileUpload.objects.filter(user=user).search(query)
+    context = {
+        'files': result,
+        'user': user_files
+
+    } 
+
+    return render(request, 'search.html', context)
