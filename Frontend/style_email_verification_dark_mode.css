@@ -1,67 +1,114 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
-
 body {
-  background-color: black;
-  font-size: 5px;
-  text-align: center;
-  line-height: 20px;
-  font-family: "Work Sans", sans-serif;
-
-  margin-top: 20vh;
+    background-color: black;
+    font-size: 5px;
+    text-align: center;
+    line-height: 20px;
+    font-family: "Work Sans", sans-serif;
+    margin-top: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 img {
-  width: 10vw;
+    width: 10vw;
 }
 
 .one {
-  text-align: center;
+    text-align: center;
 }
 
-.two {
-  color: #408cc6;
+.two >h2{
+    color: #408cc6;
+    align-self: center;
 }
-.two > h2 {
-  font-size: 2rem;
+
+.two>h2 {
+    font-size: 2rem;
 }
 
 .three {
-  color: #C4C4C4;
-  width: 654px;
-  display: flex;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 28px;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin: 0 auto;
+    color: #8a8a8a;
+    width: 654px;
+    display: flex;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
 }
 
 .three p {
-  width: 100%;
+    width: 100%;
 }
 
 .four {
-  font-size: 20px;
-  width: 654px;
-  margin: 0 auto;
-  color: #8a8a8a;
-  font-weight: 400;
-  line-height: 28px;
-}
-.four a {
-  color: #56ccf2;
-  text-decoration: none;
+    font-size: 20px;
+    width: 654px;
+    margin: 0 auto;
+    color: #8a8a8a;
+    font-weight: 400;
+    line-height: 28px;
 }
 
-@media (min-width: 600) and (max-width: 900){
-    .field-container{
-        flex-direction: row;
+.four a {
+    color: #56ccf2;
+    text-decoration: none;
+    
+}
+
+.four >p{
+    font-size: 20px;
+}
+
+.new >a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+@media (min-width: 375px) and (max-width: 900px) {
+    .img {
+        width: 40vw;
+    }
+
+    .new {
+        color: white;
+    }
+
+    .body {
+        /* font-size: 2px; */
+        line-height: 10px;
+        margin-top: 10vh;
+    }
+
+    .two>h2 {
+        font-size: 1.5rem;
+    }
+
+    .three {
+        width: 90%;
+        font-size: 15px;
+        font-weight: 200;
+        line-height: 20px;
+    }
+
+    /* .three p {
+        width: 80%;
+    } */
+
+    .four {
+        width: 80%;
+        line-height: 14px;
+    }
+    
+    .four >p{
+        font-size: 15px;
+        font-weight: 500;
+
     }
 }
-
-.new {
-  color: #1d1a1a;
-}
-
