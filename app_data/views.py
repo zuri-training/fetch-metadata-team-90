@@ -14,15 +14,20 @@ from xhtml2pdf import pisa
 from django.utils import timezone
 from django.views.decorators.cache import never_cache
 from django.utils.decorators import method_decorator
+
+from django.conf import settings
+from django.core.mail import send_mail, send_mass_mail
+from django.contrib import messages
+
 # to be placed in a differn=ent file  
 def render_to_pdf(template_src, context_dict={}):
-	template = get_template(template_src)
-	html  = template.render(context_dict)
-	result = BytesIO()
-	pdf = pisa.pisaDocument(BytesIO(html.encode("ISO-8859-1")), result)
-	if not pdf.err:
-		return HttpResponse(result.getvalue(), content_type='application/pdf')
-	return None
+    template = get_template(template_src)
+    html  = template.render(context_dict)
+    result = BytesIO()
+    pdf = pisa.pisaDocument(BytesIO(html.encode("ISO-8859-1")), result)
+    if not pdf.err:
+        return HttpResponse(result.getvalue(), content_type='application/pdf')
+    return None
 
 
 class HomePageView(TemplateView):
@@ -31,23 +36,33 @@ class HomePageView(TemplateView):
 
 
 # //wil be change to class based view 
-def Contact(request):
-	
-	if request.method == 'POST':
-		form = ContactForm(request.POST)
-		if form.is_valid():
-			message = form.save(commit=False)
-			message.message_date = timezone.now()
-			form.save()
-			return redirect('contactsuccess')
-	else:
-		form = ContactForm()
-
-	context = {
-		'form':form,
-	}
-
-	return render(request, 'contact.html', context)
+class ContactView(View):
+    form = ContactForm
+    template_name = 'contact.html'
+    context  = {'form': form}
+    def get(self, request):
+        return render(request, self.template_name, self.context)
+    
+    def post(self, request):
+        form = self.form(request.POST)
+        if form.is_valid():
+            name_email = request.POST['name']
+            email = request.POST['sender_email']
+            subject = request.POST['subject']
+            message_email = request.POST['message']
+            message_email2 = f'{message_email} from {email}'
+            try:
+                send_mail(subject, message_email2, email, 
+                [settings.EMAIL_HOST_USER], fail_silently=False,)
+                messages.success(request, 'Thanks, A response has been sent to your mail')
+                return render(request, self.template_name, self.context)
+            except:
+                messages.error(request, 'Email not sent, Something went wrong. Try again!')
+                return render(request, self.template_name, self.context)
+            
+        else:
+            self.context['form'] = form
+            return render(request, self.template_name, self.context)
 
 
 #static website for the form contact
