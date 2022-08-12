@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;500;600;700&family=Work+Sans:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Work Sans";
+  font-style: normal;
+  overflow-x: hidden;
+}
+.generalflexselector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header {
+  background-image: url(./Hero.png);
+  width: 100%;
+  /* height: 100%; */
+  padding-top: 40px;
+}
+
+
+/* This is the starting point for styling of the nav links */
+nav {
+    padding: 0 20px;
+    line-height: 98px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .logo {
+    padding: 15px 30px 15px 50px;
+    line-height: 28px;
+  }
+
+  .doc-main-container{
+    width: 100%;
+    /* height: 897px; */
+    background: #FAFAFA;
+}
+
+.doc-sub-head h1{
+    font-weight: 700;
+    font-size: 34px;
+    letter-spacing: -0.02em;
+    color: #408CC6;
+    padding: 106px 0 78px 97px;
+}
+.doc-sub-head p{
+font-weight: 400;
+font-size: 24px;
+line-height: 36px;
+letter-spacing: -0.02em;
+color: #6F6F6F;
+padding: 0px 0 78px 97px;
+
+}
+
+.doc-links{
+gap: 20px;
+justify-content: space-around;
+width: 100%;
+
+}
+
+.sub-links{
+gap: 24px;
+
+}
+
+.sub-links p{
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+     display: flex;
+    align-items: center;
+    letter-spacing: -0.02em;
+    color: #56CCF2;
+}
+
+hr{
+margin: 50px 40px;
+border: 1px solid grey;
+}
+
+.doc-sub-container{
+    justify-content: space-around;
+    justify-items: left;
+    align-items:flex-start;
+}
+
+.meta-art{
+    flex-direction: column;
+    justify-content: space-around;
+}
+.meta-art h6{
+font-weight: 700;
+font-size: 20px;
+line-height: 30px;
+text-align: center;
+letter-spacing: -0.02em;
+color: #408CC6;
+margin-bottom: 20px;
+}
+
+.folders{
+    justify-content: left;
+}
+
+.folders p{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    color: #6F6F6F;
+}
+
+
+
+
+
+/*Styling of the Footer starts here*/
+footer {
+    width: 100%;
+    height: 100%;
+    background: url(./footer-bg.png);
+  }
+  .footer-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer-container .resourses {
+    align-items: center;
+    margin: 50px 50px;
+    flex-direction: column;
+  }
+  .footer-container .resourses img {
+    height: 57px;
+    width: 206px;
+    margin-bottom: 15px;
+  }
+  .footer-container .resourses h6 {
+    width: 269px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: center;
+    color: #ffffff;
+  }
+  .footer-container .resourses p {
+    width: 234px;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: left;
+    line-height: 20px;
+    padding: 7px 0;
+    color: #ffffff;
+  }
+  .footer-container .resourses li,
+  .footer-container .resourses li a {
+    text-align: center;
+    padding: 7px 0;
+    font-size: 16px;
+    font-weight: 400;
+    width: 269px;
+    list-style: none;
+    text-decoration: none;
+    color: #ffffff;
+  }
+  .footer-txt {
+    width: 100%;
+    margin: auto;
+  }
+  .footer-txt p {
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    margin: 15px auto;
+    color: #ffffff;
+  }
+  footer .social {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  footer .social .icons {
+    margin: 20px 10px;
+    display: flex;
+    flex-direction: row;
+  }
+  footer .social .icons i {
+    font-size: 25px;
+    color: #408cc6;
+    background-color: #ffffff;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 2px;
+  }
+
+  /*This is the styling of the mobile view/responsiveness of the footer*/
+@media (max-width: 720px) {
+    .footer-txt {
+      width: 100%;
+      margin: auto;
+    }
+    .footer-container .resourses {
+      display: flex;
+      margin: 10px auto;
+    }
+    .footer-container {
+      padding-top: 50px;
+    }
+    .footer-txt p {
+      font-size: 16px;
+      margin: 15px 20px;
+    }
+    .resourses {
+      padding: 20px;
+    }
+  }

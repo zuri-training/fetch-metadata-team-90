@@ -38,6 +38,7 @@
   
     {% endblock %}
    
+   
     <script type="text/javascript"  src="{% static 'js/general.js' %}"></script>
  
   </head>
@@ -69,7 +70,11 @@
               <div class="dropdown-content">
                 <a href="{% url 'dashboard' %}">Dashboard</a>
                 <a href="#">Profile</a>
+
+                <a href="{% url 'edit-profile' request.user.id %}">Settings</a>
+
                 <a href="{% url 'profile' %}">Settings</a>
+
                 <a href="{% url 'logout' %}">Log out</a>
               </div>
             </div>

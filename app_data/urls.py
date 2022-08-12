@@ -15,6 +15,7 @@ urlpatterns = [
     path('documentations/', views.DocumentationView.as_view(), name='documentations'),
     path('archives/', views.ArchiveView.as_view(), name='archives'),
     path('dashboard/', views.DashboardView.as_view(), name='dashboard'),
+    path('save-page/', views.SavePageView.as_view(), name='save-page'),
     # path('dashboard/', views.CreateFilePuloadView.as_view(template_name='dashboard.html'), name='file_upload'),
     path('share/<int:pk>/', views.ShareFileUploadDetailView.as_view(), name='share'),
     path('details/<int:pk>/', views.FileUploadDetailView.as_view(), name='details'),
