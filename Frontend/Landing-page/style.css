@@ -280,6 +280,7 @@ nav {
   background: url(Home-Images/Vector2.svg);
   height: 100%;
   width: 100%;
+  padding-top: 50px;
 }
 .how-it-works h3 {
   font-size: 35px;
@@ -556,7 +557,7 @@ nav {
   box-shadow: 0px 13px 30px rgba(0, 0, 0, 0.25);
 }
 .accordion-item-header {
-  padding: 15px 25px 15px 20px;
+  padding: 15px 25px;
   display: flex;
   min-height: 3.5rem;
   font-weight: 700;
@@ -567,9 +568,9 @@ nav {
   cursor: pointer;
 }
 .accordion-item-header::after {
-  content: "\25BE";
-  font-size: 50px;
-  color: #408cc6;
+  content: "\005E";
+  font-size: 30px;
+  color: #6f6f6f;
   position: absolute;
   right: 25px;
 }
@@ -577,6 +578,7 @@ nav {
   transform: rotate(180deg);
 }
 .accordion-item-body {
+  padding-left: 20px;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
@@ -602,8 +604,8 @@ nav {
     font-size: 20px;
   }
   .accordion-item-header::after {
-    content: "\25BE";
-    font-size: 30px;
+    content: "\005E";
+    font-size: 25px;
   }
   .accordion-item-body-content {
     text-align: justify;
