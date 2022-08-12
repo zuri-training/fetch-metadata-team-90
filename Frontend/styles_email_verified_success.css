@@ -24,7 +24,7 @@ img {
 }
 
 .top-section h3 {
-  color: #408cc6;
+  color: #408CC6;
   font-size: 45px;
   font-weight: 700;
 }
@@ -48,8 +48,44 @@ button {
   padding: 10px;
   border: none;
   /* change color */
-  background-color: #56ccf2;
+  background-color: #1A75BB
+  ;
   color: #fff;
   border-radius: 4px;
   cursor: pointer;
+}
+
+@media (min-width: 375px) and (max-width: 900px) {
+  .img {
+      width: 40vw;
+  }
+
+  .main-section{
+      /* width: 50vw; */
+      font-size: 20px;
+  }
+
+  .top-section h3{
+     font-weight: 100px; 
+  }
+
+  .middle-section p{
+      font-size: 15px;
+      text-align: center;
+      width: 450px;    
+  }
+  
+  .button{
+     
+      font-weight: 200;
+      font-size: 15px;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      border-radius: 2px;
+
+  }
+
+  .top-section h3 {
+      font-size: 20px;
+  }
 }
