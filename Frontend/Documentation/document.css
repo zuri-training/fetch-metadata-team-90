@@ -34,14 +34,31 @@ nav {
   line-height: 28px;
 }
 
+
+.doc-sub-head h1{
+    font-weight: 700;
+    font-size: 34px;
+    letter-spacing: -0.02em;
+    color: #408CC6;
+    padding: 106px 0 78px 97px;
+}
+.doc-sub-head p{
+font-weight: 400;
+font-size: 24px;
+line-height: 36px;
+letter-spacing: -0.02em;
+color: #6F6F6F;
+padding: 0px 0 78px 97px;
+}
+
 .doc-main-container {
   width: 100%;
   /* height: 897px; */
   background: #fafafa;
+
 }
 
-.doc-sub-head {
-}
+
 .doc-sub-head h1 {
   font-weight: 700;
   font-size: 34px;
