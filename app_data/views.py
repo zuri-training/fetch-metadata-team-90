@@ -48,13 +48,16 @@ class ContactView(View):
         if form.is_valid():
             name_email = request.POST['name']
             email = request.POST['sender_email']
+            
             subject = request.POST['subject']
             message_email = request.POST['message']
             message_email2 = f'{message_email} from {email}'
+            print(message_email2, settings.EMAIL_HOST_USER)
             try:
                 send_mail(subject, message_email2, email, 
                 [settings.EMAIL_HOST_USER], fail_silently=False,)
                 messages.success(request, 'Thanks, A response has been sent to your mail')
+                
                 return render(request, self.template_name, self.context)
             except:
                 messages.error(request, 'Email not sent, Something went wrong. Try again!')
@@ -116,7 +119,16 @@ class DashboardView(LoginRequiredMixin, View):
             self.context['form'] = form
             return render(request, self.template_name, self.context)
 
-
+class SavePageView(LoginRequiredMixin, View):
+    template_name = 'save_page.html'
+    context = {}
+    @method_decorator(never_cache)
+    def get(self, request):
+        q = request.GET.get('q')
+        if q:
+            self.context['file_list'] = FileUpload.objects.search(q)
+        self.context['file_list'] = self.request.user.user_file.all()
+        return render(request, self.template_name, self.context)
 
 
 class FileUploadDetailView(DetailView):

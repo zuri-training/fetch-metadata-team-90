@@ -96,7 +96,7 @@ header nav {
 footer {
   width: 100%;
   height: 100%;
-  background: url("img/footer_bg.png");
+  background: url("footer_bg_img/footer_bg.png");
 }
 .footer-container {
   width: 100%;
@@ -109,7 +109,6 @@ footer {
 .footer-container .resourses {
   align-items: center;
   margin: 50px 50px;
-  position: relative;
   flex-direction: column;
 }
 .footer-container .resourses img {
@@ -149,12 +148,14 @@ footer {
   width: 100%;
   margin: auto;
 }
-.footer-txt p {
+.footer-txt p,
+.footer-txt p a {
   font-size: 16px;
   font-weight: 400;
   text-align: center;
   margin: 15px auto;
   color: #ffffff;
+  text-decoration: none;
 }
 footer .social {
   width: 100%;
@@ -162,7 +163,6 @@ footer .social {
 }
 footer .social .icons {
   margin: 20px 10px;
-  position: relative;
   display: flex;
   flex-direction: row;
 }
@@ -174,6 +174,24 @@ footer .social .icons i {
   cursor: pointer;
   border-radius: 2px;
 }
+/*This is the css for scroll-to-top button*/
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 0;
+  border: none;
+  background: url("footer_bg_img/Scroll_Back_To_Top.png");
+  border-radius: 0px 0px 0px 0px;
+  background-size: 100%;
+  cursor: pointer;
+  margin-bottom: 15px;
+  opacity: 0.9;
+}
+.scrolltopbtn {
+  height: 60px;
+  width: 60px;
+}
 /*This is the styling of the mobile view/responsiveness of the footer*/
 @media (max-width: 720px) {
   .footer-txt {
@@ -183,7 +201,6 @@ footer .social .icons i {
   .footer-container .resourses {
     display: flex;
     margin: 10px auto;
-    position: relative;
   }
   .footer-container {
     padding-top: 50px;
@@ -191,5 +208,8 @@ footer .social .icons i {
   .footer-txt p {
     font-size: 16px;
     margin: 15px 20px;
+  }
+  .resourses {
+    padding: 20px;
   }
 }
