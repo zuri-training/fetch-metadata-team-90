@@ -12,7 +12,7 @@ body {
   font-size: 14px;
 }
 
-.nav-aside {
+.profile__menu {
   width: 15%;
   height: 95vh;
   display: flex;

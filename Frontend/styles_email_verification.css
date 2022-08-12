@@ -57,3 +57,45 @@ img {
 .new {
   color: #1d1a1a;
 }
+
+@media (min-width: 375px) and (max-width: 900px) {
+  .img {
+      width: 40vw;
+  }
+
+  .new {
+      color: gray;
+  }
+
+  .body {
+      /* font-size: 2px; */
+      line-height: 10px;
+      margin-top: 10vh;
+  }
+
+  .two>h2 {
+      font-size: 1.5rem;
+  }
+
+  .three {
+      width: 90%;
+      font-size: 15px;
+      font-weight: 200;
+      line-height: 20px;
+  }
+
+  /* .three p {
+      width: 80%;
+  } */
+
+  .four {
+      width: 80%;
+      line-height: 14px;
+  }
+  
+  .four >p{
+      font-size: 15px;
+      font-weight: 500;
+
+  }
+}
