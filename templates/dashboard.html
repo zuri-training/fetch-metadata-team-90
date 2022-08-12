@@ -8,24 +8,7 @@
 {%block navbar%} {% endblock %}
 {% block content %}
 
-        {% comment %} <ul>
-           {% if  request.user.is_authenticated %}
-                {{ request.user.username }}
-                <ul id="taskList">
-               
-               </ul>
-                <form method="post" enctype="multipart/form-data" class="dropzone">
-                  {% csrf_token %}
-                  {{ form.file.errors }}
-                 <label>File Upload: {{ form.file }}</label> 
-                  <input type="submit" value="Save">
-              </form>
-
-              <div>
-                
-              </div>
-           {% endif %}
-        </ul> {% endcomment %}
+       
 
         {% include 'side_menu.html' %}
        <main class="section-container">
@@ -42,10 +25,11 @@
                   
                  <div class="upload-area">
                    <div class="icon"><img class="cloud-icon" src="{% static 'svg/cloud-plus.svg' %}" alt=""></div>
-                   <p> Drag & Drop to Upload File or <button>click to upload</button></p>
+                   <p> Drag & Drop to Upload File or</p>
                    {{ form.file.errors }}
-                   {% comment %} <input type="file" hidden> {% endcomment %}
-                   {{ form.file }}
+                    {{ form.file }}
+                  
+                   
                  </div>
                  <script src="profile.js"></script>
                  <div class="extraction-button">
@@ -140,4 +124,8 @@
       </script>
 {% endblock %}
 {% block footer %}
+{% endblock %}
+{% block js %}
+<script type="text/javascript"  src="{% static 'js/dashboard.js' %}"></script>
+ 
 {% endblock %}
