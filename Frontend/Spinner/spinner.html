@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="spinner"></div>
+<!--Styling for spinner. You can create a seperate stylesheet if you prefer-->
+    <style>
+      body {
+        background: #fefefe;
+        display: grid;
+        place-items: center;
+        height: 100vh;
+      }
+
+      .spinner {
+        position: relative;
+        background-color: #418cc6;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        background: conic-gradient(#418cc6 50%, white);
+        animation: rotate 1.2s linear infinite;
+      }
+
+      .spinner:before,
+      .spinner:after {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+      }
+
+      .spinner:before {
+        width: 80px;
+        height: 80px;
+        top: 10px;
+        left: 10px;
+        background-color: #fefefe; /*change to body background color*/
+      }
+
+      .spinner:after {
+        height: 10px;
+        width: 10px;
+        background-color: #418cc6;
+        top: 0;
+        left: 45px;
+      }
+
+      @keyframes rotate {
+        from {
+          transform: rotateZ(0);
+        }
+        to {
+          transform: rotateZ(-360deg);
+        }
+      }
+    </style>
+  </body>
+</html>

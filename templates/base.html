@@ -25,6 +25,7 @@
       type="text/css"
       rel="stylesheet"
     />
+
     <link rel="icon" href="{% static 'img/favicon-16x16-blue.png' %}">
     {% block css %}
     <link
@@ -33,28 +34,59 @@
       rel="stylesheet"
       media="screen,projection"
     />
-    <link rel="stylesheet" href="{% static 'css/landing.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+  
     {% endblock %}
-
+   
+   
+    <script type="text/javascript"  src="{% static 'js/general.js' %}"></script>
+ 
   </head>
   <body>
+    {% if messages %}
+    {% for message in messages %}
+      <div id="alert" style="text-align: center;" class="alert {{ message.tags }}" role="alert">
+         <span > {{ message }}</span>
+      </div>
+    {% endfor %}
+{% endif %}
     {%block navbar%}
     <header>
       <nav>
         <div class="logo generalflexselector">
-          <a href=""><img src="{% static 'img/Home-Images/Horizontal Logo.svg' %}" /></a>
+          <a href="/"><img src="{% static 'svg/Horizontal_Logo.svg' %}" /></a>
         </div>
         <ul class="nav-menu">
-          <li><a href="" class="nav-link">Home</a></li>
+          <li><a href="/" class="nav-link">Home</a></li>
           <li><a href="" class="nav-link">About </a></li>
-          <li><a href="" class="nav-link">Support</a></li>
-          <li><a href="" class="nav-link">Meta Data</a></li>
-          <button class="login-btn">
-            <a href="{% url 'login' %}" class="nav-link">Login</a>
-          </button>
-          <button class="signup-btn">
-            <a href="{% url 'django_registration_register' %}" class="nav-link">Sign Up</a>
-          </button>
+          <li><a href="{% url 'terms-conditions' %}" class="nav-link">Support</a></li>
+          <li><a href="{% url 'dashboard' %}" class="nav-link">Meta Data</a></li>
+          {% if request.user.is_authenticated %}
+          <button class="dashboard-btn">Jane Doe</button>
+            <div class="dropdown">
+              <button class="dropbtn" type="button">
+                <i class="fa fa-user" aria-hidden="true"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="{% url 'dashboard' %}">Dashboard</a>
+                <a href="#">Profile</a>
+
+                <a href="{% url 'edit-profile' request.user.id %}">Settings</a>
+
+                <a href="{% url 'profile' %}">Settings</a>
+
+                <a href="{% url 'logout' %}">Log out</a>
+              </div>
+            </div>
+          {% else %}
+        
+            <a href="{% url 'login' %}" class="login-btn nav-link">Login</a>
+       
+            <a href="{% url 'django_registration_register' %}" class="nav-link signup-btn">Sign Up</a>
+          
+          {% endif %}
+         
+         
         </ul>
         <div class="hamburger">
           <span class="bar"></span>
@@ -63,49 +95,79 @@
         </div>
       </nav>
     </header>
+    <!--This is the end of header -->
+
    {% endblock %}
     {% block content %} {% endblock %}
+
+
+
     {% block footer %}
     <footer>
       <div class="footer-container">
-         <div class="resourses generalflexselector">
-         <img src="{% static 'img/Home-Images/Horizontal Logo.svg' %}" />
-         <p>
+        <div class="resourses generalflexselector">
+          <img src="{% static 'svg/Horizontal_Logo.svg' %}" />
+          <p>
             Extracting data quickly and effectively while providing accurate
             information about the data being extracted.
-         </p>
-         </div>
-         <div class="resourses">
-         <h6>RESOURCES</h6>
-         <li><a href="">Getting Started</a></li>
-         <li><a href="">Documentation</a></li>
-         <li><a href="">Status</a></li>
-         </div>
-         <div class="resourses">
-         <h6>COMPANY</h6>
-         <li><a href="">Aunthenticate</a></li>
-         <li><a href="">Support</a></li>
-         <li><a href="">Meta Data</a></li>
-         </div>
+          </p>
+        </div>
+        <div class="resourses">
+          <h6>RESOURCES</h6>
+          <li><a href="{% url 'dashboard' %}">Getting Started</a></li>
+          <li><a href="{% url 'documentations' %}">Documentation</a></li>
+          <li><a href="">Status</a></li>
+        </div>
+        <div class="resourses">
+          <h6>COMPANY</h6>
+          <li><a href="">Aunthenticate</a></li>
+          <li><a href="">Support</a></li>
+          <li><a href="">Meta Data</a></li>
+        </div>
       </div>
       <div class="footer-txt">
-         <p>Privacy | Website Terms of Use | Cookie Consent | COVID-19</p>
-         <p>© 2022 MetLab. All Rights Reserved</p>
+        <p>
+          <a href="">Privacy</a> | <a href="">Website Terms of Use</a> |
+          <a href="">Cookie Consent</a> | <a href="">COVID-19</a>
+        </p>
+        <p>© 2022 MetLab. All Rights Reserved</p>
       </div>
       <div class="social generalflexselector">
-         <div class="icons">
-         <i class="fa-brands fa-facebook-f"></i>
-         </div>
-         <div class="icons">
-         <i class="fa-brands fa-instagram"></i>
-         </div>
-         <div class="icons">
-         <i class="fa-brands fa-twitter"></i>
-         </div>
+        <div class="icons">
+          <i class="fa-brands fa-facebook-f"></i>
+        </div>
+        <div class="icons">
+          <i class="fa-brands fa-instagram"></i>
+        </div>
+        <div class="icons">
+          <i class="fa-brands fa-twitter"></i>
+        </div>
       </div>
-      <button class="scroll-to-top"> <img src="{% static 'img/Home-Images/Scroll Back To Top (1).png' %}" alt="Image" class="scroll"></button>
-   </footer>
+      <!-- This is the scroll to top button for  long pages -->
+      <button class="scroll-to-top">
+        <img
+          class="scrolltopbtn"
+          src="{% static 'img/Scroll_Back_To_Top.png' %}"
+          alt="image"
+        />
+      </button>
+    </footer>
     {% endblock %}
-    <script  src="{% static 'js/test.js' %}"></script>
+    <!--This is preloader -->
+    <div class="loader">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+
+    
+   
+
+    <script type="text/javascript"  src="{% static 'js/loader.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/index.js' %}"></script>
+    {% block js %}
+    
+    {% endblock %}
+
   </body>
 </html>

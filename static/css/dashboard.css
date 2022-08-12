@@ -19,8 +19,7 @@ body {
   background: #fafafa;
   width: 100%;
 }
-
-.nav-aside {
+.profile__menu {
   width: 15%;
   height: 95vh;
   display: flex;
@@ -73,6 +72,8 @@ body {
   background-color: #e5e5e5;
   border: none;
 }
+
+
 .search-bar {
   display: flex;
   justify-content: center;
@@ -378,6 +379,27 @@ hr {
   color: rgb(27, 100, 129);
   margin: 10px 0 15px 0;
 }
+/* #id_file::-webkit-file-upload-button {
+  visibility: hidden;
+}
+#id_file::before {
+  content: 'Select some files';
+  display: inline;
+  background: transparent
+  
+  
+  cursor: pointer;
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+}
+#id_file:hover::before {
+  border-color: black;
+}
+#id_file:active::before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}  */
 .upload-area button {
   border: none;
   outline: none;
@@ -416,6 +438,7 @@ hr {
 
 .upload-area {
   box-sizing: border-box;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -561,9 +584,6 @@ input.extract-button:hover {
 }
 
 
-#save-result:hover {
-  /* color: #1A75BB; */
-}
 #view-result, #save-result {
   font-family: "Droid Sans";
   font-style: normal;
