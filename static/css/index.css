@@ -9,6 +9,13 @@ body {
   font-style: normal;
   overflow-x: hidden;
 }
+a,  a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  color: #fff;
+}
 .generalflexselector {
   display: flex;
   justify-content: center;
@@ -246,11 +253,14 @@ nav {
   height: 56px;
   width: 350px;
   left: 386px;
+  cursor: pointer;
   top: 0px;
+  font-size: 20px;
   border-radius: 4px;
   border: none;
   padding: 10px;
   background: #56ccf2;
+  color: #ffffff;
   margin: 20px 0;
 }
 .hero-content button a {
@@ -516,9 +526,11 @@ nav {
   font-weight: 700;
   text-align: center;
   line-height: 16px;
+  color: #408cc6;
+  cursor: pointer;
 }
 .need-to-know .start-btn button a {
-  color: #408cc6;
+  
   text-decoration: none;
 }
 /*This is the styling of the mobile view/responsiveness of the need-to-know section*/
@@ -578,6 +590,7 @@ nav {
     height: 56px;
     width: 200px;
     padding: 10px;
+    font-size: 16px;
     margin: auto;
   }
   .need-to-know .start-btn button a {

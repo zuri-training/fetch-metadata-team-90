@@ -6,6 +6,7 @@
 
 body {
   background: #f5f5f5;
+  font-family: 'Work Sans';
 }
 
 a {
@@ -16,15 +17,13 @@ a {
   /* Auto layout */
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   padding: 0px;
-  gap: 16px;
-
+  gap: 10px;
   position: absolute;
+  left: 5rem;
   height: 100px;
-  left: 100px;
-  right: 906px;
-  top: 270px;
+  top: 150px;
 }
 
 .pageNotFound {
@@ -80,15 +79,12 @@ a {
   /* Auto layout */
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  padding: 0px;
   gap: 40px;
-
   position: absolute;
   height: 56px;
-  left: 100px;
+  left: 5rem;
   right: 895px;
-  top: 630px;
+  top: 430px;
 }
 
 .home {
@@ -97,14 +93,15 @@ a {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding: 0px;
   gap: 10px;
-
   width: 202.5px;
   height: 56px;
+  color: white;
 
   /* Maya Blue/maya blue */
-  background: #56ccf2;
+  background: #56CCF2;
+  border: none;
   border-radius: 4px;
 
   /* Inside auto layout */
@@ -121,14 +118,14 @@ a {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding: 0px;
   gap: 10px;
 
   width: 202.5px;
   height: 56px;
-
+  color: #408cc6;
   /* Maya Blue/maya blue */
-  border: 2px solid #56ccf2;
+  border: 2px solid #56CCF2;
   border-radius: 4px;
 
   /* Inside auto layout */
@@ -137,24 +134,20 @@ a {
   flex-grow: 1;
 }
 
-.errorPad {
+.errorPad img{
   position: absolute;
-  width: 448px;
-  height: 358px;
-  right: 238px;
-  top: 134px;
-
-  background: url(errorPad.png);
+  width: 30%;
+  height: 45%;
+  right: 208px;
+  top: 40px;
 }
 
-.errorCode {
+.errorCode img{
   position: absolute;
-  width: 297px;
-  height: 198px;
+  width: 20%;
+  height: 25%;
   right: 290px;
-  top: 492px;
-
-  background: url(404signsmall.png) no-repeat;
+  top: 350px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -162,12 +155,15 @@ a {
   .errorPad {
     display: none;
   }
-  .errorCode {
+  .errorCode.small{
+    display: none;
+  }
+  .errorPage {
     position: absolute;
-    width: 168px;
-    height: 141px;
-    left: 104px;
-    top: 107px;
+    width: 280px;
+    height: 180px;
+    left: calc(40%/2);
+    top: 3rem;
     background: url(404signsmall.png) no-repeat;
     background-size: cover;
   }
@@ -177,13 +173,11 @@ a {
     flex-direction: column;
     align-items: flex-start;
     padding: 0px;
-    gap: 16px;
-
+    gap: 14px;
     position: absolute;
     height: 128px;
-    left: 37px;
-    right: 38px;
-    top: 272px;
+    left: 2rem;
+    top: 12rem;
   }
 
   .pageNotFound {
@@ -214,6 +208,7 @@ a {
   .message {
     width: 300px;
     height: 48px;
+    margin-left: -25%;
 
     /* Mobile/Body text medium */
     font-family: 'Work Sans';
@@ -221,6 +216,7 @@ a {
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
+    left: -3rem;
     /* or 150% */
     display: flex;
     align-items: center;
@@ -249,13 +245,8 @@ a {
     position: absolute;
     width: 188px;
     height: 48px;
-    left: calc(50% - 188px / 2 + 0.5px);
-    top: 424px;
-
-    /* maya blue */
-    background: #56ccf2;
-    border: 1px solid #56ccf2;
-    border-radius: 4px;
+    left: -3rem;
+    top: 7rem;
   }
 
   .support {
@@ -272,11 +263,8 @@ a {
     position: absolute;
     width: 188px;
     height: 48px;
-    left: calc(50% - 188px / 2 + 0.5px);
-    top: 504px;
-
-    border: 2px solid #56ccf2;
-    border-radius: 4px;
+    left: -3rem;
+    top: 11.5rem;
   }
 
   .buttons {
@@ -285,7 +273,6 @@ a {
     flex-direction: column;
   
     position: absolute;
-    left: calc(50% - 188px / 2 + 0.5px);
     top: 242px;
   }
 }
