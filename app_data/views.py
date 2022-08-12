@@ -116,7 +116,16 @@ class DashboardView(LoginRequiredMixin, View):
             self.context['form'] = form
             return render(request, self.template_name, self.context)
 
-
+class SavePageView(LoginRequiredMixin, View):
+    template_name = 'save_page.html'
+    context = {}
+    @method_decorator(never_cache)
+    def get(self, request):
+        q = request.GET.get('q')
+        if q:
+            self.context['file_list'] = FileUpload.objects.search(q)
+        self.context['file_list'] = self.request.user.user_file.all()
+        return render(request, self.template_name, self.context)
 
 
 class FileUploadDetailView(DetailView):
