@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign up</title>
+    <link rel="icon" href="../favicon-16x16-blue.png">
+    <link rel="stylesheet" href="darkmode.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <main>
+        <div class="box">
+            <div class="inner-box">
+                <div class="picture-side">
+                    <div class="picture__logo-content">
+                    <div class="logo">
+                        <img src="./signup-img/Horizontal Logo.svg" alt="">
+                    </div>
+                    <div class="heading-right">
+                        <p>A data extraction tool that can be used to extract data quickly and effectively while providing accurate information about the data being extracted.</p>
+                    </div>
+                </div>
+                    <div class="image">
+                        <!-- <div class=""></div> -->
+                        <img class="dots" src="./signup-img/25332 [Converted] 1.png" alt="">
+                        <img class="woman" src="./signup-img/woman sign-up.png" alt="">
+                        <img class="pattern" src="./signup-img/Patter Bg.png" alt="">
+                    </div>
+                </div>
+
+                <div class="forms-wrapper">
+                    <form action="#">
+                        <div class="field_wrapper">
+                        <div class="heading">
+                            <p class="big">Start for free</p>
+                            <h3>Create new account</h3>
+                            <p>Already a member?</p>
+                            <a href="login.html">Log in</a>
+                        </div>
+                        <div class="card-box">
+                            <span class="details">Create Username</span>
+                            <input style="margin-top: 0.5rem;"
+                             type="text"
+                             minlength="4"
+                             autocomplete="off"
+                             required
+                             placeholder="Username">
+                        </div>
+                        
+                        <div class="card-box">
+                            <span class="details">E-mail Address</span>
+                            <div class="test">
+                                <input type="email"
+                                 minlength="4"
+                                 autocomplete="off"
+                                 required
+                                 placeholder="name@gmail">
+                                <i style="position: absolute; margin-right: 15px;" class="fa-regular fa-envelope"></i>
+                            </div>
+                            
+                        </div>
+                        <div class="card-box">
+                            <span class="details">Password</span>
+                            <div class="test">
+                                <input type="password"
+                                 placeholder="**********"
+                                 minlength="4"
+                                 autocomplete="off"
+                                 required
+                                 id="myInput">
+                                <span class="eye" onclick="myFunction()">
+                                    <i id="hide1" class="fa-regular fa-eye"></i>
+                                    <i id="hide2" class="fa-regular fa-eye-slash"></i>
+                            </span>
+                            </div>
+                        </div>
+                        <div class="card-box last">
+                            <span class="details">Confirm password</span>
+                            <div class="test">
+                                <input type="password"
+                                 placeholder="6+characters,1capital letter"
+                                 minlength="4"
+                                 autocomplete="off"
+                                 required
+                                 id="myInput2">
+                                <span class="eye" onclick="myFunction2()">
+                                    <i id="hide3" class="fa-regular fa-eye"></i>
+                                    <i id="hide4" class="fa-regular fa-eye-slash"></i>
+                                </span>
+                            </div>
+                        
+                        </div>
+                        <div class="button">
+                            <input type="submit" value="Create Account">
+                        </div>
+                        <div class="buttom-text">
+                            <p class="text">
+                                By continuing with Google Apple or Email, I agree to MetLab's
+                                <a href="Privacy-Policy/privacy-policy.html">Prvacy Policy</a> and
+                                <a href="Terms-Conditions/terms-conditions.html">Terms of service</a>
+                            </p>
+                        </div>
+                    </div>
+                    </form>
+                    
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        function myFunction(){
+            var x = document.getElementById("myInput");
+            var y = document.getElementById("hide1");
+            var z = document.getElementById("hide2");
+
+            if(x.type === 'password'){
+                x.type ="text";
+                y.style.display = "block";
+                z.style.display = "none";
+            }
+            else{
+                x.type ="password";
+                y.style.display = "none";
+                z.style.display = "block";
+            }
+        }
+        function myFunction2(){
+            var c = document.getElementById("myInput2");
+            var a = document.getElementById("hide3");
+            var b = document.getElementById("hide4");
+
+            if(c.type === 'password'){
+                c.type ="text";
+                a.style.display = "block";
+                b.style.display = "none";
+            }
+            else{
+                c.type ="password";
+                a.style.display = "none";
+                b.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
