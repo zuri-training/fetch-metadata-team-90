@@ -4,12 +4,16 @@
 
 **ROLE ON THE TEAM: BACKEND**
 
+
+
 **BACKEND:**
 
   * ASSIGNED TO CO-CREATE DJANGO APPLICATION SETUP ALONGSIDE @KCPELE https://github.com/zuri-training/fetch-metadata-team-90/tree/4525e1687c6d1fbf8a0d133cb241805f25b8290a
   * ASSIGNED TO WORK ON PASSWORD RESET EMAIL AUTHENTICATION ( DONE AND PUSHED IN THE LINK ABOVE)
   * ASSIGNED TO MAKE RESULT OF METADATA EXTRACTED RETURN TO USER ( DONE AND PUSHED IN THE LINK ABOVE)
   
+
+
 **FRONTEND:**
   
   * ASSIGNED TO CREATE THE CONTACT PAGE;
@@ -34,24 +38,35 @@
          * https://github.com/zuri-training/fetch-metadata-team-90/commit/d5e16a69bb5eb629b3dcfaa2c7424737229ea596
          * https://github.com/zuri-training/fetch-metadata-team-90/commit/8f092fb9acda3599caa5c672de0225b6b29
 
-* **EXTRA:**
+
+
+
+
+**EXTRA:**
   
   * ASSIGNED TO MAKE THE FIRST PRESENTATION FOR THE TEAM
 
 
-****                                                    **ISSUES CREATED**
+                                                                      
+                                                                      
+  **ISSUES CREATED**
+                                               
+                                                  
+  **{REFERENCE LINK}**
+  
+ * https://github.com/zuri-training/fetch-metadata-team-90/issues?q=is%3Aclosed+author%3ACoolTonie
 
 
 
 
 
-****                                                    **SOLUTION TO ISSUES ASSIGNED TO / CREATED**
 
-* RECTIFIED THE FOOTER DESIGN FOR ALL 
+ **SOLUTION TO ISSUES ASSIGNED TO / CREATED**
+ 
 
-     **{REFERENCE LINK}**
+   **{REFERENCE LINK}**
      
-* https://github.com/zuri-training/fetch-metadata-team-90/commit/f52a5c380e5fcb236a9356258f59a923911e43cb
+* https://github.com/zuri-training/fetch-metadata-team-90/issues?q=is%3Aclosed+assignee%3ACoolTonie
 
 **LINK TO TOTAL COMMITS**
 
