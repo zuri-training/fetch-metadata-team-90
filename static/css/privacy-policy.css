@@ -2,6 +2,8 @@
 
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 /* General Styles */
 body {
@@ -20,6 +22,10 @@ body {
   width: 132px;
   height: 42px;
 }
+header nav {
+  background-color: #408cc6;
+  padding: 50px;
+}
 nav {
   padding: 0 20px;
   line-height: 98px;
@@ -29,7 +35,8 @@ nav {
 }
 
 .container {
-  padding: 0 100px 0 100px;
+  padding: 0 100px 50px 100px;
+
   max-width: 100%;
   width: 1000px;
   background-color: #ffffff;
@@ -49,8 +56,7 @@ nav {
   position: absolute;
   width: 271px;
   height: 10px;
-  left: 95px;
-  top: 215px;
+  left: 90px;
 
   /* Web/Link Text */
 
@@ -70,25 +76,54 @@ nav {
 h1,
 h3 {
   color: #408cc6;
+  padding: 30px 0;
 }
 p {
   opacity: 0.8;
+  text-align: justify;
 }
 ol li {
+  text-align: justify;
   opacity: 0.8;
 }
 /*Styling of the header*/
-header nav {
-  background-color: #408cc6;
-  padding: 50px 30px 100px 50px;
-}
 
 @media (max-width: 720px) {
   .container {
-    padding: 0 20px 0 20px;
+    padding: 0 20px 50px 20px;
   }
   .last-updated {
     height: 10px;
     left: 10px;
   }
+  ol li {
+    text-align: justify;
+    opacity: 0.8;
+  }
+  p {
+    text-align: justify;
+    vertical-align: top;
+  }
+  li {
+    margin-left: 10px;
+  }
+}
+
+/*This is the css for scroll-to-top button*/
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 0;
+  border: none;
+  background: url("../img/Scroll_Back_To_Top.png");
+  border-radius: 0px 0px 0px 0px;
+  background-size: 100%;
+  cursor: pointer;
+  margin-bottom: 15px;
+  opacity: 0.9;
+}
+.scrolltopbtn {
+  height: 60px;
+  width: 60px;
 }
