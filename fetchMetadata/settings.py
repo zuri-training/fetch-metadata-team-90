@@ -159,6 +159,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 EMAIL_HOST = "smtp.gmail.com"
 EMAIL_PORT = 587
 EMAIL_HOST_USER = "zurimetlab@gmail.com"
+# the password was placed because we wont be the one to deploy. but will be diactivated after somedays" 
 EMAIL_HOST_PASSWORD = "vzllukizdsglyhho"
 EMAIL_USE_TLS = True
 

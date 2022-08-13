@@ -11,6 +11,8 @@ from authy.models import Profile
 from django.template import loader
 from django.http import HttpResponse
 from django.contrib.auth import get_user_model
+from django.contrib import messages
+
 User = get_user_model()
 
 
@@ -35,6 +37,7 @@ def PasswordChange(request):
             user.set_password(new_password)
             user.save()
             update_session_auth_hash(request, user)
+            messages.success(request, "password change success")
             return redirect('change_password_done')
     else:
         form = ChangePasswordForm(instance=user)
@@ -53,4 +56,5 @@ def PasswordChangeDone(request):
 class UpdateProfileView(LoginRequiredMixin, UpdateView):
     model = Profile
     fields = ['picture', 'first_name', 'last_name', 'location', 'url', 'profile_info']
+    success_message = "Update done successfully"
     

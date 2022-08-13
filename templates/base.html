@@ -43,16 +43,20 @@
     <script type="text/javascript" src="{% static 'js/general.js' %}"></script>
   </head>
   <body>
+   
+    <div class="spinner__background">
+      <div class="spinner"></div>
+    </div>
     {% if messages %} {% for message in messages %}
     <div id="alert" class="toast-wrapper">
-      <div id="toast-{{ message.tags }}">
+      <div class="toast-div" id="toast-{{ message.tags }}">
         <div class="container-{{ message.tags }}">
           <i class="fas fa-check-square"></i>
         </div>
         <div class="container-{{ message.tags }}">
           <p>{{ message }}</p>
         </div>
-        <button id="close-{{ message.tags }}" onclick="closeToastSuccess()">
+        <button id="close-{{ message.tags }}" onclick="closeToast{{ message.tags }}()">
           &times;
         </button>
       </div>
@@ -165,46 +169,44 @@
       </button>
     </footer>
     {% endblock %}
-    <!--This is preloader -->
-    <div class="loader">
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-    </div>
+
+    <!-- spinner -->
+   
+   
 
     <script>
-      let x;
-
-      function showToastSuccess() {
-        clearTimeout(x);
-        document.getElementById("toast-success").style.transform =
-          "translateX(0)";
+      let x
+      const success = document.querySelector("#toast-success")
+      const error = document.querySelector("#toast-error")
+      const toast = document.querySelector(".toast-div")
+      if(toast.id == 'toast-error'){
+        error.style.transform = "translateX(0)";
         x = setTimeout(() => {
-          document.getElementById("toast-success").style.transform =
+          error.style.transform =
             "translateX(400px)";
+           
         }, 4000);
       }
-      showToastSuccess();
-      function closeToastSuccess() {
-        document.getElementById("toast-success").style.transform =
+      success.style.transform = "translateX(0)";
+        clearTimeout(x);
+       x = setTimeout(() => {
+
+            success.style.transform =
+            "translateX(400px)";
+        }, 4000);
+
+      function closeToastsuccess() {
+        success.style.transform =
+          "translateX(400px)";
+      }
+      function closeToasterror() {
+        error.style.transform =
           "translateX(400px)";
       }
 
-      function showToastError() {
-        clearTimeout(x);
-        document.getElementById("toast-error").style.transform =
-          "translateX(0)";
-        x = setTimeout(() => {
-          document.getElementById("toast-error").style.transform =
-            "translateX(400px)";
-        }, 4000);
-      }
-      showToastError();
-      function closeToastError() {
-        document.getElementById("toast-error").style.transform =
-          "translateX(400px)";
-      }
+    
     </script>
+  
 
     <script type="text/javascript" src="{% static 'js/loader.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/index.js' %}"></script>

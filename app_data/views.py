@@ -108,6 +108,7 @@ class DashboardView(LoginRequiredMixin, View):
             _form.user = request.user
             saved_data = form.save()
             print(saved_data.file_name)
+            
             self.context['file_list'] = self.request.user.user_file.all()
             if saved_data:
                 self.context['new_data'] = self.context['file_list'][0]
@@ -115,10 +116,11 @@ class DashboardView(LoginRequiredMixin, View):
                 self.context['new_data'] = None
 
             
-            
+            messages.success(request, "Data extracted successfully")
             return render(request, self.template_name, self.context)
         else:
             self.context['form'] = form
+            messages.error(request, "Extraction failed try again")
             return render(request, self.template_name, self.context)
 
 class SavePageView(LoginRequiredMixin, View):

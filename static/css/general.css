@@ -1,13 +1,8 @@
-
-
-
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
-
-
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role="list"],
@@ -20,7 +15,6 @@ html:focus-within {
   scroll-behavior: smooth;
 }
 
-
 /* Set core body defaults */
 body {
   text-rendering: optimizeSpeed;
@@ -32,19 +26,21 @@ a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
-a, a:hover, a:focus, a:active {
-    text-decoration: none;
-    color: inherit;
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
 }
-.errorlist{
-    color: red;
-    list-style: none;
+.errorlist {
+  color: red;
+  list-style: none;
 }
 
-input[type=email]::-webkit-input-placeholder::before {
-    content: "name@gmail";
+input[type="email"]::-webkit-input-placeholder::before {
+  content: "name@gmail";
 }
-
 
 /*Styling of the Footer starts here*/
 footer {
@@ -168,129 +164,181 @@ footer .social .icons i {
   }
 }
 
-
-.toast-wrapper{
+.toast-wrapper {
   width: 420px;
   padding: 30px 20px;
   position: absolute;
   bottom: 50px;
   right: 0;
   overflow: hidden;
-  font-family: 'Work Sans';
+  font-family: "Work Sans";
   font-size: 14px;
   bottom: 80%;
 }
-#show-alert-success{
-    position: absolute;
-    transform: translate(-50%,-50%);
-    top: 50%;
-    left: 50%;
-    background-color: #56CCF2;
-    color: #ffffff;
-    padding: 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    border: none;
-  
+#show-alert-success {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  background-color: #56ccf2;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
 }
 #close-success {
   border: none;
+}
+#toast-success {
+  width: 380px;
+  height: 80px;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 10px 20px rgba(75, 50, 50, 0.05);
+  border-left: 8px solid #56ccf2;
+  border-radius: 7px;
+  display: grid;
+  grid-template-columns: 1.2fr 6fr 0.5fr;
+  transform: translate(400px);
+  transition: 1s;
+}
+.container-success,
+.container-success {
+  align-self: center;
+}
+.container-success i {
+  font-size: 40px;
+  color: #56ccf2;
+}
+.container-success p:first-child {
+  color: #101020;
+  font-weight: 600;
+  font-size: 16px;
+}
+.container-success p:last-child {
+  font-size: 12px;
+  color: #656565;
+  font-weight: 400;
+}
+#toast-success button {
+  align-self: flex-start;
+  background-color: transparent;
+  font-size: 25px;
+  line-height: 0;
+  color: #656565;
+  cursor: pointer;
+}
 
-}
-#toast-success{
-    width: 380px;
-    height: 80px;
-    padding: 20px;
-    background-color: #ffffff;
-    box-shadow: 0 10px 20px rgba(75, 50, 50, 0.05);
-    border-left: 8px solid #56CCF2;
-    border-radius: 7px;
-    display: grid;
-    grid-template-columns: 1.2fr 6fr 0.5fr;
-    transform: translate(400px);
-    transition: 1s;
-    
-}
-.container-success,.container-success{
-    align-self: center;
-}
-.container-success i{
-    font-size: 40px;
-    color: #56CCF2;
-}
-.container-success p:first-child{
-    color: #101020;
-    font-weight: 600;
-    font-size: 16px;
-}
-.container-success p:last-child{
-    font-size: 12px;
-    color: #656565;
-    font-weight: 400;
-}
-#toast-success button{
-    align-self: flex-start;
-    background-color: transparent;
-    font-size: 25px;
-    line-height: 0;
-    color: #656565;
-    cursor: pointer;
-}
-
-
-#show-alert-error{
-    position: absolute;
-    transform: translate(-50%,-50%);
-    top: 50%;
-    left: 50%;
-    background-color: #56CCF2;
-    color: #ffffff;
-    padding: 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    border: none;
-  
+#show-alert-error {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  background-color: #56ccf2;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
 }
 #close-error {
   border: none;
+}
+#toast-error {
+  width: 380px;
+  height: 80px;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 10px 20px rgba(75, 50, 50, 0.05);
+  border-left: 8px solid #e11d25;
+  border-radius: 7px;
+  display: grid;
+  grid-template-columns: 1.2fr 6fr 0.5fr;
+  transform: translate(400px);
+  transition: 1s;
+}
+.container-error,
+.container-error {
+  align-self: center;
+}
+.container-error i {
+  font-size: 40px;
+  color: #e11d25;
+}
+.container-error p:first-child {
+  color: #101020;
+  font-weight: 600;
+  font-size: 16px;
+}
+.container-error p:last-child {
+  font-size: 12px;
+  color: #656565;
+  font-weight: 400;
+}
+#toast-error button {
+  align-self: flex-start;
+  background-color: transparent;
+  font-size: 25px;
+  line-height: 0;
+  color: #656565;
+  cursor: pointer;
+}
 
+/* sinner is her  */
+.spinner__background{
+  background-color: rgb(255, 255, 255);
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  display: none;
+  position: fixed;
+  opacity: 0.6;
 }
-#toast-error{
-    width: 380px;
-    height: 80px;
-    padding: 20px;
-    background-color: #ffffff;
-    box-shadow: 0 10px 20px rgba(75, 50, 50, 0.05);
-    border-left: 8px solid #E11D25;
-    border-radius: 7px;
-    display: grid;
-    grid-template-columns: 1.2fr 6fr 0.5fr;
-    transform: translate(400px);
-    transition: 1s;
-    
+
+.spinner {
+  position: fixed;
+  background-color: #418cc6;
+  height: 100px;
+  width: 100px;
+  left: 50%;
+  bottom: 50%;
+  /* display: none */
+  border-radius: 50%;
+  background: conic-gradient(#4596d3 50%, rgb(247, 241, 241));
+  animation: rotate 1.2s linear infinite;
 }
-.container-error,.container-error{
-    align-self: center;
+
+.spinner:before,
+.spinner:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  left: 0;
+  right: 0;
 }
-.container-error i{
-    font-size: 40px;
-    color: #E11D25;
+
+.spinner:before {
+  width: 80px;
+  height: 80px;
+  top: 10px;
+  left: 10px;
+  background-color: #fefefe; /*change to body background color*/
 }
-.container-error p:first-child{
-    color: #101020;
-    font-weight: 600;
-    font-size: 16px;
+
+.spinner:after {
+  height: 10px;
+  width: 10px;
+  background-color: #418cc6;
+  top: 0;
+  left: 45px;
 }
-.container-error p:last-child{
-    font-size: 12px;
-    color: #656565;
-    font-weight: 400;
-}
-#toast-error button{
-    align-self: flex-start;
-    background-color: transparent;
-    font-size: 25px;
-    line-height: 0;
-    color: #656565;
-    cursor: pointer;
+
+@keyframes rotate {
+  from {
+    transform: rotateZ(0);
+  }
+  to {
+    transform: rotateZ(-360deg);
+  }
 }
