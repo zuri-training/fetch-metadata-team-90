@@ -7,7 +7,7 @@
 * Footer
 * Fixed responsiveness
  
-#The above is just an example. Copy and paste, the start yours below.#
+# The above is just an example. Copy and paste, the start yours below.#
 
 ### 1. Fixed the follwing in Privacy policy page:  
 * Footer links
