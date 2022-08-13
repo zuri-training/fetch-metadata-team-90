@@ -1,7 +1,7 @@
 {% load static %}
 
 <header class="profile__menu">
-    <a style="cursor: pointer;" href="#" class="metlab-logo">
+    <a style="cursor: pointer;" href="{% url 'index' %}" class="metlab-logo">
         <img src="{% static 'img/Horizontal_Logo.png' %}" alt=""/>
     </a>
     <hr>
@@ -15,7 +15,7 @@
         <div class="dash-section">
             <nav class="light-gray">
                 <span><img src="{% static 'img/profile-icon.png' %}" alt=""></span>
-                <a href="">Profile</a>
+                <a href="{% url 'edit-profile' request.user.id %}">Profile</a>
             </nav>
         </div>
         <div class="dash-section">
@@ -42,7 +42,7 @@
         <div class="dash-section">
             <nav class="light-gray">
                 <span><img src="{% static 'svg/logout.svg' %}" alt=""></span>
-                <a href="{% url 'logout' %}">Log Out</a>
+                <a href="{% url 'logout' %}">Logout</a>
             </nav>
         </div>
     </div>
