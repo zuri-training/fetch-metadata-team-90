@@ -81,7 +81,7 @@
              <h3>History</h3>
              <div class="day"><p>Today</p></div>
              {% for file in file_list %}
-             <a href="{{ file.get_absolute_url}}?q=view" target="_blank">
+             <a href="{{ file.get_absolute_url}}?q=view" rel="noopener" target="_blank">
              <div class="history-data">
               <div class="mtdata-img"><img src="{% static 'img/Vector.png' %}" alt=""></div>
               <div class="mtdata">

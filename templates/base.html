@@ -108,10 +108,12 @@
           </div>
           {% else %}
 
-          <a href="{% url 'login' %}" class="login-btn nav-link">Login</a>
+          <a href="{% url 'login' %}" target="_blank" rel="noopener" class="login-btn nav-link">Login</a>
 
           <a
             href="{% url 'django_registration_register' %}"
+            target="_blank"
+            rel="noopener"
             class="nav-link signup-btn"
             >Sign Up</a
           >
