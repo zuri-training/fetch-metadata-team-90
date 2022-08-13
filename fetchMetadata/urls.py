@@ -21,7 +21,7 @@ urlpatterns = [
     path('metlab-admin/', admin.site.urls),
     path('', include('app_data.urls')),
     path('', include('authy.urls')),
-    path('metadata/', include('metadata_extraction.urls'))
+    # path('metadata/', include('metadata_extraction.urls'))
 ] 
 
 urlpatterns += static(
