@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toast Notification</title>
+   
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/96d7066557.js" crossorigin="anonymous"></script>
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="red.css">
+</head>
+<body>
+  
+    <div class="toast-wrapper2">
+        <div id="toast2">
+            <div class="container-1">
+                <i class="fas fa-times-square"></i>
+            </div>
+            <div class="container-2">
+                <p>Error</p>
+                <p>An error has occured while saving changes.</p>
+            </div>
+            <button id="close2" onclick="closeToast()">
+                &times;
+            </button>
+        </div>
+    </div>
+    <button id="show-alert2" onclick="showToast()">Show Alert</button>
+    <!--Script-->
+    <script>
+      let x;
+let toast = document.getElementById("toast2");
+function showToast(){
+    clearTimeout(x);
+    toast.style.transform = "translateX(0)";
+    x = setTimeout(()=>{
+        toast.style.transform = "translateX(400px)"
+    }, 4000);
+}
+showToast()
+function closeToast(){
+    toast.style.transform = "translateX(400px)";
+}
+    </script>
+</body>
+</html>
+
+  
+  </body>
+</html>

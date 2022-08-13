@@ -18,9 +18,15 @@ from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('metlab-admin/', admin.site.urls),
     path('', include('app_data.urls')),
     path('', include('authy.urls')),
-    path('metadata/', include('metadata_extraction.urls'))
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    # path('metadata/', include('metadata_extraction.urls'))
+] 
 
+urlpatterns += static(
+    settings.MEDIA_URL, document_root=settings.MEDIA_ROOT
+)
+urlpatterns += static(
+    settings.STATIC_URL, document_root=settings.STATIC_ROOT
+)

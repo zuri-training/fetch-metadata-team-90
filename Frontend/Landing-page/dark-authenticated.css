@@ -1,0 +1,763 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;500;600;700&family=Work+Sans:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Work Sans";
+  font-style: normal;
+  overflow-x: hidden;
+}
+.generalflexselector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header {
+  background-image: url(Home-Images/Hero.png);
+  width: 100%;
+  height: 100%;
+  padding-top: 40px;
+}
+
+/* This is the starting point for styling of the nav links */
+nav {
+  padding: 0 20px;
+  line-height: 98px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.logo {
+  padding: 15px 30px 15px 50px;
+  line-height: 28px;
+}
+.nav-menu {
+  float: right;
+  margin-right: 50px;
+}
+.nav-menu li {
+  display: inline;
+  list-style: none;
+}
+.nav-menu li a {
+  line-height: 28px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #ffffff;
+  padding-left: 60px;
+  font-weight: 400;
+}
+
+.dashboard-btn {
+  padding: 15px 0;
+  color: #ffffff;
+  background: none;
+  border: none;
+  margin-left: 150px;
+  margin-right: 1px;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: 700;
+  color: #ffffff;
+}
+.dropdown {
+  float: right;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  padding: 14px 16px;
+  background-color: inherit;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #1a75bb;
+  height: 400px;
+}
+
+.dropdown-content a {
+  float: none;
+  color: white;
+  padding: 3px 4px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #ffffff;
+}
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+/*This is the styling of the mobile view/responsiveness header/nav section*/
+@media (max-width: 720px) {
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 90px;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: #408cc6;
+    transition: 0.3s;
+    text-align: center;
+  }
+  .nav-menu li a {
+    font-size: 18px;
+    padding: 10px 0;
+    margin: 10px 0;
+    display: block;
+  }
+  .nav-menu.active {
+    left: 0;
+  }
+  .hamburger {
+    display: block;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .dashboard-btn {
+    padding: 8px 5px;
+    margin-left: 10px;
+  }
+  .dashboard-btn a {
+    font-size: 16px;
+  }
+
+  .logo {
+    margin: -25px;
+  }
+  .dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    padding: 14px 16px;
+    background-color: inherit;
+  }
+  .dropdown-content a {
+    float: none;
+    color: white;
+    padding: 3px 4px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+}
+/*Styling of the hero section starts here*/
+.hero-section {
+  width: 100%;
+  padding-top: 100px;
+  background-image: url(Home-Images/Hero.png);
+}
+.hero-content {
+  padding: 0 59px;
+  width: 100%;
+}
+.left-cont {
+  width: 50%;
+}
+.right-cont {
+  width: 50%;
+  padding: 0 30px;
+}
+.hero-content h3 {
+  height: 65px;
+  width: 629px;
+  font-size: 55px;
+  color: #ffffff;
+  font-weight: 700;
+  line-height: 53px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  margin-bottom: 30px;
+}
+.hero-content p {
+  height: 65px;
+  width: 629px;
+  font-size: 24px;
+  color: #ffffff;
+  font-weight: 400;
+  line-height: 36px;
+  text-align: justify;
+  letter-spacing: -0.02em;
+  margin-bottom: 50px;
+}
+.hero-content button {
+  height: 56px;
+  width: 350px;
+  left: 386px;
+  top: 0px;
+  border-radius: 4px;
+  border: none;
+  padding: 10px;
+  background: #56ccf2;
+  margin: 20px 0;
+}
+.hero-content button a {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: left;
+  text-decoration: none;
+  color: #ffffff;
+}
+.hero-content img {
+  height: 620px;
+  width: 861px;
+}
+.animation {
+  width: 100%;
+}
+.animation img {
+  width: 70%;
+  margin: auto;
+  display: flex;
+}
+/*This is the styling of the mobile view/responsiveness hero section*/
+@media (max-width: 720px) {
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .left-cont {
+    width: 100%;
+  }
+  .right-cont {
+    width: 100%;
+    padding: 0;
+  }
+  .hero-content h3 {
+    font-size: 30px;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: center;
+    height: 26px;
+    width: 100%;
+  }
+  .hero-content p {
+    height: 158px;
+    width: 357px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-bottom: 0;
+  }
+  .hero-content button {
+    height: 48px;
+    width: 300px;
+    margin: auto 40px;
+  }
+  .hero-content button a {
+    font-size: 16px;
+    text-align: center;
+  }
+  .hero-content img {
+    display: none;
+    height: 400px;
+    width: 300px;
+    margin-top: 30px;
+  }
+  .animation {
+    width: 100%;
+  }
+  .animation img {
+    width: 100%;
+  }
+}
+
+/*This is the styling for the section of 5 simple steps of how metlab works*/
+.how-it-works {
+  padding-top: 50px;
+  background-color: #1f1f1f;
+  height: 100%;
+  width: 100%;
+}
+.how-it-works h3 {
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 56px;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: #66a3d2;
+}
+.how-it-works .row {
+  flex-wrap: wrap;
+}
+.how-it-works .row .col-md-3 {
+  flex-direction: column;
+  width: 256px;
+  height: 302px;
+  border-radius: 15px;
+  background-color: #f5f5f5;
+  margin: 50px;
+  padding: 30px;
+  transition: 0.3s;
+}
+.how-it-works .row .col-md-3 .icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+  padding: 20px;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+}
+.how-it-works .row .col-md-3 h6 {
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: -0.02em;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #408cc6;
+}
+.how-it-works .row .col-md-3 p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #6f6f6f;
+}
+/*This is the styling of the mobile view/responsiveness of the how it works section*/
+@media (max-width: 720px) {
+  .how-it-works h3 {
+    font-size: 25px;
+    margin: 30px;
+    text-align: left;
+  }
+  .how-it-works .row .col-md-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    height: 302px;
+    margin: 30px;
+    border: #408cc6 2px solid;
+  }
+  .how-it-works .row .col-md-3 .icon {
+    margin-bottom: 10px;
+    padding: 20px;
+  }
+  .how-it-works .row .col-md-3 h6 {
+    font-size: 22px;
+  }
+  .how-it-works .row .col-md-3 p {
+    font-size: 18px;
+  }
+}
+
+/*Stling what you need to know section goes here*/
+.need-to-know {
+  background-color: #1f1f1f;
+}
+.need-to-know .first {
+  display: flex;
+  padding: 80px 45px 30px 45px;
+}
+.need-to-know .first .left {
+  padding-right: 40px;
+}
+.need-to-know .first .right {
+  padding: 30px 25px;
+}
+.need-to-know .first .right h3 {
+  margin-bottom: 20px;
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 56px;
+  text-align: left;
+  color: #408cc6;
+}
+.need-to-know .first .right p {
+  margin-bottom: 18px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: left;
+  color: #6f6f6f;
+}
+
+.need-to-know .container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.need-to-know .container .boxes {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 232px;
+  height: 359px;
+  border-radius: 15px;
+  background-color: #ffffff;
+  margin: 40px;
+  padding: 30px;
+  transition: 0.3s;
+}
+.need-to-know .container .boxes .icon {
+  display: flex;
+  justify-content: left;
+  margin-bottom: 10px;
+  width: 45px;
+  height: 45px;
+}
+.need-to-know .container .boxes h6 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: left;
+  color: #408cc6;
+}
+.need-to-know .container .boxes ul {
+  list-style: none;
+}
+.need-to-know .container .boxes ul li::before {
+  content: "\2022";
+  color: #408cc6;
+  font-weight: 700;
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  margin-left: -1em;
+}
+.need-to-know .container .boxes li {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: left;
+  padding: 7px 0;
+  list-style-type: square;
+  color: #6f6f6f;
+  margin-left: 5px;
+}
+.need-to-know .container .boxes p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: left;
+  color: #6f6f6f;
+}
+.need-to-know .start-btn {
+  padding-bottom: 80px;
+}
+.need-to-know .start-btn button {
+  height: 56px;
+  width: 300px;
+  border-radius: 4px;
+  padding: 10px;
+  background: #fafafa;
+  border: 2px solid #56ccf2;
+  margin: auto;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 16px;
+}
+.need-to-know .start-btn button a {
+  color: #408cc6;
+  text-decoration: none;
+}
+/*This is the styling of the mobile view/responsiveness of the need-to-know section*/
+@media (max-width: 720px) {
+  .need-to-know .first {
+    display: block;
+  }
+  .need-to-know .first .left {
+    display: block;
+    width: 70%;
+    margin: auto;
+  }
+  .need-to-know .first .right {
+    display: block;
+  }
+  .need-to-know .first .right h3 {
+    margin-bottom: 20px;
+    font-size: 30px;
+    text-align: center;
+  }
+  .need-to-know .first .right p {
+    margin-bottom: 18px;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: justify;
+  }
+  .need-to-know .container .boxes {
+    display: block;
+    flex-direction: column;
+    width: 70%;
+    height: 359px;
+    margin: 20px;
+  }
+  .need-to-know .container .boxes .icon {
+    margin: auto;
+    width: 45px;
+    height: 45px;
+  }
+  .need-to-know .container .boxes h6 {
+    font-size: 20px;
+    text-align: center;
+  }
+  .need-to-know .container .boxes li {
+    font-size: 18px;
+    text-align: center;
+    padding: 7px 0;
+    list-style: none;
+  }
+  .need-to-know .container .boxes p {
+    font-size: 18px;
+    text-align: center;
+  }
+  .need-to-know .container .boxes ul li::before {
+    display: none;
+  }
+  .need-to-know .start-btn button {
+    height: 56px;
+    width: 200px;
+    padding: 10px;
+    margin: auto;
+  }
+  .need-to-know .start-btn button a {
+    font-size: 16px;
+  }
+}
+/*Styling of the faq starts here*/
+.faq {
+  padding: 80px 10px;
+  background-color: #1f1f1f;
+}
+.faq h3 {
+  height: 56px;
+  font-size: 35px;
+  font-weight: 700;
+  text-align: center;
+  color: #66a3d2;
+}
+.accordion {
+  width: 70%;
+  max-width: 1000px;
+  margin: 30px auto;
+}
+.accordion-item {
+  background-color: #ffffff;
+  color: #6f6f6f;
+  margin: 20px 0;
+  border-radius: 4px;
+  box-shadow: 0px 13px 30px rgba(0, 0, 0, 0.25);
+}
+.accordion-item-header {
+  padding: 15px 35px;
+  display: flex;
+  min-height: 3.5rem;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 38px;
+  position: relative;
+  align-items: center;
+  cursor: pointer;
+}
+.accordion-item-header::after {
+  content: "\002B";
+  font-size: 30px;
+  color: #6f6f6f;
+  position: absolute;
+  right: 25px;
+  font-weight: 200;
+}
+.accordion-item-header.active::after {
+  content: "\002D";
+  font-size: 30px;
+  color: #6f6f6f;
+  position: absolute;
+  right: 25px;
+  font-weight: 200;
+}
+.accordion-item-body {
+  padding-left: 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.accordion-item-body-content {
+  padding: 16px;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: left;
+  width: 770px;
+  font-size: 20px;
+  font-weight: 400;
+}
+/*This is the styling of the mobile view/responsiveness of the need-to-know section*/
+@media (max-width: 720px) {
+  .faq h3 {
+    font-size: 25px;
+  }
+  .accordion {
+    width: 80%;
+  }
+  .accordion-item-header {
+    font-size: 18px;
+  }
+  .accordion-item-header::after {
+    font-size: 25px;
+  }
+  .accordion-item-body-content {
+    text-align: justify;
+    width: 100%;
+    font-size: 16px;
+  }
+}
+
+/*Styling of the Footer starts here*/
+footer {
+  width: 100%;
+  height: 100%;
+  background: url(Home-Images/footer-bg.png);
+}
+.footer-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.footer-container .resourses {
+  align-items: center;
+  margin: 50px 50px;
+  flex-direction: column;
+}
+.footer-container .resourses img {
+  height: 57px;
+  width: 206px;
+  margin-bottom: 15px;
+}
+.footer-container .resourses h6 {
+  width: 269px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: center;
+  color: #ffffff;
+}
+.footer-container .resourses p {
+  width: 234px;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: left;
+  line-height: 20px;
+  padding: 7px 0;
+  color: #ffffff;
+}
+.footer-container .resourses li,
+.footer-container .resourses li a {
+  text-align: center;
+  padding: 7px 0;
+  font-size: 16px;
+  font-weight: 400;
+  width: 269px;
+  list-style: none;
+  text-decoration: none;
+  color: #ffffff;
+}
+.footer-txt {
+  width: 100%;
+  margin: auto;
+}
+.footer-txt p,
+.footer-txt p a {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  margin: 15px auto;
+  color: #ffffff;
+  text-decoration: none;
+}
+footer .social {
+  width: 100%;
+  flex-wrap: wrap;
+}
+footer .social .icons {
+  margin: 20px 10px;
+  display: flex;
+  flex-direction: row;
+}
+footer .social .icons i {
+  font-size: 25px;
+  color: #408cc6;
+  background-color: #ffffff;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 2px;
+}
+/*This is the css for scroll-to-top button*/
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 0;
+  border: none;
+  background: url("/Frontend/Landing-page/Home-Images/Scroll Back To Top (1).png");
+  border-radius: 0px 0px 0px 0px;
+  background-size: 100%;
+  cursor: pointer;
+  margin-bottom: 15px;
+  opacity: 0.9;
+}
+.scrolltopbtn {
+  height: 60px;
+  width: 60px;
+}
+/*This is the styling of the mobile view/responsiveness of the footer*/
+@media (max-width: 720px) {
+  .footer-txt {
+    width: 100%;
+    margin: auto;
+  }
+  .footer-container .resourses {
+    display: flex;
+    margin: 10px auto;
+  }
+  .footer-container {
+    padding-top: 50px;
+  }
+  .footer-txt p {
+    font-size: 16px;
+    margin: 15px 20px;
+  }
+  .resourses {
+    padding: 20px;
+  }
+}

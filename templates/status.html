@@ -1,0 +1,69 @@
+{% extends 'base.html' %} {%load static%}
+<title>{%block title%}MetLab Status Page{%endblock%}</title>
+{%block css%}
+<link rel="stylesheet" href="{% static 'css/status.css' %}" />
+{%endblock %} {%block navbar%}
+<header class="hero-section">
+  <nav>
+    <a href="{% url 'index'%}" class="logo generalflexselector">
+      <img src="{% static 'svg/Horizontal_Logo.svg' %}" alt="" />
+    </a>
+  </nav>
+</header>
+{% endblock %} {% block content %}
+<div class="doc-main-container">
+  <div class="sub-nav">
+    <img src="{% static 'img/Frame 6311.png' %}" width="1400" height="94" />
+  </div>
+
+  <div class="image-container1">
+    <p>App and Runtime</p>
+    <br />
+    <img
+      src="{% static 'img/Input Fields without icon.png' %}"
+      class="center"
+    />
+    <br />
+
+    <p>Data Services</p>
+    <br />
+    <img
+      src="{% static 'img/Input Fields without icon.png' %}"
+      class="center"
+    />
+
+    <br />
+
+    <p>Tools</p>
+    <br />
+    <img
+      src="{% static 'img/Input Fields without icon.png' %}"
+      class="center"
+    />
+  </div>
+  <!-- <div class="line"> <img src="./Line-58.png" alt=""></div> -->
+  <br />
+  <br />
+
+  <div class="image-container">
+    <ul>
+      <li style="float: left">
+        <p class="incident">Past Incidents</p>
+      </li>
+
+      <li style="float: right">
+        <a href="{% url 'archives' %}" class="viewarc">View Archive </a>
+      </li>
+    </ul>
+    <br /><br />
+    <img class="rec" src="{% static 'img/Rectangle 3638.png' %}" />
+
+    <div class="centered">
+      <p class="in">No Incidents in the last week</p>
+      <a class="archive" href="{% url 'archives'%}"> View Archive </a>
+    </div>
+  </div>
+</div>
+
+<br />
+{%endblock%}

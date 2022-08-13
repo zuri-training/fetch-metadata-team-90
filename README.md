@@ -36,6 +36,20 @@ This is a platform that fetches and extracts metadata from files uploaded by use
 * Add your code/make your changes
 * Commit with a descriptive message and push
 * Create a pull request
- 
+
+### **For Production**
+* install exiftoll
+ * sudo apt install libimage-exiftool-perl
+* pip3 install -r requirement.txt
+
+* create a super user
+   * email: zurimetlab@gmail.com
+   * username: metlab
+   * password: metlab123
+
+* Update the settings.py
+
+   
+
 
 

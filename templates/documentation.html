@@ -1,0 +1,108 @@
+{% extends 'base.html' %} {%load static%}
+<title>{% block title %}MetLab Documentation Page{% endblock %}</title>
+{% block css %}<link
+  rel="stylesheet"
+  href="{% static 'css/documentation.css' %}"
+/>
+{% endblock %} {%block navbar%}
+<!--This is for header-->
+<header>
+  <nav>
+    <div class="logo generalflexselector">
+      <a href="{% url 'index'%}">
+        <img src="{% static 'svg/Horizontal_Logo.svg' %}" />
+      </a>
+    </div>
+  </nav>
+</header>
+{% endblock %} {% block content %}
+<div class="doc-main-container">
+  <div class="doc-sub-head">
+    <h1>Documentation</h1>
+    <p>
+      This page provides all published technical documentation for the Metlab
+      platform.
+    </p>
+  </div>
+  <div class="doc-links generalflexselector">
+    <div class="sub-links generalflexselector">
+      <img src="{% static 'img/Link.png'%}" alt="" />
+      <a href="#folder-link">Metlab Architecture</a>
+    </div>
+    <div class="sub-links generalflexselector">
+      <img src="{% static 'img/Link.png'%}" alt="" />
+      <a href="#folder-link">Troubleshooting & Support</a>
+    </div>
+    <div class="sub-links generalflexselector">
+      <img src="{% static 'img/Link.png'%}" alt="" />
+      <a href="#folder-link">Security</a>
+    </div>
+  </div>
+  <hr id="folder-link" />
+  <!-- <div class="line"> <img src="./Line-58.png" alt=""></div> -->
+
+  <div class="doc-sub-container generalflexselector">
+    <div class="meta-art">
+      <h6>Metlab Architecture</h6>
+      <div class="folders generalflexselector">
+        <img src="{% static 'svg/File-Folder.svg'%}" alt="" />
+        <a
+          href="https://docs.google.com/document/d/e/2PACX-1vRdKiq4aFziSQG7YQgTVQXmhoRFwRvkb6Z1VOx0pFE2a9dLSijPJQU0vfOkMcl4827DYbKpmve22BDH/pub"
+          >How Metlabworks</a
+        >
+      </div>
+      <div class="folders generalflexselector">
+        <img src="{% static 'svg/File-Folder.svg'%}" alt="" />
+        <a href="{% url 'privacy-policies'%}">Privacy policy</a>
+      </div>
+      <div class="folders generalflexselector">
+        <img src="{% static 'svg/File-Folder.svg'%}" alt="" />
+        <a
+          href="https://docs.google.com/document/d/e/2PACX-1vQO9BxnRgRv2quOtGd6ZqUkfRmq6A-pLYwaX8J5BOLNpPtyUVh06qI8vDmx4B72ixop2nEv_KxX1b5F/pub"
+          >Region</a
+        >
+      </div>
+      <div class="folders generalflexselector">
+        <img src="{% static 'svg/File-Folder.svg'%}" alt="" />
+        <a
+          href="https://docs.google.com/document/d/e/2PACX-1vTRA6PClcztZzX0oRnuO4y1rViekbctiSdMwz8JjY7vVPp18nKwdSWfecdfRSlOxBbjFrE_7hWOXAWG/pub"
+          >Version</a
+        >
+      </div>
+    </div>
+    <div class="meta-art">
+      <h6>Troubleshooting & Support</h6>
+      <div class="folders generalflexselector">
+        <img src="{% static 'svg/File-Folder.svg'%}" alt="" />
+        <a href="{% url 'status'%}">Metlab Status</a>
+      </div>
+      <div class="folders generalflexselector">
+        <img src="{% static 'svg/File-Folder.svg'%}" alt="" />
+        <a href="{% url 'contact'%}">Support Channels</a>
+      </div>
+    </div>
+    <div class="meta-art">
+      <h6>Security</h6>
+      <div class="folders generalflexselector">
+        <img src="{% static 'svg/File-Folder.svg'%}" alt="" />
+        <a href="">App Security</a>
+      </div>
+      <div class="folders generalflexselector">
+        <img src="{% static 'svg/File-Folder.svg'%}" alt="" />
+        <a
+          href="https://docs.google.com/document/d/e/2PACX-1vQpNI6aFd-Z-ChGk6f5O-9uDf5TG6SYnUeTnIiM7W4ofm4hKc-pwT-1j8Daq3p2bI-Aby0KP5P7mD9_/pub"
+          >Resources</a
+        >
+      </div>
+      <div class="folders generalflexselector">
+        <img src="{% static 'svg/File-Folder.svg'%}" alt="" />
+        <a
+          href="https://docs.google.com/document/d/e/2PACX-1vQpNI6aFd-Z-ChGk6f5O-9uDf5TG6SYnUeTnIiM7W4ofm4hKc-pwT-1j8Daq3p2bI-Aby0KP5P7mD9_/pub"
+          >Features</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+
+{%endblock%}

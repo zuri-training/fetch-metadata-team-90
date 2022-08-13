@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;500;600;700&family=Work+Sans:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Work Sans";
+  font-style: normal;
+  overflow-x: hidden;
+}
+.generalflexselector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header {
+  background-image: url(footer_bg_img/Hero.png);
+  width: 100%;
+  /* height: 100%; */
+  padding-top: 40px;
+  margin: auto;
+}
+
+/* This is the starting point for styling of the nav links */
+nav {
+  padding: 0 20px;
+  line-height: 98px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.logo {
+  padding: 15px 30px 15px 50px;
+  line-height: 28px;
+}
+
+.doc-main-container {
+  width: 100%;
+  background: #f7f7f7;
+}
+
+.image-container {
+  position: relative;
+  text-align: center;
+  background: #f7f7f7;
+}
+
+.image-container1 {
+  position: relative;
+  text-align: left;
+  background: #f7f7f7;
+}
+.image-container1 p {
+  padding-left: 55px;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+}
+
+p {
+  font-family: Work Sans;
+  font-style: Regular;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: -2%;
+  color: #6f6f6f;
+}
+
+li {
+  text-decoration: none;
+  list-style: none;
+}
+.incident {
+  padding-left: 55px;
+}
+.viewarc {
+  padding-right: 55px;
+  font-family: Work Sans;
+  font-style: Regular;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: -2%;
+  color: #6f6f6f;
+  font-weight: 400;
+  text-decoration: underline;
+}
+
+.viewarc:hover {
+  text-decoration: underline;
+  color: #56ccf2;
+}
+.archive {
+  text-decoration: underline;
+  color: #56ccf2;
+  font-family: Work Sans;
+  font-style: Regular;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: -2%;
+  font-weight: 400;
+}
+
+.archive:hover {
+  text-decoration: underline;
+  color: #56ccf2;
+}
+
+@media (max-width: 720px) {
+  .image-container1 p {
+    padding-left: 30px;
+  }
+  .image-container1 img {
+    padding-left: 30px;
+  }
+  .incident {
+    padding-left: 10px;
+  }
+  .viewarc {
+    padding-right: 10px;
+  }
+  .in {
+    text-align: center;
+  }
+  .rec {
+    padding-left: 10px;
+  }
+  header {
+    padding: 20px 0 30px 0px;
+  }
+  .sub-nav {
+    overflow-x: auto;
+  }
+}

@@ -13,7 +13,6 @@ defusedxml==0.7.1
 deprecation==2.1.0
 Django==4.0.6
 django-allauth==0.51.0
-django-configurations==2.3.2
 django-exiffield==3.0.0
 django-registration==3.3
 filetype==1.1.0
@@ -43,6 +42,7 @@ python-dateutil==2.8.2
 python3-openid==3.2.0
 pytz==2022.1
 pytz-deprecation-shim==0.1.0.post0
+python-environ==0.4.54
 PyYAML==6.0
 qrcode==7.3.1
 reportlab==3.6.11

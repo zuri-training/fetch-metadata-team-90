@@ -298,10 +298,10 @@ nav {
 
 /*This is the styling for the section of 5 simple steps of how metlab works*/
 .how-it-works {
-  background-color: #ffffff;
   background: url(Home-Images/Vector2.svg);
   height: 100%;
   width: 100%;
+  padding-top: 50px;
 }
 .how-it-works h3 {
   font-size: 35px;
@@ -310,7 +310,7 @@ nav {
   letter-spacing: -0.02em;
   text-align: center;
   color: #66a3d2;
-  margin: 50px auto;
+  padding: 50px auto;
 }
 .how-it-works .row {
   flex-wrap: wrap;
@@ -579,7 +579,7 @@ nav {
   box-shadow: 0px 13px 30px rgba(0, 0, 0, 0.25);
 }
 .accordion-item-header {
-  padding: 15px 25px 15px 20px;
+  padding: 15px 35px;
   display: flex;
   min-height: 3.5rem;
   font-weight: 700;
@@ -590,16 +590,23 @@ nav {
   cursor: pointer;
 }
 .accordion-item-header::after {
-  content: "\25BE";
-  font-size: 50px;
-  color: #408cc6;
+  content: "\002B";
+  font-size: 30px;
+  color: #6f6f6f;
   position: absolute;
   right: 25px;
+  font-weight: 200;
 }
 .accordion-item-header.active::after {
-  transform: rotate(180deg);
+  content: "\002D";
+  font-size: 30px;
+  color: #6f6f6f;
+  position: absolute;
+  right: 25px;
+  font-weight: 200;
 }
 .accordion-item-body {
+  padding-left: 20px;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
@@ -622,11 +629,10 @@ nav {
     width: 80%;
   }
   .accordion-item-header {
-    font-size: 20px;
+    font-size: 18px;
   }
   .accordion-item-header::after {
-    content: "\25BE";
-    font-size: 30px;
+    font-size: 25px;
   }
   .accordion-item-body-content {
     text-align: justify;
@@ -691,12 +697,14 @@ footer {
   width: 100%;
   margin: auto;
 }
-.footer-txt p {
+.footer-txt p,
+.footer-txt p a {
   font-size: 16px;
   font-weight: 400;
   text-align: center;
   margin: 15px auto;
   color: #ffffff;
+  text-decoration: none;
 }
 footer .social {
   width: 100%;
@@ -714,6 +722,24 @@ footer .social .icons i {
   padding: 5px;
   cursor: pointer;
   border-radius: 2px;
+}
+/*This is the css for scroll-to-top button*/
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 0;
+  border: none;
+  background: url("/Frontend/Landing-page/Home-Images/Scroll Back To Top (1).png");
+  border-radius: 0px 0px 0px 0px;
+  background-size: 100%;
+  cursor: pointer;
+  margin-bottom: 15px;
+  opacity: 0.9;
+}
+.scrolltopbtn {
+  height: 60px;
+  width: 60px;
 }
 /*This is the styling of the mobile view/responsiveness of the footer*/
 @media (max-width: 720px) {

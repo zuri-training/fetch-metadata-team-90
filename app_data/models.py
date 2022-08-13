@@ -1,7 +1,7 @@
 from django.db import models
 from django.urls import reverse
 from django.contrib.auth import get_user_model
-
+from django.db.models import Q
 
 from exiffield.fields import ExifField
 from exiffield.getters import exifgetter
@@ -25,7 +25,20 @@ content_types = [
     ]
 max_upload_size = 10485760 #5mb
 
+class FileQuerySet(models.QuerySet):
+    def search(self, query):
+        if not query is None:
+            lookup = Q(file_name__icontains = query) | Q(file_type__icontains = query) | Q(exif__icontains = query)
+            return self.filter(lookup)
+        else:
+            return self.none
 
+class FileManager(models.Manager):
+    def get_queryset(self):
+        return FileQuerySet(self.model, using = self._db)
+    
+    def search(self , query):
+        return self.get_queryset().search(query=query)
 
 class FileUpload(models.Model):
     user = models.ForeignKey(UserModel, related_name='user_file', on_delete=models.CASCADE)
@@ -45,6 +58,7 @@ class FileUpload(models.Model):
             'file_type': exifgetter('FileTypeExtension'),
         },
     )
+    objects = FileManager()
     class Meta:
         ordering = ['-created']
 
@@ -66,17 +80,3 @@ class FileUpload(models.Model):
 
 
 
-
-
-
-
-
-class Contact(models.Model):
-	name = models.CharField(max_length=150, verbose_name='Name')
-	email = models.EmailField()
-	message_date = models.DateField()
-	message = models.TextField(max_length=3000)
-
-	def __str__(self):
-		return self.name + self.email
-		

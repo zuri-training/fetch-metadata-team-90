@@ -1,0 +1,242 @@
+
+{% extends 'base.html' %} 
+{% load static %}
+<title>{% block title %}saved files{% endblock %}</title>
+{% block css %}<link rel="stylesheet"  href="{% static 'css/saved-pages.css' %}" /> {% endblock %}
+
+
+{%block navbar%} {% endblock %}
+{% block content %}
+<header class="nav-aside">
+    <div class="metlab-logo">
+      <img class="logo-1" src="{% static 'img/Horizontal_Logo.png' %}" alt="" />
+      <img class="logo-2" src="{% static 'img/logo.png' %}" alt="">
+    </div>
+    <hr>
+    <div  class="dash">
+      <a href="{% url 'dashboard' %}"><P class="light-gray"><span><img src="{% static 'svg/menu.svg' %}" alt="">
+    </span> Dashboard</P>
+      <div class="dash-section">
+      <nav  class="light-gray"><span><img src="{% static 'img/profile-icon.png' %}" alt=""></span><a href="{% url 'edit-profile' request.user.id %}">Profile</a></nav>
+      </div>
+      <div class="dash-section">
+      <nav  class="light-gray"><span><img src="{% static 'svg/save-2.svg' %}" alt=""></span><a href="#">Saved Data</a></nav>
+      </div>
+    </div>
+    <hr>
+    <div class="dash">
+      <div class="dash-section">
+      <nav  class="light-gray"><span><img src="{% static 'svg/setting-2.svg' %}" alt=""></span><a href="{% url 'edit-profile' request.user.id %}">Settings</a></nav>
+      </div>
+      <div class="dash-section">
+      <nav  class="light-gray"><span><img src="{% static 'svg/24-support.svg' %}" alt=""></span><a href="{% url 'contact' %}">Support</a></nav>
+      </div>
+      <div class="dash-section">
+      <nav  class="light-gray"><span><img src="{% static 'svg/logout.svg' %}" alt=""></span><a href="{% url 'logout' %}">Log Out</a></nav>
+      </div>
+    </div>
+    <hr>
+
+    <div class="rate-us">
+      <p>How would you rate us</p>
+      <span>
+          <img src="{% static 'img/Star 1star.png' %}" class="star" alt="" />
+        </span>
+        <span>
+          <img src="{% static 'img/Star 1star.png' %}" class="star" alt="" />
+        </span>
+        <span>
+          <img src="{% static 'img/Star 1star.png' %}" class="star" alt="" />
+        </span>
+        <span>
+          <img src="{% static 'img/Star 1star.png' %}" class="star" alt="" />
+        </span>
+        <span>
+          <img src="{% static 'img/Star 1star.png' %}" class="star" alt="" />
+        </span>
+      </div>
+    </div>
+  </header>
+  <main class="section-container">
+     {% include 'top_menu.html' %}
+      <section class="main-flow">
+          <div class="text-area">
+            <div class="text-top">
+              <h3 style="margin-bottom: 16px;">Saved Data</h3>
+              <div class="top-right">
+               <p>All</p>
+               <P>PDF</P>
+               <P>CSV</P>
+               <P>Audio</P>
+               <p>Image</p>
+               <p>JSON</p>
+              </div>
+            </div>
+            
+            <div class="below">
+              <p class="day">Today</p>
+              <hr>
+            </div>
+          </div>
+          {% for file in file_list %}
+          <div class="file-space">
+            <div class="left">
+              <div class="image">
+                <img class="vector" src="{% static 'img/Vector.png' %}" alt="">
+              </div>
+              <div class="file-name">
+                <p class="file-heading">{{ file.file_name }}</p>
+                <p class="file-size">107kb</p>
+              </div>
+            </div>
+            
+            <div class="right">
+              <div class="export">
+                <a href="{{ file.get_absolute_url}}?q=view" target="_blank">
+                <img class="export1" src="{% static 'img/export.png' %}" alt="">
+                <img class="export2" src="{% static 'img/ash- export.png' %}" alt="">
+                </a>
+            </div>
+              <div class="share">
+                <a href="{% url 'share' file.id %}">
+                <img class="share1" src="{% static 'img/newshare.png' %}" alt="">
+                <img class="share2" src="{% static 'img/ash-share.png' %}" alt="">
+
+                </a>
+              </div>
+              <a class="button" href="{{ file.get_absolute_url}}">Download</a>
+            </div>
+            
+            
+          </div>
+          {% endfor %}
+          {% comment %} <div class="file-space">
+            <div class="left">
+              <div class="image">
+                <img class="vector" src="mp3 vector.png" alt="">
+              </div>
+              <div class="file-name">
+                <p class="file-heading">Lecture Recording.mp3</p>
+                <p class="file-size">107kb</p>
+              </div>
+            </div>
+            
+            <div class="right">
+              <div class="export">
+                <img class="export1" src="export.png" alt="">
+                <img class="export2" src="ash- export.png" alt="">
+              </div>
+              <div class="share">
+                <img class="share1" src="newshare.png" alt="">
+                <img class="share2" src="ash-share.png" alt="">
+              </div>
+              <a class="button" href="#">Download</a>
+            </div>
+            
+            
+          </div>
+
+          
+          <div class="text-area">
+            <div class="below">
+              <p class="day">Yesterday</p>
+              <hr>
+            </div>
+            
+          </div>
+          
+          <div class="file-space">
+            <div class="left">
+              <div class="image">
+                <img class="vector" src="pdf.png" alt="">
+              </div>
+              <div class="file-name">
+                <p class="file-heading">Presentation Speach.pdf</p>
+                <p class="file-size">107kb</p>
+              </div>
+            </div>
+            
+            <div class="right">
+              <div class="export">
+                <img class="export1" src="export.png" alt="">
+                <img class="export2" src="ash- export.png" alt="">
+              </div>
+              <div class="share">
+                <img class="share1" src="newshare.png" alt="">
+                <img class="share2" src="ash-share.png" alt="">
+              </div>
+              <a class="button" href="#">Download</a>
+            </div>
+            
+          </div>
+
+          <div class="file-space">
+            <div class="left">
+              <div class="image">
+                <img class="vector" src="json.png" alt="">
+              </div>
+              <div class="file-name">
+                <p class="file-heading">Javascript.json</p>
+                <p class="file-size">107kb</p>
+              </div>
+            </div>
+            
+            <div class="right">
+              <div class="export">
+                <img class="export1" src="export.png" alt="">
+                <img class="export2" src="ash- export.png" alt="">
+              </div>
+              <div class="share">
+                <img class="share1" src="newshare.png" alt="">
+                <img class="share2" src="ash-share.png" alt="">
+              </div>
+              <a class="button" href="#">Download</a>
+            </div>    
+          </div>
+
+          <div class="file-space">
+            <div class="left">
+              <div class="image">
+                <img class="vector" src="csv.png" alt="">
+              </div>
+              <div class="file-name">
+                <p class="file-heading">Project Result.csv</p>
+                <p class="file-size">107kb</p>
+              </div>
+            </div>
+            
+            <div class="right">
+              <div class="export">
+                <img class="export1" src="export.png" alt="">
+                <img class="export2" src="ash- export.png" alt="">
+              </div>
+              <div class="share">
+                <img class="share1" src="newshare.png" alt="">
+                <img class="share2" src="ash-share.png" alt="">
+              </div>
+              <a class="button" href="#">Download</a>
+            </div>    
+          </div>
+           {% endcomment %}
+      </section>
+      
+  </main>
+  <script>
+    const shareLink = document.querySelectorAll(".shareLink")
+    shareLink.forEach(share => {
+      share.addEventListener('click', function (event) {
+         event.preventDefault()
+        console.log(share.href);
+        navigator.clipboard.writeText(share.href)
+   
+      });
+    });
+ 
+ </script>
+{% endblock %}
+{% block footer %}
+{% endblock %}
+{% block js %}
+<script type="text/javascript"  src="{% static 'js/saved-page.js' %}"></script>
+ 
+{% endblock %}

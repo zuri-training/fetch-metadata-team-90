@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <link rel="icon" href="./favicon-16x16-blue.png">
+  <title>Profile Page-Test</title>
+    <link rel="stylesheet" href="profile-dark.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+  </head>
+  <body>
+    <header class="nav-aside">
+      <div class="metlab-logo">
+        <img src="./Horizontal Logo.png" alt="" />
+      </div>
+      <img src="./Line 54.svg" alt="">
+      <div class="dash">
+        <div class="dash-section">
+          <div class="light-gray">
+             <img src="./menu.svg" alt="">
+             <p>Dashboard</P>
+          </div>
+        </div>
+        <div class="dash-section">
+             <div  class="light-gray">
+               <img src="./profile.svg" alt="">
+               <a href="">Profile</a>
+             </div>
+        </div>
+        <div class="dash-section">
+            <div class="light-gray">
+              <img src="./save-2.svg" alt="">
+              <a href="">Saved Data</a>
+            </div>
+        </div>
+      </div>
+      <img src="./Line 54.svg" alt="">
+      <div class="dash">
+        <div class="dash-section">
+            <div  class="light-gray">
+              <img src="./setting-2.svg" alt="">
+              <a href="">Settings</a>
+            </div>
+        </div>
+        <div class="dash-section">
+           <div  class="light-gray">
+              <img src="./24-support.svg" alt="">
+              <a href="">Support</a>
+            </div>
+        </div>
+        <div class="dash-section">
+            <div  class="light-gray">
+              <img src="./logout.svg" alt="">
+              <a href="">Log Out</a>
+            </div>
+        </div>
+      </div>
+      <img src="./Line 54.svg" alt="">
+
+      <div class="rate-us">
+        <p>How would you rate us</p>
+        <div class="rates">
+            <img src="./Star 1star.png" class="star" alt="" />
+              
+            <img src="./Star 1star.png" class="star" alt="" />
+        
+            <img src="./Star 1star.png" class="star" alt="" />
+        
+            <img src="./Star 1star.png" class="star" alt="" />
+        
+            <img src="./Star 1star.png" class="star" alt="" />
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="section-container">
+        <section class="head-section">
+            <div class="hello">
+                <h3 class="bold-grey">Hello Jane</h3>
+                <p>Welcome!</p>
+              </div>
+              <div class="search-bar">
+                <form class="search-forms" action="">
+                  <button class="search-button" type="submit">Search</button>
+                  <input type="search" name="" id="" title="" class="profile-search"  placeholder="Search here" />
+                </form>
+              </div>
+              <div class="bell-toggle">
+                <div>
+                  <img src="./notification.svg" alt="">
+                </div>
+                <div>
+                  <label class="switch">
+                    <input type="checkbox" title="#" />
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+              </div>
+              <div class="profile-pic-name">
+                <div class="profile-pic">
+                  <img src="./my passport.jpg" alt="" />
+                  <p class='bold-grey'>Jane Doe</p>
+                  </div>
+              
+                <div class="navbar">
+                    <div class="dropdown">
+                      <button class="dropbtn" type="button" title="">
+                      <img src="./arrow-down.svg" alt=""> </button>
+                      <div class="dropdown-content">
+                        <a href="#">Dashboard</a>
+                        <a href="#">Profile</a>
+                        <a href="#">Saved Data</a>
+                        <a href="#">Settings</a>
+                        <a href="#">Support</a>
+                        <a href="#">Log out</a>
+                      </div>
+                    </div>
+                  </div>
+               
+              
+        </section>
+      <div class="main-flow-flex">
+        <section class="main-flow">
+            <div class="upload-container">
+               <div class="upload-area">
+                <div class="icon"><img class="cloud-icon" src="./cloud-plus.svg" alt=""></div>
+                <p> Drag & drop to upload file or <button>Click to Upload</button></p>
+                
+                <input type="file" hidden>
+              </div>
+              <script src="profile.js"></script>
+
+
+              <div class="extraction-button">
+               <input class="extract-button" type="submit" value="Extract Metadata">           
+              </div>
+            </div>
+              <div class="result-container">
+                <h3>Result</h3>
+                <div class="result-details">
+                  <p>File Name:</p>
+                </div>
+                <div class="result-details">
+                  <p>File Size:</p>
+                </div>
+                <div class="result-details">
+                  <p>File Type:</p>
+                </div>
+                <div class="result-details">
+                  <p>Mime Type:</p>
+                </div>
+                <div class="result-details">
+                  <p>Image Size:</p>
+                </div>
+                <div class="result-details">
+                  <p>File Category:</p>
+                </div>
+                <div class="result-buttons">
+                  <input type="submit" value="Save" class="save-button" id="save-result">
+                  <input type="submit" value="View full info" class="view-button" id="view-result">
+                </div>
+              </div>
+              
+             
+           
+        </section>
+        <section class="right-side">
+          <h3>History</h3>
+          <div class="day"><p>Today</p> <img src="./Line 54.svg" alt=""></div>
+
+          <div class="history-data">
+            <div class="mtdata-img"><img src="./Vector.png" alt=""></div>
+            <!-- <img src="./Vector.png" alt=""> -->
+            <div class="mtdata">
+              <span>Nigerian Map.jpg</span>
+              <p>107 kb</p>
+            </div>
+          </div>
+          <div class="history-data">
+            <div class="mtdata-img1"><img src="./Vector (1).png" alt=""></div>
+            <div class="mtdata">
+              <span>Nigerian Map.csv</span>
+              <p>107 kb</p>
+            </div>
+          </div>
+          <div class="history-data">
+            <div class="mtdata-img2"><img src="./Vector (2).png" alt=""></div>
+            <div class="mtdata">
+              <span>Nigerian Map.mp3</span>
+              <p>107 kb</p>
+            </div>
+          </div>
+          <div class="history-data">
+            <div class="mtdata-img3"><img src="./Vector (3).png" alt=""></div>
+            <div class="mtdata">
+              <span>Nigerian Map.json</span>
+              <p>107 kb</p>
+            </div>
+          </div>
+          <div class="history-data">
+            <div class="mtdata-img4"><img src="./Vector (4).png" alt=""></div>
+            <div class="mtdata">
+              <span>Nigerian Map.pdf</span>
+              <p>107 kb</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,6 +1,6 @@
 {% extends 'base.html' %} {%load static%}
 <title>
-  {% block title %}Metlab Privacy and Policy Statements{% endblock %}
+  {% block title %}MetLab Privacy and Policy Statements{% endblock %}
 </title>
 {% block css %}<link
   rel="stylesheet"
@@ -9,7 +9,7 @@
 {% endblock %} {%block navbar%}
 <header class="hero-section">
   <nav>
-    <a href="#" class="logo generalflexselector">
+    <a href="{% url 'index'%}" class="logo generalflexselector">
       <img src="{% static 'svg/Horizontal_Logo.svg' %}" alt="" />
     </a>
   </nav>
@@ -128,45 +128,4 @@
   </p>
 </div>
 
-{% endblock %} {% block footer %}
-<footer>
-  <div class="footer-container">
-    <div class="resourses generalflexselector">
-      <a href="#">
-        <img src="{% static 'svg/Horizontal_Logo.svg'%}" />
-      </a>
-      <p>
-        Extracting data quickly and effectively while providing accurate
-        information about the data being extracted.
-      </p>
-    </div>
-    <div class="resourses">
-      <h6>RESOURCES</h6>
-      <li><a href="">Getting Started</a></li>
-      <li><a href="">Documentation</a></li>
-      <li><a href="">Status</a></li>
-    </div>
-    <div class="resourses">
-      <h6>COMPANY</h6>
-      <li><a href="">Aunthenticate</a></li>
-      <li><a href="">Support</a></li>
-      <li><a href="">Meta Data</a></li>
-    </div>
-  </div>
-  <div class="footer-txt">
-    <p>Privacy | Website Terms of Use | Cookie Consent | COVID-19</p>
-    <p>© 2022 MetLab. All Rights Reserved</p>
-  </div>
-  <div class="social generalflexselector">
-    <div class="icons">
-      <i class="fa-brands fa-facebook-f"></i>
-    </div>
-    <div class="icons">
-      <i class="fa-brands fa-instagram"></i>
-    </div>
-    <div class="icons">
-      <i class="fa-brands fa-twitter"></i>
-    </div>
-  </div>
-</footer>
 {% endblock %}

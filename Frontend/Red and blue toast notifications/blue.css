@@ -1,0 +1,85 @@
+
+/*CSS for toast notification*/
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Work Sans';
+  font-size: 14px;
+ 
+}
+body{
+  background: rgb(103, 127, 139);
+}
+ 
+    
+   
+.toast-wrapper{
+  width: 420px;
+  padding: 30px 20px;
+  position: absolute;
+  bottom: 50px;
+  right: 0;
+  overflow: hidden;
+  font-family: 'Work Sans';
+  font-size: 14px;
+  bottom: 80%;
+}
+#show-alert{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    background-color: #56CCF2;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+  
+}
+#close {
+  border: none;
+
+}
+#toast{
+    width: 380px;
+    height: 80px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 10px 20px rgba(75, 50, 50, 0.05);
+    border-left: 8px solid #56CCF2;
+    border-radius: 7px;
+    display: grid;
+    grid-template-columns: 1.2fr 6fr 0.5fr;
+    transform: translate(400px);
+    transition: 1s;
+    
+}
+.container-1,.container-2{
+    align-self: center;
+}
+.container-1 i{
+    font-size: 40px;
+    color: #56CCF2;
+}
+.container-2 p:first-child{
+    color: #101020;
+    font-weight: 600;
+    font-size: 16px;
+}
+.container-2 p:last-child{
+    font-size: 12px;
+    color: #656565;
+    font-weight: 400;
+}
+#toast button{
+    align-self: flex-start;
+    background-color: transparent;
+    font-size: 25px;
+    line-height: 0;
+    color: #656565;
+    cursor: pointer;
+}
