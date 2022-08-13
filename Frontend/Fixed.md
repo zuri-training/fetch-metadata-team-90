@@ -13,10 +13,10 @@
 * Fixed responsiveness
 * adjust header
 * little adjustment to the body
-* added scroll to top button
-### 1. Fixed the follwing in Terms and Condition page:  
+* added scroll to top button and a new Javascript file for the scroll to top
+### 2. Fixed the follwing in Terms and Condition page:  
 * Footer links
 * Fixed responsiveness
 * adjust header
 * little adjustment to the body
-* added scroll to top button
+* added scroll to top button and a new Javascript file for the scroll to top
