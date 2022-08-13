@@ -2,6 +2,8 @@
 
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 /* General Styles */
 body {
@@ -29,14 +31,13 @@ nav {
 }
 
 .container {
-  padding: 0 100px 0 100px;
+  padding: 0 100px 50px 100px;
   max-width: 100%;
   width: 1000px;
   background-color: #ffffff;
   width: 1440px;
   left: 0px;
   top: 202px;
-  border-radius: 0px;
 }
 
 .generalflexselector {
@@ -50,7 +51,6 @@ nav {
   width: 271px;
   height: 10px;
   left: 95px;
-  top: 215px;
 
   /* Web/Link Text */
 
@@ -70,17 +70,28 @@ nav {
 h1,
 h3 {
   color: #408cc6;
+  padding: 30px 0;
 }
 p {
   opacity: 0.8;
+  text-align: justify;
 }
 ul li {
   opacity: 0.8;
+  text-align: justify;
 }
 /*Styling of the header*/
 header nav {
   background-color: #408cc6;
-  padding: 50px 30px 100px 50px;
+  padding: 50px;
+}
+@media (max-width: 720px) {
+  .container {
+    padding: 0 20px 50px 20px;
+  }
+  .last-updated {
+    left: 15px;
+  }
 }
 
 /*Styling of the Footer starts here*/
@@ -100,7 +111,6 @@ footer {
 .footer-container .resourses {
   align-items: center;
   margin: 50px 50px;
-  position: relative;
   flex-direction: column;
 }
 .footer-container .resourses img {
@@ -140,12 +150,14 @@ footer {
   width: 100%;
   margin: auto;
 }
-.footer-txt p {
+.footer-txt p,
+.footer-txt p a {
   font-size: 16px;
   font-weight: 400;
   text-align: center;
   margin: 15px auto;
   color: #ffffff;
+  text-decoration: none;
 }
 footer .social {
   width: 100%;
@@ -153,7 +165,6 @@ footer .social {
 }
 footer .social .icons {
   margin: 20px 10px;
-  position: relative;
   display: flex;
   flex-direction: row;
 }
@@ -165,15 +176,25 @@ footer .social .icons i {
   cursor: pointer;
   border-radius: 2px;
 }
-
-@media (max-width: 720px) {
-  .container {
-    padding: 0 20px 0 20px;
-  }
-  .last-updated {
-    left: 15px;
-  }
+/*This is the css for scroll-to-top button*/
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 0;
+  border: none;
+  background: url("images/Scroll\ Back\ To\ Top\ \(1\).png");
+  border-radius: 0px 0px 0px 0px;
+  background-size: 100%;
+  cursor: pointer;
+  margin-bottom: 15px;
+  opacity: 0.9;
 }
+.scrolltopbtn {
+  height: 60px;
+  width: 60px;
+}
+
 /*This is the styling of the mobile view/responsiveness of the footer*/
 @media (max-width: 720px) {
   .footer-txt {
@@ -183,7 +204,6 @@ footer .social .icons i {
   .footer-container .resourses {
     display: flex;
     margin: 10px auto;
-    position: relative;
   }
   .footer-container {
     padding-top: 50px;
@@ -192,4 +212,8 @@ footer .social .icons i {
     font-size: 16px;
     margin: 15px 20px;
   }
+  .resourses {
+    padding: 20px;
+  }
 }
+/*Styling of the Footer ends here*/
