@@ -21,3 +21,5 @@
 * adjust header
 * little adjustment to the body
 * added scroll to top button and a new Javascript file for the scroll to top
+### 3. Created email template for account verification and reset password:  (Peaches)
+* https://github.com/zuri-training/fetch-metadata-team-90/tree/main/Frontend/Verification%20%26%20reset%20email
