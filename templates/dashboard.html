@@ -51,7 +51,25 @@
                  
                   
                    <div class="result-buttons">
-                    <a class="save-button shareLink" id="view-result" href="{% url 'share' new_data.id %}" target="_blank">Share</a>
+                    <div class="save-button share-link-div"   >
+                      <button class="share-button ">Share</button>
+                      <div class="popup">
+                        <section class="share-header">
+                          <span>Share File</span>
+                          <div class="close"><i class="uil uil-times"></i></div>
+                        </section>
+    
+                          <div class="content">
+                            <p>Copy link to share file</p>
+                            <div class="field">
+                              <i class="url-icon uil uil-link"></i>
+                              <input type="text" readonly value="" />
+                              <a class="shareLink" href="{% url 'share' new_data.id %}"><button class="copy-button"> Copy</button></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  
                      <a class="view-button" id="save-result"  href={{ new_data.get_absolute_url}}>Download</a>
                    </div>
                  </div>
@@ -112,15 +130,46 @@
 
        <script>
          const shareLink = document.querySelectorAll(".shareLink")
+         const viewBtn = document.querySelector(".share-button"),
+         popup = document.querySelector(".popup"),
+         close = popup.querySelector(".close"),
+         field = popup.querySelector(".field"),
+         input = field.querySelector("input"),
+         copy = field.querySelector("button");
+        
+         
          shareLink.forEach(share => {
            share.addEventListener('click', function (event) {
               event.preventDefault()
-             console.log(share.href);
-             navigator.clipboard.writeText(share.href)
+              input.value = share.href
+            
         
            });
          });
       
+         
+ 
+       viewBtn.onclick = () => {
+         popup.classList.toggle("show");
+         input.value = shareLink[0].href
+       };
+       close.onclick = () => {
+         viewBtn.click();
+       };
+ 
+       copy.onclick = () => {
+         input.select(); //select input value
+         if (document.execCommand("copy")) {
+           //if the selected text copy
+           field.classList.add("active");
+           copy.innerText = "Copied";
+           setTimeout(() => {
+             window.getSelection().removeAllRanges(); //remove selection from document
+             field.classList.remove("active");
+             copy.innerText = "Copy";
+           }, 3000);
+         }
+       };
       </script>
 {% endblock %}
 {% block footer %}

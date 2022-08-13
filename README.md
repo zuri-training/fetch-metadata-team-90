@@ -47,6 +47,8 @@ This is a platform that fetches and extracts metadata from files uploaded by use
    * username: metlab
    * password: metlab123
 
+* Update the settings.py
+
    
 
 
