@@ -1,6 +1,9 @@
 Hi,
-You registered for MetLab, you are required to activate your account within {{ expiration_days }} days.
-CLick on the link to account your account:
+
+Thank you for creating an account with us. You're almost ready to get started. Please click on the link below to verify your account and begin extracting metadata from Metlab!
+
 {{ scheme }}://{{ request.get_host }}{% url "django_registration_activate" activation_key %}
+
 Thanks,
-The MetLab Team
+The Metlab Team
+
