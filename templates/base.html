@@ -162,6 +162,8 @@
           <a href="{% url '404'%}">COVID-19</a>
         </p>
         <p>© 2022 MetLab. All Rights Reserved</p>
+
+        {% block icons%}
       </div>
       <div class="social generalflexselector">
         <div class="icons">
@@ -174,7 +176,9 @@
           <i class="fa-brands fa-twitter"></i>
         </div>
       </div>
+      {% endblock %}
       <!-- This is the scroll to top button for  long pages -->
+      {% block scroll %}
       <button class="scroll-to-top">
         <img
           class="scrolltopbtn"
@@ -182,6 +186,7 @@
           alt="image"
         />
       </button>
+      {% endblock %}
     </footer>
     {% endblock %}
 

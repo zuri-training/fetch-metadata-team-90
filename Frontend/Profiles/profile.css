@@ -17,7 +17,7 @@ body {
   height: 95vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 35px;
   box-shadow: 0 0 10px rgba(36, 24, 24, 0.1);
@@ -25,8 +25,12 @@ body {
   position: fixed;
   left: 16px;
 }
+.metlab-logo {
+  padding-top: 0;
+  height: 50px;
+}
 .metlab-logo img {
-  height: 42px;
+  height: 45px;
   width: 145px;
 }
 
@@ -57,11 +61,26 @@ body {
 }
 .profile-search {
   width: 20vw;
-  height: 5vh;
-  padding: 20px;
+  height: 40px;
+  padding: 0 30px;
   background-color: #e5e5e5;
   border: none;
+  border-radius: 4px;
+  font-size: 1.15rem;
 }
+.input-icons i {
+  position: absolute;
+}
+
+.input-icons {
+  margin-bottom: 10px;
+}
+
+.icon {
+  padding: 5px;
+  min-width: 40px;
+}
+
 .profile-pic-name {
   display: inherit;
   justify-content: space-between;
@@ -69,15 +88,12 @@ body {
   width: 12vw;
 }
 .bell-toggle {
-  width: 6vw;
+  width: 6.5vw;
   display: inherit;
   justify-content: space-between;
   align-items: center;
 }
-/* BELL CUSTOM */
-.fa_custom {
-  color: #1a75bb;
-}
+
 .profile-pic img {
   width: 30px;
   height: 30px;
@@ -138,6 +154,7 @@ body {
   display: block;
 }
 
+
 /* DROPDOWN ENDS */
 
 /* TOGGLE */
@@ -145,7 +162,7 @@ body {
   position: relative;
   display: inline-block;
   width: 50px;
-  height: 20px;
+  height: 26px;
 }
 
 /* Hide default HTML checkbox */
@@ -163,7 +180,8 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #e5e5e5;
+  background-color: white;
+  box-shadow: 0 0 5px #E1E1E1;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -171,21 +189,21 @@ body {
 .slider:before {
   position: absolute;
   content: "";
-  height: 17px;
-  width: 17px;
-  left: 4px;
-  bottom: 2px;
-  background-color: #f6f6f5;
+  height: 20px;
+  width: 20px;
+  left: 2px;
+  bottom: 3px;
+  background-color:  #E1E1E1;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
 input:checked + .slider {
-  background-color: #56ccf2;
+  background-color:  #1A75BB;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #56ccf2;
+  box-shadow: 0 0 1px #E1E1E1;
 }
 
 input:checked + .slider:before {
@@ -219,11 +237,19 @@ hr {
 }
 .dash-section {
   width: 100%;
+  padding: 0 10px;
+}
+.dash-section:hover {
+  background-color: #edf7ff;
+  color: #56ccf2;
 }
 .rate-us {
   width: 10vw;
   text-align: center;
   background-color: #edf7ff;
+  padding: 8px;
+  line-height: 1.3;
+  font-weight: 600;
 }
 .star {
   width: 15px;
@@ -235,22 +261,18 @@ hr {
 .light-gray {
   color: #6f6f6f;
   display: flex;
+  align-items: center;
   gap: 2vw;
 }
 .light-gray a {
   text-decoration: none;
   color: #6f6f6f;
 }
-.light-gray:hover,
-.light-gray:active,
-.light-gray:focus {
-  background-color: #edf7ff;
-  color: #56ccf2;
-  transition: all 0.1s linear;
-}
+
 .light-gray a:hover,
 .light-gray a:active,
-.light-gray a:focus {
+.light-gray a:focus 
+{
   background-color: #edf7ff;
   color: #56ccf2;
 }
@@ -314,22 +336,24 @@ hr {
 
 .right {
   width: 60%;
-  margin-top: 30px;
+  margin: 30px 0;
 }
 .input-house {
-  padding-bottom: 25px;
+  padding-bottom: 7px;
+  line-height: 25px;
 }
 .label {
   color: #373737;
 }
 .input {
-  margin-top: 10px;
   width: 35vw;
-  height: 28px;
+  height: 40px;
   padding: 0 15px;
   border: 1px solid #a6a6a6;
   border-radius: 4px;
 }
+
+
 @media (max-width: 760px) {
   body {
     width: 100%;
@@ -358,6 +382,9 @@ hr {
     display: none;
   }
   .section-container .bell-toggle {
+    display: none;
+  }
+  .input-icons i {
     display: none;
   }
   .main-flow {
