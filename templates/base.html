@@ -27,6 +27,11 @@
       type="text/css"
       rel="stylesheet"
     />
+    <link
+    href="{% static 'css/loader.css' %}"
+    type="text/css"
+    rel="stylesheet"
+  />
 
     <link rel="icon" href="{% static 'img/favicon-16x16-blue.png' %}" />
     {% block css %}
@@ -43,6 +48,15 @@
     <script type="text/javascript" src="{% static 'js/general.js' %}"></script>
   </head>
   <body>
+    <!-- pre loader-->
+    <link
+    <div class="loader">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+  </div>
+  
+  <!--spinner-->
    
     <div class="spinner__background">
       <div class="spinner"></div>

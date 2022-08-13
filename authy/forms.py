@@ -3,7 +3,9 @@ from django.core.exceptions import ValidationError
 
 
 from django_registration.forms import RegistrationForm
-from .models import User, Profile
+from .models import Profile
+from django.contrib.auth import get_user_model
+User = get_user_model()
 
 
 
