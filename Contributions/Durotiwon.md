@@ -16,7 +16,7 @@
 * ### https://github.com/durobolu/fetch-metadata-team-90/commit/8f36f7ddadb865eda58b08e4088d2b24a343d772
 ## 6. I worked on and completed the mobile responsiveness for contact page.
 * ### https://github.com/zuri-training/fetch-metadata-team-90/commit/769a2e3c3f37357f7a0f934b43d8e91f2b1eb3c2
-## 7. I made email verification failed page responsive both on light mode and dark mode
+## 7. I made email verification failed page responsive both on light mode and dark mode.
 * ### https://github.com/zuri-training/fetch-metadata-team-90/commit/b44c0cbd338d774b0f18f3f97b9108d261d74d19
 ## 8. Profile dashboard was made responsive both on light and dark mode.
 * ### https://github.com/zuri-training/fetch-metadata-team-90/commit/61b367e3f3cf311c03086c3a4352bd70b9eb3511
