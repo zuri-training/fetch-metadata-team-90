@@ -27,6 +27,11 @@
       type="text/css"
       rel="stylesheet"
     />
+    <link
+    href="{% static 'css/loader.css' %}"
+    type="text/css"
+    rel="stylesheet"
+  />
 
     <link rel="icon" href="{% static 'img/favicon-16x16-blue.png' %}" />
     {% block css %}
@@ -43,6 +48,14 @@
     <script type="text/javascript" src="{% static 'js/general.js' %}"></script>
   </head>
   <body>
+    <!-- pre loader-->
+    <div class="loader-wrapper">
+      <div class="loader">
+      </div>
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+    </div>
+  <!--spinner-->
    
     <div class="spinner__background">
       <div class="spinner"></div>
@@ -207,7 +220,7 @@
     
     </script>
   
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="{% static 'js/loader.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/index.js' %}"></script>
     {% block js %} {% endblock %}
