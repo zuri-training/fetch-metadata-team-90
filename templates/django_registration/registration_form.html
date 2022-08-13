@@ -14,7 +14,7 @@
           <div class="picture-side">
               <div class="picture__logo-content">
               <div class="logo">
-            <img src="{% static 'signup-img/logo.svg' %}" alt="" />
+            <a href="{% url 'index' %}"><img src="{% static 'signup-img/logo.svg' %}" alt="" /></a>
           </div>
           <div class="heading-right">
               <p>A data extraction tool that can be used to extract data quickly and effectively while providing accurate information about the data being extracted.</p>
@@ -82,7 +82,7 @@
               <input type="submit" value="Create Account" />
             </div>
             <div class="buttom-text">
-              <p class="text">
+              <p class="test">
                 By continuing with Google or Apple or Email, I agree to MetLab's
                 <a href="{% url 'privacy-policies' %}">Prvacy Policy</a> and
                 <a href="{% url 'terms-conditions' %}">Terms of service</a>
