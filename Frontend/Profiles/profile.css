@@ -317,15 +317,17 @@ hr {
   margin-top: 30px;
 }
 .input-house {
-  padding-bottom: 25px;
+  padding-bottom: 15px;
+  line-height: 1.25rem;
 }
 .label {
   color: #373737;
 }
 .input {
-  margin-top: 10px;
+  /* margin-top: 5px; */
   width: 35vw;
-  height: 28px;
+  /* height: 28px; */
+  height: 40px;
   padding: 0 15px;
   border: 1px solid #a6a6a6;
   border-radius: 4px;
