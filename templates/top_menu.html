@@ -54,12 +54,12 @@
                 <i class="fa fa-caret-down"></i>
               </button>
               <div class="dropdown-content">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
+                <a href="{% url 'dashboard' %}">Dashboard</a>
+                <a href="{% url 'edit-profile' request.user.id %}">Profile</a>
+                <a href="{% url 'save-page' %}">Saved Data</a>
+                <a href="{% url 'edit-profile' request.user.id %}">Settings</a>
+                <a href="{% url 'contact' %}">Support</a>
+                <a href="{% url 'logout' %}">Logout</a>
               </div>
             </div>
           </div>
