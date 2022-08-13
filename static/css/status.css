@@ -52,7 +52,7 @@ nav {
   background: #f7f7f7;
 }
 .image-container1 p {
-  padding-left: 20px;
+  padding-left: 55px;
 }
 
 .centered {
@@ -69,16 +69,78 @@ nav {
   width: auto;
 }
 
-li {
-  text-decoration: none;
+p {
+  font-family: Work Sans;
+  font-style: Regular;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: -2%;
+  color: #6f6f6f;
 }
 
+li {
+  text-decoration: none;
+  list-style: none;
+}
+.incident {
+  padding-left: 55px;
+}
+.viewarc {
+  padding-right: 55px;
+  font-family: Work Sans;
+  font-style: Regular;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: -2%;
+  color: #6f6f6f;
+  font-weight: 400;
+  text-decoration: underline;
+}
+
+.viewarc:hover {
+  text-decoration: underline;
+  color: #56ccf2;
+}
 .archive {
   text-decoration: underline;
   color: #56ccf2;
+  font-family: Work Sans;
+  font-style: Regular;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: -2%;
+  font-weight: 400;
 }
 
 .archive:hover {
   text-decoration: underline;
   color: #56ccf2;
+}
+
+@media (max-width: 720px) {
+  .image-container1 p {
+    padding-left: 30px;
+  }
+  .image-container1 img {
+    padding-left: 30px;
+  }
+  .incident {
+    padding-left: 10px;
+  }
+  .viewarc {
+    padding-right: 10px;
+  }
+  .in {
+    text-align: center;
+  }
+  .rec {
+    padding-left: 10px;
+  }
+  header {
+    padding: 20px 0 30px 0px;
+  }
+  .sub-nav {
+    overflow-x: auto;
+  }
 }
