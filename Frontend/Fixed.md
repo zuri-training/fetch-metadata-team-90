@@ -7,15 +7,15 @@
 * Footer
 * Fixed responsiveness
  
-# The above is just an example. Copy and paste, the start yours below.#
+# The above is just an example. Copy and paste, the start yours below.
 
-### 1. Fixed the follwing in Privacy policy page:  
+### 1. Fixed the follwing in Privacy policy page:  (Durobolu)
 * Footer links
 * Fixed responsiveness
 * adjust header
 * little adjustment to the body
 * added scroll to top button and a new Javascript file for the scroll to top
-### 2. Fixed the follwing in Terms and Condition page:  
+### 2. Fixed the follwing in Terms and Condition page:  (Durobolu)
 * Footer links
 * Fixed responsiveness
 * adjust header
