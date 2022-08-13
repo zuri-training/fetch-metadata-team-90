@@ -6,6 +6,7 @@
 
 body {
   background: #f5f5f5;
+  height: 100vh;
 }
 
 a {
@@ -24,7 +25,7 @@ a {
   height: 100px;
   left: 100px;
   right: 906px;
-  top: 270px;
+  top: 180px;
 }
 
 .pageNotFound {
@@ -88,7 +89,7 @@ a {
   height: 56px;
   left: 100px;
   right: 895px;
-  top: 630px;
+  top: 450px;
 }
 
 .home {
@@ -142,7 +143,7 @@ a {
   width: 448px;
   height: 358px;
   right: 238px;
-  top: 134px;
+  top: 40px;
 
   background: url(errorPad.png);
 }
@@ -152,7 +153,7 @@ a {
   width: 297px;
   height: 198px;
   right: 290px;
-  top: 492px;
+  top: 380px;
 
   background: url(404signsmall.png) no-repeat;
 }
@@ -164,8 +165,8 @@ a {
   }
   .errorCode {
     position: absolute;
-    width: 168px;
-    height: 141px;
+    width: 270px;
+    height: 170px;
     left: 104px;
     top: 107px;
     background: url(404signsmall.png) no-repeat;
@@ -175,7 +176,7 @@ a {
     /* Auto layout */
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     padding: 0px;
     gap: 16px;
 
@@ -183,7 +184,10 @@ a {
     height: 128px;
     left: 37px;
     right: 38px;
-    top: 272px;
+    top: 282px;
+
+    text-justify: auto;
+    justify-content: center;
   }
 
   .pageNotFound {
@@ -286,6 +290,6 @@ a {
   
     position: absolute;
     left: calc(50% - 188px / 2 + 0.5px);
-    top: 242px;
+    top: 50px;
   }
 }
