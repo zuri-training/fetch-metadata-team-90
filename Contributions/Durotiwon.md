@@ -18,3 +18,7 @@
 * ### https://github.com/zuri-training/fetch-metadata-team-90/commit/769a2e3c3f37357f7a0f934b43d8e91f2b1eb3c2
 ## 7. I made email verification failed page responsive both on light mode and dark mode
 * ### https://github.com/zuri-training/fetch-metadata-team-90/commit/b44c0cbd338d774b0f18f3f97b9108d261d74d19
+## 8. Profile dashboard was made responsive both on light and dark mode.
+* ### https://github.com/zuri-training/fetch-metadata-team-90/commit/61b367e3f3cf311c03086c3a4352bd70b9eb3511
+## 9. Contributed to the responsiveness of the privacy-policiy page and added scroll to top to the page.
+* ### https://github.com/zuri-training/fetch-metadata-team-90/commit/08405b5be3f1ba781596d55a25b5589777ee9222
