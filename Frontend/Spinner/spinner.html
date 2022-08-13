@@ -7,23 +7,31 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="spinner"></div>
-<!--Styling for spinner. You can create a seperate stylesheet if you prefer-->
+    <div class="loader">
+      <div class="spinner"></div>
+    </div>
+    thia
+    <!--Styling for spinner. You can create a seperate stylesheet if you prefer-->
     <style>
-      body {
-        background: #fefefe;
-        display: grid;
-        place-items: center;
-        height: 100vh;
+      .loader {
+        background-color: rgb(255, 255, 255);
+        min-height: 100vh;
+        width: 100%;
+        margin: 0;
+        position: fixed;
+        opacity: 0.6;
       }
 
       .spinner {
-        position: relative;
+        position: fixed;
         background-color: #418cc6;
         height: 100px;
         width: 100px;
+        left: 50%;
+        bottom: 50%;
+        /* display: none */
         border-radius: 50%;
-        background: conic-gradient(#418cc6 50%, white);
+        background: conic-gradient(#4596d3 50%, rgb(247, 241, 241));
         animation: rotate 1.2s linear infinite;
       }
 
@@ -32,6 +40,8 @@
         content: "";
         position: absolute;
         border-radius: 50%;
+        left: 0;
+        right: 0;
       }
 
       .spinner:before {
