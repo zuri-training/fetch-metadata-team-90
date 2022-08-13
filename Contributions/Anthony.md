@@ -40,7 +40,8 @@
 
 
 ****                                                    **ISSUES CREATED**
-        **{REFERENCE LINK}**
+
+  **{REFERENCE LINK}**
   
  * https://github.com/zuri-training/fetch-metadata-team-90/issues?q=is%3Aclosed+author%3ACoolTonie
 
