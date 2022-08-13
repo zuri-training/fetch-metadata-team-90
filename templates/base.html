@@ -75,18 +75,16 @@
             <a href="{% url 'dashboard' %}" class="nav-link">Meta Data</a>
           </li>
           {% if request.user.is_authenticated %}
-          <button class="dashboard-btn">Jane Doe</button>
+          <button class="dashboard-btn">{{ request.user.username}}</button>
           <div class="dropdown">
             <button class="dropbtn" type="button">
               <i class="fa fa-user" aria-hidden="true"></i>
             </button>
             <div class="dropdown-content">
               <a href="{% url 'dashboard' %}">Dashboard</a>
-              <a href="#">Profile</a>
+              <a href="{% url 'profile' %}">Profile</a>
 
               <a href="{% url 'edit-profile' request.user.id %}">Settings</a>
-
-              <a href="{% url 'profile' %}">Settings</a>
 
               <a href="{% url 'logout' %}">Log out</a>
             </div>

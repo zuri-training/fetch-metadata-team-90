@@ -52,7 +52,6 @@ class ContactView(View):
             subject = request.POST['subject']
             message_email = request.POST['message']
             message_email2 = f'{message_email} from {email}'
-            print(message_email2, settings.EMAIL_HOST_USER)
             try:
                 send_mail(subject, message_email2, email, 
                 [settings.EMAIL_HOST_USER], fail_silently=False,)
