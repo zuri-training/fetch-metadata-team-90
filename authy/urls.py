@@ -15,6 +15,7 @@ urlpatterns = [
 	path("accounts/register/", RegistrationView.as_view(form_class=AuthyRegistrationForm), name="django_registration_register"),
 	path("accounts/", include("django_registration.backends.activation.urls")),
 	path('accounts/', include('django.contrib.auth.urls')),
+	path('accounts/password-reset/', auth_views.PasswordResetView.as_view(html_email_template_name='registration/html_password_reset_email.html'), name='password_reset'),
 	path("accounts/", include("allauth.urls")),
 
 ]
