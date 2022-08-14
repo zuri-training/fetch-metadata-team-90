@@ -66,15 +66,15 @@ button {
   background-color: #56ccf2;
   color: #fff;
   border-radius: 4px;
-  border: 2px solid #56ccf2;
+  border: 2px solid #1B6298;
   font-size: 20px;
   font-weight: 400;
   cursor: pointer;
-}
+} 
 
 .email__container {
   margin-top: 7px;
-  border: 2px solid #9ca2ac;
+  border: 1.5px solid #9ca2ac;
   height: 40px;
   width: 524px;
   display: flex;
@@ -83,6 +83,7 @@ button {
   margin-left: 2rem;
   margin-bottom: 30px;
   border-radius: 4px;
+  background-color: #535353;
 }
 
 .email__container input {
@@ -91,6 +92,7 @@ button {
   border: none;
   outline: none;
   padding: 0 0.3rem;
+  background-color: #535353;
 }
 
 .email__container input::placeholder {
