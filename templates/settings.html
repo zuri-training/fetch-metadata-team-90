@@ -1,0 +1,70 @@
+
+{% extends 'base.html' %} 
+{% load static %}
+<title>{% block title %}Profile{% endblock %}</title>
+{% block css %}<link rel="stylesheet"  href="{% static 'css/edit_profile.css' %}" /> {% endblock %}
+
+
+{%block navbar%} {% endblock %}
+{% block content %}
+  
+  {% include 'side_menu.html'%}
+  <main class="section-container">
+    {% include 'top_menu.html' %}
+        <section class="main-flow">
+            <div class="text-area left">
+                <div class="top-left">
+                    <h3>Personal Information</h3>
+                    {% if request.user.profile.picture  %}
+          <img src={{ request.user.profile.picture.url }} alt="" class="image"/>
+          {% else %}
+          
+          <img src="{% static 'img/user_photo.png' %}" alt="" class="image"/>
+          {% endif %}
+                    <form method="POST" enctype="multipart/form-data">
+                      {% csrf_token %}
+                        <a class="btn upload" href="">
+                          {{ form.picture }}
+                        </a>
+                   
+                </div>
+                <div class="submit__btn">
+               
+                        <button type="submit"  class="btn1 save">Save changes</button>
+                </div>
+            </div>
+            <div class="text-area right">
+               
+                  {% csrf_token %}
+                    <div class="input-house">
+                        <label for="FirstName" class="label">Old password</label><br>
+                        {{form.old_password.errors }}
+                        {{ form.old_password }}
+                    </div>
+                    <div class="input-house">
+                        <label for="LastName"  class="label">New Password</label><br>
+                        {{form.new_password.errors }}
+                        {{ form.new_password}}
+                    </div>
+                     <div class="input-house">
+                        <label for="username"  class="label">Confirm password</label><br>
+                        {{form.confirm_password.errors }}
+                        {{ form.confirm_password }}
+                    </div> 
+    
+                    {{form.errors}}
+                   
+                    </form>
+                </div>
+            </section>
+    
+        </main>
+{% endblock %}
+
+{%block footer %}
+{%endblock%}
+
+{% block js %}
+<script type="text/javascript"  src="{% static 'js/edit_profile.js' %}"></script>
+ 
+{% endblock %}
