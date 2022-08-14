@@ -1,6 +1,4 @@
-{% extends 'base.html' %} 
-{% load static %} 
-{%block navbar%} {% endblock %}
+{% extends 'base.html' %} {% load static %} {%block navbar%} {% endblock %}
 {%block css %}
 <link rel="stylesheet" href="{% static 'css/errorPage.css' %}" />
 {%endblock%}
@@ -23,16 +21,19 @@
     <a href="{% url 'dashboard' %}"
       ><button class="home" style="cursor: pointer">Go to Dashboard</button></a
     >
-    {% endif %}
     <a href="{% url 'index' %}"
       ><button class="home" style="cursor: pointer">Back to Home</button></a
     >
-
+    {% else %}
+    <a href="{% url 'index' %}"
+      ><button class="home" style="cursor: pointer">Back to Home</button></a
+    >
     <a href="{% url 'contact' %}"
       ><button class="support" style="cursor: pointer">
         Contact Support
       </button></a
     >
+    {% endif %}
   </div>
 
   <div class="errorPad">

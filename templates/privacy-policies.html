@@ -16,9 +16,9 @@
 </header>
 {% endblock %} {% block content %}
 
-<div class="container">
+<section class="container">
   <div>
-    <img src="{% static ''%}" alt="" />
+    <img src="" alt="" />
   </div>
 
   <div class="last-updated">Last updated: August 06, 2022</div>
@@ -100,7 +100,6 @@
     when you leave our website and read theprivacy statements of each website
     that may collect personal information.
   </p>
-
   <h3>Information Security:</h3>
   <p>
     We secure information you provide on computer servers in a controlled,
@@ -126,6 +125,16 @@
     to contact us concerning any matter relating to individual rights and your
     Personal Information, you may send an email to support@metlab.com.
   </p>
-</div>
+</section>
 
+{% endblock %} {% block scroll %}
+<button class="scroll-to-top">
+  <img
+    class="scrolltopbtn"
+    src="{% static 'img/Scroll_Back_To_Top.png'%}"
+    alt="image"
+  />
+</button>
+{% endblock %} {% block js %}
+<script type="text/javascript" src="{% static 'js/privacy.js' %}"></script>
 {% endblock %}
