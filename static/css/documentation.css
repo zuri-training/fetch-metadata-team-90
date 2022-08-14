@@ -201,7 +201,7 @@ footer .social .icons i {
 /*This is the css for scroll-to-top button*/
 .scroll-to-top {
   position: fixed;
-  bottom: 20px;
+  bottom: 60px;
   right: 20px;
   font-size: 0;
   border: none;
