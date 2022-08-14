@@ -18,20 +18,20 @@ User = get_user_model()
 
 class SignupRedirectView(RedirectView):
     pass
-class UserProfile(LoginRequiredMixin, TemplateView):
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        user = get_object_or_404(User, pk=self.request.user.id)
-        context['profile'] = Profile.objects.get(user=user)
-        return context
+class PasswordChangeRedirectView(RedirectView):
+    pass
+class UserProfile(LoginRequiredMixin, View):
+    form = ChangePasswordForm
+    context = {"form":form}
+    template_name = 'seetings.html'
+    
+    def get(self, request):
+        user = get_object_or_404(User, email=request.user.email)
+        self.context['profile'] = Profile.objects.get(user=user)
+        return render(request, self.template_name, self.context)
 
-
-
-@login_required
-def PasswordChange(request):
-    user = request.user
-    if request.method == 'POST':
-        form = ChangePasswordForm(request.POST)
+    def post(self, request):
+        form = self.form(request.POST)
         if form.is_valid():
             new_password = form.cleaned_data.get('new_password')
             user.set_password(new_password)
@@ -39,14 +39,15 @@ def PasswordChange(request):
             update_session_auth_hash(request, user)
             messages.success(request, "password change success")
             return redirect('change_password_done')
-    else:
-        form = ChangePasswordForm(instance=user)
+        else:
+            user = get_object_or_404(User, email=request.user.email)
+            form = self.form(instance=user)
 
-    context = {
-        'form':form,
-    }
+            self.context = {
+                'form':form,
+            }
 
-    return render(request, 'change_password.html', context)
+            return render(request, self.template_name, self.context)
 
 def PasswordChangeDone(request):
     return render(request, 'change_password_done.html')
