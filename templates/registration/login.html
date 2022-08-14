@@ -188,7 +188,26 @@
 
 </main>
 
+<script>
+  const checkbox = document.querySelector("input[name='check-box']");
+  const body = document.querySelector(".big-wrapper");
+  checkbox.addEventListener("click", () => {body.classList.toggle("bg-dark");});
+function myFunction() {
+  var x = document.getElementById("id_password");
+  var y = document.getElementById("hide1");
+  var z = document.getElementById("hide2");
 
+  if (x.type === "password") {
+    x.type = "text";
+    y.style.display = "block";
+    z.style.display = "none";
+  } else {
+    x.type = "password";
+    y.style.display = "none";
+    z.style.display = "block";
+  }
+}
+</script>
 
 
 
@@ -202,51 +221,6 @@
 {% block footer %}
 
 {% endblock %}
-<script>
 
-  const submitBtn = document.getElementsByTagName("input[type=submit]");
-
-submitBtn.addEventListener("click", function () {
-  console.log("click");
-  document.getElementsByClassName("spinner__background").style.display =
-    "block";
-});
-
-  function myFunction(){
-  
-  
-  
-  var x = document.getElementById("myInput");
-  
-  var y = document.getElementById("hide1");
-  
-  var z = document.getElementById("hide2");
-  
-  
-  
-  if(x.type === 'password'){
-  
-    x.type ="text";
-  
-    y.style.display = "block";
-  
-    z.style.display = "none";
-  
-  }
-  
-  else{
-  
-    x.type ="password";
-  
-    y.style.display = "none";
-  
-    z.style.display = "block";
-  
-  }
-  
-  }
-  
-  </script>
-  
   
   
