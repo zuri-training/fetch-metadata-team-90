@@ -244,13 +244,20 @@ footer .social .icons i {
   .doc-sub-container{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
   }
   .doc-sub-head p{
-    padding: 0px 0 78px 57px;
+    padding: 0px 0 58px 57px;
     }
     
   .doc-sub-head h1{
-    padding: 106px 0 78px 57px;
-}
+    padding: 76px 0 38px 57px;
+  }
+  .meta-art{
+    padding-left: 57px;
+    margin-bottom: 40px;
+  }
+  .meta-art h6 {
+    margin-bottom: 10px;
+  }
 }
