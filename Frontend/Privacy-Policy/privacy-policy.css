@@ -35,15 +35,10 @@ nav {
 }
 
 .container {
-  padding: 0 100px 50px 100px;
-
-  max-width: 100%;
-  width: 1000px;
+  width: 100%;
   background-color: #ffffff;
-  width: 1440px;
-  left: 0px;
-  top: 202px;
-  border-radius: 0px;
+  padding: 50px 50px 100px;
+  
 }
 
 .generalflexselector {
@@ -51,27 +46,15 @@ nav {
   justify-content: center;
   align-items: center;
 }
-/*Styling Last Updated*/
+
 .last-updated {
-  position: absolute;
-  width: 271px;
-  height: 10px;
-  left: 90px;
-
-  /* Web/Link Text */
-
   font-family: "Droid Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
-  line-height: 24px;
-  /* identical to box height, or 120% */
-
-  text-align: center;
-
-  /* Grey/Grey08 */
-
+   text-align: left;
   color: #6f6f6f;
+
 }
 h1,
 h3 {
