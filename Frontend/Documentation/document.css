@@ -105,7 +105,7 @@ hr {
   justify-content: space-around;
   justify-items: left;
   align-items: flex-start;
-  margin-bottom: 200px;
+  padding-bottom: 200px;
 }
 
 .meta-art {
@@ -235,4 +235,22 @@ footer .social .icons i {
   .resourses {
     padding: 20px;
   }
+}
+@media (max-width: 590px) {
+  .doc-links {
+    display: flex;
+    flex-direction: column;
+  }
+  .doc-sub-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .doc-sub-head p{
+    padding: 0px 0 78px 57px;
+    }
+    
+  .doc-sub-head h1{
+    padding: 106px 0 78px 57px;
+}
 }
