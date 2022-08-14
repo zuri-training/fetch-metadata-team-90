@@ -54,7 +54,7 @@ INSTALLED_APPS = [
 ]
 
 AUTH_USER_MODEL = "authy.User"
-ACCOUNT_ACTIVATION_DAYS = 7
+ACCOUNT_ACTIVATION_DAYS = 1
 SITE_ID = 1
 SOCIALACCOUNT_LOGIN_ON_GET = True
 ACCOUNT_LOGOUT_ON_GET = True
@@ -154,20 +154,16 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 ### SMTP configuration; simple mail transfer protocol
 #for development only
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-# for production only
-
-EMAIL_HOST = "smtp.gmail.com"
+EMAIL_BACKEND = 'django.core.mail.backends.smtp'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = "zurimetlab@gmail.com"
-# the password was placed because we wont be the one to deploy. but will be diactivated after somedays" 
-EMAIL_HOST_PASSWORD = "vzllukizdsglyhho"
+EMAIL_HOST_USER = 'fidekg122@gmail.com'
+EMAIL_HOST_PASSWORD = 'iisvrdgqrtviccro'
 EMAIL_USE_TLS = True
 
-
-# 
 SERVER_EMAIL = "zurimetlab@gmail.com"
-ADMINS = [("fidekg123@gmail.com", "zurimetlab@gmail.com")]
-
+ADMINS = [("fidekg123@gmail.com", "zurimetlab@gmail.com", "fidekg122@gmail.com")]
 
 LOGIN_REDIRECT_URL = "dashboard"
 LOGOUT_REDIRECT_URL = "/"

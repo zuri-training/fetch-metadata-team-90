@@ -97,10 +97,10 @@
   </main>
   <script>
     function myFunction(){
-        var x = document.getElementById("myInput");
+        var x = document.getElementById("id_password1");
         var y = document.getElementById("hide1");
         var z = document.getElementById("hide2");
-  
+
         if(x.type === 'password'){
             x.type ="text";
             y.style.display = "block";
@@ -113,10 +113,10 @@
         }
     }
     function myFunction2(){
-        var c = document.getElementById("myInput2");
+        var c = document.getElementById("id_password2");
         var a = document.getElementById("hide3");
         var b = document.getElementById("hide4");
-  
+
         if(c.type === 'password'){
             c.type ="text";
             a.style.display = "block";
@@ -128,7 +128,7 @@
             b.style.display = "block";
         }
     }
-  </script>
+</script>
   {% endblock %}
   {% block footer %}
   {% endblock %}
