@@ -302,7 +302,7 @@ label[class="fname"] {
 }
 input[type="text"] {
   box-sizing: border-box;
-
+  outline: none;
   /* Auto layout */
 
   display: flex;
@@ -323,9 +323,13 @@ input[type="text"] {
   order: 1;
   flex-grow: 0;
 }
+input[type=text]:focus, input[type="email"]:focus, textarea:focus {
+  border: 2px solid #56CCF2 !important;
+}
+
 input[type="email"] {
   box-sizing: border-box;
-
+  outline: none;
   /* Auto layout */
   /*     
     display: flex;
@@ -371,7 +375,7 @@ input[type="text"] {
 }
 textarea[id="id_message"] {
   /* Input Fields */
-
+  outline: none;
   box-sizing: border-box;
 
   /* Auto layout */
@@ -1647,7 +1651,7 @@ footer .social .icons i {
 /*This is the css for scroll-to-top button*/
 .scroll-to-top {
   position: fixed;
-  bottom: 20px;
+  bottom: 60px;
   right: 20px;
   font-size: 0;
   border: none;

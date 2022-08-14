@@ -62,6 +62,7 @@ footer {
   flex-direction: column;
 }
 .footer-container .resourses img {
+  margin-left: -40px;
   height: 57px;
   width: 206px;
   margin-bottom: 15px;
@@ -127,7 +128,7 @@ footer .social .icons i {
 /*This is the css for scroll-to-top button*/
 .scroll-to-top {
   position: fixed;
-  bottom: 20px;
+  bottom: 60px;
   right: 20px;
   font-size: 0;
   border: none;
@@ -286,7 +287,7 @@ footer .social .icons i {
 }
 
 /* sinner is her  */
-.spinner__background{
+.spinner__background {
   background-color: rgb(255, 255, 255);
   min-height: 100vh;
   width: 100%;
@@ -342,8 +343,3 @@ footer .social .icons i {
     transform: rotateZ(-360deg);
   }
 }
-
-
-
-
-
