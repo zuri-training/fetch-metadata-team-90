@@ -30,7 +30,7 @@ nav {
   justify-content: space-between;
 }
 .logo {
-  padding: 15px 30px 15px 50px;
+  padding: 15px 30px 15px 10px;
   line-height: 28px;
 }
 
@@ -40,7 +40,9 @@ nav {
     font-size: 34px;
     letter-spacing: -0.02em;
     color: #408CC6;
-    padding: 106px 0 78px 97px;
+    margin-top: 15px;
+    margin-bottom: 78px;
+    /* padding: 106px 0 78px 97px; */
 }
 .doc-sub-head p{
 font-weight: 400;
@@ -48,23 +50,29 @@ font-size: 24px;
 line-height: 36px;
 letter-spacing: -0.02em;
 color: #6F6F6F;
-padding: 0px 0 78px 97px;
+margin-bottom: 48px;
+/* padding: 0px 0 78px 97px; */
 }
 
 .doc-main-container {
   width: 100%;
   /* height: 897px; */
   background: #fafafa;
+  padding-top: 100px;
+  
 
 }
 
-
+.doc-sub-head{
+  margin-left:30px;
+  
+}
 .doc-sub-head h1 {
   font-weight: 700;
   font-size: 34px;
   letter-spacing: -0.02em;
   color: #408cc6;
-  padding: 106px 0 78px 97px;
+  text-align: left;
 }
 .doc-sub-head p {
   font-weight: 400;
@@ -72,13 +80,15 @@ padding: 0px 0 78px 97px;
   line-height: 36px;
   letter-spacing: -0.02em;
   color: #6f6f6f;
-  padding: 0px 0 78px 97px;
+  /* padding: 0px 0 78px 97px; */
 }
 
 .doc-links {
   gap: 20px;
   justify-content: space-around;
   width: 100%;
+  margin-bottom: 59px;
+  justify-items: left;
 }
 
 .sub-links {
@@ -87,7 +97,7 @@ padding: 0px 0 78px 97px;
 
 .sub-links a {
   font-weight: 400;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 36px;
   display: flex;
   align-items: center;
@@ -114,9 +124,18 @@ hr {
 }
 .meta-art h6 {
   font-weight: 700;
-  font-size: 20px;
+  font-size: 24px;
   line-height: 30px;
   text-align: center;
+  letter-spacing: -0.02em;
+  color: #408cc6;
+  margin-bottom: 20px;
+}
+.secure h6 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: left;
   letter-spacing: -0.02em;
   color: #408cc6;
   margin-bottom: 20px;
@@ -124,6 +143,8 @@ hr {
 
 .folders {
   justify-content: left;
+  gap: 8px;
+  margin-bottom: 16px;
 }
 
 .folders a {
@@ -132,6 +153,10 @@ hr {
   line-height: 28px;
   color: #6f6f6f;
   text-decoration: none;
+}
+
+#folder-link{
+  margin-bottom: 86px;
 }
 
 /*Styling of the Footer starts here*/
