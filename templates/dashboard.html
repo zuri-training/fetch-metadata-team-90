@@ -74,68 +74,7 @@
     </div>
   </header>
   <main class="section-container">
-      <section class="head-section">
-          <div class="hello">
-              <h3 class="bold-grey">Hello 
-                {% if request.user.username %}
-          {{ request.user.username}}
-          {% else %}
-          {{ request.user.email }}
-          {% endif %}
-              </h3>
-              <p>Welcome!</p>
-            </div>
-            <div class="search-bar">
-              <form class="search-forms" action="">
-                <button class="search-button" type="submit">Search</button>
-                <input type="search" name="" id="" title="#" class="profile-search"  placeholder="Search here" />
-              </form>
-            </div>
-            <div class="bell-toggle">
-              <div>
-                <img src="{% static 'svg/notification.svg' %}" alt="">
-              </div>
-              <div>
-                <label class="switch">
-                  <input type="checkbox" title="#" />
-                  <span class="slider round"></span>
-                </label>
-              </div>
-            </div>
-            <div class="profile-pic-name">
-              <div class="profile-pic">
-                {% if request.user.profile.picture  %}
-                <img src="{{ request.user.profile.picture.url }}" alt="" />
-                {% else %}
-          
-                <img src="{% static 'img/user_photo.png' %}" alt="profile image" />
-                {% endif %}
-                <p class='bold-grey'>
-                    {% if request.user.username %}
-          {{ request.user.username}}
-          {% else %}
-          {{ request.user.email }}
-          {% endif %}
-                </p>
-                </div>
-            
-                <div class="navbar">
-                  <div class="dropdown">
-                    <button class="dropbtn" type="button" title="">
-                    <img src="{% static 'svg/arrow-down.svg' %}" alt=""> </button>
-                    <div class="dropdown-content">
-                      <a href="{% url 'dashboard' %}">Dashboard</a>
-                      <a href="{% url 'profile' %}">Profile</a>
-                      <a href="{% url 'save-page' %}">Saved Data</a>
-                      <a href="{% url 'edit-profile' request.user.id %}">Settings</a>
-                      <a href="{% url 'contact' %}">Support</a>
-                      <a href="{% url 'logout' %}">Log out</a>
-                    </div>
-                  </div>
-                </div>
-             
-            
-      </section>
+    {% include 'top_menu.html' %}
     <div class="main-flow-flex">
       <section class="main-flow">
           <div class="upload-container">
@@ -150,8 +89,7 @@
               {{ form.file.errors }}
             {{ form.file }}
             </div>
-            <script src="{% static 'profile.js' %}"></script>
-
+            
 
             <div class="extraction-button">
              <input class="extract-button" id="id_file" type="submit" value="Extract Metadata">           
@@ -303,6 +241,6 @@
 {% block footer %}
 {% endblock %}
 {% block js %}
-<script type="text/javascript"  src="{% static '{% static ' %}'js/dashboard.js' %}"></script>
+<script type="text/javascript"  src="{% static 'js/dashboard.js' %}"></script>
  
 {% endblock %}
