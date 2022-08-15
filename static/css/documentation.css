@@ -237,3 +237,29 @@ footer .social .icons i {
     padding: 20px;
   }
 }
+
+@media (max-width: 590px) {
+  .doc-links {
+    display: flex;
+    flex-direction: column;
+  }
+  .doc-sub-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .doc-sub-head p {
+    padding: 0px 0 58px 57px;
+  }
+
+  .doc-sub-head h1 {
+    padding: 76px 0 38px 57px;
+  }
+  .meta-art {
+    padding-left: 57px;
+    margin-bottom: 40px;
+  }
+  .meta-art h6 {
+    margin-bottom: 10px;
+  }
+}
