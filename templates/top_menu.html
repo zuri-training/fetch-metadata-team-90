@@ -1,77 +1,66 @@
 {% load static %}
 
 
+
 <section class="head-section">
-    <div>
-        <h3 class="bold-grey">
-          {% if request.user.username %}
-          {{ request.user.username}}
-          {% else %}
-          {{ request.user.email }}
-          {% endif %}
-        </h3>
-        <p class="light-gray">Welcome!</p>
+  <div class="hello">
+      <h3 class="bold-grey">Hello 
+        {% if request.user.username %}
+  {{ request.user.username}}
+  {% else %}
+  {{ request.user.email }}
+  {% endif %}
+      </h3>
+      <p>Welcome!</p>
+    </div>
+    <div class="search-bar">
+      <form class="search-forms" action="">
+        <button class="search-button" type="submit">Search</button>
+        <input type="search" name="" id="" title="#" class="profile-search"  placeholder="Search here" />
+      </form>
+    </div>
+    <div class="bell-toggle">
+      <div>
+        <img src="{% static 'svg/notification.svg' %}" alt="">
       </div>
-      <div class="search-bar">
-        <form class="search-forms" action="{% url 'search' %}" method="post"> {% csrf_token %}
-          <button class="search-button" type="submit">Search</button>
-          <input type="search" name="q" id="" title="#" class="profile-search"  placeholder="Search here" />
-        </form>
+      <div>
+        <label class="switch">
+          <input type="checkbox" title="#" />
+          <span class="slider round"></span>
+        </label>
       </div>
-      <div class="bell-toggle">
-        <div>
-          <i class="fa fa-bell fa_custom"></i>
-        </div>
-        <div>
-          <label class="switch">
-            <input type="checkbox" title="#" />
-            <span class="slider round"></span>
-          </label>
-        </div>
-      </div>
-      <div class="profile-pic-name">
-        <div class="profile-pic">
-          {% if request.user.profile.picture  %}
-          <img src={{ request.user.profile.picture.url }} alt="profile image"/>
-          {% else %}
-          
-          <img src="{% static 'img/user_photo.png' %}" alt="profile image" />
-          {% endif %}
-          
-        </div>
-        <div>
-          <h5 bold-grey>
+    </div>
+    <div class="profile-pic-name">
+      <div class="profile-pic">
+        {% if request.user.profile.picture  %}
+        <img src="{{ request.user.profile.picture.url }}" alt="" />
+        {% else %}
+  
+        <img src="{% static 'img/user_photo.png' %}" alt="profile image" />
+        {% endif %}
+        <p class='bold-grey'>
             {% if request.user.username %}
-          {{ request.user.username}}
-          {% else %}
-          {{ request.user.email }}
-          {% endif %}
-          </h5>
+  {{ request.user.username}}
+  {% else %}
+  {{ request.user.email }}
+  {% endif %}
+        </p>
         </div>
+    
         <div class="navbar">
-            <div class="dropdown">
-              <button class="dropbtn" type="button" title="#">
-                <i class="fa fa-caret-down"></i>
-              </button>
-              <div class="dropdown-content">
-                <a href="{% url 'dashboard' %}">Dashboard</a>
-                <a href="{% url 'edit-profile' request.user.id %}">Profile</a>
-                <a href="{% url 'save-page' %}">Saved Data</a>
-                <a href="{% url 'edit-profile' request.user.id %}">Settings</a>
-                <a href="{% url 'contact' %}">Support</a>
-                <a href="{% url 'logout' %}">Logout</a>
-              </div>
+          <div class="dropdown">
+            <button class="dropbtn" type="button" title="">
+            <img src="{% static 'svg/arrow-down.svg' %}" alt=""> </button>
+            <div class="dropdown-content">
+              <a href="{% url 'dashboard' %}">Dashboard</a>
+              <a href="{% url 'profile' %}">Profile</a>
+              <a href="{% url 'save-page' %}">Saved Data</a>
+              <a href="{% url 'edit-profile' request.user.id %}">Settings</a>
+              <a href="{% url 'contact' %}">Support</a>
+              <a href="{% url 'logout' %}">Log out</a>
             </div>
           </div>
-
-          <script>
-            // form = document.querySelector('.search-forms')
-            // const myFunc = (e) => {
-            //    return (
-            //     e.preventDefault()
-            //   )
-            // }
-            // form.addEventListener('submit', (e)=>myFunc(e))
-          </script>
-      
+        </div>
+     
+    
 </section>
