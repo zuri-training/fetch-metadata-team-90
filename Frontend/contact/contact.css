@@ -151,8 +151,9 @@ nav {
 /* the drop a message section styling begins here */
 .main-container {
   gap: 125px;
-  margin-top: 140px;
+  margin-top: 100px;
   margin-bottom: 32px;
+  margin-left: 30px;
 }
 body {
   font-family: "Work Sans";
@@ -221,9 +222,7 @@ header {
 label[class="fname"] {
   width: 200px;
   height: 40px;
-
-  /* Web/Body small */
-
+   margin-bottom: 8px;
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 400;
@@ -231,44 +230,27 @@ label[class="fname"] {
   line-height: 28px;
   /* identical to box height, or 140% */
 
-  display: flex;
-  align-items: center;
-
-  /* Grey/Grey10 */
+ 
 
   color: #373737;
 
-  /* Inside auto layout */
-
-  flex: none;
-  order: 0;
-  flex-grow: 0;
 }
 input[id="fname"] {
   box-sizing: border-box;
+  margin-bottom: 32px;
 
-  /* Auto layout */
-
-  display: flex;
-  flex-direction: row;
   align-items: center;
   padding: 10px 0px 10px 48px;
   gap: 10px;
-
   width: 504px;
   height: 56px;
-
   border: 2px solid #9ca2ac;
   border-radius: 4px;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 1;
-  flex-grow: 0;
+  
 }
 input[id="email"] {
   box-sizing: border-box;
+  margin-bottom: 32px;
 
   /* Auto layout */
   /*     
@@ -286,12 +268,10 @@ input[id="email"] {
 
   /* Inside auto layout */
 
-  flex: none;
-  order: 1;
-  flex-grow: 0;
-}
+  }
 input[id="Subject"] {
   box-sizing: border-box;
+  margin-bottom: 18px;
 
   /* Auto layout */
 
@@ -309,34 +289,28 @@ input[id="Subject"] {
 
   /* Inside auto layout */
 
-  flex: none;
-  order: 1;
-  flex-grow: 0;
 }
 input[id="message"] {
   /* Input Fields */
 
   box-sizing: border-box;
+  
 
   /* Auto layout */
 
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 10px 0px 10px 48px;
+  padding: 0px 5px 48px 50px;
   gap: 10px;
-
+  align-self: stretch;
   width: 504px;
   height: 98px;
 
   border: 2px solid #9ca2ac;
   border-radius: 4px;
 
-  /* Inside auto layout */
 
-  flex: none;
-  order: 1;
-  flex-grow: 0;
 }
 input[type="submit"] {
   justify-content: center;
@@ -355,7 +329,6 @@ input[type="submit"] {
   flex-grow: 0;
   cursor: pointer;
 
-  font-family: "Droid Sans";
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
@@ -396,7 +369,7 @@ input::placeholder {
 }
 
 .contact-us {
-  margin-top: -70px;
+  margin-top: 30px;
 }
 
 .contact-us h1 {
@@ -416,6 +389,7 @@ input::placeholder {
 }
 .contact-us img {
   width: 610px;
+  margin-top: 30px;
 }
 /* the drop a message section styling ends here */
 
@@ -442,7 +416,7 @@ input::placeholder {
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15),
     0px 0px 15px 4px rgba(0, 0, 0, 0.02);
   border-radius: 4px;
-  margin: 56px 50px 183px;
+  margin: 100px 50px 183px;
 }
 .getting-in span {
   font-family: "Work Sans";
@@ -761,6 +735,7 @@ footer .social .icons i {
     width: 120px;
     font-size: 15px;
     line-height: 22px;
+  
   }
 
   input::placeholder {

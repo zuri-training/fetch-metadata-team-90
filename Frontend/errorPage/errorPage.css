@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;500;600;700&family=Work+Sans:wght@400;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +9,8 @@
 body {
   background: #f5f5f5;
   height: 100vh;
+  font-family: "Work Sans";
+  font-style: normal;
 }
 
 a {
@@ -42,15 +46,9 @@ a {
   display: flex;
   align-items: center;
   letter-spacing: -0.02em;
-
-  /* Blue/Blue05 */
   color: #408cc6;
 
-  /* Inside auto layout */
-  flex: none;
-  order: 0;
-  align-self: stretch;
-  flex-grow: 0;
+  
 }
 
 .message {
@@ -63,18 +61,12 @@ a {
   font-weight: 400;
   font-size: 24px;
   line-height: 36px;
-  /* or 150% */
   display: flex;
   align-items: center;
   letter-spacing: -0.02em;
 
-  /* Grey/Grey07 */
   color: #8a8a8a;
 
-  flex: none;
-  order: 1;
-  align-self: stretch;
-  flex-grow: 0;
 }
 
 .buttons {
@@ -89,73 +81,67 @@ a {
   height: 56px;
   left: 100px;
   right: 895px;
-  top: 450px;
+  top: 400px;
 }
 
 .home {
-  /* Auto layout */
-  display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 10px;
-  gap: 10px;
-
+  color: #FFFFFF;
   width: 202.5px;
   height: 56px;
-
-  /* Maya Blue/maya blue */
   background: #56ccf2;
   border-radius: 4px;
-
-  /* Inside auto layout */
-  flex: none;
-  order: 0;
-  flex-grow: 1;
+   border:none;
+   font-family: "Work Sans";
+   font-style: normal;
+   font-weight: 700;
+   font-size: 20px;
 }
 
 .support {
   box-sizing: border-box;
 
-  /* Auto layout */
-  display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 10px;
   gap: 10px;
-
-  width: 202.5px;
+ width: 202.5px;
   height: 56px;
-
-  /* Maya Blue/maya blue */
-  border: 2px solid #56ccf2;
+ border: 2px solid #408CC6;
   border-radius: 4px;
+  font-weight: 700;
+font-size: 20px;
+color: #408CC6;
 
-  /* Inside auto layout */
-  flex: none;
-  order: 1;
-  flex-grow: 1;
 }
 
 .errorPad {
   position: absolute;
-  width: 448px;
-  height: 358px;
+  
   right: 238px;
   top: 40px;
 
-  background: url(errorPad.png);
+  /* background: url(errorPad.png); */
+}
+.errorPad img{
+  width: 390px;
+  height: 298px;
+}
+
+.errorCode img{
+  width: 257px;
+  height: 158px;
 }
 
 .errorCode {
   position: absolute;
-  width: 297px;
-  height: 198px;
+  
   right: 290px;
-  top: 380px;
+  top: 320px;
 
-  background: url(404signsmall.png) no-repeat;
+  /* background: url(404signsmall.png) no-repeat; */
 }
 
 @media only screen and (max-width: 768px) {
@@ -169,7 +155,7 @@ a {
     height: 170px;
     left: 104px;
     top: 107px;
-    background: url(404signsmall.png) no-repeat;
+    /* background: url(404signsmall.png) no-repeat; */
     background-size: cover;
   }
   .errorMessage {
@@ -182,13 +168,16 @@ a {
 
     position: absolute;
     height: 128px;
-    left: 37px;
-    right: 38px;
+    left: 95px;
+    right: -10px;
     top: 282px;
 
     text-justify: auto;
   }
-
+.message{
+  position: relative;
+  left: -40px;
+}
   .pageNotFound {
     width: 300px;
     height: 64px;
@@ -199,19 +188,12 @@ a {
     font-weight: 700;
     font-size: 24px;
     line-height: 32px;
-    /* or 133% */
-    display: flex;
     align-items: center;
     text-align: center;
     letter-spacing: -0.01em;
-
     /* Blue/Blue05 */
     color: #408cc6;
-
-    /* Inside auto layout */
-    flex: none;
-    order: 0;
-    flex-grow: 0;
+    
   }
 
   .message {
@@ -252,7 +234,7 @@ a {
     position: absolute;
     width: 188px;
     height: 48px;
-    left: calc(50% - 188px / 2 + 0.5px);
+    left: calc(50% - 18px / 2 + 0.5px);
     top: 424px;
 
     /* maya blue */
@@ -275,7 +257,7 @@ a {
     position: absolute;
     width: 188px;
     height: 48px;
-    left: calc(50% - 188px / 2 + 0.5px);
+    left: calc(50% - 18px / 2 + 0.5px);
     top: 504px;
 
     border: 2px solid #56ccf2;
