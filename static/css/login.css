@@ -225,7 +225,7 @@ i{
     margin-left: 8rem;
 }
 
-@media (max-width:375px){
+@media (max-width:775px){
     body{
         font-size: 16px;
         font-weight: 400;

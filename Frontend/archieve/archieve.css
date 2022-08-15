@@ -2,21 +2,24 @@
 
 :root {
   --blue: #408cc6;
-  --light-blue: #01aefd;
+  --light-blue: #56CCF2;
 }
 
 body {
   margin: 0;
   padding: 0;
   font-family: "Work Sans";
-  font-size: 400;
+  font-size: 20px;
 }
 header {
   background-color: var(--blue);
-  padding: 40px 12px;
+  padding: 40px 30px;
 }
 a {
   color: var(--light-blue);
+}
+p{
+  color:#6F6F6F;
 }
 .navbar-section {
   padding: 7px 12px 10px;
@@ -29,6 +32,7 @@ a {
   display: flex;
   flex-direction: column;
   margin-top: 15px;
+  width: 100%;
 }
 .container {
   display: flex;
@@ -38,7 +42,7 @@ a {
   margin-top: 10px;
 }
 hr {
-  width: 92%;
+  width: 94%;
 }
 .button-container {
   display: flex;
@@ -82,6 +86,7 @@ button:hover {
 .display-none {
   display: none !important;
 }
+
 
 /* styling for the footer */
 footer {

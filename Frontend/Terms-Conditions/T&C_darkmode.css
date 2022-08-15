@@ -22,10 +22,6 @@ body {
   width: 132px;
   height: 42px;
 }
-header nav {
-  background-color: #408cc6;
-  padding: 50px;
-}
 nav {
   padding: 0 20px;
   line-height: 98px;
@@ -35,10 +31,13 @@ nav {
 }
 
 .container {
-  width: 100%;
-  background-color: #ffffff;
-  padding: 50px 50px 100px;
-  
+  padding: 0 100px 50px 100px;
+  max-width: 100%;
+  width: 1000px;
+  background-color: #1F1F1F;
+  width: 1440px;
+  left: 0px;
+  top: 202px;
 }
 
 .generalflexselector {
@@ -46,15 +45,27 @@ nav {
   justify-content: center;
   align-items: center;
 }
-
+/*Styling Last Updated*/
 .last-updated {
+  position: absolute;
+  width: 271px;
+  height: 10px;
+  left: 95px;
+
+  /* Web/Link Text */
+
   font-family: "Droid Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
-   text-align: left;
-  color: #6f6f6f;
+  line-height: 24px;
+  /* identical to box height, or 120% */
 
+  text-align: center;
+
+  /* Grey/Grey08 */
+
+  color: #C4C4C4;
 }
 h1,
 h3 {
@@ -65,28 +76,29 @@ p {
   opacity: 0.8;
   text-align: justify;
 }
-ol li {
-  text-align: justify;
+ul li {
   opacity: 0.8;
+  text-align: justify;
 }
 /*Styling of the header*/
-
+header nav {
+  background-color: #408cc6;
+  padding: 50px;
+}
 @media (max-width: 720px) {
   .container {
     padding: 0 20px 50px 20px;
   }
   .last-updated {
-    height: 10px;
-    left: 10px;
+    left: 15px;
   }
 }
-/*Styling of the Footer starts here*/
 
 /*Styling of the Footer starts here*/
 footer {
   width: 100%;
   height: 100%;
-  background: url(images/footer-bg.png);
+  background: url(images/footer_bg.png);
 }
 .footer-container {
   width: 100%;
@@ -204,5 +216,4 @@ footer .social .icons i {
     padding: 20px;
   }
 }
-
 /*Styling of the Footer ends here*/
