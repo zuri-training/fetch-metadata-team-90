@@ -642,6 +642,7 @@ footer {
   height: 57px;
   width: 206px;
   margin-bottom: 15px;
+  margin-left: -40px;
 }
 .footer-container .resourses h6 {
   width: 269px;
