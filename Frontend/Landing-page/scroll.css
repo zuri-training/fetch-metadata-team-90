@@ -1,0 +1,21 @@
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 0;
+    border: none;
+    
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    
+    
+    
+   
+    
+
+}
+.scroll img {
+    height: 100px;
+    width: 200px;
+}

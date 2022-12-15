@@ -1,0 +1,324 @@
+*, *::after, *::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.box{
+    max-height: 100vh;
+    width: 100%;
+}
+.inner-box{
+    display: flex;
+    min-height: 100vh;
+}
+.forms-wrapper{
+    flex: 1;
+    background: white;
+    display: flex;
+    justify-content: center;
+}
+.field_wrapper{
+    max-width: 23em;
+    max-height: 100vh;
+}
+.picture-side{
+    flex: 1;
+    background-color: rgba(26, 117, 187, 1);
+    color: rgba(250, 250, 250, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+}
+.picture__logo-content{
+    padding: 35px 80px 20px;
+
+}
+.image{
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: flex-end;
+}
+.image img{
+    max-width: 100%
+}
+
+
+.heading{
+    margin-bottom: 1rem;
+    
+  }
+  
+  .heading .big{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: rgba(111, 111, 111, 1);
+  }
+  
+  .heading h3{
+    margin-bottom: 1rem;
+    color: rgba(111, 111, 111, 1);
+    font-weight: 700;
+    top: 38px;
+    font-size: 40px;
+  }
+  
+  .heading p{
+    display: inline;
+    font-size: 20px;
+    color: rgba(55, 55, 55, 1);
+  }
+  .heading a{
+    text-decoration: none;
+    font-size: 20px;
+    color: rgba(86, 204, 242, 1);
+  }
+
+.details{
+    color: rgba(55, 55, 55, 1);
+}
+
+
+.picture-side .logo{
+    Width:189px;
+    Height:60px;
+    Top:88px;
+    Left:100px;
+    
+    /* margin-bottom: 2rem; */
+  }
+  
+  .picture-side .heading-right{
+    Width:100%;
+    Height:112px;
+    Top:184px;
+    Left:100px;
+    
+  }
+
+
+
+.dots{
+    
+    position: absolute;
+}
+
+.woman{
+    position: absolute;
+}
+
+.pattern{
+    height: 250px;
+}
+.card-box{
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-box input{
+    min-height: 56px;
+    width: 100%;
+    outline: none;
+    border-radius: 4px;
+    border: 1px solid rgba(166, 166, 166, 1);
+    padding-left: 15px; 
+}
+
+form .button input{
+    height: 56px;
+    width: 100%;
+    outline: none;
+    border: none;
+    background: rgba(86, 204, 242, 1);
+    color: rgba(250, 250, 250, 1);
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+
+.eye{
+    position: absolute;
+    display: inline;
+}
+
+#hide1{
+    display: none;
+}
+
+#hide3{
+    display: none;
+}
+
+i{
+    color: rgba(166, 166, 166, 1);
+}
+
+.card-box.last{
+    margin-bottom: 3rem;
+}
+
+.card-box .test{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 00.5rem;
+}
+
+.eye{
+    margin-right: 15px;
+}
+
+.text{
+    top: 880px;
+}
+
+.text a{
+    text-decoration: none;
+    color: rgba(86, 204, 242, 1);
+}
+
+
+@media (max-width:375px){
+    body{
+        font-size: 16px;
+        font-weight: 400;
+    }
+    .inner-box{
+        display: flex;
+        flex-direction: column;
+    }
+    .picture-side{
+        width: 100%;
+        padding: 40px;
+        height: 100%;
+        position: relative;
+    }
+    .forms-wrapper{
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0%;
+        right: 0%;
+        margin-left: 1rem;
+        padding: 10px;
+    }
+    .picture-side .heading-right{
+        Width:330px;
+    }
+    .picture-side .logo{
+        margin-bottom: 20px;
+    }
+    
+    .dots{
+        width: 100%;
+        Height:202px;
+        Top:224px;
+        left: 0px;
+        position: absolute;
+    }
+    
+    .woman{
+        width: 90%;
+        height: 177px;
+        position: relative;
+        z-index: 10;
+        left: 16.8%;
+        right: 16.53%;
+        top: 10px;
+    }
+    
+    .pattern{
+        width: 100%;
+        Height:153px;
+        left: 0px;
+        position: absolute;
+        
+    }
+    .heading{
+        margin-bottom: 20px;
+    }
+    
+    .heading .big{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-weight: 700;
+        color: rgba(111, 111, 111, 1);
+        font-size: 20px;
+        
+    }
+    
+    .heading h3{
+        margin-bottom: 20px;
+        color: rgba(111, 111, 111, 1);
+        font-weight: 700;
+        top: 438px;
+        font-size: 20px;
+    }
+    .heading p{
+        font-size: 16px;
+    }
+    .heading a{
+        font-size: 16px;
+    }
+    .card-box input{
+        height: 56px;
+        outline: none;
+        border-radius: 4px;
+        border: 1px solid rgba(166, 166, 166, 1);
+        padding-left: 10px; 
+        width: 90%;
+    }
+    .button{
+        margin-left: 5rem;
+    }
+    form .button input{
+        height: 48px;
+        width: 188px;
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+    .card-box{
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .card-box.last{
+        margin-bottom: 20px;
+    }
+    .card-box .test{
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+    }
+    .card-box .test i{
+        margin-left: 18rem;
+    }
+    .text{
+        font-size: 14px;
+        width: 80%;
+        justify-content: center;
+        align-items: center;
+    }
+    .buttom-text .text a{
+        margin: auto;
+    }
+}

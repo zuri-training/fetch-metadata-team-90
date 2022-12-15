@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="icon" href="../favicon-16x16-blue.png" />
+    <link rel="stylesheet" href="login_darkmode.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="big-wrapper">
+    <main>
+      <div class="box">
+        <div class="inner-box">
+          <div class="forms-wrapper">
+            <form action="#">
+              <div class="heading">
+                <p class="big">Login to continue</p>
+              </div>
+
+              <div class="card-box">
+                <span class="details">E-mail Address</span>
+                <div class="test">
+                  <input
+                    type="email"
+                    minlength="4"
+                    autocomplete="off"
+                    required
+                    placeholder="name@gmail"
+                  />
+                  <i
+                    style="position: absolute; margin-right: 15px"
+                    class="fa-regular fa-envelope"
+                  ></i>
+                </div>
+              </div>
+              <div class="card-box">
+                <span class="details">Password</span>
+                <div class="test">
+                  <input
+                    type="password"
+                    placeholder="**********"
+                    minlength="4"
+                    autocomplete="off"
+                    required
+                    id="myInput"
+                  />
+                  <span class="eye" onclick="myFunction()">
+                    <i id="hide1" class="fa-regular fa-eye"></i>
+                    <i id="hide2" class="fa-regular fa-eye-slash"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="remember-me">
+                <input type="checkbox" name="Remember me" id="Remember-me" />
+                <label class="reminder" for="Remember-me">Remember me</label>
+                <a href="#">Forgot password?</a>
+              </div>
+              <div class="button">
+                <input type="submit" value="Login" />
+              </div>
+
+              <div class="or">
+                <p>or</p>
+              </div>
+
+              <div class="button down">
+                <img class="google" src="flat-color-icons_google.png" alt="" />
+                <input type="submit" value="Login with Google" />
+              </div>
+              <div class="buttom-text">
+                <p class="text">
+                  Don't have an account?
+                  <a href="signup.html">Signup</a>
+                </p>
+              </div>
+            </form>
+          </div>
+
+          <div class="picture-side">
+            <div class="picture-side-top">
+              <div>
+                <label class="switch">
+                  <input type="checkbox" name="check-box" title="#" />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+              <div class="logo">
+                <img src="Horizontal Logo.svg" alt="" />
+              </div>
+            </div>
+
+            <div class="heading-right">
+              <p>Welcome back.</p>
+            </div>
+            <div class="image">
+              <img
+                class="dots"
+                src="/Frontend/signup-img/25332 [Converted] 1.png"
+                alt=""
+              />
+              <img class="man" src="./Man chatting on dating site.png" alt="" />
+              <img
+                class="pattern"
+                src="/Frontend/signup-img/Patter Bg.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      const checkbox = document.querySelector("input[name='check-box']");
+      const body = document.querySelector(".big-wrapper");
+      checkbox.addEventListener("click", () => {
+        body.classList.toggle("bg-dark");
+      });
+      function myFunction() {
+        var x = document.getElementById("myInput");
+        var y = document.getElementById("hide1");
+        var z = document.getElementById("hide2");
+
+        if (x.type === "password") {
+          x.type = "text";
+          y.style.display = "block";
+          z.style.display = "none";
+        } else {
+          x.type = "password";
+          y.style.display = "none";
+          z.style.display = "block";
+        }
+      }
+    </script>
+  </body>
+</html>
